@@ -1,0 +1,135 @@
+{
+  "$description": "Sizes are logical px (Flutter sp). lineHeight is a multiplier (Flutter TextStyle.height). All text is RTL Arabic with Western digits. letterSpacing must stay 0 for Arabic.",
+  "families": {
+    "display": {
+      "name": "NotoKufiArabic",
+      "files": [
+        "docs/design/assets/fonts/NotoKufiArabic[wght].ttf"
+      ],
+      "variable": true,
+      "axis": "wght",
+      "usedWeights": [
+        800,
+        900
+      ],
+      "license": "OFL-1.1",
+      "licenseFile": "docs/design/assets/fonts/OFL-NotoKufiArabic.txt"
+    },
+    "text": {
+      "name": "IBMPlexSansArabic",
+      "files": {
+        "400": "docs/design/assets/fonts/IBMPlexSansArabic-Regular.ttf",
+        "500": "docs/design/assets/fonts/IBMPlexSansArabic-Medium.ttf",
+        "600": "docs/design/assets/fonts/IBMPlexSansArabic-SemiBold.ttf",
+        "700": "docs/design/assets/fonts/IBMPlexSansArabic-Bold.ttf"
+      },
+      "variable": false,
+      "license": "OFL-1.1",
+      "licenseFile": "docs/design/assets/fonts/OFL-IBMPlexSansArabic.txt"
+    }
+  },
+  "styles": {
+    "displayXL": {
+      "fontFamily": "NotoKufiArabic",
+      "fontSize": 72,
+      "lineHeight": 1.3,
+      "fontWeight": 900,
+      "use": "Secret word, winner headline. Auto-shrink to fit one line, minimum 40.",
+      "minFontSize": 40
+    },
+    "displayL": {
+      "fontFamily": "NotoKufiArabic",
+      "fontSize": 48,
+      "lineHeight": 1.3,
+      "fontWeight": 900,
+      "use": "Hero name on handoff, result headline",
+      "minFontSize": 32
+    },
+    "displayM": {
+      "fontFamily": "NotoKufiArabic",
+      "fontSize": 34,
+      "lineHeight": 1.35,
+      "fontWeight": 800,
+      "use": "Large screen headings"
+    },
+    "titleL": {
+      "fontFamily": "NotoKufiArabic",
+      "fontSize": 26,
+      "lineHeight": 1.4,
+      "fontWeight": 800,
+      "use": "Screen titles, dialog titles"
+    },
+    "titleM": {
+      "fontFamily": "IBMPlexSansArabic",
+      "fontSize": 20,
+      "lineHeight": 1.45,
+      "fontWeight": 700,
+      "use": "Section headings, card titles, player names in lists"
+    },
+    "bodyL": {
+      "fontFamily": "IBMPlexSansArabic",
+      "fontSize": 18,
+      "lineHeight": 1.6,
+      "fontWeight": 400,
+      "use": "Primary reading text, instructions"
+    },
+    "bodyM": {
+      "fontFamily": "IBMPlexSansArabic",
+      "fontSize": 16,
+      "lineHeight": 1.6,
+      "fontWeight": 400,
+      "use": "Secondary text, descriptions"
+    },
+    "labelL": {
+      "fontFamily": "NotoKufiArabic",
+      "fontSize": 20,
+      "lineHeight": 1.3,
+      "fontWeight": 800,
+      "use": "Primary and accent button labels"
+    },
+    "labelM": {
+      "fontFamily": "IBMPlexSansArabic",
+      "fontSize": 16,
+      "lineHeight": 1.3,
+      "fontWeight": 600,
+      "use": "Secondary button labels, chips, tabs"
+    },
+    "caption": {
+      "fontFamily": "IBMPlexSansArabic",
+      "fontSize": 13,
+      "lineHeight": 1.5,
+      "fontWeight": 500,
+      "use": "Helper text, counters, metadata. Never below 12."
+    },
+    "numericL": {
+      "fontFamily": "NotoKufiArabic",
+      "fontSize": 34,
+      "lineHeight": 1.2,
+      "fontWeight": 900,
+      "use": "Vote counts, big counters",
+      "fontFeatures": [
+        "tnum"
+      ],
+      "textDirection": "ltr"
+    },
+    "numericM": {
+      "fontFamily": "IBMPlexSansArabic",
+      "fontSize": 16,
+      "lineHeight": 1.3,
+      "fontWeight": 700,
+      "use": "Progress pills such as 2 / 6",
+      "fontFeatures": [
+        "tnum"
+      ],
+      "textDirection": "ltr"
+    }
+  },
+  "rules": {
+    "minBodySize": 16,
+    "minAnySize": 12,
+    "maxTextScaleSupported": 1.5,
+    "digits": "western",
+    "letterSpacing": 0,
+    "textAlignDefault": "start"
+  }
+}

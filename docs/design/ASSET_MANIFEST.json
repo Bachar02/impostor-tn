@@ -1,0 +1,363 @@
+{
+  "$description": "Every design asset in the package. Paths are relative to the repository root.",
+  "naming": {
+    "icons": "ic_<name>.svg, snake_case, 24x24, stroke currentColor",
+    "logo": "<what>_<variant>.svg",
+    "app icon": "app_icon_<layer>.svg",
+    "fonts": "upstream file names, unmodified",
+    "textures": "<surface>_grain.png",
+    "sounds": "sfx_<event>.ogg (not produced yet)"
+  },
+  "notProduced": [
+    "Sound effects (sfx_stamp, sfx_stamp_soft, sfx_paper_slide, sfx_ticket_tear, sfx_win_civilians, sfx_win_impostor, sfx_draw)",
+    "Play Store listing graphics",
+    "Tutorial illustrations (Stage 4, depends on PRD)",
+    "Raster app-icon exports (generate from the SVG layers)"
+  ],
+  "assets": [
+    {
+      "path": "docs/design/assets/fonts/NotoKufiArabic[wght].ttf",
+      "type": "font",
+      "purpose": "Display family, weights 800 and 900",
+      "license": "OFL-1.1 (see OFL-NotoKufiArabic.txt)",
+      "status": "final",
+      "bytes": 434204
+    },
+    {
+      "path": "docs/design/assets/fonts/IBMPlexSansArabic-Regular.ttf",
+      "type": "font",
+      "purpose": "Text family",
+      "license": "OFL-1.1 (see OFL-IBMPlexSansArabic.txt)",
+      "status": "final",
+      "bytes": 235924
+    },
+    {
+      "path": "docs/design/assets/fonts/IBMPlexSansArabic-Medium.ttf",
+      "type": "font",
+      "purpose": "Text family",
+      "license": "OFL-1.1 (see OFL-IBMPlexSansArabic.txt)",
+      "status": "final",
+      "bytes": 242100
+    },
+    {
+      "path": "docs/design/assets/fonts/IBMPlexSansArabic-SemiBold.ttf",
+      "type": "font",
+      "purpose": "Text family",
+      "license": "OFL-1.1 (see OFL-IBMPlexSansArabic.txt)",
+      "status": "final",
+      "bytes": 244616
+    },
+    {
+      "path": "docs/design/assets/fonts/IBMPlexSansArabic-Bold.ttf",
+      "type": "font",
+      "purpose": "Text family",
+      "license": "OFL-1.1 (see OFL-IBMPlexSansArabic.txt)",
+      "status": "final",
+      "bytes": 246992
+    },
+    {
+      "path": "docs/design/assets/fonts/OFL-NotoKufiArabic.txt",
+      "type": "license",
+      "purpose": "Licence text, must ship with the font",
+      "license": "n/a",
+      "status": "final",
+      "bytes": 4382
+    },
+    {
+      "path": "docs/design/assets/fonts/OFL-IBMPlexSansArabic.txt",
+      "type": "license",
+      "purpose": "Licence text, must ship with the font",
+      "license": "n/a",
+      "status": "final",
+      "bytes": 4456
+    },
+    {
+      "path": "docs/design/assets/icons/ic_alert.svg",
+      "type": "icon",
+      "purpose": "Validation, warnings, errors",
+      "license": "Project original, same terms as the project",
+      "status": "final",
+      "bytes": 318
+    },
+    {
+      "path": "docs/design/assets/icons/ic_arrow_right.svg",
+      "type": "icon",
+      "purpose": "Back (RTL)",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 236
+    },
+    {
+      "path": "docs/design/assets/icons/ic_check.svg",
+      "type": "icon",
+      "purpose": "Selected, confirmed",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 217
+    },
+    {
+      "path": "docs/design/assets/icons/ic_chevron_left.svg",
+      "type": "icon",
+      "purpose": "Next / forward (RTL)",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 216
+    },
+    {
+      "path": "docs/design/assets/icons/ic_circle_question_mark.svg",
+      "type": "icon",
+      "purpose": "How to play",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 292
+    },
+    {
+      "path": "docs/design/assets/icons/ic_equal.svg",
+      "type": "icon",
+      "purpose": "Tie",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 265
+    },
+    {
+      "path": "docs/design/assets/icons/ic_eye.svg",
+      "type": "icon",
+      "purpose": "Reveal",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 335
+    },
+    {
+      "path": "docs/design/assets/icons/ic_eye_off.svg",
+      "type": "icon",
+      "purpose": "Hidden / privacy hint / Impostor tag on results",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 473
+    },
+    {
+      "path": "docs/design/assets/icons/ic_info.svg",
+      "type": "icon",
+      "purpose": "Information banner",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 266
+    },
+    {
+      "path": "docs/design/assets/icons/ic_lock.svg",
+      "type": "icon",
+      "purpose": "Sealed ticket, locked pack",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 284
+    },
+    {
+      "path": "docs/design/assets/icons/ic_message_circle.svg",
+      "type": "icon",
+      "purpose": "Clue phase",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 325
+    },
+    {
+      "path": "docs/design/assets/icons/ic_pencil.svg",
+      "type": "icon",
+      "purpose": "Edit player",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 352
+    },
+    {
+      "path": "docs/design/assets/icons/ic_plus.svg",
+      "type": "icon",
+      "purpose": "Add player",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 231
+    },
+    {
+      "path": "docs/design/assets/icons/ic_rotate_ccw.svg",
+      "type": "icon",
+      "purpose": "Retry, play again",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 272
+    },
+    {
+      "path": "docs/design/assets/icons/ic_settings.svg",
+      "type": "icon",
+      "purpose": "Settings",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 561
+    },
+    {
+      "path": "docs/design/assets/icons/ic_smartphone.svg",
+      "type": "icon",
+      "purpose": "Pass-the-phone instructions",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 269
+    },
+    {
+      "path": "docs/design/assets/icons/ic_ticket.svg",
+      "type": "icon",
+      "purpose": "Word packs",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 365
+    },
+    {
+      "path": "docs/design/assets/icons/ic_trash.svg",
+      "type": "icon",
+      "purpose": "Delete player",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 355
+    },
+    {
+      "path": "docs/design/assets/icons/ic_trophy.svg",
+      "type": "icon",
+      "purpose": "Results",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 517
+    },
+    {
+      "path": "docs/design/assets/icons/ic_user.svg",
+      "type": "icon",
+      "purpose": "Role ticket, Civilian tag",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 274
+    },
+    {
+      "path": "docs/design/assets/icons/ic_users.svg",
+      "type": "icon",
+      "purpose": "Players, empty state",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 352
+    },
+    {
+      "path": "docs/design/assets/icons/ic_vibrate.svg",
+      "type": "icon",
+      "purpose": "Haptics setting",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 305
+    },
+    {
+      "path": "docs/design/assets/icons/ic_volume_2.svg",
+      "type": "icon",
+      "purpose": "Sound on",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 448
+    },
+    {
+      "path": "docs/design/assets/icons/ic_volume_x.svg",
+      "type": "icon",
+      "purpose": "Sound off",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 415
+    },
+    {
+      "path": "docs/design/assets/icons/ic_vote.svg",
+      "type": "icon",
+      "purpose": "Voting phase",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 292
+    },
+    {
+      "path": "docs/design/assets/icons/ic_x.svg",
+      "type": "icon",
+      "purpose": "Close",
+      "license": "ISC, Lucide (see LICENSE-lucide.txt)",
+      "status": "final",
+      "bytes": 235
+    },
+    {
+      "path": "docs/design/assets/icons/LICENSE-lucide.txt",
+      "type": "license",
+      "purpose": "Lucide licence and attribution",
+      "license": "n/a",
+      "status": "final",
+      "bytes": 3208
+    },
+    {
+      "path": "docs/design/assets/logo/wordmark_ar_ink.svg",
+      "type": "logo",
+      "purpose": "Arabic wordmark for paper backgrounds",
+      "license": "Project original; glyph outlines from Noto Kufi Arabic (OFL-1.1)",
+      "status": "provisional: Arabic name spelling awaits Derja review; regenerate with docs/design/tools/make_logo.py",
+      "bytes": 3446
+    },
+    {
+      "path": "docs/design/assets/logo/wordmark_ar_paper.svg",
+      "type": "logo",
+      "purpose": "Arabic wordmark for carbon backgrounds",
+      "license": "Project original; glyph outlines from Noto Kufi Arabic (OFL-1.1)",
+      "status": "provisional: Arabic name spelling awaits Derja review; regenerate with docs/design/tools/make_logo.py",
+      "bytes": 3446
+    },
+    {
+      "path": "docs/design/assets/logo/logo_ticket_lockup.svg",
+      "type": "logo",
+      "purpose": "Home-screen hero: wordmark on a ticket",
+      "license": "Project original; glyph outlines from Noto Kufi Arabic (OFL-1.1)",
+      "status": "provisional: Arabic name spelling awaits Derja review; regenerate with docs/design/tools/make_logo.py",
+      "bytes": 3991
+    },
+    {
+      "path": "docs/design/assets/logo/stamp_tn.svg",
+      "type": "logo",
+      "purpose": "Round TN stamp; rotate -14deg in use",
+      "license": "Project original; glyph outlines from Noto Kufi Arabic (OFL-1.1)",
+      "status": "final",
+      "bytes": 559
+    },
+    {
+      "path": "docs/design/assets/logo/app_icon_foreground.svg",
+      "type": "app-icon",
+      "purpose": "Android adaptive icon foreground, 108x108, art inside 66x66 safe zone",
+      "license": "Project original; glyph outline from Noto Kufi Arabic (OFL-1.1)",
+      "status": "final",
+      "bytes": 1122
+    },
+    {
+      "path": "docs/design/assets/logo/app_icon_background.svg",
+      "type": "app-icon",
+      "purpose": "Android adaptive icon background (mustard)",
+      "license": "Project original",
+      "status": "final",
+      "bytes": 141
+    },
+    {
+      "path": "docs/design/assets/logo/app_icon_monochrome.svg",
+      "type": "app-icon",
+      "purpose": "Android 13+ themed icon layer",
+      "license": "Project original",
+      "status": "final",
+      "bytes": 1053
+    },
+    {
+      "path": "docs/design/assets/logo/app_icon_preview.svg",
+      "type": "app-icon",
+      "purpose": "Preview only, rounded mask; do not ship",
+      "license": "Project original",
+      "status": "preview",
+      "bytes": 1264
+    },
+    {
+      "path": "docs/design/assets/decor/paper_grain.png",
+      "type": "texture",
+      "purpose": "Optional 256x256 tile, ink noise at low alpha, over the paper background of public screens only (never over cards or buttons)",
+      "license": "Project original (generated)",
+      "status": "final",
+      "bytes": 52701
+    }
+  ]
+}

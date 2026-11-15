@@ -1,0 +1,54 @@
+name: impostor_tn
+description: "Impostor TN - offline, single-device, pass-and-play party game."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.13.7
+
+# Every dependency is justified in docs/architecture/ADR/. Do not add one
+# without updating the relevant ADR.
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_riverpod: ^3.5.0
+  flutter_svg: ^2.4.0
+  intl: ^0.20.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  generate: true
+  # The app uses its own icon set (docs/design/assets/icons), not Material icons.
+  uses-material-design: false
+
+  # Assets are bundled directly from the design package (ADR-0004). Logo files
+  # are listed one by one so preview-only files are never shipped.
+  assets:
+    - docs/design/assets/icons/
+    - docs/design/assets/logo/logo_ticket_lockup.svg
+    - docs/design/assets/logo/wordmark_ar_ink.svg
+    - docs/design/assets/logo/wordmark_ar_paper.svg
+    - docs/design/assets/logo/stamp_tn.svg
+    - docs/design/assets/fonts/OFL-NotoKufiArabic.txt
+    - docs/design/assets/fonts/OFL-IBMPlexSansArabic.txt
+
+  fonts:
+    - family: NotoKufiArabic
+      fonts:
+        - asset: "docs/design/assets/fonts/NotoKufiArabic[wght].ttf"
+    - family: IBMPlexSansArabic
+      fonts:
+        - asset: docs/design/assets/fonts/IBMPlexSansArabic-Regular.ttf
+          weight: 400
+        - asset: docs/design/assets/fonts/IBMPlexSansArabic-Medium.ttf
+          weight: 500
+        - asset: docs/design/assets/fonts/IBMPlexSansArabic-SemiBold.ttf
+          weight: 600
+        - asset: docs/design/assets/fonts/IBMPlexSansArabic-Bold.ttf
+          weight: 700

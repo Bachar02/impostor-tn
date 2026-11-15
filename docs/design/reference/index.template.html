@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impostor TN — Tesskra component reference</title>
+<style>
+@font-face{font-family:"NotoKufiArabic";src:url("__FONTS__/NotoKufiArabic[wght].ttf");font-weight:100 900}
+@font-face{font-family:"IBMPlexSansArabic";src:url("__FONTS__/IBMPlexSansArabic-Regular.ttf");font-weight:400}
+@font-face{font-family:"IBMPlexSansArabic";src:url("__FONTS__/IBMPlexSansArabic-Medium.ttf");font-weight:500}
+@font-face{font-family:"IBMPlexSansArabic";src:url("__FONTS__/IBMPlexSansArabic-SemiBold.ttf");font-weight:600}
+@font-face{font-family:"IBMPlexSansArabic";src:url("__FONTS__/IBMPlexSansArabic-Bold.ttf");font-weight:700}
+/*__TOKENS_CSS__*/
+*{box-sizing:border-box}
+body{margin:0;background:#E7E2D8;color:#1B2A4A;font-family:"IBMPlexSansArabic",system-ui,sans-serif;font-size:15px;line-height:1.5}
+main{max-width:1180px;margin:0 auto;padding:32px 24px 80px;display:flex;flex-direction:column;gap:28px}
+header h1{font-family:"NotoKufiArabic";font-weight:900;font-size:30px;margin:0}
+header p{margin:6px 0 0;max-width:70ch}
+section{background:#fff;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:18px}
+section>h2{margin:0;font-size:18px;font-weight:700}
+section>p{margin:-10px 0 0;color:#4F5A73;max-width:80ch}
+.row{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start}
+.spec{font-size:12px;color:#4F5A73;font-weight:500;direction:ltr;text-align:left}
+.cell{display:flex;flex-direction:column;gap:8px}
+.sw{width:118px}.sw i{display:block;height:52px;border-radius:10px;border:1.5px solid rgba(27,42,74,.25)}
+.sw b{font-size:13px;display:block}.sw span{font-size:12px;color:#4F5A73}
+table{border-collapse:collapse;width:100%}td,th{padding:8px 10px;border-bottom:1px solid #E3DED3;text-align:left;font-size:13px;vertical-align:middle}th{font-weight:700}
+/* ---------- themed stage ---------- */
+.stage{padding:20px;border-radius:12px;display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;direction:rtl;background:var(--bg);color:var(--text);font-family:"IBMPlexSansArabic"}
+.stage.col{flex-direction:column;align-items:stretch}
+.w{width:312px}
+.ic{width:24px;height:24px;display:inline-flex;flex:none}.ic svg{width:100%;height:100%;stroke-width:2.25}
+.ic.s svg{stroke-width:2.4}.ic.s{width:20px;height:20px}
+/* buttons */
+.btn{appearance:none;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:60px;padding:0 20px;border-radius:16px;border:2.5px solid var(--border);background:transparent;color:var(--text);font-family:"NotoKufiArabic";font-weight:800;font-size:20px;line-height:1.3;cursor:pointer}
+.btn.primary{background:var(--primary);color:var(--on-primary);box-shadow:var(--btn-shadow)}
+.btn.primary.pressed,.btn.primary:active{background:var(--primary-pressed);box-shadow:none;transform:var(--btn-press)}
+.btn.secondary{height:52px;font-family:"IBMPlexSansArabic";font-weight:600;font-size:16px;border-color:var(--border-strong)}
+.btn.secondary.pressed{background:var(--sunken)}
+.btn.text{height:44px;border-color:transparent;font-family:"IBMPlexSansArabic";font-weight:600;font-size:16px;text-decoration:underline;text-underline-offset:5px}
+.btn.accent{background:var(--accent);color:var(--on-accent);box-shadow:var(--btn-shadow)}
+.btn.danger{height:52px;font-family:"IBMPlexSansArabic";font-weight:600;font-size:16px;color:var(--error-text);border-color:var(--error-text)}
+.btn.disabled,.btn:disabled{background:var(--sunken);color:var(--text-disabled);border-color:var(--text-disabled);box-shadow:none;cursor:default;transform:none}
+.btn.focus,.btn:focus-visible,.iconbtn:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.iconbtn{appearance:none;width:48px;height:48px;border-radius:14px;border:2.5px solid var(--border-strong);background:var(--surface);color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none}
+.iconbtn.ghost{border-color:transparent;background:transparent}
+/* inputs */
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-weight:600;font-size:16px}
+.input{height:56px;border-radius:16px;border:2.5px solid var(--border-strong);background:var(--surface);color:var(--text);padding:0 16px;font:400 18px/1.6 "IBMPlexSansArabic";width:100%;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.input.ph{color:var(--text2)}
+.input.focused{outline:3px solid var(--focus);outline-offset:2px}
+.input.err{border-color:var(--error-text)}
+.help{font-size:13px;font-weight:500;color:var(--text2);display:flex;justify-content:space-between;gap:8px}
+.help.err{color:var(--error-text);justify-content:flex-start;align-items:center;gap:6px}
+.caret{width:2px;height:26px;background:var(--focus)}
+/* cards */
+.card{background:var(--surface);border:2.5px solid var(--border-strong);border-radius:16px;padding:8px 12px;display:flex;align-items:center;gap:12px;min-height:64px}
+.badge{width:40px;height:40px;border-radius:12px;background:var(--accent);color:var(--on-accent);border:2.5px solid var(--border-strong);display:flex;align-items:center;justify-content:center;font:900 18px/1 "NotoKufiArabic";flex:none;direction:ltr}
+.name{flex:1;min-width:0;font-weight:700;font-size:20px;line-height:1.45;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card.dashed{border-style:dashed;justify-content:center;font-weight:600;color:var(--text);background:transparent}
+.pack{align-items:center;padding:14px 16px;min-height:84px;position:relative}
+.pack .t{font:800 20px/1.4 "NotoKufiArabic"}.pack .m{font-size:13px;font-weight:500;color:var(--text2)}
+.pack.sel{box-shadow:3px 3px 0 var(--shadow);border-color:var(--border-strong)}
+.pack.off{background:var(--sunken)}.pack.off .t{color:var(--text2)}
+.stamp{border:2.5px solid var(--error-text);color:var(--error-text);border-radius:8px;padding:2px 10px;font-weight:700;font-size:13px;transform:rotate(-6deg);display:inline-flex;align-items:center;gap:4px;flex:none}
+.stamp.ink{border-color:var(--border-strong);color:var(--text)}
+.chip{display:inline-flex;align-items:center;gap:6px;border:2.5px solid var(--border-strong);border-radius:999px;padding:4px 14px;font-weight:600;font-size:16px;line-height:1.3}
+.pill{display:inline-flex;border:2.5px solid var(--border-strong);border-radius:999px;padding:4px 14px;font:700 16px/1.3 "IBMPlexSansArabic";direction:ltr}
+/* controls */
+.check{width:28px;height:28px;border-radius:8px;border:2.5px solid var(--border-strong);background:var(--surface);display:flex;align-items:center;justify-content:center;flex:none}
+.check.on{background:var(--primary);color:var(--on-primary)}
+.radio{width:28px;height:28px;border-radius:50%;border:2.5px solid var(--border-strong);background:transparent;display:flex;align-items:center;justify-content:center;flex:none}
+.radio.on::after{content:"";width:14px;height:14px;border-radius:50%;background:var(--primary)}
+.switch{width:56px;height:32px;border-radius:999px;border:2.5px solid var(--border-strong);background:var(--sunken);position:relative;flex:none}
+.switch::after{content:"";position:absolute;top:2px;right:2px;width:23px;height:23px;border-radius:50%;background:var(--text)}
+.switch.on{background:var(--primary)}.switch.on::after{right:auto;left:2px;background:var(--on-primary)}
+.line{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;font-weight:600;font-size:16px}
+/* feedback */
+.banner{border:2.5px solid var(--border-strong);border-radius:16px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;font-size:16px;line-height:1.6;background:var(--surface)}
+.banner.warn{background:var(--accent);color:var(--on-accent)}
+.banner.err{border-color:var(--error-text);color:var(--error-text)}
+.dialog{background:var(--surface);border:2.5px solid var(--border-strong);border-radius:20px;padding:24px;box-shadow:6px 6px 0 var(--shadow);display:flex;flex-direction:column;gap:12px}
+.dialog h3,.h-title{margin:0;font:800 26px/1.4 "NotoKufiArabic"}
+.dialog p{margin:0;font-size:16px;line-height:1.6}
+.sheet{background:var(--surface);border:2.5px solid var(--border-strong);border-bottom:0;border-radius:28px 28px 0 0;padding:12px 24px 24px;display:flex;flex-direction:column;gap:12px}
+.grab{width:44px;height:5px;border-radius:999px;background:var(--text2);align-self:center}
+.state{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:24px 16px}
+.state .big{width:72px;height:72px;border-radius:50%;border:3.5px solid var(--border-strong);display:flex;align-items:center;justify-content:center}
+.state .big .ic{width:32px;height:32px}
+.dots{display:flex;gap:8px;direction:ltr}.dots i{width:12px;height:12px;border-radius:50%;background:var(--text);animation:dot 1s infinite}.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
+@keyframes dot{0%,60%,100%{opacity:.25}30%{opacity:1}}
+.appbar{height:56px;display:flex;align-items:center;gap:8px}
+.appbar .h-title{flex:1;font-size:22px}
+/* ticket */
+.ticket{background:var(--ticket);color:var(--on-ticket);border-radius:20px;position:relative;display:flex;flex-direction:column;box-shadow:var(--ticket-shadow)}
+.ticket .top{padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.ticket .lbl{font-size:13px;font-weight:500}
+.ticket .role{font:800 26px/1.4 "NotoKufiArabic"}
+.ticket .rs{width:52px;height:52px;border:3.5px solid currentColor;border-radius:12px;display:flex;align-items:center;justify-content:center;transform:rotate(6deg);flex:none}
+.perf{border-top:2.5px dashed currentColor;margin:0 14px;position:relative;height:0}
+.perf::before,.perf::after{content:"";position:absolute;top:-13px;width:24px;height:24px;border-radius:50%;background:var(--bg)}
+.perf::before{right:-26px}.perf::after{left:-26px}
+.ticket .bot{padding:18px 20px 22px;display:flex;flex-direction:column;align-items:center;gap:6px;min-height:206px;justify-content:center;text-align:center}
+.word{font:900 64px/1.3 "NotoKufiArabic";max-width:100%;overflow-wrap:anywhere}
+.word.m{font-size:48px}.word.sm{font-size:40px}
+.ticket .chip{border-color:currentColor;font-size:15px}
+.seal{font:800 20px/1.4 "NotoKufiArabic";display:flex;flex-direction:column;align-items:center;gap:10px}
+.hint{display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px;color:var(--primary)}
+/* voting + results */
+.vote{min-height:64px;border:2.5px solid var(--border);border-radius:16px;padding:8px 14px;display:flex;align-items:center;gap:12px;background:var(--surface)}
+.vote.sel{border-color:var(--primary);background:transparent;outline:2.5px solid var(--primary);outline-offset:-6px}
+.vote.dis{opacity:1;color:var(--text-disabled);border-style:dashed}
+.tally{display:flex;align-items:center;gap:12px;min-height:64px;border-bottom:2.5px dashed var(--border-strong);padding:6px 0}
+.tally .marks{display:flex;gap:4px;direction:rtl}.tally .marks i{width:18px;height:18px;border-radius:5px;border:2.5px solid var(--error-text);transform:rotate(-8deg)}
+.num{font:900 34px/1.2 "NotoKufiArabic";direction:ltr;min-width:36px;text-align:center}
+.rolestamp{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;font-weight:700;font-size:15px;color:#FFFDF7;flex:none}
+.rolestamp.civ{background:var(--role-civ);border-radius:8px}.rolestamp.imp{background:var(--role-imp);border-radius:999px}
+.winner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:8px 0}
+.bigstamp{border:5px solid var(--error-text);color:var(--error-text);border-radius:18px;padding:6px 22px;font:900 34px/1.35 "NotoKufiArabic";transform:rotate(-5deg)}
+.bigstamp.civ{border-color:var(--role-civ);color:var(--role-civ)}.bigstamp.draw{border-color:var(--text);color:var(--text);border-style:dashed}
+.plaque{background:var(--surface);border:2.5px solid var(--border-strong);border-radius:20px;padding:14px 20px;display:flex;flex-direction:column;align-items:center;gap:2px;box-shadow:4px 4px 0 var(--shadow)}
+/* phone */
+.phone{width:360px;height:720px;border-radius:28px;border:8px solid #0A0F1C;overflow:hidden;position:relative;background:var(--pub-bg);flex:none}
+.screen{position:absolute;inset:0;padding:24px 24px 24px;display:flex;flex-direction:column;gap:16px;direction:rtl;background:var(--bg);color:var(--text)}
+.screen .grow{flex:1}
+.carbon-sheet{position:absolute;inset:0;transform:translateY(100%);transition:transform 520ms cubic-bezier(.2,0,0,1)}
+.carbon-sheet.up{transform:none}
+@media (prefers-reduced-motion:reduce){.carbon-sheet{transition:opacity 140ms linear;transform:none;opacity:0;pointer-events:none}.carbon-sheet.up{opacity:1;pointer-events:auto}.dots i{animation:none}}
+.fade{animation:fade .14s linear both}@keyframes fade{from{opacity:0}to{opacity:1}}
+.center{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px}
+.dl{font:900 48px/1.3 "NotoKufiArabic";max-width:100%;overflow-wrap:anywhere}.dl.m{font-size:36px}.dl.sm{font-size:32px}
+.note{font-size:13px;background:#FFF4D6;border-radius:8px;padding:8px 12px;color:#4a3a00}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>Tesskra — component reference</h1>
+<p>Stage 2 design foundation for Impostor TN. Every value on this page comes from <code>docs/design/tokens/*.json</code>. Paper theme is for public screens; carbon theme is for private screens. All Arabic text is provisional and awaits Derja review (see <code>docs/ARABIC_LOCALIZATION.md</code>).</p>
+</header>
+
+<section data-shot="01_colors">
+<h2>1 · Colour system</h2>
+<div class="row">__SWATCHES__</div>
+</section>
+
+<section data-shot="02_type">
+<h2>2 · Typography</h2>
+<p>Display: Noto Kufi Arabic (800, 900). Text: IBM Plex Sans Arabic (400 to 700). Both include the Tunisian letters ڨ ڤ پ, which Lalezar and Almarai (Stage 1) do not.</p>
+<table>__TYPE_ROWS__</table>
+</section>
+
+<section data-shot="03_buttons">
+<h2>3 · Buttons</h2>
+<div class="stage public">
+<div class="cell w"><button class="btn primary">طرح جديد</button><span class="spec">primary · default</span></div>
+<div class="cell w"><button class="btn primary pressed">طرح جديد</button><span class="spec">primary · pressed (moves by shadow offset)</span></div>
+<div class="cell w"><button class="btn primary disabled" disabled>هيّا نبداو</button><span class="spec">primary · disabled</span></div>
+<div class="cell w"><button class="btn primary focus">طرح جديد</button><span class="spec">primary · keyboard focus</span></div>
+<div class="cell w"><button class="btn accent">طرح آخر</button><span class="spec">accent (mustard) · replay, positive secondary</span></div>
+<div class="cell w"><button class="btn secondary">كيفاش تتلعب؟</button><span class="spec">secondary</span></div>
+<div class="cell w"><button class="btn secondary pressed">كيفاش تتلعب؟</button><span class="spec">secondary · pressed</span></div>
+<div class="cell w"><button class="btn danger">__IC:trash__ فسّخ اللعّاب</button><span class="spec">destructive</span></div>
+<div class="cell w"><button class="btn text">ارجع</button><span class="spec">text button</span></div>
+<div class="cell"><div style="display:flex;gap:12px"><button class="iconbtn" aria-label="settings">__IC:settings__</button><button class="iconbtn" aria-label="back">__IC:arrow_right__</button><button class="iconbtn ghost" aria-label="close">__IC:x__</button></div><span class="spec">icon buttons 48 · back arrow points right in RTL</span></div>
+</div>
+<div class="stage private">
+<div class="cell w"><button class="btn primary">ورّيني دوري</button><span class="spec" style="color:#B4BACB">private primary · mustard, flat</span></div>
+<div class="cell w"><button class="btn primary pressed">ورّيني دوري</button><span class="spec" style="color:#B4BACB">pressed</span></div>
+<div class="cell w"><button class="btn primary disabled" disabled>فهمت، خبّي</button><span class="spec" style="color:#B4BACB">disabled (acknowledge locked for 800 ms)</span></div>
+<div class="cell w"><button class="btn secondary">ارجع</button><span class="spec" style="color:#B4BACB">private secondary</span></div>
+</div>
+</section>
+
+<section data-shot="04_inputs">
+<h2>4 · Inputs and selection controls</h2>
+<div class="stage public">
+<div class="field w"><label>اسم اللعّاب</label><div class="input ph">مثلا: سلمى</div><div class="help"><span>حتى 16 حرف</span><span dir="ltr">0 / 16</span></div><span class="spec">empty</span></div>
+<div class="field w"><label>اسم اللعّاب</label><div class="input focused"><span>ڨمر</span><span class="caret"></span></div><div class="help"><span>حتى 16 حرف</span><span dir="ltr">3 / 16</span></div><span class="spec">focused · caret on the left of RTL text</span></div>
+<div class="field w"><label>اسم اللعّاب</label><div class="input err">سلمى</div><div class="help err">__ICS:alert__ الاسم هذا موجود</div><span class="spec">error: duplicate name (icon + text, not colour alone)</span></div>
+<div class="cell w"><div class="line"><span>الصوت</span><span class="switch on"></span></div><div class="line"><span>الاهتزاز</span><span class="switch"></span></div><span class="spec">switch on / off · thumb travels left when on (RTL)</span></div>
+<div class="cell w"><div class="line"><span>ماكلة تونسية</span><span class="check on">__ICS:check__</span></div><div class="line"><span>بلايص</span><span class="check"></span></div><span class="spec">checkbox · multi-select</span></div>
+<div class="cell w"><div class="line"><span>سلمى</span><span class="radio on"></span></div><div class="line"><span>ياسين</span><span class="radio"></span></div><span class="spec">radio · single-select</span></div>
+</div>
+</section>
+
+<section data-shot="05_players_packs">
+<h2>5 · Players and word packs</h2>
+<div class="stage public">
+<div class="cell w">
+<div class="card"><span class="badge">1</span><span class="name">سلمى</span><button class="iconbtn ghost" aria-label="edit">__IC:pencil__</button></div>
+<div class="card"><span class="badge">2</span><span class="name">عبد الرحمان بن عاشور الطرابلسي</span><button class="iconbtn ghost" aria-label="edit">__IC:pencil__</button></div>
+<div class="card dashed">__IC:plus__ زيد لعّاب</div>
+<span class="spec">player row 64 · one trailing action (edit; delete lives in the edit sheet) · long names truncate with ellipsis · add row</span>
+</div>
+<div class="cell w">
+<div style="display:flex;justify-content:space-between;align-items:center"><span class="h-title" style="font-size:22px">اللعّابة</span><span class="pill">3 / 12</span></div>
+<div class="banner warn">__IC:alert__<span>لازمكم 4 لعّابة على الأقل</span></div>
+<span class="spec">count pill + validation banner (blocks start)</span>
+<div class="state"><span class="big">__IC:users__</span><b style="font-size:20px">مازال ما فمّا حتى لعّاب</b><span style="color:var(--text2)">زيد 4 لعّابة باش تبداو</span></div>
+<span class="spec">empty state</span>
+</div>
+<div class="cell w">
+<div class="card pack sel"><div style="flex:1"><div class="t">ماكلة تونسية</div><div class="m">60 كلمة</div></div><span class="stamp">__ICS:check__ مختار</span></div>
+<div class="card pack"><div style="flex:1"><div class="t">بلايص</div><div class="m">48 كلمة</div></div><span class="check"></span></div>
+<div class="card pack off"><div style="flex:1"><div class="t">كورة</div><div class="m">باكو مسكّر</div></div><span class="stamp ink">__ICS:lock__ مسكّر</span></div>
+<div class="card pack off"><div style="flex:1"><div class="t">أمثال</div><div class="m">ما فيه حتى كلمة</div></div>__IC:alert__</div>
+<span class="spec">pack: selected · available · locked (premium) · empty/unavailable</span>
+</div>
+</div>
+</section>
+
+<section data-shot="06_feedback">
+<h2>6 · Dialogs, sheets, feedback and navigation</h2>
+<div class="stage public">
+<div class="cell w"><div class="dialog"><h3>تخرج من الطرح؟</h3><p>الطرح الحالي يتفسّخ وما تنجّمش ترجّعو.</p><button class="btn danger">أخرج</button><button class="btn secondary">كمّل اللعب</button></div><span class="spec">confirmation dialog · safe action last and closest to thumb</span></div>
+<div class="cell w"><div class="sheet"><span class="grab"></span><h3 class="h-title" style="font-size:22px">بدّل الاسم</h3><div class="input">ياسين</div><button class="btn primary">أكّد</button><button class="btn danger">__IC:trash__ فسّخ اللعّاب</button></div><span class="spec">edit-player bottom sheet · sits above the keyboard</span></div>
+<div class="cell w"><div class="banner">__IC:info__<span>الطرح توقّف. كمّلوا من وين وصلتوا.</span></div><div class="banner err">__IC:alert__<span>صار مشكل. عاود مرّة أخرى.</span></div><span class="spec">info and error banners</span>
+<div class="state"><span class="dots"><i></i><i></i><i></i></span><span>لحظة…</span></div><span class="spec">loading</span></div>
+<div class="cell w"><div class="appbar"><button class="iconbtn ghost" aria-label="back">__IC:arrow_right__</button><span class="h-title">طرح جديد</span><span class="pill">1 / 3</span></div><span class="spec">app bar 56 · back on the right, step pill on the left</span>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><span class="chip">__ICS:message_circle__ التلميحات</span><span class="chip">__ICS:vote__ التصويت</span></div><span class="spec">phase chips</span></div>
+</div>
+</section>
+
+<section data-shot="07_private">
+<h2>7 · Private components: handoff, role ticket, voting</h2>
+<p>Civilian and Impostor tickets share one structure, one colour set and one sound. Role colours never appear here.</p>
+<div class="stage private">
+<div class="cell w"><div class="center" style="padding:16px 0"><span style="color:var(--text2);font-size:18px">أعطي التليفون لـ</span><span class="dl">سلمى</span><span class="pill">2 / 6</span></div><button class="btn primary">أنا سلمى</button><span class="spec" style="color:#B4BACB">neutral handoff block</span></div>
+<div class="cell w"><div class="ticket"><div class="top"><div><div class="lbl">دور</div><div class="role">سلمى</div></div><span class="rs">__IC:lock__</span></div><div class="perf"></div><div class="bot"><div class="seal">__IC:eye_off__<span>الدور مخبّي</span></div></div></div><span class="spec" style="color:#B4BACB">ticket · sealed</span></div>
+<div class="cell w"><div class="ticket"><div class="top"><div><div class="lbl">دورك</div><div class="role">مدني</div></div><span class="rs">__IC:user__</span></div><div class="perf"></div><div class="bot"><div class="lbl">الكلمة السرّية</div><div class="word">بريك</div><span class="chip">الصنف: ماكلة</span></div></div><span class="spec" style="color:#B4BACB">ticket · revealed, Civilian</span></div>
+<div class="cell w"><div class="ticket"><div class="top"><div><div class="lbl">دورك</div><div class="role">إمبوستور</div></div><span class="rs">__IC:user__</span></div><div class="perf"></div><div class="bot"><div class="lbl">الصنف برك</div><div class="word">ماكلة</div><span class="chip">ما تعرفش الكلمة</span></div></div><span class="spec" style="color:#B4BACB">ticket · revealed, Impostor (same silhouette)</span></div>
+<div class="cell w">
+<div class="vote"><span class="radio"></span><span class="name">ياسين</span></div>
+<div class="vote sel"><span class="radio on"></span><span class="name">عبد الرحمان بن عاشور الطرابلسي</span></div>
+<div class="vote dis"><span class="radio" style="border-color:var(--text-disabled)"></span><span class="name">سلمى</span><span style="font-size:13px">إنتي</span></div>
+<span class="spec" style="color:#B4BACB">vote option: default · selected · unavailable (self-vote rule to be confirmed against PRD)</span></div>
+</div>
+</section>
+
+<section data-shot="08_results">
+<h2>8 · Results components (public)</h2>
+<div class="stage public">
+<div class="cell w"><div class="winner"><span class="bigstamp civ">المدنيين ربحوا</span></div><div class="winner"><span class="bigstamp">الإمبوستور ربح</span></div><div class="winner"><span class="bigstamp draw">تعادل</span></div><span class="spec">winner stamps: blue solid · red solid · ink dashed (text + border style, not colour alone)</span></div>
+<div class="cell w"><div class="plaque"><span style="font-size:13px;font-weight:500;color:var(--text2)">الكلمة السرّية</span><span class="word m">بريك</span><span class="chip">الصنف: ماكلة</span></div><span class="spec">secret word plaque</span>
+<div class="card"><span class="badge">1</span><span class="name">سلمى</span><span class="rolestamp civ">__ICS:user__ مدني</span></div>
+<div class="card"><span class="badge">2</span><span class="name">ياسين</span><span class="rolestamp imp">__ICS:eye_off__ إمبوستور</span></div>
+<span class="spec">role reveal rows</span></div>
+<div class="cell w">
+<div class="tally"><span class="name">ياسين</span><span class="marks"><i></i><i></i><i></i></span><span class="num">3</span></div>
+<div class="tally"><span class="name">عبد الرحمان بن عاشور</span><span class="marks"><i></i><i></i><i></i></span><span class="num">3</span></div>
+<div class="tally"><span class="name">سلمى</span><span class="marks"></span><span class="num">0</span></div>
+<div class="banner warn">__IC:equal__<span>تعادل في الأصوات. نعاودو التصويت بيناتهم.</span></div>
+<span class="spec">vote tally rows + tie banner (leads to runoff)</span></div>
+</div>
+</section>
+
+<section>
+<h2>9 · Working demo: paper to carbon, tap to reveal, acknowledge</h2>
+<p>This demo is interactive. It shows three players on a 360 × 720 screen. It is a design reference for the reveal mechanics only, not application code, and gameplay rules still have to be checked against PRD v0.3.</p>
+<div class="row">
+<div class="phone" id="phone"><div class="screen public" id="paper"></div><div class="carbon-sheet" id="sheet"><div class="screen private" id="carbon"></div></div></div>
+<div class="cell" style="max-width:420px">
+<button class="btn secondary" id="interrupt" style="width:auto">Simulate app interruption</button>
+<div class="note">Interrupting at any point returns to the neutral handoff for the current player. The role is never shown again without a new deliberate tap.</div>
+<table>
+<tr><th>Step</th><th>Rule</th></tr>
+<tr><td>Paper to carbon</td><td>Carbon sheet slides up (520 ms). Nothing secret is rendered during the slide.</td></tr>
+<tr><td>Handoff</td><td>Shows only the next player's name and position.</td></tr>
+<tr><td>Sealed ticket</td><td>One deliberate tap on a labelled button reveals. No hold gesture.</td></tr>
+<tr><td>Revealed</td><td>Stays until acknowledged. Acknowledge is locked for 800 ms and sits where the reveal button was not, to stop double-tap skipping.</td></tr>
+<tr><td>Acknowledge</td><td>Secret content is removed in the same frame, then the next handoff appears.</td></tr>
+</table>
+<div class="spec" id="statelabel"></div>
+</div>
+</div>
+</section>
+</main>
+<script>
+const IC=__ICONS_JSON__;
+const ic=n=>'<span class="ic">'+IC[n]+'</span>';
+const players=[{n:'سلمى',imp:false},{n:'ياسين',imp:true},{n:'عبد الرحمان بن عاشور',imp:false}];
+const word='بريك',cat='ماكلة';
+let st='setup',i=0,lockT=null;
+const paper=document.getElementById('paper'),carbon=document.getElementById('carbon'),sheet=document.getElementById('sheet'),lab=document.getElementById('statelabel');
+const dl=n=>'<span class="dl '+(n.length>12?'sm':n.length>7?'m':'')+'">'+n+'</span>';
+function ticket(p,open){
+  const top='<div class="top"><div><div class="lbl">'+(open?'دورك':'دور')+'</div><div class="role">'+(open?(p.imp?'إمبوستور':'مدني'):p.n)+'</div></div><span class="rs">'+ic(open?'user':'lock')+'</span></div><div class="perf"></div>';
+  const bot=open?'<div class="bot fade"><div class="lbl">'+(p.imp?'الصنف برك':'الكلمة السرّية')+'</div><div class="word">'+(p.imp?cat:word)+'</div><span class="chip">'+(p.imp?'ما تعرفش الكلمة':'الصنف: '+cat)+'</span></div>':'<div class="bot"><div class="seal">'+ic('eye_off')+'<span>الدور مخبّي</span></div></div>';
+  return '<div class="ticket">'+top+bot+'</div>';
+}
+function render(){
+  clearTimeout(lockT);const p=players[i];
+  lab.textContent='state: '+st+(st!=='setup'&&st!=='clues'?' · player '+(i+1)+' of '+players.length:'');
+  sheet.classList.toggle('up',!(st==='setup'||st==='clues'));
+  if(st==='setup')paper.innerHTML='<div class="appbar"><span class="h-title">طرح جديد</span><span class="pill">3 / 3</span></div><div class="card"><span class="badge">3</span><span class="name">لعّابة</span></div><div class="card pack sel"><div style="flex:1"><div class="t">ماكلة تونسية</div><div class="m">60 كلمة</div></div><span class="stamp">مختار</span></div><div class="grow"></div><button class="btn primary" data-go="handoff">هيّا نبداو</button>';
+  if(st==='clues')paper.innerHTML='<div class="appbar"><span class="h-title">التلميحات</span></div><div class="grow"></div><div class="center"><span class="bigstamp draw" style="font-size:26px">الكل شافوا دورهم</span><span style="font-size:18px">حطّوا التليفون في الوسط.</span></div><div class="grow"></div><button class="btn accent" data-go="restart">عاود الديمو</button>';
+  if(st==='handoff')carbon.innerHTML='<div class="grow"></div><div class="center"><span style="color:var(--text2);font-size:18px">أعطي التليفون لـ</span>'+dl(p.n)+'<span class="pill">'+(i+1)+' / '+players.length+'</span></div><div class="grow"></div><button class="btn primary" data-go="sealed">أنا '+p.n+'</button>';
+  if(st==='sealed')carbon.innerHTML='<div class="hint">'+ic('eye_off')+'<span>ما يشوف حد غيرك</span></div>'+ticket(p,false)+'<div class="grow"></div><button class="btn primary" data-go="revealed">ورّيني دوري</button>';
+  if(st==='revealed'){carbon.innerHTML='<div class="hint">'+ic('eye_off')+'<span>ما يشوف حد غيرك</span></div>'+ticket(p,true)+'<button class="btn primary" id="ack" disabled data-go="ack">فهمت، خبّي</button><div class="grow"></div>';lockT=setTimeout(()=>{const a=document.getElementById('ack');if(a)a.disabled=false},800);}
+}
+document.getElementById('phone').addEventListener('click',e=>{
+  const b=e.target.closest('[data-go]');if(!b||b.disabled)return;const g=b.dataset.go;
+  if(g==='restart'){i=0;st='setup'}
+  else if(g==='ack'){carbon.innerHTML='';if(i<players.length-1){i++;st='handoff'}else{st='clues'}}
+  else st=g;
+  render();
+});
+document.getElementById('interrupt').addEventListener('click',()=>{if(st==='sealed'||st==='revealed'){carbon.innerHTML='';st='handoff';render()}});
+render();
+</script>
+</body>
+</html>

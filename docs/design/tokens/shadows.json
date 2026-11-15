@@ -1,0 +1,52 @@
+{
+  "$description": "Tesskra uses hard offset shadows with zero blur (print mis-registration), never soft elevation. Offsets are physical and are NOT mirrored in RTL. The private theme uses no shadows except on the ticket.",
+  "public": {
+    "none": {
+      "x": 0,
+      "y": 0,
+      "blur": 0,
+      "color": "{public.shadow}"
+    },
+    "sm": {
+      "x": 3,
+      "y": 3,
+      "blur": 0,
+      "color": "{public.shadow}"
+    },
+    "md": {
+      "x": 4,
+      "y": 4,
+      "blur": 0,
+      "color": "{public.shadow}"
+    },
+    "lg": {
+      "x": 6,
+      "y": 6,
+      "blur": 0,
+      "color": "{public.shadow}"
+    }
+  },
+  "private": {
+    "none": {
+      "x": 0,
+      "y": 0,
+      "blur": 0,
+      "color": "{private.shadow}"
+    },
+    "ticket": {
+      "x": 0,
+      "y": 6,
+      "blur": 0,
+      "color": "{private.shadow}"
+    }
+  },
+  "usage": {
+    "buttonPrimary": "public.md",
+    "buttonSecondary": "public.none",
+    "card": "public.none",
+    "cardSelected": "public.sm",
+    "dialog": "public.lg",
+    "heroTicket": "public.lg",
+    "pressed": "Translate the element by the shadow offset and set shadow to none."
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "$description": "4-pt scale, logical px.",
+  "scale": {
+    "0": 0,
+    "1": 4,
+    "2": 8,
+    "3": 12,
+    "4": 16,
+    "5": 20,
+    "6": 24,
+    "8": 32,
+    "10": 40,
+    "12": 48,
+    "16": 64
+  },
+  "layout": {
+    "screenMarginH": 24,
+    "screenMarginHCompact": 16,
+    "compactBreakpointWidth": 360,
+    "screenPaddingTop": 16,
+    "screenPaddingBottom": 24,
+    "sectionGap": 24,
+    "itemGap": 12,
+    "cardPadding": 16,
+    "cardPaddingLarge": 20,
+    "ticketPadding": 20,
+    "dialogPadding": 24,
+    "maxContentWidth": 480
+  },
+  "sizes": {
+    "touchTargetMin": 48,
+    "buttonPrimaryHeight": 60,
+    "buttonSecondaryHeight": 52,
+    "buttonCompactHeight": 44,
+    "iconButton": 48,
+    "icon": 24,
+    "iconSmall": 20,
+    "inputHeight": 56,
+    "playerRowHeight": 64,
+    "voteOptionHeight": 64,
+    "appBarHeight": 56,
+    "badge": 40,
+    "stampSmall": 56,
+    "stampLarge": 96,
+    "ticketNotchDiameter": 24
+  },
+  "borders": {
+    "hairline": 1.5,
+    "standard": 2.5,
+    "strong": 3.5,
+    "dashLength": 8,
+    "dashGap": 6
+  }
+}

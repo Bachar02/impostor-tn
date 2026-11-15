@@ -1,0 +1,167 @@
+{
+  "$description": "Durations in ms. Curves are cubic-bezier control points (Flutter Cubic(a,b,c,d)). When Android 'remove animations' / MediaQuery.disableAnimations is on, use the reducedMotion values.",
+  "durations": {
+    "instant": 80,
+    "fast": 140,
+    "base": 220,
+    "slow": 360,
+    "reveal": 420,
+    "themeShift": 520,
+    "stagger": 40
+  },
+  "curves": {
+    "standard": [
+      0.2,
+      0,
+      0,
+      1
+    ],
+    "enter": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "exit": [
+      0.3,
+      0,
+      1,
+      1
+    ],
+    "stamp": [
+      0.34,
+      1.56,
+      0.64,
+      1
+    ],
+    "linear": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "named": {
+    "buttonPress": {
+      "duration": "instant",
+      "curve": "standard",
+      "effect": "translate by shadow offset, shadow to none",
+      "haptic": "light",
+      "sound": null
+    },
+    "buttonRelease": {
+      "duration": "fast",
+      "curve": "standard",
+      "effect": "return to rest"
+    },
+    "stampIn": {
+      "duration": 280,
+      "curve": "stamp",
+      "effect": "scale 1.6 to 1, opacity 0 to 1, final rotation -6deg",
+      "haptic": "medium",
+      "sound": "sfx_stamp"
+    },
+    "carbonIn": {
+      "duration": "themeShift",
+      "curve": "standard",
+      "effect": "carbon sheet slides up from bottom edge to cover paper; private content fades in over last 140ms",
+      "haptic": null,
+      "sound": "sfx_paper_slide",
+      "reducedMotion": {
+        "duration": 140,
+        "effect": "cross-fade"
+      }
+    },
+    "carbonOut": {
+      "duration": "themeShift",
+      "curve": "standard",
+      "effect": "private content removed first (same frame), then carbon sheet slides down to uncover paper",
+      "reducedMotion": {
+        "duration": 140,
+        "effect": "cross-fade"
+      }
+    },
+    "ticketReveal": {
+      "duration": "reveal",
+      "curve": "enter",
+      "effect": "seal strip lifts off (translate up 24, fade); secret content fades in only after the seal is gone (last 120ms)",
+      "haptic": "medium",
+      "sound": "sfx_ticket_tear",
+      "reducedMotion": {
+        "duration": 120,
+        "effect": "fade"
+      }
+    },
+    "ticketHide": {
+      "duration": 0,
+      "effect": "secret content is removed from the tree in the same frame as the acknowledgement; only the empty sealed ticket animates out",
+      "haptic": "light",
+      "sound": null
+    },
+    "screenPush": {
+      "duration": "base",
+      "curve": "standard",
+      "effect": "new screen slides in from the left edge in RTL (Flutter default RTL page transition), 24px + fade"
+    },
+    "listItemIn": {
+      "duration": "base",
+      "curve": "enter",
+      "effect": "fade + 8px rise, stagger per item, max 6 items staggered"
+    },
+    "listItemOut": {
+      "duration": "fast",
+      "curve": "exit",
+      "effect": "fade + collapse height"
+    },
+    "selection": {
+      "duration": "fast",
+      "curve": "standard",
+      "effect": "border/ fill change + check stamp scales in",
+      "haptic": "selection"
+    },
+    "errorShake": {
+      "duration": 240,
+      "curve": "standard",
+      "effect": "horizontal 6px shake x2",
+      "haptic": "error",
+      "reducedMotion": {
+        "duration": 0,
+        "effect": "none, show message only"
+      }
+    },
+    "voteTally": {
+      "duration": "slow",
+      "curve": "enter",
+      "effect": "vote stamps appear one at a time per ballot, 160ms apart",
+      "haptic": "light per stamp",
+      "sound": "sfx_stamp_soft"
+    },
+    "winnerReveal": {
+      "duration": 600,
+      "curve": "stamp",
+      "effect": "result stamp slams in, then headline rises",
+      "haptic": "heavy",
+      "sound": "sfx_win_civilians | sfx_win_impostor | sfx_draw",
+      "reducedMotion": {
+        "duration": 140,
+        "effect": "fade"
+      }
+    },
+    "dialogIn": {
+      "duration": "base",
+      "curve": "enter",
+      "effect": "scrim fade + dialog scale 0.96 to 1"
+    },
+    "sheetIn": {
+      "duration": "slow",
+      "curve": "enter",
+      "effect": "slide up from bottom"
+    }
+  },
+  "privacyRules": [
+    "No animation may render the secret word, category or role outside the fully revealed state.",
+    "No hero/shared-element transitions on private screens.",
+    "No decorative looping animation on handoff screens.",
+    "Sounds on private screens must be identical for Civilian and Impostor."
+  ]
+}
