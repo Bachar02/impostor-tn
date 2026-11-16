@@ -4,6 +4,8 @@ Status: **DRAFT for Product Owner review (Stage 3).** Written against PRD v0.3 a
 
 Companion documents: `SCREEN_SPECIFICATIONS.md` (what each screen contains) and `UX_RESEARCH_AND_RISKS.md` (assumptions, risks, validation plan).
 
+Revision 2 (2026-11-16, consistency audit): §3 now defines retry safety, restore checks, the final-guess text forms and word selection; replay is one atomic step (C9); F10 and F11 are complete tables. Summary of changes: `UX_RESEARCH_AND_RISKS.md` §7.
+
 ## 1. Screen inventory
 
 Fourteen screens and two overlays cover the whole MVP. A "screen" is a distinct destination; everything else is a state of one of them. The earlier estimate of 47 counted states as screens.
@@ -64,16 +66,72 @@ The app advances only after the listed data is saved in one transaction (PRD §1
 | # | Checkpoint | Trigger | Saved |
 |---|---|---|---|
 | C0 | Roster and packs | Any edit in PUB-05 / PUB-06 | Player names, order, selected packs (retained for replay, PRD §4) |
-| C1 | Start game | Primary button on PUB-06; "play again" on PUB-09 | New session: player snapshot, selected packs, Impostor, secret word reference, phase = reveal |
-| C2 | Consume word | First "I am {name}" tap of the game on PRV-01 | Word ID added to the cooldown, once (**Q-16**) |
+| C1 | Start game | Primary button on PUB-06 | New session: player snapshot, selected packs, Impostor, secret word reference, phase = reveal, word not yet consumed |
+| C2 | Consume word | An "I am {name}" tap on PRV-01 during the reveal phase while the session's word is not marked consumed (normally the first tap of the game) | The word moved to the newest position of the cooldown and the session marked "word consumed", together (**Q-16**) |
 | C3 | Acknowledge | "Got it, hide" on PRV-02 | That player's acknowledgement; after the last one, phase = discussion |
 | C4 | Open voting | Primary button on PUB-07 | Phase = first ballot |
 | C5 | Submit vote | Confirm on PRV-03 (first ballot) | The vote; after the last one, the outcome: phase = runoff, final guess or result |
 | C6 | Submit runoff vote | Confirm on PRV-03 (runoff) | The vote; after the last one, the outcome: phase = final guess or result |
-| C7 | Submit final guess | Final confirmation on PRV-04 | Normalized guess, correct/incorrect, phase = result |
-| C8 | End session | Play again, change setup, home, leave game | Session deleted; roster, packs, cooldown and settings kept |
+| C7 | Submit final guess | Final confirmation on PRV-04 | The guess exactly as typed, correct/incorrect, phase = result (§3.3) |
+| C8 | End session | Change setup, home, leave game | Session deleted; roster, packs, cooldown and settings kept |
+| C9 | Replace session | "Play again" on PUB-09 | In one transaction: the finished session deleted and a new one created as in C1. If no word can be chosen or the save fails, nothing changes and the finished result is still there |
 
-Why C2 is separate from C1: PRD §10 requires the word to be recorded "before the first private role reveal is prepared" and also that "a game abandoned before the first reveal must not consume a word". A group that starts a game and leaves from the very first handoff has not prepared a reveal, so nothing may be consumed yet. Recording on the first "I am {name}" satisfies both sentences. This is an interpretation and is listed as Q-16.
+### 3.1 Retrying and duplicates
+
+A save can fail, be retried, or be interrupted by the process dying. Three rules make every checkpoint safe to repeat:
+
+1. Before writing, the app re-reads the saved state. If the thing it is about to save is already there, it writes nothing and continues as if the save had just succeeded.
+2. The store itself refuses duplicates (one acknowledgement per player, one vote per voter per ballot, one guess per session, one cooldown entry per word), so a programming slip cannot double-count either.
+3. Everything a checkpoint saves is written in one transaction: either all of it is there afterwards or none of it.
+
+| Checkpoint | Process dies before the save completes | Process dies after it completes | Retry after an error |
+|---|---|---|---|
+| C1 | No session exists; the group is back at Home with the roster kept | Session exists; resume gate, then the first handoff | A second start cannot happen: the first successful one left the packs screen |
+| C2 | Word not consumed; the next "I am {name}" in the reveal phase runs C2 again | Word consumed and marked; C2 never runs again for this session | Same tap again; the "consumed" mark prevents a second entry |
+| C3 | That player has no acknowledgement and reveals again (PRD §5 allows this) | Flow resumes at the next player without an acknowledgement | Retry saves the same player's acknowledgement once; the role is not shown again |
+| C4 | Phase is still discussion | Phase is first ballot; the first handoff | Harmless to repeat |
+| C5, C6 | That voter has no vote in the ballot and votes again | Flow resumes at the next voter without a vote, or at the tally if it was the last | If a vote by this voter already exists in this ballot, it stands; nothing is written |
+| C7 | No guess saved; the Impostor gets the handoff and types again | Result | If a guess is already saved, it stands; nothing is written |
+| C8, C9 | The old session still exists and is resumed or shown | Old session gone (and, for C9, the new one exists) | Harmless to repeat |
+
+The last acknowledgement and the change to the discussion phase are one save; so are the last vote of a ballot and its outcome. There is never a moment in which all votes are saved but the outcome is not.
+
+### 3.2 What a restore checks, and what it never does
+
+A saved session is accepted only if all of this holds; otherwise it is cancelled (F1 step 3):
+
+- 4 to 12 players; exactly one of them is the Impostor; the word reference exists in the bundled content.
+- Acknowledgements belong to players of the session and form an unbroken run from the first player in order. A gap means the data is damaged; the app does not guess.
+- Votes belong to the current session; no voter appears twice in a ballot; nobody voted for themselves; runoff votes name only tied players.
+- The phase agrees with the data (for example "discussion" requires every acknowledgement).
+
+A restore never draws a new Impostor or word, never fills in a missing acknowledgement or vote, and never moves past a player who has not acknowledged: the next player is always the first one in order without a saved acknowledgement (or vote).
+
+### 3.3 The final guess: what is stored, compared and shown
+
+| Form | Definition | Used for |
+|---|---|---|
+| Raw | The text exactly as it is in the field at the final confirmation, character for character | Stored (C7). Nothing else about the guess is stored except the outcome |
+| Display | Raw with leading and trailing spaces removed. Nothing else changed | Shown in the review state of PRV-04 and on PUB-09, so the table sees exactly what the Impostor confirmed |
+| Comparison | Raw with leading and trailing spaces removed and each run of spaces inside reduced to one (D-01). Nothing else: no change to letters, diacritics, tatweel or letter case | Compared, character for character, with the comparison form of the canonical word and of each alias. Equal to any of them → correct |
+
+Three details of "nothing else" are not settled by D-01 and are listed in Q-26: which characters count as spaces, whether invisible formatting characters are removed, and whether both sides are brought to the same Unicode composition form. Until decided, the strict reading applies (only the ordinary space counts; nothing is removed).
+
+### 3.4 Word selection and the cooldown (PRD §10)
+
+- Candidates: the approved, published words of the selected packs.
+- Eligible: candidates that are not among the 30 most recently used words.
+- If at least one word is eligible, one is drawn from the eligible words.
+- If none is eligible, the cooldown is released from its oldest entry forward, one entry at a time, until an entry is a candidate; that word is used. In effect the least recently used candidate comes back. This takes at most 30 steps and involves no chance.
+- Releasing does not delete anything from the cooldown; it only decides this one selection. (An engineering detail that needs confirming with ADR-0003.)
+- The word is written to the cooldown at C2, as its newest entry. If it was already in the list (the release case), it moves to the newest position instead of appearing twice.
+- If the selected packs contain no approved word at all, starting fails with a clear message (PUB-06). This cannot be caused by the cooldown.
+
+The player sees none of this. Pack cards show the total of approved words, never the eligible number (Q-27).
+
+### 3.5 Why C2 is separate from C1
+
+PRD §10 requires the word to be recorded "before the first private role reveal is prepared" and also that "a game abandoned before the first reveal must not consume a word". A group that starts a game and leaves from the very first handoff has not prepared a reveal, so nothing may be consumed yet. Recording on the first "I am {name}" satisfies both sentences. This is an interpretation and is listed as Q-16.
 
 ## 4. Flows
 
@@ -99,7 +157,7 @@ Why C2 is separate from C1: PRD §10 requires the word to be recorded "before th
 3. PUB-05 → PUB-06: choose one or more packs. Only packs with approved, available words can be selected (PRD §10). Retained selections are pre-ticked if still available.
 4. PUB-06 "let's start" → C1.
    - Success → paper-to-carbon transition → PRV-01 for player 1.
-   - No eligible approved word (after cooldown release, PRD §10) → error banner on PUB-06; nothing is created.
+   - The selection contains no approved word (§3.4; the cooldown alone can never cause this) → error banner on PUB-06; nothing is created.
    - Save failure → error banner; retry.
 
 Validation (PRD §4): fewer than 4 or more than 12 players, an empty name, a duplicate name, or no available pack each block progress with a visible reason next to the problem. Name length and duplicate rules are Q-01.
@@ -115,7 +173,7 @@ For each player in order:
 4. **Acknowledge.** The secret leaves the screen in the same frame as the tap. C3 runs while the ticket is already sealed again and the button shows its loading state.
    - Saved, more players → PRV-01 for the next player.
    - Saved, last player → carbon-to-paper transition → PUB-07.
-   - Save failure → error banner on the sealed ticket with "retry". Retrying repeats C3 only; it does not show the role again unless the player taps "show me my role".
+   - Save failure → error banner on the sealed ticket with "retry". Retrying repeats C3 only and never shows the role again. If saving keeps failing, system back offers to leave the game.
 
 Interruptions are covered in F9.
 
@@ -169,10 +227,10 @@ With two tied candidates each of them can only vote for the other; the remaining
 1. PUB-08 has just told the table that the nominee is the Impostor. This public statement is unavoidable: the PRD gives the guess only to a nominated Impostor, so handing them the phone reveals it. The secret word stays hidden.
 2. PRV-01 Handoff for the Impostor.
 3. **PRV-04, entry.** One text field. "Confirm" is disabled while the field is empty or only spaces.
-4. **PRV-04, review.** The typed guess is shown large with "yes, this is my answer" and "change it". This guards a one-shot, irreversible input against typos (**Q-22**).
+4. **PRV-04, review.** The guess is shown large, in its display form (§3.3), with "yes, this is my answer" and "change it". This guards a one-shot, irreversible input against typos (**Q-22**).
 5. Final confirmation → C7 → carbon-to-paper transition → PUB-09.
 
-Matching (D-01): trim, collapse repeated spaces, then exact comparison with the canonical word and its aliases. Nothing else is normalized. The app gives no hint, no character count of the answer and no "close" feedback.
+Matching uses the comparison form defined in §3.3 (D-01). The app gives no hint, no character count of the answer and no "close" feedback.
 
 ### F9 — Results and replay (PRD §8, §9)
 
@@ -187,31 +245,53 @@ PUB-09 reveals, in this order: the winner, the secret word and category, the fin
 
 Actions:
 
-- **Play again** → C8 then C1 with the same players, order and packs → PRV-01. If no eligible word exists, the error appears on PUB-09 and the finished result stays visible.
+- **Play again** → C9 with the same players, order and packs → PRV-01. If it fails, the error appears on PUB-09 and the finished result is untouched, because C9 changes nothing unless it succeeds completely.
 - **Change players or packs** → C8 → PUB-05.
 - **Home** → C8 → PUB-01.
 
 No scores are kept (PRD §9).
 
-### F10 — Leaving a game
+### F10 — System back, and leaving a game
 
-- Public in-game screens (PUB-07, PUB-08) have a close button that opens OVL-02. On PUB-09 the game is already over, so "home" needs no confirmation.
-- On every in-game screen, system back opens OVL-02 instead of navigating, with two exceptions: on PRV-02 sealed and PRV-03 it behaves like the "back" button (return to the handoff), and on PRV-02 revealed and while a checkpoint is saving it does nothing.
+| Screen and state | System back |
+|---|---|
+| PUB-01 | Leaves the app |
+| PUB-02 | Same as its button: PUB-01 (and marks the tutorial as seen on first launch) |
+| PUB-03, PUB-04, PUB-05, PUB-06 | Previous screen |
+| OVL-01 | Closes the sheet; unsaved text is discarded |
+| PUB-07, PUB-08 | Opens OVL-02 |
+| PUB-09 | Nothing. The game is over and the three buttons are the exits; "home" needs no confirmation |
+| OVL-02 | Closes the dialog; the game continues |
+| PRV-01 | Opens OVL-02 |
+| PRV-02 sealed | Back to PRV-01, same player |
+| PRV-02 revealing, revealed, saving | Nothing |
+| PRV-02 save error | Opens OVL-02 |
+| PRV-03 | Back to PRV-01, same voter; the selection is discarded. Nothing while saving |
+| PRV-04 entry | Opens OVL-02 |
+| PRV-04 review | Back to the entry state with the text kept. Nothing while saving |
+| PRV-05 | Opens OVL-02 |
+
+- Public in-game screens (PUB-07, PUB-08) also have a visible close button that opens OVL-02.
 - Private screens show no visible leave control, because the handoff specification allows nothing but the name, the position and one button. Leaving from them relies on system back and on PRV-05. (**Q-19**)
+- OVL-02 can never open over a revealed secret: where a secret is on screen, back does nothing.
 - Confirming OVL-02 → C8 → PUB-01. If the word was already consumed (C2), it stays in the cooldown.
 
 ### F11 — Interruption and recovery (PRD §5, §11, §12)
 
-**Warm return** (app sent to the background and brought back, process alive). When the app leaves the foreground on a private screen, the secret is removed immediately.
+**Warm return** (app sent to the background and brought back, process alive). When the app leaves the foreground on a private screen, the secret is removed immediately. "Leaves the foreground" is defined in `SCREEN_SPECIFICATIONS.md` §1.5. The destination is always worked out from saved state, never from what was on screen.
 
 | Was on | Returns to |
 |---|---|
-| PRV-01 | PRV-01, same player |
-| PRV-02 sealed or revealed, not yet acknowledged | PRV-01, same player; they must tap and reveal again |
-| PRV-02 while C3 was saving | PRV-01 for whoever is next according to saved state |
+| PRV-01 (including while C2 was saving) | PRV-01, same player |
+| PRV-02 sealed, revealing or revealed, not yet acknowledged | PRV-01, same player; they must tap and reveal again |
+| PRV-02 while C3 was saving, or showing a save error | PRV-01 for the first player without a saved acknowledgement: the same player if the save had not completed, the next one if it had; PUB-07 if it was the last |
 | PRV-03, vote not submitted | PRV-01, same voter; the selection is discarded |
-| PRV-04, guess not submitted | PRV-01 for the Impostor; typed text is discarded |
-| Any public screen | The same screen |
+| PRV-03 while C5 / C6 was saving | PRV-01 for the first voter without a saved vote; PUB-08 if the ballot is complete |
+| PRV-04, guess not submitted (entry or review) | PRV-01 for the Impostor; typed text is discarded |
+| PRV-04 while C7 was saving | PRV-01 for the Impostor if the guess was not saved; PUB-09 if it was |
+| PRV-05 | PRV-05 |
+| OVL-02 open over a private screen | PRV-01 for the current player, dialog closed |
+| OVL-02 open over a public screen, or any public screen | Unchanged |
 
 **Cold start** (process was killed). PRV-05 opens first, then "continue" leads to:
 
@@ -254,8 +334,9 @@ Guarantees: roles and the word are never reassigned; a saved acknowledgement or 
 | §8 | Win conditions; result reveals word, Impostor, votes, winner, guess outcome | PUB-09, F9 |
 | §9 | Replay without re-entry, new session, no scores | F9, C8 → C1 |
 | §10 | Only approved, available content selectable | PUB-06 |
-| §10 | Cooldown recorded once, before the first reveal; not when abandoned earlier; controlled error when nothing is eligible | C2, F3 step 4, Q-16 |
-| §11 | Persist and recover every phase; cancel safely when corrupt | §3, F11, F1 |
+| §10 | Cooldown recorded once, before the first reveal; not when abandoned earlier; progressive release; controlled error when there is no approved content | C2, §3.4, F3 step 4, Q-16 |
+| §8 | Exact matching after approved normalization only | §3.3, Q-26 |
+| §11 | Persist and recover every phase; no duplicates on retry; cancel safely when corrupt | §3, §3.1, §3.2, F11, F1 |
 | §12 | Neutral handoffs, hide after acknowledgement, private votes, neutral resume, screenshot protection | PRV-01 to PRV-05, F11, ADR-0006 |
 | §13 | RTL, Derja, mixed digits, Tesskra | `SCREEN_SPECIFICATIONS.md` §1 |
 | §14 | Tutorial covering six topics; basic settings | PUB-02, PUB-03 |

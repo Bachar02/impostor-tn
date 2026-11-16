@@ -15,7 +15,8 @@ Location note: the foundation documents live in `docs/`; the three UX documents 
 | Localization, glossary, font licences | `docs/ARABIC_LOCALIZATION.md` | Drafted; 0 strings approved |
 | Interaction and animation rules | `docs/INTERACTIONS_AND_ANIMATIONS.md` | Foundation; per-screen behaviour is now in the screen specifications |
 | UX flows | `docs/design/UX_FLOWS.md` | **Draft, awaiting review** |
-| Screen specifications (14 screens, 2 overlays, all states) | `docs/design/SCREEN_SPECIFICATIONS.md` | **Draft, awaiting review** |
+| Screen specifications (14 screens, 2 overlays, all states) | `docs/design/SCREEN_SPECIFICATIONS.md` | **Draft, revision 2 after the consistency audit, awaiting review** |
+| Full-screen reference renders (52 states, up to four sizes) and layout measurements | `docs/design/reference/screens.html`, `reference/png/screens/`, `reference/screens_metrics.json` | Complete as browser renders; not verified on a device |
 | Assumptions, risks, inconsistencies, validation plan | `docs/design/UX_RESEARCH_AND_RISKS.md` | **Draft, awaiting review.** No user research has been done |
 | Tokens | `docs/design/tokens/{colors,typography,spacing,radii,shadows,animations}.json` | Complete for Stage 2; additions proposed (Q-06, Q-07, Q-23) |
 | Fonts + licences | `docs/design/assets/fonts/` | Complete, unmodified upstream files |
@@ -25,15 +26,14 @@ Location note: the foundation documents live in `docs/`; the three UX documents 
 | Asset manifest | `docs/design/ASSET_MANIFEST.json` | Complete |
 | Component reference (HTML, with a working reveal demo) | `docs/design/reference/index.html` | Complete for Stage 2 |
 | Component renders (2×) | `docs/design/reference/png/01…12_*.png` | Complete for Stage 2 |
-| Design tooling | `docs/design/tools/` | Regenerates logo and reference |
+| Design tooling | `docs/design/tools/` | Regenerates logo, component reference and screen renders (`build_screens.py`) |
 
 ## 2. What does not exist yet
 
 | Missing | Blocked by |
 |---|---|
 | Product Owner approval of the flows and screen specifications | Review |
-| Full-screen visual references for the 14 screens | Not produced. Screens are specified by composition of rendered components only |
-| Carbon-theme renders of the dialog, text field and error banner | Not produced; values derived from the reference tool's mapping |
+| Device verification of the rendered layouts | Needs a build and a phone. The renders are browser compositions |
 | Clickable prototype of the full game | Not produced |
 | Sound effects | Not produced; names reserved in `animations.json`. The MVP is specified as silent (D-05) |
 | Tutorial illustrations | Not produced; the tutorial uses icons |
@@ -94,13 +94,14 @@ Full wording, evidence and recommendations are in `docs/product/DECISIONS.md`.
 6. Q-19 no visible leave control on private screens.
 7. Q-22 the review step and the "no empty guess" rule for the final guess (with Q-02).
 8. Q-06 and Q-07 the icon stroke and the two carbon colours.
+9. From the consistency audit: Q-25 role-ticket parity, Q-26 final-guess text details, Q-27 pack word count, Q-29 long secret words, Q-30 layout corrections already made to the drafts.
 
 **Can be settled during implementation**
 
 9. Q-20 no "see my word again".
 10. Q-21 tutorial shown automatically on first launch.
 11. Q-23 small token additions and reference mismatches.
-12. Q-04 screenshot-protection scope; Q-09 sound; Q-10 orientation.
+12. Q-04 screenshot-protection scope; Q-09 sound; Q-10 orientation; Q-28 screen-reader behaviour.
 
 **Before release**
 

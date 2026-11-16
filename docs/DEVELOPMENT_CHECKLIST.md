@@ -44,7 +44,9 @@ Last update: 2026-11-16 (UX documents drafted).
 - [x] `docs/DESIGN_HANDOFF.md` updated
 - [ ] Product Owner review and approval (Q-05)
 - [ ] Blocking decisions settled: Q-01, Q-06, Q-07, Q-16, Q-17, Q-18, Q-19, Q-22
-- [ ] Full-screen renders of the 14 screens (not produced)
+- [x] Full-screen reference renders: 52 states, 172 images, with layout measurements (browser renders; not device-verified)
+- [x] Consistency audit: flows, specifications and risks revised (revision 2)
+- [ ] Audit decisions settled: Q-25, Q-26, Q-27, Q-28, Q-29, Q-30
 
 ## Phase D — First vertical slice
 

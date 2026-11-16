@@ -1,6 +1,8 @@
 # Impostor TN — Screen specifications
 
-Status: **DRAFT for Product Owner review (Stage 4).** Flows are in `UX_FLOWS.md`. Every screen is composed from components already defined in `docs/DESIGN_SYSTEM.md` §5; no new component is introduced. **No full-screen visual render exists yet** for any screen except the four demo frames (`reference/png/09` to `12`); see `UX_RESEARCH_AND_RISKS.md` §4.
+Status: **DRAFT for Product Owner review (Stage 4).** Flows are in `UX_FLOWS.md`. Every screen is composed from components already defined in `docs/DESIGN_SYSTEM.md` §5; no new component is introduced. Full-screen reference renders of every screen now exist in `reference/png/screens/` (built by `tools/build_screens.py`); Appendix C lists them with the layout measurements taken from them. The renders are browser compositions of the tokens, not screenshots of the app, and nothing has been checked on a device.
+
+Revision 2 (2026-11-16, consistency audit): corrected claims that the renders disproved, removed the step pills, changed the pinned actions on PUB-09, defined the final-guess text forms, and added the screen-reader, pack-count and parity notes. Changes are summarised in `UX_RESEARCH_AND_RISKS.md` §7.
 
 How to read this document:
 
@@ -36,17 +38,21 @@ How to read this document:
 - Numbers shown to users (`2 / 6`, `3 / 12`, `4–12`, vote counts) are isolated left-to-right runs in `numericM` or `numericL`.
 - Player names are shown as typed, isolated, on one line with an ellipsis unless a screen says otherwise.
 - Text scale: layouts must work up to 1.5. Above 1.5, display styles (`displayXL`, `displayL`, `displayM`) are clamped at 1.5; body text keeps scaling and the screen scrolls.
-- `displayXL` shrinks to fit one line down to 40; `displayL` shrinks to 32 and may wrap to two lines.
+- `displayXL` shrinks to fit one line down to 40; `displayL` shrinks to 32 and may wrap to two lines. The fit is done on the final rendered size (after text scale), and the floors 40 and 32 are absolute, not scaled.
+- Measured limits of these rules (Appendix C): a two-word secret word still overflows one line at the floor of 40, and a 30-character name needs three lines at 320 wide. What happens then is open: Q-29 (long words) and Q-01 (name length; a 16-character name fits on one line at every tested size).
 
 ### 1.4 Buttons and states
 
 As specified in `DESIGN_SYSTEM.md` §5: primary 60, secondary 52, text 44, destructive 52; pressed, disabled, focused and loading states included. A button whose action runs a checkpoint (see `UX_FLOWS.md` §3) shows the loading state (three dots, width unchanged, not tappable) until the save finishes.
 
+The text button is drawn 44 high (`sizes.buttonCompactHeight`) but `sizes.touchTargetMin` is 48: its tappable area is extended to 48 without changing its look. The renders measure the drawn 44 on PUB-03 and PUB-09.
+
 ### 1.5 Private wrapper (all PRV screens)
 
 - Carbon theme. No role colour, no hard shadow except on the ticket, primary buttons are mustard and flat.
-- Screenshot blocking and the app-switcher cover are active while any PRV screen is shown (ADR-0006, scope pending Q-04).
-- When the app leaves the foreground, secret content is removed from the screen immediately and the flow returns to PRV-01 (`UX_FLOWS.md` F11).
+- Screenshot blocking and the app-switcher cover are active while any PRV screen is shown. Whether they also cover public in-game screens or the whole app is Q-04, which stays open; the three options and what each protects are listed there. Whatever the scope, the "remove the secret when paused" rule above applies as well, because blocking screenshots does not hide what is on the glass.
+- Screen readers (Q-28, proposal): nothing secret is ever announced automatically. Private screens set no live region and never move accessibility focus onto the word, the category, the role or a vote option by themselves. Those elements remain ordinary text, spoken only when the player deliberately moves focus onto them. Buttons and player names keep their labels, since names are not secret. Not tested with TalkBack.
+- When the app leaves the foreground, secret content is removed from the screen immediately and the flow returns to PRV-01 (`UX_FLOWS.md` F11). "Leaves the foreground" means Android pauses the activity: home, app switcher, another app, an incoming-call screen, screen lock or timeout. Pulling down the notification shade or changing the volume does not pause the activity and is not treated as an interruption; this boundary has not been verified on a device.
 - No shared-element transitions, no previews or blurred versions of secret content, no looping animation.
 - Secret text is not selectable and is never copied to the clipboard.
 - Sounds and haptics are identical for Civilian and Impostor.
@@ -63,7 +69,9 @@ As specified in `DESIGN_SYSTEM.md` §5: primary 60, secondary 52, text 44, destr
 
 ### 1.7 Small screens
 
-The reference frame is 360 × 720. Each screen must also work at 320 × 568 and at text scale 1.5. Where content cannot fit, it scrolls; pinned actions stay visible; touch targets stay at least 48 × 48. Screen-specific notes are given only where something beyond this rule applies.
+The reference frame is 360 × 720. Each screen must also work at 320 × 568 and at text scale 1.5. Where content cannot fit, it scrolls; pinned actions stay visible; touch targets stay at least 48 × 48.
+
+These sizes were rendered and measured with a 24 status bar and a 48 navigation bar (the three-button worst case) and an assumed keyboard of 260 at 568 high and 300 at 720 high. Results are in Appendix C; where a screen section below says "measured", the number comes from there. Device behaviour (real keyboards, gesture navigation, font rendering) is unverified.
 
 ### 1.8 Motion and haptics
 
@@ -186,7 +194,7 @@ Named interactions, durations and haptics follow `INTERACTIONS_AND_ANIMATIONS.md
 
 **Layout**
 
-1. App bar: back, title `home.new_game`, `CountPill` "1 / 2" (step) at the end.
+1. App bar: back, title `home.new_game`. No step pill: a "1 / 2" pill next to the "{n} / 12" player count read as two competing counters.
 2. Heading row: `players.title` in `titleL`; `CountPill` "{n} / 12" in `numericM` at the end.
 3. Warning `TesskraBanner` when the count is out of range.
 4. List of `PlayerRow` (height 64, gap `layout.itemGap`): index badge (40, `public.accent`, numeric), name (`titleM`, one line, ellipsis), ghost icon button `ic_pencil`.
@@ -223,7 +231,7 @@ More than 12 cannot be reached, so no "too many" error exists.
 **Layout.** `TesskraSheet` (top radius `xl`, grab handle 44 × 5, padding `layout.dialogPadding`), resting above the keyboard:
 
 1. Title in `titleL` at 22: `players.add` (add mode) or `action.rename` (edit mode).
-2. `TesskraTextField`: label `players.name_label`, hint `players.name_hint`, helper `players.name_limit`, counter "{n} / 16" (LTR, at the end). Keyboard: the user's current keyboard, action "done".
+2. `TesskraTextField`: label `players.name_label`, hint `players.name_hint`, helper `players.name_limit`, counter "{n} / 16" (LTR, at the end). Keyboard: the user's current keyboard, action "done". **The keyboard's "done" key does exactly what the primary button does**, because the primary button is not always visible (see below).
 3. Primary `TesskraButton`: `action.add`★ (add mode) or `action.confirm` (edit mode).
 4. Edit mode only: two secondary buttons side by side, `players.move_earlier`★ and `players.move_later`★ (**Q-17**).
 5. Edit mode only: destructive `TesskraButton` with `ic_trash`, `action.delete_player`.
@@ -246,7 +254,9 @@ Rules for length and duplicates are the proposal in Q-01 (16 characters; compari
 - Dismiss by dragging down, tapping the scrim, or system back; unsaved text is discarded.
 - The field receives focus when the sheet opens.
 
-**RTL and small screens.** Text is right-aligned, the caret is at the left end of Arabic text. On a 568-high screen with the keyboard open, the sheet content scrolls; the field and the primary button stay visible.
+**RTL and small screens.** Text is right-aligned, the caret is at the left end of Arabic text. The sheet never grows past the space above the keyboard; its content scrolls, and the field with its helper or error line is always kept in view.
+
+Measured: at 320 × 568 with the keyboard, 236 of height is left. The title and field fit; the primary button is cut off by 24 and everything below it is out of view. At 360 × 720 the add sheet fits completely; in edit mode the delete button is out of view (and the move buttons too at text scale 1.5). So the earlier statement that the primary button stays visible was wrong for small phones; the "done" key is what makes the sheet usable there. Without the keyboard the edit sheet fits at both sizes.
 
 ---
 
@@ -258,9 +268,9 @@ Rules for length and duplicates are the proposal in Q-01 (16 characters; compari
 
 **Layout**
 
-1. App bar: back, title `home.new_game`, `CountPill` "2 / 2".
+1. App bar: back, title `home.new_game`.
 2. Heading `packs.title`★ in `titleL`.
-3. List of `WordPackCard` (min height 84, gap `layout.itemGap`): title in the Kufi 20 style (`labelL`), meta line `pack.word_count` in `caption` with the number first as an LTR run.
+3. List of `WordPackCard` (min height 84, gap `layout.itemGap`): title in the Kufi 20 style (`labelL`), meta line `pack.word_count` in `caption` with the number first as an LTR run. The number is the pack's **total of approved, published words**. It does not change with the cooldown (see "Word counts" below).
 4. Banner area above the bottom action area (validation or error).
 5. Bottom action area: primary `TesskraButton` `action.start`.
 
@@ -272,7 +282,16 @@ Rules for length and duplicates are the proposal in Q-01 (16 characters; compari
 | Available | Empty checkbox (28) at the end | Yes, selects (`stampIn`, medium haptic) |
 | Unavailable | Sunken fill, `ic_alert`, meta `pack.empty` | No |
 
-The "locked" card state in the design system is not used (D-04). The word count shown is the number of approved, available words in the pack.
+The "locked" card state in the design system is not used (D-04).
+
+**Word counts (Q-27, proposal).** Two different numbers exist for a pack:
+
+| Number | Meaning | Shown? |
+|---|---|---|
+| Total approved | Published words in the pack that passed both reviews | Yes, on the card |
+| Eligible now | Of those, the words not among the 30 most recently used | No |
+
+Showing "eligible now" would make a pack's count shrink and grow as games are played and would suggest that a pack with a low number cannot be played. That is not the case: when every candidate word is on cooldown, the least recently used one is released automatically (PRD §10; `UX_FLOWS.md` §3.4). The player never has to do anything about the cooldown, and the screen never mentions it. A pack is "unavailable" only when its total of approved words is zero.
 
 **Screen states**
 
@@ -284,10 +303,10 @@ The "locked" card state in the design system is not used (D-04). The word count 
 | Nothing selected | Warning banner (`ic_alert`, `error.no_pack`★) | Disabled |
 | At least one selected | No banner | Enabled |
 | Starting | — | Loading state while C1 runs |
-| Start failed: no eligible word | Error banner `error.no_words`★ | Enabled again |
+| Start failed: no approved word | Error banner `error.no_words`★. Defensive only: with at least one approved word in the selection the cooldown can never cause this, and a selection without approved words cannot be made on this screen | Enabled again |
 | Start failed: save error | Error banner `state.error` | Enabled again |
 
-Retained selections are pre-ticked when the pack is still available; a retained pack that became unavailable is shown unavailable and unticked.
+Retained selections are pre-ticked when the pack is still available; a retained pack that became unavailable is shown unavailable and unticked. Every change of selection is saved at once (C0).
 
 **Interactions.** Primary: button press (80 ms), C1, then `carbonIn` (520 ms, medium haptic) → PRV-01 for player 1. Nothing about the chosen word or roles is ever shown on this screen.
 
@@ -345,7 +364,9 @@ In state A the screen does not say whether the nominee is a civilian; that is th
 
 **Interactions.** On first display: vote marks land one at a time, 160 ms apart (`voteTally`, light haptic per mark); then the top row or rows are emphasised and the outcome block appears (360 ms, medium haptic). The primary button is enabled only after the sequence ends. With reduced motion everything appears at once. On recovery the screen appears complete, without the sequence.
 
-**RTL and small screens.** Name on the right, marks then count on the left; marks run right to left. With many votes for one player the marks wrap inside their area; the count is always visible. Twelve rows scroll under the pinned button.
+**RTL and small screens.** Name on the right, marks then count on the left; marks run right to left. With many votes for one player the marks wrap inside their area; the count is always visible. In state B the button label contains the name; it stays on one line and the name is ellipsized.
+
+Measured at 360 × 720 with six players: state D fits; states A, C and B need 51, 88 and 115 of scrolling to reach the outcome block. Because the outcome block is what tells the group what happens next, the list scrolls it into view when the counting sequence ends. Twelve rows need 435 of scrolling (1149 in total).
 
 **Privacy.** Counts only: who voted for whom is not shown (**Q-18**). The secret word and category never appear here.
 
@@ -362,10 +383,13 @@ In state A the screen does not say whether the nominee is a civilian; that is th
 1. `WinnerStamp` (5 px border, radius 18, Kufi 900 at 34, rotated −5°), centred.
 2. One `bodyL` line explaining why (see states).
 3. `SecretWordPlaque`: caption `reveal.word_label`, the word in `displayXL` (shrinking), chip `reveal.category`.
-4. Final-guess card, only when a guess was made: surface, 2.5 border, radius `md`, padding `layout.cardPadding`; caption `result.guess_label`★; the guess as typed in `titleM` (isolated); then `ic_check` + `result.guess_correct`★ in `public.success`, or `ic_x` + `result.guess_wrong`★ in `public.errorText`.
+4. Final-guess card, only when a guess was made: surface, 2.5 border, radius `md`, padding `layout.cardPadding`; caption `result.guess_label`★; the guess in its display form (exactly what the Impostor confirmed on PRV-04; see `UX_FLOWS.md` §3.3) in `titleM`, isolated, wrapping if long; then `ic_check` + `result.guess_correct`★ in `public.success`, or `ic_x` + `result.guess_wrong`★ in `public.errorText`.
 5. Section heading `players.title` in `titleM`, then one `RoleRevealRow` per player in playing order: badge, name, role tag at the end (Civilian: `role.civilian`, `role.civilian` colour, radius 8, `ic_user`; Impostor: `role.impostor`, `role.impostor` colour, pill, `ic_eye_off`).
 6. Section heading `result.votes_title`★ in `titleM`; sub-heading `result.first_ballot`★ in `labelM` and its `VoteTallyRow`s; if there was a runoff, sub-heading `vote.runoff_title`★ and its rows.
-7. Bottom action area: accent `TesskraButton` `action.play_again` with `ic_rotate_ccw`; below it secondary `action.change_setup`★; below it text button `action.home`★.
+7. At the end of the scrolling content: secondary `TesskraButton` `action.change_setup`★, then text button `action.home`★.
+8. Bottom action area: accent `TesskraButton` `action.play_again` with `ic_rotate_ccw`, alone.
+
+The first draft pinned all three actions. Measured at 320 × 568 that left 280 of height for about 1700 of content (render `pub09_results_first_draft_three_pinned`); pinning only the replay button leaves 400.
 
 **States**
 
@@ -375,12 +399,14 @@ In state A the screen does not say whether the nominee is a civilian; that is th
 | Impostor nominated, guess correct | `result.impostor_wins`, `public.errorText`, solid | — | Yes, correct |
 | Impostor nominated, guess wrong | `result.civilians_win`, `role.civilian` colour, solid | — | Yes, wrong |
 | Runoff tied | `result.draw`, `public.textPrimary`, dashed | `result.draw_note`★ | No |
-| Starting a new game | — | — | Accent button loading while C8 + C1 run |
+| Starting a new game | — | — | Accent button loading while C9 runs |
 | New game failed | Error banner (`error.no_words`★ or `state.error`); the result stays visible | | |
 
 **Interactions.** On first display: the stamp slams in and the content rises (`winnerReveal`, 600 ms, heavy haptic). On recovery or with reduced motion: no slam. Play again → `carbonIn` → PRV-01 for player 1 of the new game. System back does nothing (the three buttons are the exits).
 
-**RTL and small screens.** Role tags and counts sit on the left. A long secret word shrinks to one line; a long guess wraps. The three actions take 60 + 52 + 44 plus gaps; at 568 high about half the screen remains for content, which scrolls.
+**RTL and small screens.** Role tags and counts sit on the left. A long guess wraps. A long secret word follows the same rule as on the ticket (Q-29).
+
+Measured: with six players and one ballot the content is about 1740 long (2.4 screens at 720); with twelve players and a runoff, 2820. The first screenful shows the winner stamp and the top of the word plaque. At 320 wide and text scale 1.5 the stamp "الإمبوستور ربح" is wider than the screen: the stamp text must shrink until its longest word fits (not specified in the design system; added to Q-23).
 
 **Privacy.** This is the only public screen that shows the word, the roles and the guess, and only after the game is over. Role colours are allowed here and nowhere else. Screenshots of this screen are possible unless Q-04 is decided as "whole app".
 
@@ -413,24 +439,26 @@ All of §1.5 applies to every screen in this section.
 
 **Layout** (`HandoffBlock`, vertically centred)
 
-1. `handoff.pass_to` without the name ("pass the phone to") in `bodyL`, `private.textSecondary`, centred.
+1. `handoff.pass_label`★ ("pass the phone to", without a name, as drawn in the approved render) in `bodyL`, `private.textSecondary`, centred. The glossary key `handoff.pass_to` contains the name and is used only for the PUB-08 button.
 2. The player's name in `displayL`, `private.textPrimary`, centred: 48, shrinking to 36 then 32 for long names, two lines at most, isolated.
-3. `CountPill` "{position} / {total}" in `numericM`, 2.5 `private.borderStrong` border. Omitted for the final guess, where there is only one person.
+3. `CountPill` "{position} / {total}" in `numericM`, 2.5 `private.borderStrong` border. Omitted for the final guess, where there is only one person and the table already knows who it is.
 4. Bottom action area: primary `TesskraButton` (private: mustard, flat) `handoff.i_am` with the name.
 
-Nothing else appears: no phase label, no icon, no leave control, no decoration. The screen is identical for reveal, voting, runoff and the final guess, so it tells an onlooker nothing.
+Nothing else appears: no phase label, no icon, no leave control, no decoration. The screen is identical for reveal, voting and the runoff, so it tells an onlooker nothing about the phase or the previous player.
 
 **States**
 
 | State | Difference |
 |---|---|
 | Default | As above |
-| Saving | Button loading. Only on the first handoff of a game, while C2 runs |
+| Saving | Button loading while C2 runs. C2 runs on an "I am {name}" tap in the reveal phase whenever the session's word is not yet marked as consumed: normally once, on the first handoff, and again only after a failed attempt or a restart before it succeeded |
 | Save error | Error banner (`state.error`, `coralLight` border and text) above the button; button active again |
 
 **Interactions.** Button → the phase's private screen, 220 ms content change on the same carbon ground; no haptic, no sound, no motion beyond the content change. System back → OVL-02.
 
-**RTL and small screens.** Everything is centred. If the name wraps to two lines the block grows; the button stays pinned. In the button, "{name}" may be long: the label stays on one line and the name is ellipsized. How far the label may shrink first is not specified anywhere (Q-23).
+**RTL and small screens.** Everything is centred. If the name wraps the block grows; the button stays pinned. In the button, "{name}" may be long: the label stays on one line and the name is ellipsized. How far the label may shrink first is not specified anywhere (Q-23).
+
+Measured: a 16-character name (the Q-01 proposal) fits on one line at 37 (360 wide) and 34 (320 wide), above the floor of 32. The 30-character stress name from the design samples needs two lines at 360 wide and **three at 320 wide**, more than the two the design system allows; with a 16-character limit this cannot occur. In the button, the 16-character name is ellipsized at 320 wide with text scale 1.5.
 
 **Privacy.** Shows a name and a position only. It must be impossible to tell from this screen which role the previous player had or what they voted.
 
@@ -455,14 +483,35 @@ Nothing else appears: no phase label, no icon, no leave control, no decoration. 
 
 | State | Ticket top row | Ticket bottom block | Controls |
 |---|---|---|---|
-| Sealed | Label `reveal.role_label` (sealed form "دور"), the **player's name**, stamp `ic_lock` | `ic_eye_off` + `reveal.sealed` in `labelL` | Bottom action area: primary `reveal.show`; below it private secondary `action.back` |
+| Sealed | Label `reveal.role_label_sealed`★ ("دور"; the glossary notes this form but gives it no key), the **player's name**, stamp `ic_lock` | `ic_eye_off` + `reveal.sealed` in `labelL` | Bottom action area: primary `reveal.show`; below it private secondary `action.back` |
 | Revealing | Seal lifts (`ticketReveal`, 420 ms, medium haptic); secret content fades in only during the last 120 ms | | None active |
 | Revealed, Civilian | Label `reveal.role_label`, `role.civilian`, stamp `ic_user` | Caption `reveal.word_label`; the word in `displayXL` (shrinks to 40, one line); chip `reveal.category` | Under the ticket: primary `reveal.ack`, disabled for the first 800 ms |
 | Revealed, Impostor | Label `reveal.role_label`, `role.impostor`, stamp `ic_user` | Caption `reveal.category_only`; the category in `displayXL`; chip `reveal.no_word` | Same |
 | Saving | Sealed again, immediately | Sealed | Under the ticket: the same button in its loading state |
-| Save error | Sealed | Sealed | Error banner (`state.error`); under the ticket: primary `action.retry` |
+| Save error | Sealed | Sealed | Error banner (`state.error`); under the ticket: primary `action.retry`. No "show me my role" control: the player has already seen it |
 
 The two revealed states use the same widgets, sizes, colours, icon, sound and haptic. Only the text differs. The Impostor never sees the word, an alias or a hint.
+
+**What an onlooker can tell (measured, 360 × 720, text scale 1).** The two tickets are not indistinguishable.
+
+| Element | Civilian | Impostor | Difference |
+|---|---|---|---|
+| Ticket size | 312 × 301 | 312 × 301 | None |
+| Role name, top row, Kufi 26 | مدني, 71 wide | إمبوستور, 125 wide | The largest tell: 76 % wider, in the heaviest type on the top row |
+| Caption above the big text, 13 | 66 wide | 56 wide | Small |
+| Big text, Kufi 72 | The secret word | The category | Depends on the words; reveals the role only to someone who knows the category |
+| Chip, 15 | 81 wide | 98 wide | Small |
+| Colours, icon, button, sound, haptic | Same | Same | None |
+| Ticket height at text scale 1.5, 320 wide | 386 | 361 | The block grows with the fitted font size, so the two differ by 25 |
+
+Anyone who can read the screen learns the role, and the secret word if it is a Civilian's; no layout can prevent that. What the layout can do is remove tells that work at a glance or from a distance.
+
+**Smallest improvement (Q-25, proposal; renders `prv02_proposed_*`).** Two changes, no new component, no rule change:
+
+1. The top row does not change on reveal: it keeps the sealed label and the **player's name**; only the stamp icon changes from lock to person. The role name moves into the caption of the bottom block: "مدني · الكلمة السرّية" or "إمبوستور · الصنف برك", at 13 instead of 26. Measured: the top rows become identical (82 wide for both); the captions are 100 and 110 wide.
+2. The big text keeps a line box of the full `displayXL` height whatever size it is fitted to, so both tickets have the same height at every text scale (measured 389 and 389 at scale 1.5).
+
+This also makes the screen satisfy design principle 3 ("name first"), which the approved revealed-ticket render does not: it shows no name. The remaining differences are the small caption, the chip and the big text itself. The specification above still describes the approved render; it changes only if Q-25 is approved.
 
 **Interactions**
 
@@ -470,12 +519,25 @@ The two revealed states use the same widgets, sizes, colours, icon, sound and ha
 - `reveal.ack`: the secret is removed in the same frame (`ticketHide`, light haptic), then C3 runs. The app moves on only after C3 succeeds: to PRV-01 for the next player (220 ms), or `carbonOut` to PUB-07 after the last player (520 ms, medium haptic).
 - Retry after a save error repeats C3 only.
 - `action.back` (sealed only) → PRV-01, same player.
-- System back: sealed → like `action.back`; revealing, revealed, saving → ignored.
+- System back: sealed → like `action.back`; revealing, revealed, saving → ignored; save error → OVL-02, so a group is never trapped by a storage fault.
 - Leaving the foreground in any state → secret removed → PRV-01, same player, on return (unless C3 had already succeeded).
 
-**RTL and small screens.** Label and role at the right of the top row, stamp at the left. At 320 × 568 the ticket (about 300 high) and the acknowledge button fit with the hint; the sealed-state buttons at the bottom do not overlap the acknowledge position. At text scale 1.5 the ticket grows and the screen scrolls; the 800 ms lock still protects against a double tap landing on "got it".
+**RTL and small screens.** Label and role at the right of the top row, stamp at the left.
 
-**Privacy.** The most sensitive screen. §1.5 applies in full. The acknowledge lock value (800 ms) comes from `INTERACTIONS_AND_ANIMATIONS.md` §5 and has no token yet (Q-23). A screen reader would speak the role aloud; see `UX_RESEARCH_AND_RISKS.md` R-07.
+Measured:
+
+| Size | Sealed | Revealed | "Show" button vs "got it" button |
+|---|---|---|---|
+| 360 × 720 | Fits | Fits | Different places: 524–584 and 389–449 |
+| 320 × 568 | 17 of the ticket's lower edge is under the buttons | Fits | **Overlap by 43** (372–432 and 389–449) |
+| 360 × 720, scale 1.5 | Fits | Fits | Overlap by 25 |
+| 320 × 568, scale 1.5 | 58 hidden | "Got it" is 50 below the fold | No overlap, because the button is off screen |
+
+So the earlier statement that the two buttons never share a position was wrong. They are separated only on tall screens (about 645 high or more at scale 1). On small phones the 800 ms lock is the only protection against a double tap, and the specification relies on it.
+
+When "got it" would not be fully visible under the ticket, it moves to the pinned bottom action area instead, so that the way to hide the role is never off screen. A two-word secret word overflows the ticket at the floor of 40 (render `prv02_revealed_long_word`); see Q-29.
+
+**Privacy.** The most sensitive screen. §1.5 applies in full. The acknowledge lock value (800 ms) comes from `INTERACTIONS_AND_ANIMATIONS.md` §5 and has no token yet (Q-23). With a screen reader on, revealing announces nothing; the role and the word are spoken only if the player moves focus onto them (§1.5, Q-28, risk R-07).
 
 ---
 
@@ -511,9 +573,21 @@ The two revealed states use the same widgets, sizes, colours, icon, sound and ha
 | Saving | List not tappable | Loading while C5 / C6 runs |
 | Save error | Error banner (`state.error`); the selection is kept | Enabled again |
 
-**Interactions.** Tapping an available option selects it (`selection`, 140 ms, selection haptic); tapping another moves the selection. Confirm → C5 / C6 → the screen clears to PRV-01 for the next voter (220 ms), or `carbonOut` to PUB-08 after the last voter. After a successful save the vote cannot be seen or changed (D-02). `action.back` and system back → PRV-01, same voter, selection discarded. Leaving the foreground → the same.
+**Interactions.** Tapping an available option selects it (`selection`, 140 ms, selection haptic); tapping another moves the selection. Confirm (medium haptic, as in the interactions table) → C5 / C6 → the screen clears to PRV-01 for the next voter (220 ms), or `carbonOut` to PUB-08 after the last voter. After a successful save the vote cannot be seen or changed (D-02). `action.back` and system back → PRV-01, same voter, selection discarded; both are ignored while saving. Leaving the foreground → PRV-01 for the same voter with the selection discarded, or, if the save had already succeeded, for the next voter.
 
-**RTL and small screens.** Radio on the right, "you" tag on the left. Eleven options do not fit on any phone: the list scrolls under the pinned buttons. On a 568-high screen about three options are visible at once; the list shows a partly visible row at the fold so that scrolling is evident.
+A retry after a save error never records a second vote: before writing, the app checks whether this voter already has a vote in this ballot. If one exists, that vote stands and the flow simply advances (`UX_FLOWS.md` §3.1).
+
+**RTL and small screens.** Radio on the right, "you" tag on the left. The hint, name and title scroll away with the list; only the two buttons are pinned.
+
+Measured with twelve players (twelve rows, 900 of list):
+
+| Size | Rows fully visible on arrival | After scrolling the heading away |
+|---|---|---|
+| 360 × 720 | 4 | 6 |
+| 320 × 568 | 2, and part of a third | 4 |
+| 320 × 568, scale 1.5 | 1, and part of a second | 4 |
+
+The earlier "about three" was optimistic. One visible row at large text on a small phone is poor but usable; nothing is unreachable. A runoff with two candidates fits without scrolling at 320 × 568; with three it needs 35. Long names are ellipsized inside the row.
 
 **Privacy.** Shows no earlier votes and no counts. The selection is visible only until confirm. Nothing on PRV-01 afterwards hints at the choice.
 
@@ -538,7 +612,7 @@ The two revealed states use the same widgets, sizes, colours, icon, sound and ha
 
 1–2. As above.
 3. Title `guess.review_title`★ in `titleL`.
-4. The guess, trimmed and with repeated spaces collapsed, in `displayL` (shrinks, two lines at most), isolated, centred.
+4. The guess in its display form (the text as typed, minus leading and trailing spaces; nothing else changed) in `displayL` (shrinks, two lines at most), isolated, centred. The result screen later shows exactly this text. What is compared with the secret word is defined in `UX_FLOWS.md` §3.3.
 5. Bottom action area: primary `guess.confirm_final`★; below it private secondary `guess.edit`★.
 
 **States**
@@ -549,11 +623,13 @@ The two revealed states use the same widgets, sizes, colours, icon, sound and ha
 | Entry, text present | Primary enabled → review state; the keyboard closes |
 | Review | `guess.edit`★ returns to entry with the text kept |
 | Saving | Primary loading while C7 runs |
-| Save error | Error banner (`state.error`); primary active again. The guess is not lost and not counted twice |
+| Save error | Error banner (`state.error`); primary active again. The guess is not lost. A retry never records a second guess: if one is already saved for the session, it stands and the flow advances |
 
-**Interactions.** Final confirmation → C7 → `carbonOut` → PUB-09. No haptic or sound distinguishes a correct from a wrong guess on this screen; the result screen does that. System back: review → entry; entry → OVL-02. Leaving the foreground before C7 → PRV-01 for the Impostor, typed text discarded.
+**Interactions.** Final confirmation → C7 → `carbonOut` → PUB-09. No haptic or sound distinguishes a correct from a wrong guess on this screen; the result screen does that. System back: review → entry; entry → OVL-02; ignored while saving. Leaving the foreground before C7 has succeeded → PRV-01 for the Impostor, typed text discarded; after it has succeeded → PUB-09. The keyboard's "done" key moves to the review state, like the confirm button. No maximum length is specified for the guess (Q-26).
 
-**RTL and small screens.** Right-aligned text, caret at the left end of Arabic text; Latin input is accepted and shown as typed. With the keyboard open on a 568-high screen the title, the field and the confirm button must all remain visible; the hint line may scroll away.
+**RTL and small screens.** Right-aligned text, caret at the left end of Arabic text; Latin input is accepted and shown as typed.
+
+Measured with the keyboard open: at 360 × 720 everything fits. At 320 × 568 only 124 of height remains between the top padding and the pinned button, and the field starts below it: **in the rendered layout the field is completely hidden** (render `prv04_guess_typed__320x568`). The earlier requirement that title, field and button all stay visible cannot be met there. The requirement is therefore: with the keyboard open, the field with its label and the confirm button are visible; the hint, name and title scroll out of view, and the focused field is scrolled into view automatically. The field with its label needs 83 (94 at scale 1.5), which fits in 124.
 
 **Privacy.** The category is **not** repeated here (the Impostor already knows it, and less on screen is safer). The app shows no hint, no letter count and no "almost" feedback. The guess appears publicly only on PUB-09.
 
@@ -575,7 +651,7 @@ The two revealed states use the same widgets, sizes, colours, icon, sound and ha
 
 **Interactions.** Continue → the destination for the saved phase. To a private destination: 220 ms content change. To a public destination: `carbonOut`. System back → OVL-02.
 
-**Privacy.** Shows no name, phase, count or any other detail of the saved game.
+**Privacy.** Shows no name, phase, count or any other detail of the saved game. This is the one private screen that does not state whose turn it is (design principle 3); the handoff that follows does.
 
 ---
 
@@ -594,6 +670,8 @@ These keys do not exist in the glossary. The Arabic below was drafted in this se
 | action.change_setup | Change players or packs | بدّل اللعّابة والباكوات |
 | action.home | Home | الرئيسية |
 | state.restore_failed | The last game could not be restored | الطرح اللي فات ما نجّمناش نرجّعوه |
+| handoff.pass_label | Pass the phone to (shown above the name) | أعطي التليفون لـ |
+| reveal.role_label_sealed | Role (label on the sealed ticket, above the player's name) | دور |
 | players.max_reached | 12 players is the maximum | 12 لعّاب هو الحدّ |
 | players.move_earlier | Move earlier in the order | قدّم |
 | players.move_later | Move later in the order | أخّر |
@@ -640,7 +718,7 @@ These keys do not exist in the glossary. The Arabic below was drafted in this se
 | result.draw_note | The second vote was tied as well | حتى التصويت الثاني وفى بتعادل |
 | result.civilian_out | A civilian was voted out | خرّجتو مدني |
 
-Two drafts reuse text that already appears in the design package: `discussion.put_phone` (demo in `reference/index.html`) and `vote.title` (type sample in the same file). They are still unreviewed.
+Four drafts reuse text that already appears in the design package: `discussion.put_phone` (demo in `reference/index.html`), `vote.title` (type sample in the same file), and `handoff.pass_label` and `reveal.role_label_sealed` (approved render `07_private`). They are still unreviewed.
 
 Glossary keys not used by any screen: `home.packs`, `settings.sound`, `pack.locked`, `game.round`. They can stay in the glossary; nothing depends on them.
 
@@ -651,7 +729,7 @@ Glossary keys not used by any screen: `home.packs`, `settings.sound`, `pack.lock
 | `TesskraButton` | All |
 | `TesskraIconButton`, `TesskraAppBar` | PUB-01 to PUB-08 |
 | `TesskraTextField` | OVL-01, PRV-04 |
-| `PlayerRow`, `AddPlayerRow`, `CountPill` | PUB-05; `CountPill` also PUB-06, PRV-01 |
+| `PlayerRow`, `AddPlayerRow`, `CountPill` | PUB-05; `CountPill` also PRV-01 |
 | `WordPackCard`, `StampLabel` | PUB-06 |
 | `TesskraSheet` | OVL-01 |
 | `TesskraDialog` | OVL-02 |
@@ -666,3 +744,50 @@ Glossary keys not used by any screen: `home.packs`, `settings.sound`, `pack.lock
 | `CarbonTransition`, `PrivateScope` | Every paper ↔ carbon change; every PRV screen |
 
 Selection controls: the switch is used on PUB-03 and the checkbox inside `WordPackCard`; the stand-alone radio appears only inside `VoteOption`.
+
+## Appendix C — Reference renders and measurements
+
+Built by `docs/design/tools/build_screens.py --png` from `reference/screens.template.html`. The page takes its component styles, tokens and icons from the same sources as the component reference, so it cannot restyle a component. Open `reference/screens.html` in a browser for an index of every state at every size. Raw measurements are in `reference/screens_metrics.json`.
+
+**What the renders are.** Browser compositions at exact dp sizes with: a 24 status bar and a 48 navigation bar; an assumed keyboard (260 at 568 high, 300 at 720 high); text scale applied to every font size; shrink-to-fit applied as in §1.3. Arabic is provisional; names, packs and words are mock content.
+
+**What they are not.** They are not the app and not a device. Not verified by them: Flutter's text metrics and line breaking, real keyboard heights and behaviour, gesture-navigation insets, display cut-outs, animation, haptics, TalkBack, and how the fonts render on Android.
+
+File names: `<state>__<width>x<height>[_ts150].png`, or `<state>__full.png` for the whole scrolling content at 360 wide.
+
+| Screen | States rendered | Sizes |
+|---|---|---|
+| PUB-01 | `pub01_home`, `pub01_home_restore_failed` | 360 × 720, 320 × 568, both at scale 1.5 |
+| PUB-02 | `pub02_howto` | 360 × 720, full |
+| PUB-03 | `pub03_settings` | 360 × 720 |
+| PUB-05 | `pub05_players_empty`, `_three`, `_six`, `_twelve` | 360 × 720; twelve also at all sizes and full |
+| OVL-01 | `ovl01_add_keyboard`, `ovl01_edit_keyboard`, `ovl01_edit_duplicate`, `ovl01_edit_no_keyboard` | All four |
+| PUB-06 | `pub06_packs`, `pub06_packs_none_selected` | 360 × 720 |
+| PUB-07 | `pub07_discussion` | 360 × 720 |
+| PUB-08 | `pub08_tally_a_nominee`, `_b_impostor`, `_c_tie`, `_d_runoff_tie`, `_12_players` | 360 × 720; twelve at all sizes and full |
+| PUB-09 | `pub09_results_civilians_win`, `_impostor_wins`, `_draw`, `_12_players`, `_first_draft_three_pinned` | All four, and full |
+| OVL-02 | `ovl02_leave_paper`, `ovl02_leave_carbon` | 360 × 720 |
+| PRV-01 | `prv01_handoff`, `_16_chars`, `_long_name`, `_final_guess` | All four |
+| PRV-02 | `prv02_sealed`, `_revealed_civilian`, `_revealed_impostor`, `_revealed_long_word`, `_saving`, `_save_error`; proposal: `prv02_proposed_sealed`, `_civilian`, `_impostor`, `_long_word` | All four |
+| PRV-03 | `prv03_vote_12_none`, `_12_selected`, `_6_selected`, `_long_voter`, `_runoff_candidate`, `_runoff_non_candidate`, `_save_error` | All four; twelve also full |
+| PRV-04 | `prv04_guess_empty`, `_typed`, `_review` | All four |
+| PRV-05 | `prv05_resume_gate` | 360 × 720 |
+
+Not rendered: PUB-04 (plain licence text), loading states, and the content-error states of PUB-06.
+
+**Summary of the constrained screens** ("fits" means no scrolling is needed and every control is fully visible)
+
+| Screen | 360 × 720 | 320 × 568 | 320 × 568, scale 1.5 |
+|---|---|---|---|
+| OVL-01 add, keyboard open | Fits | Primary button cut by 24 | Primary button out of view |
+| OVL-01 edit, keyboard open | Delete out of view | Only title and field visible | Only title and field visible |
+| PRV-02 sealed | Fits | 17 hidden | 58 hidden |
+| PRV-02 revealed | Fits | Fits; buttons overlap in position by 43 | "Got it" 50 below the fold |
+| PRV-03, twelve players | 4 rows visible, 541 to scroll | 2 rows visible, 693 to scroll | 1 row visible, 793 to scroll |
+| PRV-04, keyboard open | Fits | Field hidden until scrolled | Field hidden until scrolled |
+| PRV-04 review | Fits | Fits | 19 hidden |
+| PUB-09, six players | 1019 to scroll | 1217 to scroll | 1468 to scroll |
+| PRV-01, 16-character name | One line at 37 | One line at 34 | One line; name ellipsized in the button |
+| PUB-01 | Fits | 38 hidden | 181 hidden |
+
+Other measurements: no element extends past the screen edge except the winner stamp at 320 wide with scale 1.5; the only tap target under 48 is the text button (44, see §1.4).

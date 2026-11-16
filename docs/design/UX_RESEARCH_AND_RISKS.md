@@ -27,22 +27,22 @@ Severity: how bad if it happens. Likelihood is a judgement, not a measurement.
 |---|---|---|---|---|---|
 | R-01 | Someone sees another player's role over their shoulder | High | Medium | Carbon ground, privacy hint, nothing secret until a deliberate tap, same layout for both roles | Depends on A-1; test with real groups |
 | R-02 | The previous player's secret is still visible when the phone is passed | High | Low | Secret removed in the same frame as "got it"; the app cannot advance without it | None known |
-| R-03 | A role is distinguishable at a glance (length of text, layout) | High | Medium | Identical structure; both show one large word and one chip | The role name itself differs in length (مدني vs إمبوستور) and the Impostor's chip is longer. A watcher who sees the screen at all can tell. Structural identity cannot fix that; only not being seen can |
+| R-03 | A role is distinguishable at a glance (length of text, layout) | High | Medium | Identical structure; both show one large word and one chip | Measured: the role name on the top row is 76 % wider for the Impostor and is the main tell; ticket heights differ at large text. A minimal fix is proposed (Q-25). Even with it, anyone who reads the screen learns the role |
 | R-04 | The wrong person taps "I am {name}" and reveals someone else's role | High | Medium | Name shown large; sealed step before reveal with a "back" button | No protection after the reveal tap. PINs or similar would be a new feature and are not proposed |
 | R-05 | App switcher or screenshot exposes a secret | High | Low–Medium | `FLAG_SECURE` and neutral cover on private screens; secret removed when the app leaves the foreground | Not built and not verified on any device (Q-04, Q-15) |
 | R-06 | A phone call or lock screen interrupts a reveal | Medium | High | Returns to the handoff for the same player; they reveal again | The interrupted player has to repeat two taps |
-| R-07 | A screen reader speaks the role or vote aloud | High | Low | None yet | TalkBack on a shared party phone is unlikely but the conflict between accessibility and privacy is real. Needs a Product Owner decision before release; not tested |
+| R-07 | A screen reader speaks the role or vote aloud | High | Low | Proposed (Q-28): nothing secret is announced automatically; secret text is spoken only when the player moves focus onto it | A player using the speaker can still expose their own role. Not tested with TalkBack |
 | R-08 | Accidental "start voting" ends the discussion early | Low | Medium | Voting can still be discussed over; no vote exists yet | No way back to the discussion screen. Acceptable because the screen only carries instructions |
 | R-09 | A player votes for the wrong person by mis-tap | Medium | Medium | Two steps: select, then confirm; selection is clearly marked | No change after confirm (D-02) by design |
 | R-10 | The Impostor loses on a typo | Medium | Medium | Review step before the final confirmation (Q-22); autocorrect off | Alias quality (content work) matters more than UI here |
 | R-11 | A group cannot leave a stuck game from a private screen | Medium | Low | System back opens the leave dialog; the resume gate offers "leave" | No visible control on the handoff (Q-19). Gesture navigation makes "back" less discoverable |
 | R-12 | The public statement that the nominee is the Impostor arrives before the group expects it | Low | Medium | Stated on the tally screen with the reason (one last chance) | Inherent in PRD §8; see A-6 |
-| R-13 | Draft Derja strings are unnatural or wrong | Medium | High | Every string is marked for review; 54 new drafts are listed in the specification, Appendix A | Zero strings are reviewed. This is the largest known quality gap |
+| R-13 | Draft Derja strings are unnatural or wrong | Medium | High | Every string is marked for review; 56 new drafts are listed in the specification, Appendix A | Zero strings are reviewed. This is the largest known quality gap |
 | R-14 | Long names break layouts | Low | Medium | Ellipsis in rows, shrinking and two lines on the handoff, isolation of mixed-direction names | The 16-character limit is still a proposal (Q-01) |
-| R-15 | Text scale above 1.5 pushes the acknowledge button onto the reveal button's position | Medium | Low | 800 ms lock on "got it"; display styles clamped at 1.5 | Verify on a small device at large text |
+| R-15 | "Got it" lands where "show me my role" was, so a double tap skips the role | Medium | Medium on small phones | 800 ms lock on "got it" | Measured: the two buttons overlap in position by 43 at 320 × 568 and by 25 at 360 × 720 with text scale 1.5; they are separate only on screens about 645 high or more. The lock is the only protection there |
 | R-16 | Dim rooms: the paper screens light up faces and the table | Low | Medium | Accepted trade-off of the Tesskra direction; secrets are only ever on carbon | None |
 | R-17 | With few approved words, the same words return quickly | Medium | High at launch | Cooldown of 30 with progressive release (PRD §10) | Content volume, not UX |
-| R-18 | Screens have never been drawn as full layouts | Medium | Certain | Every screen is composed only from components that have approved renders | See §4 |
+| R-18 | Screens had never been drawn as full layouts | Medium | Was certain | Full-screen reference renders now exist for 15 of the 16 screens and overlays (all but the licence page) in 52 states | They are browser renders, not the app; device behaviour is unverified (§7.7) |
 
 ## 3. Design inconsistencies found
 
@@ -101,8 +101,8 @@ Contrast on the affected surfaces (computed with the formula in `build_reference
 
 | Missing | Effect | Suggested next step |
 |---|---|---|
-| Full-screen renders of the 14 screens | Composition, spacing and vertical rhythm have not been seen by anyone | Extend `reference/index.template.html` with the screens and regenerate the PNGs, before or alongside implementation |
-| Carbon renders of dialog, text field, banner | Small visual risk | Same |
+| Device verification of the layouts | Renders now exist (`reference/png/screens/`), but only as browser compositions | Check the constrained screens on a small and a large phone once they are built |
+| Approval of the carbon dialog, text field and error banner | Now rendered (`ovl02_leave_carbon`, `prv04_*`, `prv02_save_error`) from derived values | Review with Q-07 |
 | Reviewed Arabic | Blocks release, not development | Derja review of the glossary and Appendix A |
 | Tutorial illustrations | Tutorial uses icons | Decide whether icons are enough for the MVP |
 | Sounds | App is silent | Product decision (Q-09) |
@@ -141,3 +141,78 @@ Contrast on the affected surfaces (computed with the formula in `build_reference
 Record per session: group size, ages, device, lighting, whether a privacy leak happened, and where anyone hesitated for more than a few seconds. Repeat until three distinct groups have played (PRD §16).
 
 **On devices**: small phone (about 320–360 dp wide) and large phone; text scale 1.0, 1.3, 1.5 and the maximum; "remove animations" on; screenshots and the app switcher on every private screen; TalkBack on the role ticket (R-07).
+
+## 7. Consistency audit (2026-11-16)
+
+A review of the draft documents against each other, the PRD, the design system, the tokens and new full-screen renders. It is a desk review plus browser measurements. **It is not user research and nothing was run on a device.**
+
+### 7.1 Role privacy and visual parity
+
+The Civilian and Impostor tickets are structurally identical but not indistinguishable. Measured differences and the proposed minimum change (Q-25) are in `SCREEN_SPECIFICATIONS.md`, PRV-02. In short: the ticket size, colours, icon and button are the same; the role name on the top row is the one tell that works at a glance (71 against 125 wide in the heaviest type); at text scale 1.5 the two tickets also differ in height by 25. Keeping the player's name on the top row and reserving a fixed line box for the big text removes both. The big text, the small caption and the chip still differ, and anyone who can actually read the screen learns the role. No claim of indistinguishability is made.
+
+### 7.2 Persistence and recovery
+
+| Issue found | Resolution in the drafts |
+|---|---|
+| The final guess was "stored normalized" but "shown as typed" | Three forms are now defined (raw, display, comparison). Raw is stored; display is shown in the review step and on the results; comparison decides (`UX_FLOWS.md` §3.3) |
+| "Play again" ended the old session and started a new one as two steps, yet promised the result would stay visible if the start failed | One atomic step, C9 |
+| Retry behaviour after a failed save was only described for acknowledgements | Rules and a per-checkpoint table for interruption before, after, and retry (`UX_FLOWS.md` §3.1) |
+| C2 was tied to "the first handoff", which breaks after a failed attempt or a restart | Tied to the session's "word consumed" mark |
+| Releasing a word from the cooldown and then recording it could list it twice | Recording moves an existing entry to the newest position |
+| Nothing said how a restore proves that no player is skipped | Restore checks listed (`UX_FLOWS.md` §3.2): acknowledgements must be an unbroken run in playing order |
+| Warm-return table missed saves in progress on the vote and guess screens, the resume gate and the leave dialog | Table completed (F11) |
+| A group could be trapped on a save error on the role ticket, where back did nothing | Back opens the leave dialog in the error state |
+| What counts as a space, invisible characters, and Unicode composition are not defined by D-01 | Not resolved: Q-26. The strict reading applies until decided |
+
+### 7.3 Pack availability
+
+Two numbers were being confused: a pack's total of approved words and the words eligible after the cooldown. The card now shows the total only; the eligible number is never shown, because the cooldown releases its oldest entry automatically and never blocks a game. The "no eligible word" error was reworded: it can only mean "no approved word at all". The selection algorithm is written out in `UX_FLOWS.md` §3.4. Open: Q-27.
+
+### 7.4 Accessibility and privacy
+
+- **Screen readers.** Proposed rule (Q-28): private screens announce nothing secret by themselves; secret text is read only when the player moves focus onto it. This keeps the game playable with TalkBack and headphones without the phone speaking a role to the room. It does not stop a player with the speaker on from exposing their own role. Untested.
+- **Screenshot and app-switcher protection.** Q-04 is still open; the three possible scopes and what each covers are now listed there. Independent of the scope, secrets are removed whenever the activity is paused.
+- **System back.** F10 is now a table covering every screen and state. Two entries were wrong or missing before: PUB-09 (back does nothing) and the final-guess review state (back returns to entry).
+- **Interruptions.** "Leaves the foreground" is now defined (activity paused). The notification shade and volume controls do not pause the activity, so a secret stays visible under them; this is accepted and unverified.
+- **Screen timeout.** The app does not keep the screen awake. A phone that locks during a reveal returns to the handoff; during the discussion it returns to the same public screen.
+
+### 7.5 Layout feasibility
+
+Method and limits are described in `SCREEN_SPECIFICATIONS.md`, Appendix C. Findings:
+
+| Screen | Finding | Status |
+|---|---|---|
+| OVL-01 + keyboard | At 320 × 568 the primary button is cut off; in edit mode only the title and field are visible | Spec corrected: the keyboard's "done" key acts as the primary button; the sheet scrolls |
+| PRV-02 | "Show" and "got it" overlap in position by 43 at 320 × 568; "got it" is below the fold at scale 1.5 | Spec corrected: the 800 ms lock is the protection; "got it" moves to the pinned area when it would not be visible |
+| PRV-02 | A two-word secret word overflows at the minimum size | Open: Q-29 |
+| PRV-03, 12 players | 2 rows visible on arrival at 320 × 568, 1 at scale 1.5 | Spec corrected (it said "about three"). Usable, not good |
+| PRV-04 + keyboard | At 320 × 568 the text field is completely hidden behind the pinned button | Spec corrected: field and button are guaranteed; the heading scrolls away |
+| PUB-09 | Three pinned buttons left 280 of height for about 1700 of content at 320 × 568 | Draft changed: only "play again" is pinned |
+| PUB-09 | Winner stamp wider than the screen at 320, scale 1.5 | Rule added to Q-23 |
+| PRV-01 | A 30-character name takes three lines at 320 wide; a 16-character name fits on one | Depends on Q-01 |
+| PUB-08 | The outcome block is below the fold with six players | Spec: scrolled into view after the count |
+| Text button | Drawn 44 high against a 48 minimum target | Spec: tappable area extended |
+
+### 7.6 Disagreements between documents
+
+| # | Sources | Disagreement | Handling |
+|---|---|---|---|
+| 1 | `INTERACTIONS_AND_ANIMATIONS.md` §3 vs §4 | "Play again" is a 220 ms standard screen change, but it goes from paper to carbon, which §4 says always uses `carbonIn` (520 ms) | Specs use `carbonIn`. Added to Q-23 |
+| 2 | `DESIGN_SYSTEM.md` §5, reference CSS vs `spacing.json` | The ticket's icon stamp is 52; the token `stampSmall` is 56 and no document says what it is for | Specs use 52 as rendered. Added to Q-23 |
+| 3 | `DESIGN_SYSTEM.md` §3 | Text button height 44 vs minimum touch target 48 | Visual 44, target 48 |
+| 4 | `DESIGN_DIRECTION.md` principle 3 vs approved render `12_demo_revealed` | "Every private screen states whose turn it is"; the revealed ticket shows no name | Resolved if Q-25 is approved |
+| 5 | Glossary `handoff.pass_to` vs approved render `07_private` | The key includes the name; the render shows the label and the name as separate lines | New key `handoff.pass_label` |
+| 6 | Glossary `reveal.role_label` | The note says the sealed state uses a different word but gives it no key | New key `reveal.role_label_sealed` |
+| 7 | First draft of the specs | A step pill "1 / 2" next to the player count "3 / 12" | Step pills removed |
+| 8 | First draft of the specs, PRV-01 | "Identical for reveal, voting, runoff and final guess" while the final-guess handoff has no position pill | Wording corrected |
+| 9 | `DESIGN_SYSTEM.md` §5, `INTERACTIONS_AND_ANIMATIONS.md` §3 | Locked packs, speaking turns and sounds are specified but excluded from the MVP | Already listed in the handoff §9; the source documents are unchanged |
+| 10 | Q-02 vs Q-22 | "An empty guess is incorrect" vs "an empty guess cannot be submitted" | Q-22 narrows Q-02; both stay open |
+
+The approved Stage 2 documents (`DESIGN_SYSTEM.md`, `DESIGN_DIRECTION.md`, `INTERACTIONS_AND_ANIMATIONS.md`), the tokens and the PRD were not edited.
+
+### 7.7 Still unverified
+
+- Everything on a real device: fonts, keyboard heights, navigation insets, cut-outs, lifecycle boundaries, screenshot blocking, the app switcher, TalkBack.
+- Flutter's text layout against the browser's (line breaks and shrink-to-fit can differ by a few pixels).
+- The assumed keyboard heights (260 and 300). A taller keyboard makes OVL-01 and PRV-04 tighter.
+- Any of this with people.
