@@ -17,6 +17,10 @@ Rule for engineers: an item under "Open questions" is **not** decided. Do not im
 | D-07 | 2026-11-15 | Design package location | The design package stays under `docs/design/`. All references were updated to that path. | — |
 | D-08 | 2026-11-15 | Git | Only the Product Owner runs Git commands. Engineers and agents provide the commands and wait. | — |
 | D-10 | 2026-11-16 | UX documents | UX flows, screen specifications and a risk review are to be written before any gameplay or screen implementation. They are drafts until approved (see Q-05). | — |
+| D-11 | 2026-11-16 | Production diagnostics | In profile and release builds, an uncaught error is logged as its origin and error type only: no exception message, no stack trace. Debug builds may keep full detail. No `debugPrint` or other console output outside the approved diagnostics implementation, enforced by a source guard test. ADR-0008 itself remains Proposed. | §12 |
+| D-12 | 2026-11-16 | Riverpod retry | Riverpod's default automatic retry is not changed now. When persistence is implemented, checkpoint-related providers must use explicit retry behaviour. | §11 |
+| D-13 | 2026-11-16 | Theme slot mapping | The Material colour slots not covered by `DESIGN_SYSTEM.md` §7 (`onError`, the private `secondary`/`onSecondary` fallbacks, and others) are left as they are and revisited at the component implementation milestone. | — |
+| D-14 | 2026-11-16 | Unexpected-error screen | Not designed or implemented yet. The inventory in ADR-0008 is input for a later specification. | — |
 | D-09 | 2026-11-15 | Scope gate | Phases B and C (configuration, architecture, bootstrap, tokens, themes, test infrastructure) are approved. Phase D and all gameplay or screen work stay blocked until final UX flows and screen specifications are approved. | — |
 
 ## Open questions

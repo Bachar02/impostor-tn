@@ -10,10 +10,11 @@ abstract interface class Diagnostics {
   void report(Object error, StackTrace stack, {required String origin});
 }
 
-/// Writes the error's type name and stack trace, never its message.
+/// Writes the origin and the error's type name only: never its message and
+/// never its stack trace (D-11).
 ///
 /// An exception message is free text and could carry a secret by mistake
-/// (PRD §12); a type name and a stack trace cannot.
+/// (PRD §12). Used outside debug builds; debug keeps Flutter's full output.
 final class RedactedDiagnostics implements Diagnostics {
   const RedactedDiagnostics({this.sink = _deviceLog});
 
@@ -24,10 +25,10 @@ final class RedactedDiagnostics implements Diagnostics {
   void report(Object error, StackTrace stack, {required String origin}) {
     String entry;
     try {
-      entry = '[$origin] ${error.runtimeType}\n$stack';
+      entry = '[$origin] ${error.runtimeType}';
     } on Object {
       // This runs inside the global error handlers: if formatting throws
-      // (a custom StackTrace with a broken toString), throwing again would
+      // (an error class overriding runtimeType), throwing again would
       // re-enter them. Write a fixed entry instead (ADR-0008).
       entry = '[$origin] unreportable error';
     }
