@@ -22,7 +22,16 @@ final class RedactedDiagnostics implements Diagnostics {
 
   @override
   void report(Object error, StackTrace stack, {required String origin}) {
-    sink('[$origin] ${error.runtimeType}\n$stack');
+    String entry;
+    try {
+      entry = '[$origin] ${error.runtimeType}\n$stack';
+    } on Object {
+      // This runs inside the global error handlers: if formatting throws
+      // (a custom StackTrace with a broken toString), throwing again would
+      // re-enter them. Write a fixed entry instead (ADR-0008).
+      entry = '[$origin] unreportable error';
+    }
+    sink(entry);
   }
 
   static void _deviceLog(String entry) => debugPrintSynchronously(entry);

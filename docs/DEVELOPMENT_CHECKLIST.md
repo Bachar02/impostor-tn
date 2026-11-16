@@ -17,7 +17,7 @@ Last update: 2026-11-16 (foundation re-assessed; error handling added, ADR-0008)
 - [x] Agents: architecture, gameplay, UI/design, QA reviewers (read-only)
 - [x] `.claude/settings.json`: Git commands denied; Dart format hook (verified to fire)
 - [x] ADR-0001 to ADR-0007
-- [~] ADR-0008 (error handling, diagnostics, build configuration): proposed, awaiting Product Owner review
+- [~] ADR-0008 (error handling, diagnostics, build configuration): proposed, reviewed against SDK source 2026-11-16, awaiting Product Owner review; release logging not verified on a device
 - [x] `docs/product/DECISIONS.md` with rulings D-01 to D-10 and open questions Q-01 to Q-30
 - [x] Design path references corrected to `docs/design/`; 43 assets re-verified
 
