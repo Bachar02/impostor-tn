@@ -13,7 +13,7 @@ Goal: every rule in the PRD has a deterministic test that would fail if the rule
    - **Setup:** start accepted for every count 4–12; rejected for 3 and 13; rejected with no available pack.
    - **Roles:** exactly one Impostor across many seeds and all counts; the Impostor view holds no word or alias; assignment identical after save and restore.
    - **Reveal:** acknowledge required to advance; interruption before commit lets the same player reveal again; after commit the next pending player is up; the last acknowledgement moves to discussion.
-   - **Voting:** self-vote rejected; second vote by the same player rejected; vote change rejected (D-03); ballot closes only when everyone has voted.
+   - **Voting:** self-vote rejected; second vote by the same player rejected; vote change rejected (D-02); ballot closes only when everyone has voted.
    - **Outcome:** unique top → nominated; 2-way, 3-way and all-way top ties → runoff with exactly the tied candidates; lower-ranked ties do not trigger a runoff.
    - **Runoff:** all players vote; tied candidates cannot self-vote; first-ballot votes do not carry over; unique winner nominated; tie → draw with no final guess.
    - **Final guess:** canonical match; alias match; leading, trailing and repeated inner whitespace accepted (D-01); diacritic, tatweel, ق/ڨ and ة/ه variants rejected unless listed as aliases; empty guess handled.
