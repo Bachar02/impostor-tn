@@ -100,6 +100,7 @@ final class TesskraColors {
   static const private = TesskraColors(
     background: TesskraPalette.carbon,
     surface: TesskraPalette.carbonRaised,
+    surfaceSunken: TesskraPalette.carbonRaised, // D-19
     ticket: TesskraPalette.paper,
     onTicket: TesskraPalette.ink,
     textPrimary: TesskraPalette.paper,
@@ -112,6 +113,7 @@ final class TesskraColors {
     onPrimary: TesskraPalette.carbon,
     success: TesskraPalette.mintLight,
     error: TesskraPalette.coralLight,
+    errorText: TesskraPalette.coralLight, // D-19
     focusRing: TesskraPalette.paper,
     shadow: TesskraPalette.shadowDeep,
     scrim: Color(0xB30A0F1C), // shadowDeep at alpha 0.7

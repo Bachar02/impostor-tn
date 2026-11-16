@@ -4,8 +4,8 @@ import 'package:impostor_tn/game/secret_word.dart';
 ///
 /// D-01: trim leading and trailing whitespace and collapse repeated internal
 /// whitespace; nothing else (no diacritic, tatweel, letter-variant or case
-/// folding). Which characters count as whitespace is open (Q-26); until it is
-/// decided, the strict reading applies: only U+0020 SPACE.
+/// folding). D-30 keeps the strict reading: only U+0020 SPACE counts as
+/// whitespace, nothing invisible is removed, no Unicode normalization.
 abstract final class FinalGuessMatching {
   static const _space = ' ';
 

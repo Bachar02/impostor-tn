@@ -9,6 +9,9 @@ environment:
 # Every dependency is justified in docs/architecture/ADR/. Do not add one
 # without updating the relevant ADR.
 dependencies:
+  # Already in the build through Flutter; declared because player names are
+  # limited in user-perceived characters (D-15, ADR-0003 revision 2).
+  characters: ^1.4.0
   flutter:
     sdk: flutter
   flutter_localizations:
@@ -30,6 +33,9 @@ flutter:
   # Assets are bundled directly from the design package (ADR-0004). Logo files
   # are listed one by one so preview-only files are never shipped.
   assets:
+    # Word content (ADR-0009). Production content only; empty until approved
+    # words are supplied (Q-13).
+    - assets/content/catalog.json
     - docs/design/assets/icons/
     - docs/design/assets/logo/logo_ticket_lockup.svg
     - docs/design/assets/logo/wordmark_ar_ink.svg

@@ -29,6 +29,9 @@ enum GameRejection {
 
   /// The target is not eligible in this ballot (runoff candidates only).
   notACandidate,
+
+  /// The final guess is empty after D-01 normalization (D-16).
+  emptyGuess,
 }
 
 /// The result of a transition: the next session, or why it was refused.

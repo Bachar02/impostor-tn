@@ -36,15 +36,15 @@ A PostToolUse hook formats each edited Dart file. Run analyze and the relevant t
 ## Architecture in one screen
 
 ```
-lib/app/        composition root: bootstrap, error handlers, MaterialApp, licences
+lib/app/        composition root: bootstrap, error handlers, provider overrides, MaterialApp, licences
 lib/core/       design system (tokens, themes, widgets), text helpers, diagnostics; imports no feature
-lib/game/       pure Dart game engine and domain (no Flutter, no I/O)      [rules done; word selection/cooldown not started]
-lib/data/       persistence (SQLite via drift) behind repository interfaces [not started]
-lib/features/   <feature>/{application,presentation}                        [not started]
+lib/game/       pure Dart game engine and domain (no Flutter, no I/O)      [rules, content model, cooldown, selection, snapshot]
+lib/data/       content loader, atomic JSON state file, platform channel  [done; ADR-0003 rev. 2, ADR-0009]
+lib/features/   <feature>/{application,presentation}   [application: checkpoints C0–C9, providers; no screens]
 lib/l10n/       app_ar.arb (source) and generated/ (committed, not edited)
 ```
 
-Dependencies point inward: presentation → application → game ← data. `lib/game` depends on nothing but Dart. State and DI use Riverpod without code generation. Details and rationale: ADR-0001 to ADR-0008. Unexpected errors go through `Diagnostics` (ADR-0008); there is no free-text logging.
+Dependencies point inward: presentation → application → game ← data. `lib/game` depends on nothing but Dart. State and DI use Riverpod without code generation. Details and rationale: ADR-0001 to ADR-0009. `features` never import `data`; only `lib/app` binds them. Unexpected errors go through `Diagnostics` (ADR-0008); there is no free-text logging.
 
 Design assets are bundled directly from `docs/design/assets/`; Dart token constants mirror the JSON and `test/core/design/token_sync_test.dart` fails if they drift.
 

@@ -10,15 +10,21 @@ import 'package:impostor_tn/core/design/tokens/tesskra_typography.dart';
 /// with the components that need them.
 abstract final class TesskraTheme {
   static final ThemeData public = _build(
+    TesskraSurface.paper,
     TesskraColors.public,
     Brightness.light,
   );
   static final ThemeData private = _build(
+    TesskraSurface.carbon,
     TesskraColors.private,
     Brightness.dark,
   );
 
-  static ThemeData _build(TesskraColors c, Brightness brightness) {
+  static ThemeData _build(
+    TesskraSurface surface,
+    TesskraColors c,
+    Brightness brightness,
+  ) {
     final scheme = ColorScheme(
       brightness: brightness,
       primary: c.primary,
@@ -45,6 +51,7 @@ abstract final class TesskraTheme {
       textTheme: _textTheme(c.textPrimary),
       extensions: [
         TesskraTokens(
+          surface: surface,
           colors: c,
           numericL: TesskraTypography.numericL.copyWith(color: c.textPrimary),
           numericM: TesskraTypography.numericM.copyWith(color: c.textPrimary),

@@ -18,7 +18,6 @@ void main() {
       ('an alias', 'alfa', Winner.impostor),
       ('the word with extra spaces', '  alpha  ', Winner.impostor),
       ('a wrong word', 'gamma', Winner.civilians),
-      ('an empty guess (Q-02 pending)', '', Winner.civilians),
     ]) {
       test('$label → ${winner.name} win', () {
         final session = accepted(
@@ -26,6 +25,18 @@ void main() {
         );
         final outcome = (session.phase as ResultPhase).outcome;
         expect(outcome.winner, winner);
+      });
+    }
+
+    for (final (label, guess) in [
+      ('an empty guess', ''),
+      ('a guess of spaces only', '   '),
+    ]) {
+      test('$label cannot be submitted (D-16)', () {
+        expectRejected(
+          GameEngine.submitFinalGuess(_finalGuess, guess),
+          GameRejection.emptyGuess,
+        );
       });
     }
 

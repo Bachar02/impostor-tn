@@ -16,7 +16,7 @@ import 'package:impostor_tn/game/secret_word.dart';
 ///
 /// Every action returns [Accepted] with the next session or [Rejected] with a
 /// reason; nothing is ignored and nothing is mutated. Selecting the word and
-/// the cooldown are outside the engine (PRD §10, Q-16): [start] receives an
+/// the cooldown are outside the engine (PRD §10, D-21): [start] receives an
 /// already-selected word.
 abstract final class GameEngine {
   /// Creates a session with exactly one Impostor drawn from [random].
@@ -183,12 +183,15 @@ abstract final class GameEngine {
     );
   }
 
-  /// The Impostor's single guess (PRD §8, D-01). Any text is accepted and
-  /// compared; whether an empty guess needs special handling is Q-02.
+  /// The Impostor's single guess (PRD §8, D-01). Case is preserved and an
+  /// empty guess cannot be submitted (D-16).
   static Transition submitFinalGuess(GameSession session, String rawGuess) {
     final phase = session.phase;
     if (phase is! FinalGuessPhase) {
       return const Rejected(GameRejection.wrongPhase);
+    }
+    if (FinalGuessMatching.comparisonForm(rawGuess).isEmpty) {
+      return const Rejected(GameRejection.emptyGuess);
     }
     return Accepted(
       session.withPhase(

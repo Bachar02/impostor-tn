@@ -3,5 +3,244 @@
   "appName": "إمبوستور",
   "@appName": {
     "description": "[REVIEW] Product name (glossary key app.name). Provisional spelling; variants under review: إمبوستر, أمبوستور."
+  },
+  "actionGotIt": "فهمت",
+  "@actionGotIt": {
+    "description": "[REVIEW] Got it. Spec key action.got_it; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "actionContinue": "كمّل",
+  "@actionContinue": {
+    "description": "[REVIEW] Continue. Spec key action.continue; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "actionAdd": "زيد",
+  "@actionAdd": {
+    "description": "[REVIEW] Add. Spec key action.add; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "actionStartVote": "نبداو التصويت",
+  "@actionStartVote": {
+    "description": "[REVIEW] Start voting. Spec key action.start_vote; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "actionSeeResult": "شوفوا النتيجة",
+  "@actionSeeResult": {
+    "description": "[REVIEW] See the result. Spec key action.see_result; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "actionRunoffStart": "نعاودو التصويت",
+  "@actionRunoffStart": {
+    "description": "[REVIEW] Vote again. Spec key action.runoff_start; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "actionChangeSetup": "بدّل اللعّابة والباكوات",
+  "@actionChangeSetup": {
+    "description": "[REVIEW] Change players or packs. Spec key action.change_setup; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "actionHome": "الرئيسية",
+  "@actionHome": {
+    "description": "[REVIEW] Home. Spec key action.home; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "stateRestoreFailed": "الطرح اللي فات ما نجّمناش نرجّعوه",
+  "@stateRestoreFailed": {
+    "description": "[REVIEW] The last game could not be restored. Spec key state.restore_failed; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "handoffPassLabel": "أعطي التليفون لـ",
+  "@handoffPassLabel": {
+    "description": "[REVIEW] Pass the phone to (shown above the name). Spec key handoff.pass_label; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "revealRoleLabelSealed": "دور",
+  "@revealRoleLabelSealed": {
+    "description": "[REVIEW] Role (label on the sealed ticket, above the player's name). Spec key reveal.role_label_sealed; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "playersMaxReached": "12 لعّاب هو الحدّ",
+  "@playersMaxReached": {
+    "description": "[REVIEW] 12 players is the maximum. Spec key players.max_reached; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "playersMoveEarlier": "قدّم",
+  "@playersMoveEarlier": {
+    "description": "[REVIEW] Move earlier in the order. Spec key players.move_earlier; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "playersMoveLater": "أخّر",
+  "@playersMoveLater": {
+    "description": "[REVIEW] Move later in the order. Spec key players.move_later; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "packsTitle": "اختار الباكوات",
+  "@packsTitle": {
+    "description": "[REVIEW] Choose the packs. Spec key packs.title; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "errorNoPack": "اختار باكو واحد على الأقل",
+  "@errorNoPack": {
+    "description": "[REVIEW] Choose at least one pack. Spec key error.no_pack; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "errorNoWords": "ما فمّا حتى كلمة تنجّموا تلعبوا بيها",
+  "@errorNoWords": {
+    "description": "[REVIEW] No word is available to play with. Spec key error.no_words; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "settingsCredits": "الخطوط والأيقونات",
+  "@settingsCredits": {
+    "description": "[REVIEW] Fonts and icons. Spec key settings.credits; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "settingsLicenses": "التراخيص",
+  "@settingsLicenses": {
+    "description": "[REVIEW] Licences. Spec key settings.licenses; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "settingsVersion": "النسخة {v}",
+  "@settingsVersion": {
+    "description": "[REVIEW] Version {v}. Spec key settings.version; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed.",
+    "placeholders": {
+      "v": {
+        "type": "String"
+      }
+    }
+  },
+  "tutorialGoalTitle": "الهدف",
+  "@tutorialGoalTitle": {
+    "description": "[REVIEW] The goal. Spec key tutorial.goal_title; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "tutorialGoalBody": "الكل عندهم نفس الكلمة السرّية، كان واحد: الإمبوستور. لازم تلقاوه.",
+  "@tutorialGoalBody": {
+    "description": "[REVIEW] Everyone has the same secret word except one player, the Impostor. Find them.. Spec key tutorial.goal_body; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "tutorialRolesTitle": "المدني والإمبوستور",
+  "@tutorialRolesTitle": {
+    "description": "[REVIEW] Civilian and Impostor. Spec key tutorial.roles_title; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "tutorialRolesBody": "المدني يشوف الكلمة والصنف متاعها. الإمبوستور يشوف الصنف برك.",
+  "@tutorialRolesBody": {
+    "description": "[REVIEW] A civilian sees the word and its category. The Impostor sees the category only.. Spec key tutorial.roles_body; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "tutorialHandoffTitle": "تليفون واحد يدور",
+  "@tutorialHandoffTitle": {
+    "description": "[REVIEW] One phone, passed around. Spec key tutorial.handoff_title; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "tutorialHandoffBody": "كل لعّاب ياخذ التليفون، يشوف دورو وحدو، يخبّيه، ومبعد يعدّيه.",
+  "@tutorialHandoffBody": {
+    "description": "[REVIEW] Each player takes the phone, looks at their role alone, hides it, then passes it on.. Spec key tutorial.handoff_body; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "tutorialCluesTitle": "تلميح بكلمة وحدة",
+  "@tutorialCluesTitle": {
+    "description": "[REVIEW] One-word clues. Spec key tutorial.clues_title; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "tutorialCluesBody": "كل واحد يقول كلمة وحدة على الكلمة السرّية. تنجّم تعدّي من غير ما تقول شي.",
+  "@tutorialCluesBody": {
+    "description": "[REVIEW] Each player says one word about the secret word. Passing is allowed.. Spec key tutorial.clues_body; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "tutorialVoteTitle": "التصويت",
+  "@tutorialVoteTitle": {
+    "description": "[REVIEW] The vote. Spec key tutorial.vote_title; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "tutorialVoteBody": "كل واحد يصوّت في السرّ على اللي يشكّ فيه، وما يصوّتش على روحو. كان فمّا تعادل، نعاودو مرّة وحدة بين المتعادلين. وكان تعاود التعادل، الطرح يوفى بتعادل.",
+  "@tutorialVoteBody": {
+    "description": "[REVIEW] Everyone votes in secret for the player they suspect; not for themselves. If the top is tied, there is one more vote between the tied players. If it is tied again, the game is a draw.. Spec key tutorial.vote_body; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "tutorialGuessTitle": "آخر فرصة",
+  "@tutorialGuessTitle": {
+    "description": "[REVIEW] The last chance. Spec key tutorial.guess_title; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "tutorialGuessBody": "كان شدّيتو الإمبوستور، عندو محاولة وحدة باش يعرف الكلمة: كان جابها يربح، وكان غلط المدنيين يربحوا. وكان خرّجتو مدني، الإمبوستور يربح.",
+  "@tutorialGuessBody": {
+    "description": "[REVIEW] A caught Impostor gets one guess at the secret word: right, the Impostor wins; wrong, the civilians win. If a civilian is voted out, the Impostor wins.. Spec key tutorial.guess_body; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "discussionPutPhone": "حطّوا التليفون في الوسط",
+  "@discussionPutPhone": {
+    "description": "[REVIEW] Put the phone in the middle. Spec key discussion.put_phone; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "discussionRuleOneWord": "كل واحد يقول كلمة وحدة على الكلمة السرّية",
+  "@discussionRuleOneWord": {
+    "description": "[REVIEW] Each player says one word about the secret word. Spec key discussion.rule_one_word; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "discussionRulePass": "تنجّم تعدّي من غير ما تقول شي",
+  "@discussionRulePass": {
+    "description": "[REVIEW] Passing is allowed. Spec key discussion.rule_pass; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "discussionRuleThenVote": "وقت تكمّلوا، ابداو التصويت",
+  "@discussionRuleThenVote": {
+    "description": "[REVIEW] When everyone is ready, start the vote. Spec key discussion.rule_then_vote; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "voteTitle": "شكون الإمبوستور؟",
+  "@voteTitle": {
+    "description": "[REVIEW] Who is the Impostor?. Spec key vote.title; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "voteRunoffTitle": "التصويت الثاني",
+  "@voteRunoffTitle": {
+    "description": "[REVIEW] Second vote. Spec key vote.runoff_title; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "voteRunoffHint": "اختار من بين المتعادلين",
+  "@voteRunoffHint": {
+    "description": "[REVIEW] Choose among the tied players. Spec key vote.runoff_hint; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "tallyTitle": "نتيجة التصويت",
+  "@tallyTitle": {
+    "description": "[REVIEW] Vote result. Spec key tally.title; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "tallyNominated": "أكثر أصوات: {name}",
+  "@tallyNominated": {
+    "description": "[REVIEW] {name} got the most votes. Spec key tally.nominated; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "tallyImpostorCaught": "الإمبوستور: {name}",
+  "@tallyImpostorCaught": {
+    "description": "[REVIEW] {name} is the Impostor. Spec key tally.impostor_caught; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "tallyFinalChance": "آخر فرصة للإمبوستور: محاولة وحدة على الكلمة السرّية",
+  "@tallyFinalChance": {
+    "description": "[REVIEW] The Impostor has one last chance: a single guess at the secret word. Spec key tally.final_chance; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "guessTitle": "شنوّة الكلمة السرّية؟",
+  "@guessTitle": {
+    "description": "[REVIEW] What is the secret word?. Spec key guess.title; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "guessOneChance": "محاولة وحدة برك",
+  "@guessOneChance": {
+    "description": "[REVIEW] One attempt only. Spec key guess.one_chance; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "guessLabel": "جوابك",
+  "@guessLabel": {
+    "description": "[REVIEW] Your answer. Spec key guess.label; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "guessReviewTitle": "هذا جوابك النهائي؟",
+  "@guessReviewTitle": {
+    "description": "[REVIEW] Is this your final answer?. Spec key guess.review_title; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "guessConfirmFinal": "إيه، هذا جوابي",
+  "@guessConfirmFinal": {
+    "description": "[REVIEW] Yes, this is my answer. Spec key guess.confirm_final; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "guessEdit": "نبدّلو",
+  "@guessEdit": {
+    "description": "[REVIEW] Change it. Spec key guess.edit; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "resultGuessLabel": "جواب الإمبوستور",
+  "@resultGuessLabel": {
+    "description": "[REVIEW] The Impostor's answer. Spec key result.guess_label; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "resultGuessCorrect": "صحيح",
+  "@resultGuessCorrect": {
+    "description": "[REVIEW] Correct. Spec key result.guess_correct; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "resultGuessWrong": "غالط",
+  "@resultGuessWrong": {
+    "description": "[REVIEW] Wrong. Spec key result.guess_wrong; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "resultVotesTitle": "الأصوات",
+  "@resultVotesTitle": {
+    "description": "[REVIEW] The votes. Spec key result.votes_title; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "resultFirstBallot": "التصويت الأوّل",
+  "@resultFirstBallot": {
+    "description": "[REVIEW] First vote. Spec key result.first_ballot; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "resultDrawNote": "حتى التصويت الثاني وفى بتعادل",
+  "@resultDrawNote": {
+    "description": "[REVIEW] The second vote was tied as well. Spec key result.draw_note; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "resultCivilianOut": "خرّجتو مدني",
+  "@resultCivilianOut": {
+    "description": "[REVIEW] A civilian was voted out. Spec key result.civilian_out; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
   }
 }

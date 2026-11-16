@@ -1,0 +1,120 @@
+import 'dart:math' as math;
+
+import 'package:flutter/material.dart';
+import 'package:impostor_tn/core/design/tokens/tesskra_typography.dart';
+
+/// Display text that shrinks to fit (SCREEN_SPECIFICATIONS §1.3, Q-23 (9)).
+///
+/// The start size is the style's size times the system text scale, clamped
+/// at [TesskraTypography.maxTextScaleSupported]. It then shrinks until the
+/// text fits [maxLines] lines in the available width, but not below
+/// [minFontSize], which is absolute (not scaled). If the text still does not
+/// fit at the floor, it is scaled down further rather than clipped, so no
+/// part of it is ever hidden; long secret words are Q-29.
+///
+/// With [reserveHeight], the widget always takes the height of [maxLines]
+/// lines at the start size, whatever size the text is fitted to. Role-ticket
+/// parity (D-27) uses this so the ticket height never depends on the text.
+class FittedDisplayText extends StatelessWidget {
+  const FittedDisplayText(
+    this.text, {
+    super.key,
+    required this.style,
+    required this.minFontSize,
+    this.maxLines = 1,
+    this.reserveHeight = false,
+    this.textAlign = TextAlign.center,
+    this.textDirection,
+  });
+
+  final String text;
+
+  /// Must have `fontSize` and `height`.
+  final TextStyle style;
+  final double minFontSize;
+  final int maxLines;
+  final bool reserveHeight;
+  final TextAlign textAlign;
+  final TextDirection? textDirection;
+
+  /// The font size [text] is drawn at in [maxWidth], before any last-resort
+  /// scaling. Exposed for tests.
+  static double fittedSize({
+    required String text,
+    required TextStyle style,
+    required double startSize,
+    required double minFontSize,
+    required int maxLines,
+    required double maxWidth,
+    required TextDirection textDirection,
+  }) {
+    bool fits(double size) {
+      final painter = TextPainter(
+        text: TextSpan(
+          text: text,
+          style: style.copyWith(fontSize: size),
+        ),
+        textDirection: textDirection,
+        maxLines: maxLines,
+        textScaler: TextScaler.noScaling,
+      )..layout(maxWidth: maxWidth);
+      final fitsLines = !painter.didExceedMaxLines;
+      final fitsWidth = maxLines > 1 || painter.maxIntrinsicWidth <= maxWidth;
+      painter.dispose();
+      return fitsLines && fitsWidth;
+    }
+
+    if (startSize <= minFontSize || fits(startSize)) return startSize;
+    // Whole-pixel binary search: at most about 6 layouts for 72 → 40.
+    var low = minFontSize;
+    var high = startSize;
+    if (!fits(low)) return low;
+    while (high - low > 1) {
+      final middle = ((low + high) / 2).floorToDouble();
+      if (fits(middle)) {
+        low = middle;
+      } else {
+        high = middle;
+      }
+    }
+    return low;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final scale = math.min(
+      MediaQuery.textScalerOf(context).scale(1),
+      TesskraTypography.maxTextScaleSupported,
+    );
+    final startSize = style.fontSize! * scale;
+    final direction = textDirection ?? Directionality.of(context);
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final size = fittedSize(
+          text: text,
+          style: style,
+          startSize: startSize,
+          minFontSize: minFontSize,
+          maxLines: maxLines,
+          maxWidth: constraints.maxWidth,
+          textDirection: direction,
+        );
+        final drawn = Text(
+          text,
+          style: style.copyWith(fontSize: size),
+          maxLines: maxLines,
+          textAlign: textAlign,
+          textDirection: direction,
+          textScaler: TextScaler.noScaling,
+          softWrap: maxLines > 1,
+        );
+        final fitted = FittedBox(fit: BoxFit.scaleDown, child: drawn);
+        if (!reserveHeight) return fitted;
+        return SizedBox(
+          height: startSize * style.height! * maxLines,
+          child: Center(child: fitted),
+        );
+      },
+    );
+  }
+}

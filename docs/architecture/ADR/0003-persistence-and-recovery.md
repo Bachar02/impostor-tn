@@ -1,6 +1,58 @@
 # ADR-0003: Persistence, transactions and recovery
 
-Status: Proposed (2026-11-15). Required by PRD §11 before implementation. Nothing here is built yet; the open points at the end need a Product Owner ruling. The table sketch is indicative and will be finalised with the engine.
+Status: **Revision 2 (2026-11-17), implemented; awaiting Product Owner review.** Revision 2 replaces the drift/SQLite proposal of revision 1 with a single atomically replaced JSON document, and records D-17 (Q-03) and D-21 (Q-16). Revision 1 is kept below for the record.
+
+## Revision 2 — decision
+
+### Mechanism: one document, replaced atomically
+
+All durable state is one small JSON document, `game_state.json`, in the app-private no-backup directory (`Context.getNoBackupFilesDir()`, obtained through the app's own platform channel, the one ADR-0006 uses for `FLAG_SECURE`).
+
+```
+{ "schema": 1,
+  "cooldown": ["<word id, oldest>", …, "<newest>"],
+  "roster":   { "players": [{"id", "name"}], "packs": ["<pack id>"] },
+  "session":  null | { "id", "players", "packs", "impostor",
+                       "word": {"id", "version"}, "wordConsumed", "phase",
+                       "acknowledged": [...], "firstBallot": [{"voter","target"}],
+                       "runoff": [...], "finalGuess": null | "<raw>" } }
+```
+
+**Write** (`FileStateStore.write`): encode the whole document → write `game_state.json.tmp` with `flush: true` → rename over `game_state.json`. A rename within one directory is atomic, so after a process kill at any instant the file holds either the old or the new document. **Read**: a leftover `.tmp` is an interrupted write and is deleted unread. Reads and writes are serialised.
+
+Every checkpoint is therefore one transaction across session, cooldown and roster together. In particular C2 writes the cooldown entry and `wordConsumed: true` in the same document (D-21).
+
+**Why not drift/SQLite (revision 1).** The state is a few kilobytes with one writer. One whole-document replace gives the same all-or-nothing guarantee as a SQL transaction without four packages (`drift`, `drift_flutter`, `drift_dev`, `build_runner`), code generation, or a native SQLite library in host tests. No new dependency is added; `path_provider` is not needed either.
+
+**What replaces the SQL constraints.** Revision 1 relied on `UNIQUE` and `CHECK` constraints to refuse duplicates. Here:
+
+- The codec (`SavedStateCodec`) refuses a document with a voter twice in a ballot, an acknowledgement twice, a duplicated or over-long cooldown, or any unexpected type, and drops that part whole. It never repairs.
+- Every restore replays the saved facts through the engine (`SessionSnapshot.restore` → `SessionRestore`), which refuses self-votes, out-of-order acknowledgements, votes in a ballot that never opened and phase mismatches.
+- Every checkpoint (`GameService`) re-reads the saved document, decides through the engine, and writes only when the action is not already saved. A retry, a double tap or a restart finds the work done and writes nothing (UX_FLOWS §3.1).
+
+### Parts are checked independently
+
+The codec decodes `cooldown`, `roster` and `session` separately. A damaged session is cancelled without losing the cooldown history; a damaged cooldown is dropped without cancelling the game. Only a document that is not JSON, not UTF-8 or of an unknown schema loses everything (accepted, as in revision 1).
+
+### Launch and recovery (UX_FLOWS F1, F11)
+
+`GameService.launch`: read → restore the session through the rules → if it is missing, damaged, its word is gone from the catalog, its word `version` changed (ADR-0009), or an acknowledgement exists without `wordConsumed`, the session is cancelled (the document is rewritten without it), Home opens with the "could not be restored" banner, and roster and cooldown are kept. Nothing is redrawn, repaired or invented.
+
+### Schema
+
+`schema` is 1. A future version adds a migration step in the codec, with a test per step. A document with a newer schema than the app understands is unreadable (downgrade), handled as above.
+
+### Storage security (D-17, Q-03)
+
+Unchanged from revision 1: app-private storage, backups and device transfer disabled, no encryption. The session stores names, roles, phase, votes and checkpoint flags, i.e. everything recovery needs; the word is stored by ID and version only, the cooldown holds word IDs only. A session is deleted when the group leaves (C8) or replays (C9).
+
+### Riverpod retry (D-12)
+
+Providers that run checkpoints are `Notifier`s whose methods return the `Checkpoint` result; they never rely on Riverpod's automatic retry. The launch provider (`FutureProvider`) sets `retry: (count, error) => null`, so a failed launch is surfaced once and retried only by an explicit user action.
+
+---
+
+## Revision 1 (2026-11-15, superseded)
 
 ## Requirements (PRD §5, §7, §10, §11, §12)
 

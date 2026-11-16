@@ -18,7 +18,7 @@ Location note: the foundation documents live in `docs/`; the three UX documents 
 | Screen specifications (14 screens, 2 overlays, all states) | `docs/design/SCREEN_SPECIFICATIONS.md` | **Draft, revision 2 after the consistency audit, awaiting review** |
 | Full-screen reference renders (52 states, up to four sizes) and layout measurements | `docs/design/reference/screens.html`, `reference/png/screens/`, `reference/screens_metrics.json` | Complete as browser renders; not verified on a device |
 | Assumptions, risks, inconsistencies, validation plan | `docs/design/UX_RESEARCH_AND_RISKS.md` | **Draft, awaiting review.** No user research has been done |
-| Tokens | `docs/design/tokens/{colors,typography,spacing,radii,shadows,animations}.json` | Complete for Stage 2; additions proposed (Q-06, Q-07, Q-23) |
+| Tokens | `docs/design/tokens/{colors,typography,spacing,radii,shadows,animations}.json` | Complete for Stage 2; D-19 private tokens added 2026-11-17; Q-06 and Q-23 open |
 | Fonts + licences | `docs/design/assets/fonts/` | Complete, unmodified upstream files |
 | Icons (26) + licence | `docs/design/assets/icons/` | Complete for the specified screens; stroke width under review (Q-06) |
 | Logo, stamp, app-icon layers | `docs/design/assets/logo/` | Wordmark provisional (name spelling) |

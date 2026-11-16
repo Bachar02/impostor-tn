@@ -27,7 +27,7 @@ void main() {
     }
   });
 
-  group('comparisonForm keeps characters Q-26 has not settled', () {
+  group('comparisonForm keeps characters D-30 leaves alone', () {
     // Strict interim reading: only U+0020 is a space; nothing is removed.
     for (final (label, raw) in [
       ('tab', '\ta'),

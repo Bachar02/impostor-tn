@@ -40,6 +40,16 @@ void main() {
     );
   });
 
+  test('features never import the data layer; only the composition root '
+      'binds it (ADR-0001)', () {
+    final data = RegExp(r': package:impostor_tn/data/');
+
+    expect([
+      for (final layer in ['core', 'game', 'features'])
+        ...importsUnder('lib/$layer').where(data.hasMatch),
+    ], isEmpty);
+  });
+
   test('only data imports the database package', () {
     final database = RegExp(r': package:(drift|drift_flutter|sqlite3)/');
 

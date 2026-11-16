@@ -55,6 +55,7 @@
   "private": {
     "background": "{palette.carbon}",
     "surface": "{palette.carbonRaised}",
+    "surfaceSunken": "{palette.carbonRaised}",
     "ticket": "{palette.paper}",
     "onTicket": "{palette.ink}",
     "textPrimary": "{palette.paper}",
@@ -67,6 +68,7 @@
     "onPrimary": "{palette.carbon}",
     "success": "{palette.mintLight}",
     "error": "{palette.coralLight}",
+    "errorText": "{palette.coralLight}",
     "focusRing": "{palette.paper}",
     "shadow": "{palette.shadowDeep}",
     "scrim": {

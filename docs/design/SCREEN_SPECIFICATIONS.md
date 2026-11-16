@@ -50,13 +50,13 @@ The text button is drawn 44 high (`sizes.buttonCompactHeight`) but `sizes.touchT
 ### 1.5 Private wrapper (all PRV screens)
 
 - Carbon theme. No role colour, no hard shadow except on the ticket, primary buttons are mustard and flat.
-- Screenshot blocking and the app-switcher cover are active while any PRV screen is shown. Whether they also cover public in-game screens or the whole app is Q-04, which stays open; the three options and what each protects are listed there. Whatever the scope, the "remove the secret when paused" rule above applies as well, because blocking screenshots does not hide what is on the glass.
+- Screenshot blocking and the app-switcher cover are active while any PRV screen is shown. D-18 extends them to the whole game, from starting a game until it ends or is left, public in-game screens included. Not verified on a device. Whatever the scope, the "remove the secret when paused" rule above applies as well, because blocking screenshots does not hide what is on the glass.
 - Screen readers (Q-28, proposal): nothing secret is ever announced automatically. Private screens set no live region and never move accessibility focus onto the word, the category, the role or a vote option by themselves. Those elements remain ordinary text, spoken only when the player deliberately moves focus onto them. Buttons and player names keep their labels, since names are not secret. Not tested with TalkBack.
 - When the app leaves the foreground, secret content is removed from the screen immediately and the flow returns to PRV-01 (`UX_FLOWS.md` F11). "Leaves the foreground" means Android pauses the activity: home, app switcher, another app, an incoming-call screen, screen lock or timeout. Pulling down the notification shade or changing the volume does not pause the activity and is not treated as an interruption; this boundary has not been verified on a device.
 - No shared-element transitions, no previews or blurred versions of secret content, no looping animation.
 - Secret text is not selectable and is never copied to the clipboard.
 - Sounds and haptics are identical for Civilian and Impostor.
-- Colours missing from `colors.json → private` (`surfaceSunken`, `errorText`) are used as `carbonRaised` and `coralLight`, pending Q-07.
+- `private.surfaceSunken` = `carbonRaised` and `private.errorText` = `coralLight`, now in `colors.json` (D-19).
 
 ### 1.6 Errors, loading, empty
 
@@ -511,7 +511,7 @@ Anyone who can read the screen learns the role, and the secret word if it is a C
 1. The top row does not change on reveal: it keeps the sealed label and the **player's name**; only the stamp icon changes from lock to person. The role name moves into the caption of the bottom block: "مدني · الكلمة السرّية" or "إمبوستور · الصنف برك", at 13 instead of 26. Measured: the top rows become identical (82 wide for both); the captions are 100 and 110 wide.
 2. The big text keeps a line box of the full `displayXL` height whatever size it is fitted to, so both tickets have the same height at every text scale (measured 389 and 389 at scale 1.5).
 
-This also makes the screen satisfy design principle 3 ("name first"), which the approved revealed-ticket render does not: it shows no name. The remaining differences are the small caption, the chip and the big text itself. The specification above still describes the approved render; it changes only if Q-25 is approved.
+This also makes the screen satisfy design principle 3 ("name first"), which the approved revealed-ticket render does not: it shows no name. The remaining differences are the small caption, the chip and the big text itself. **Applied by D-27 (2026-11-17).** These two changes supersede the "Revealed, Civilian" and "Revealed, Impostor" rows of the state table above: the top row keeps `reveal.role_label_sealed` and the player's name, the stamp changes from `ic_lock` to `ic_user`, and the role name opens the caption. Implemented in `RoleTicket` (`lib/core/design/widgets/role_ticket.dart`).
 
 **Interactions**
 
