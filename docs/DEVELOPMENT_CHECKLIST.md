@@ -2,7 +2,7 @@
 
 Updated after every milestone. Legend: `[x]` done and verified as described, `[~]` partly done, `[ ]` not started, `[!]` blocked.
 
-Last update: 2026-11-16 (end of Phase C).
+Last update: 2026-11-16 (UX documents drafted).
 
 ## Phase A — Repository audit
 
@@ -36,9 +36,19 @@ Last update: 2026-11-16 (end of Phase C).
 - [x] `flutter build apk --debug` succeeds
 - [ ] App run on a device or emulator (none connected so far)
 
+## UX and design handoff (Stages 3–5)
+
+- [x] `docs/design/UX_FLOWS.md` drafted: 11 flows, 9 checkpoints, PRD traceability
+- [x] `docs/design/SCREEN_SPECIFICATIONS.md` drafted: 14 screens, 2 overlays, all states
+- [x] `docs/design/UX_RESEARCH_AND_RISKS.md` drafted: assumptions, risks, Q-06/Q-07 evidence, validation plan
+- [x] `docs/DESIGN_HANDOFF.md` updated
+- [ ] Product Owner review and approval (Q-05)
+- [ ] Blocking decisions settled: Q-01, Q-06, Q-07, Q-16, Q-17, Q-18, Q-19, Q-22
+- [ ] Full-screen renders of the 14 screens (not produced)
+
 ## Phase D — First vertical slice
 
-- [!] Blocked: needs approved `docs/UX_FLOWS.md` and `docs/SCREEN_SPECIFICATIONS.md` (D-09, Q-05)
+- [!] Blocked: needs approved `docs/design/UX_FLOWS.md` and `docs/design/SCREEN_SPECIFICATIONS.md` (D-09, Q-05)
 
 ## Work that is not blocked by the design gate (needs Product Owner go-ahead)
 

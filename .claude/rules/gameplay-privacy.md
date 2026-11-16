@@ -17,7 +17,7 @@ Applies to everything that touches game rules, session state or private screens.
 - One vote per player per ballot; no self-vote; no change after submission (D-02).
 - A top tie on the first ballot leads to exactly one runoff among the tied players, with fresh votes; a runoff tie is a draw with no final guess. No random or order-based tie-break.
 - Final guess: trim and collapse whitespace only, then exact match against the canonical word or an explicit alias (D-01). No diacritic, tatweel or letter-variant folding.
-- Cooldown: the 30 most recent distinct word IDs, across sessions and restarts; recorded once, in the same transaction that starts the reveal phase.
+- Cooldown: the 30 most recent distinct word IDs, across sessions and restarts; recorded exactly once, before the first reveal is prepared and never for a game abandoned earlier (exact trigger pending Q-16).
 
 ## Persistence
 

@@ -44,7 +44,8 @@ Each row below is exactly one transaction. The UI changes only after it commits.
 
 | Checkpoint | Written atomically |
 |---|---|
-| Start game | New session row (players snapshot, Impostor, word id, phase `reveal`) **and** the cooldown entry for that word. This is "before the first private role reveal is prepared" (PRD §10). A game left at setup writes nothing, so it consumes no word. |
+| Start game | New session row (players snapshot, Impostor, word id, phase `reveal`). No cooldown entry yet. |
+| Consume word | The cooldown entry for the session's word and a "consumed" mark on the session, once. Triggered by the first "I am {name}" of the game, which is "before the first private role reveal is prepared" (PRD §10). A game abandoned at setup or at the first handoff has prepared no reveal and consumes nothing. **Pending Q-16**; the alternative is to merge this into "Start game". |
 | Acknowledge role | Acknowledgement row; if it is the last one, phase → `discussion` |
 | Open voting | Phase → `firstBallot` |
 | Submit vote | Vote row; if it is the last one, the computed outcome: phase → `finalGuess`, `runoff` or `result` |

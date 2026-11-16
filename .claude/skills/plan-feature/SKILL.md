@@ -8,7 +8,7 @@ description: Plan one Impostor TN feature or milestone before any code is writte
 Produce a plan the Product Owner can approve. Write no production code.
 
 1. **Check the gates.**
-   - Product screen or gameplay UI: `docs/UX_FLOWS.md` and `docs/SCREEN_SPECIFICATIONS.md` must exist and be approved. If not, stop and report the blocker.
+   - Product screen or gameplay UI: `docs/design/UX_FLOWS.md` and `docs/design/SCREEN_SPECIFICATIONS.md` must be approved by the Product Owner, not merely exist as drafts. If not, stop and report the blocker.
    - Read `docs/DEVELOPMENT_CHECKLIST.md` for the current state and `docs/product/DECISIONS.md` for rulings and open questions.
 2. **Collect the requirements.** Quote the exact PRD sections, decision IDs and design sections that govern the feature. List every acceptance criterion from PRD §15 that applies.
 3. **Find gaps.** List anything missing, ambiguous or contradictory. For each: the exact ambiguity, its impact, and the simplest safe interpretation. Do not resolve product questions yourself.
