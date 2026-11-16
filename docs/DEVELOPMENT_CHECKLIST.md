@@ -2,7 +2,7 @@
 
 Updated after every milestone. Legend: `[x]` done and verified as described, `[~]` partly done, `[ ]` not started, `[!]` blocked.
 
-Last update: 2026-11-16 (UX documents drafted).
+Last update: 2026-11-16 (foundation re-assessed; error handling added, ADR-0008).
 
 ## Phase A — Repository audit
 
@@ -17,7 +17,8 @@ Last update: 2026-11-16 (UX documents drafted).
 - [x] Agents: architecture, gameplay, UI/design, QA reviewers (read-only)
 - [x] `.claude/settings.json`: Git commands denied; Dart format hook (verified to fire)
 - [x] ADR-0001 to ADR-0007
-- [x] `docs/product/DECISIONS.md` with rulings D-01 to D-09 and open questions Q-01 to Q-15
+- [~] ADR-0008 (error handling, diagnostics, build configuration): proposed, awaiting Product Owner review
+- [x] `docs/product/DECISIONS.md` with rulings D-01 to D-10 and open questions Q-01 to Q-30
 - [x] Design path references corrected to `docs/design/`; 43 assets re-verified
 
 ## Phase C — Project bootstrap
@@ -31,6 +32,10 @@ Last update: 2026-11-16 (UX documents drafted).
 - [x] `TesskraIcon` widget and bidi helpers
 - [x] Localization pipeline (`ar` only) with review-status guard
 - [x] App shell with a placeholder screen (not a product screen)
+- [x] Bootstrap sequence with global error handlers; uncaught errors reported without their message outside debug builds (unit-tested; logcat output not checked on a device)
+- [x] Import-scanning test for the layer dependency rule (ADR-0001)
+- [ ] Neutral "something went wrong" screen: needs a specification and Arabic copy (ADR-0008)
+- [ ] Toolchain: Android cmdline-tools missing, SDK licences not accepted, JDK 19 in use (Product Owner's machine setup)
 - [x] Android: backups and device transfer disabled, RTL enabled, label, paper launch background, adaptive launcher icon
 - [x] `flutter analyze` clean; `flutter test` passing (see the Phase C report for counts)
 - [x] `flutter build apk --debug` succeeds

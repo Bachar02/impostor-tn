@@ -21,6 +21,7 @@ lib/
       assets/              typed asset paths
       widgets/             reusable Tesskra components
     text/                  bidi helpers
+    diagnostics/           redacted error reporting (ADR-0008)
   game/                    domain + engine, pure Dart            [not started]
   data/                    drift database, repositories, content loader [not started]
   features/
@@ -45,7 +46,7 @@ presentation → application → game ← data
 - `presentation` renders state and sends intents. It contains no rule.
 - `core` knows nothing about features or the game.
 
-A test will enforce the first rule by scanning imports under `lib/game/` once that folder exists.
+`test/architecture/layer_dependencies_test.dart` enforces these rules by scanning imports. The `core` rule is active today; the `game` and database rules pass trivially until those folders exist.
 
 ### Engine shape
 
