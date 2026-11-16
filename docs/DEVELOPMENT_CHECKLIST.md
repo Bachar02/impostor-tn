@@ -17,7 +17,8 @@ Last update: 2026-11-16 (foundation re-assessed; error handling added, ADR-0008)
 - [x] Agents: architecture, gameplay, UI/design, QA reviewers (read-only)
 - [x] `.claude/settings.json`: Git commands denied; Dart format hook (verified to fire)
 - [x] ADR-0001 to ADR-0007
-- [~] ADR-0008 (error handling, diagnostics, build configuration): proposed, reviewed against SDK source 2026-11-16, awaiting Product Owner review; release logging not verified on a device
+- [~] ADR-0008 (error handling, diagnostics, build configuration): proposed, revision 3 applies D-11 to D-14; awaiting approval and device verification
+- [x] Production diagnostics reduced to origin and error type (D-11); console-output source guard test (proved to fail on a planted `debugPrint`)
 - [x] `docs/product/DECISIONS.md` with rulings D-01 to D-10 and open questions Q-01 to Q-30
 - [x] Design path references corrected to `docs/design/`; 43 assets re-verified
 
@@ -35,11 +36,12 @@ Last update: 2026-11-16 (foundation re-assessed; error handling added, ADR-0008)
 - [x] Bootstrap sequence with global error handlers; uncaught errors reported without their message outside debug builds (unit-tested; logcat output not checked on a device)
 - [x] Import-scanning test for the layer dependency rule (ADR-0001)
 - [ ] Neutral "something went wrong" screen: needs a specification and Arabic copy (ADR-0008)
-- [ ] Toolchain: Android cmdline-tools missing, SDK licences not accepted, JDK 19 in use (Product Owner's machine setup)
+- [x] Toolchain: Android toolchain clean in `flutter doctor` (2026-11-16)
 - [x] Android: backups and device transfer disabled, RTL enabled, label, paper launch background, adaptive launcher icon
 - [x] `flutter analyze` clean; `flutter test` passing (see the Phase C report for counts)
 - [x] `flutter build apk --debug` succeeds
-- [ ] App run on a device or emulator (none connected so far)
+- [x] App run on an emulator (Pixel_XL_API_36, Android 16, 2026-11-16): debug startup, home/resume, back, background process kill. Physical device still pending.
+- [x] Redacted diagnostics checked on the emulator in profile and release builds with a temporary probe (ADR-0008 "Verification"); probe deleted
 
 ## UX and design handoff (Stages 3–5)
 
