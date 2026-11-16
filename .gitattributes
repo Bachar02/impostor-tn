@@ -1,0 +1,3 @@
+# Design assets are checked byte-for-byte against docs/design/ASSET_MANIFEST.json.
+# Never let Git rewrite their line endings.
+docs/design/assets/** -text

@@ -46,3 +46,9 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+# Claude Code personal overrides
+.claude/settings.local.json
+
+# Claude Code personal overrides
+.claude/settings.local.json
