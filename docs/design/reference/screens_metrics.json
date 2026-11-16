@@ -1,0 +1,9768 @@
+[
+ {
+  "id": "ovl01_add_keyboard",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 260,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 140,
+  "bodyContent": 514,
+  "hidden": 374,
+  "usableBottom": 260,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 16,
+    "y": 176,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "زيد",
+    "x": 26,
+    "y": 224,
+    "w": 268,
+    "h": 60,
+    "visible": false
+   }
+  ],
+  "fields": [
+   {
+    "x": 26,
+    "y": 129,
+    "w": 268,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "sheet": {
+    "x": 0,
+    "y": 24,
+    "w": 320,
+    "h": 236,
+    "textW": 268,
+    "font": 16
+   }
+  },
+  "file": "ovl01_add_keyboard__320x568.png",
+  "full": false
+ },
+ {
+  "id": "ovl01_add_keyboard",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 260,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 140,
+  "bodyContent": 545,
+  "hidden": 405,
+  "usableBottom": 260,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 16,
+    "y": 176,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "زيد",
+    "x": 26,
+    "y": 263,
+    "w": 268,
+    "h": 60,
+    "visible": false
+   }
+  ],
+  "fields": [
+   {
+    "x": 26,
+    "y": 158,
+    "w": 268,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "sheet": {
+    "x": 0,
+    "y": 24,
+    "w": 320,
+    "h": 236,
+    "textW": 268,
+    "font": 24
+   }
+  },
+  "file": "ovl01_add_keyboard__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "ovl01_add_keyboard",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 300,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 252,
+  "bodyContent": 514,
+  "hidden": 262,
+  "usableBottom": 372,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 24,
+    "y": 288,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "زيد",
+    "x": 26,
+    "y": 288,
+    "w": 308,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [
+   {
+    "x": 26,
+    "y": 193,
+    "w": 308,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "sheet": {
+    "x": 0,
+    "y": 88,
+    "w": 360,
+    "h": 284,
+    "textW": 308,
+    "font": 16
+   }
+  },
+  "file": "ovl01_add_keyboard__360x720.png",
+  "full": false
+ },
+ {
+  "id": "ovl01_add_keyboard",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 300,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 252,
+  "bodyContent": 545,
+  "hidden": 293,
+  "usableBottom": 372,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 24,
+    "y": 288,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "زيد",
+    "x": 26,
+    "y": 288,
+    "w": 308,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [
+   {
+    "x": 26,
+    "y": 183,
+    "w": 308,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "sheet": {
+    "x": 0,
+    "y": 49,
+    "w": 360,
+    "h": 323,
+    "textW": 308,
+    "font": 24
+   }
+  },
+  "file": "ovl01_add_keyboard__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "ovl01_edit_duplicate",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 260,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 140,
+  "bodyContent": 688,
+  "hidden": 548,
+  "usableBottom": 260,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 16,
+    "y": 176,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "أكّد",
+    "x": 26,
+    "y": 224,
+    "w": 268,
+    "h": 60,
+    "visible": false
+   },
+   {
+    "act": "قدّم",
+    "x": 166,
+    "y": 296,
+    "w": 128,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "أخّر",
+    "x": 26,
+    "y": 296,
+    "w": 128,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "فسّخ اللعّاب",
+    "x": 26,
+    "y": 360,
+    "w": 268,
+    "h": 52,
+    "visible": false
+   }
+  ],
+  "fields": [
+   {
+    "x": 26,
+    "y": 129,
+    "w": 268,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "sheet": {
+    "x": 0,
+    "y": 24,
+    "w": 320,
+    "h": 236,
+    "textW": 268,
+    "font": 16
+   }
+  },
+  "file": "ovl01_edit_duplicate__320x568.png",
+  "full": false
+ },
+ {
+  "id": "ovl01_edit_duplicate",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 260,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 140,
+  "bodyContent": 707,
+  "hidden": 567,
+  "usableBottom": 260,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 16,
+    "y": 176,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "أكّد",
+    "x": 26,
+    "y": 263,
+    "w": 268,
+    "h": 60,
+    "visible": false
+   },
+   {
+    "act": "قدّم",
+    "x": 166,
+    "y": 335,
+    "w": 128,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "أخّر",
+    "x": 26,
+    "y": 335,
+    "w": 128,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "فسّخ اللعّاب",
+    "x": 26,
+    "y": 399,
+    "w": 268,
+    "h": 52,
+    "visible": false
+   }
+  ],
+  "fields": [
+   {
+    "x": 26,
+    "y": 158,
+    "w": 268,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "sheet": {
+    "x": 0,
+    "y": 24,
+    "w": 320,
+    "h": 236,
+    "textW": 268,
+    "font": 24
+   }
+  },
+  "file": "ovl01_edit_duplicate__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "ovl01_edit_duplicate",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 300,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 252,
+  "bodyContent": 688,
+  "hidden": 436,
+  "usableBottom": 372,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 24,
+    "y": 288,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "أكّد",
+    "x": 26,
+    "y": 224,
+    "w": 308,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "قدّم",
+    "x": 186,
+    "y": 296,
+    "w": 148,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "أخّر",
+    "x": 26,
+    "y": 296,
+    "w": 148,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "فسّخ اللعّاب",
+    "x": 26,
+    "y": 360,
+    "w": 308,
+    "h": 52,
+    "visible": false
+   }
+  ],
+  "fields": [
+   {
+    "x": 26,
+    "y": 129,
+    "w": 308,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "sheet": {
+    "x": 0,
+    "y": 24,
+    "w": 360,
+    "h": 348,
+    "textW": 308,
+    "font": 16
+   }
+  },
+  "file": "ovl01_edit_duplicate__360x720.png",
+  "full": false
+ },
+ {
+  "id": "ovl01_edit_duplicate",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 300,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 252,
+  "bodyContent": 707,
+  "hidden": 455,
+  "usableBottom": 372,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 24,
+    "y": 288,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "أكّد",
+    "x": 26,
+    "y": 263,
+    "w": 308,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "قدّم",
+    "x": 186,
+    "y": 335,
+    "w": 148,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "أخّر",
+    "x": 26,
+    "y": 335,
+    "w": 148,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "فسّخ اللعّاب",
+    "x": 26,
+    "y": 399,
+    "w": 308,
+    "h": 52,
+    "visible": false
+   }
+  ],
+  "fields": [
+   {
+    "x": 26,
+    "y": 158,
+    "w": 308,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "sheet": {
+    "x": 0,
+    "y": 24,
+    "w": 360,
+    "h": 348,
+    "textW": 308,
+    "font": 24
+   }
+  },
+  "file": "ovl01_edit_duplicate__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "ovl01_edit_keyboard",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 260,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 140,
+  "bodyContent": 688,
+  "hidden": 548,
+  "usableBottom": 260,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 16,
+    "y": 176,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "أكّد",
+    "x": 26,
+    "y": 224,
+    "w": 268,
+    "h": 60,
+    "visible": false
+   },
+   {
+    "act": "قدّم",
+    "x": 166,
+    "y": 296,
+    "w": 128,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "أخّر",
+    "x": 26,
+    "y": 296,
+    "w": 128,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "فسّخ اللعّاب",
+    "x": 26,
+    "y": 360,
+    "w": 268,
+    "h": 52,
+    "visible": false
+   }
+  ],
+  "fields": [
+   {
+    "x": 26,
+    "y": 129,
+    "w": 268,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "sheet": {
+    "x": 0,
+    "y": 24,
+    "w": 320,
+    "h": 236,
+    "textW": 268,
+    "font": 16
+   }
+  },
+  "file": "ovl01_edit_keyboard__320x568.png",
+  "full": false
+ },
+ {
+  "id": "ovl01_edit_keyboard",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 260,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 140,
+  "bodyContent": 707,
+  "hidden": 567,
+  "usableBottom": 260,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 16,
+    "y": 176,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "أكّد",
+    "x": 26,
+    "y": 263,
+    "w": 268,
+    "h": 60,
+    "visible": false
+   },
+   {
+    "act": "قدّم",
+    "x": 166,
+    "y": 335,
+    "w": 128,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "أخّر",
+    "x": 26,
+    "y": 335,
+    "w": 128,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "فسّخ اللعّاب",
+    "x": 26,
+    "y": 399,
+    "w": 268,
+    "h": 52,
+    "visible": false
+   }
+  ],
+  "fields": [
+   {
+    "x": 26,
+    "y": 158,
+    "w": 268,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "sheet": {
+    "x": 0,
+    "y": 24,
+    "w": 320,
+    "h": 236,
+    "textW": 268,
+    "font": 24
+   }
+  },
+  "file": "ovl01_edit_keyboard__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "ovl01_edit_keyboard",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 300,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 252,
+  "bodyContent": 688,
+  "hidden": 436,
+  "usableBottom": 372,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 24,
+    "y": 288,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "أكّد",
+    "x": 26,
+    "y": 224,
+    "w": 308,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "قدّم",
+    "x": 186,
+    "y": 296,
+    "w": 148,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "أخّر",
+    "x": 26,
+    "y": 296,
+    "w": 148,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "فسّخ اللعّاب",
+    "x": 26,
+    "y": 360,
+    "w": 308,
+    "h": 52,
+    "visible": false
+   }
+  ],
+  "fields": [
+   {
+    "x": 26,
+    "y": 129,
+    "w": 308,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "sheet": {
+    "x": 0,
+    "y": 24,
+    "w": 360,
+    "h": 348,
+    "textW": 308,
+    "font": 16
+   }
+  },
+  "file": "ovl01_edit_keyboard__360x720.png",
+  "full": false
+ },
+ {
+  "id": "ovl01_edit_keyboard",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 300,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 252,
+  "bodyContent": 707,
+  "hidden": 455,
+  "usableBottom": 372,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 24,
+    "y": 288,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "أكّد",
+    "x": 26,
+    "y": 263,
+    "w": 308,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "قدّم",
+    "x": 186,
+    "y": 335,
+    "w": 148,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "أخّر",
+    "x": 26,
+    "y": 335,
+    "w": 148,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "فسّخ اللعّاب",
+    "x": 26,
+    "y": 399,
+    "w": 308,
+    "h": 52,
+    "visible": false
+   }
+  ],
+  "fields": [
+   {
+    "x": 26,
+    "y": 158,
+    "w": 308,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "sheet": {
+    "x": 0,
+    "y": 24,
+    "w": 360,
+    "h": 348,
+    "textW": 308,
+    "font": 24
+   }
+  },
+  "file": "ovl01_edit_keyboard__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "ovl01_edit_no_keyboard",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 688,
+  "hidden": 288,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "أكّد",
+    "x": 26,
+    "y": 308,
+    "w": 268,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "قدّم",
+    "x": 166,
+    "y": 380,
+    "w": 128,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "أخّر",
+    "x": 26,
+    "y": 380,
+    "w": 128,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "فسّخ اللعّاب",
+    "x": 26,
+    "y": 444,
+    "w": 268,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [
+   {
+    "x": 26,
+    "y": 213,
+    "w": 268,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "sheet": {
+    "x": 0,
+    "y": 108,
+    "w": 320,
+    "h": 412,
+    "textW": 268,
+    "font": 16
+   }
+  },
+  "file": "ovl01_edit_no_keyboard__320x568.png",
+  "full": false
+ },
+ {
+  "id": "ovl01_edit_no_keyboard",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 707,
+  "hidden": 307,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "أكّد",
+    "x": 26,
+    "y": 308,
+    "w": 268,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "قدّم",
+    "x": 166,
+    "y": 380,
+    "w": 128,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "أخّر",
+    "x": 26,
+    "y": 380,
+    "w": 128,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "فسّخ اللعّاب",
+    "x": 26,
+    "y": 444,
+    "w": 268,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [
+   {
+    "x": 26,
+    "y": 203,
+    "w": 268,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "sheet": {
+    "x": 0,
+    "y": 69,
+    "w": 320,
+    "h": 451,
+    "textW": 268,
+    "font": 24
+   }
+  },
+  "file": "ovl01_edit_no_keyboard__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "ovl01_edit_no_keyboard",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 688,
+  "hidden": 136,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "أكّد",
+    "x": 26,
+    "y": 460,
+    "w": 308,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "قدّم",
+    "x": 186,
+    "y": 532,
+    "w": 148,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "أخّر",
+    "x": 26,
+    "y": 532,
+    "w": 148,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "فسّخ اللعّاب",
+    "x": 26,
+    "y": 596,
+    "w": 308,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [
+   {
+    "x": 26,
+    "y": 365,
+    "w": 308,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "sheet": {
+    "x": 0,
+    "y": 260,
+    "w": 360,
+    "h": 412,
+    "textW": 308,
+    "font": 16
+   }
+  },
+  "file": "ovl01_edit_no_keyboard__360x720.png",
+  "full": false
+ },
+ {
+  "id": "ovl01_edit_no_keyboard",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 707,
+  "hidden": 155,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "أكّد",
+    "x": 26,
+    "y": 460,
+    "w": 308,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "قدّم",
+    "x": 186,
+    "y": 532,
+    "w": 148,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "أخّر",
+    "x": 26,
+    "y": 532,
+    "w": 148,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "فسّخ اللعّاب",
+    "x": 26,
+    "y": 596,
+    "w": 308,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [
+   {
+    "x": 26,
+    "y": 355,
+    "w": 308,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "sheet": {
+    "x": 0,
+    "y": 221,
+    "w": 360,
+    "h": 451,
+    "textW": 308,
+    "font": 24
+   }
+  },
+  "file": "ovl01_edit_no_keyboard__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "ovl02_leave_carbon",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 552,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أنا سلمى",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "أخرج",
+    "x": 50,
+    "y": 333,
+    "w": 260,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "كمّل اللعب",
+    "x": 50,
+    "y": 397,
+    "w": 260,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "name",
+    "font": 48,
+    "lines": 1
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 102,
+    "y": 275,
+    "w": 156,
+    "h": 62,
+    "textW": 156,
+    "font": 48
+   },
+   "dialog": {
+    "x": 24,
+    "y": 221,
+    "w": 312,
+    "h": 254,
+    "textW": 260,
+    "font": 16
+   }
+  },
+  "file": "ovl02_leave_carbon__360x720.png",
+  "full": false
+ },
+ {
+  "id": "ovl02_leave_paper",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 552,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "نبداو التصويت",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "أخرج",
+    "x": 50,
+    "y": 333,
+    "w": 260,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "كمّل اللعب",
+    "x": 50,
+    "y": 397,
+    "w": 260,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "dialog": {
+    "x": 24,
+    "y": 221,
+    "w": 312,
+    "h": 254,
+    "textW": 260,
+    "font": 16
+   }
+  },
+  "file": "ovl02_leave_paper__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv01_handoff_16_chars",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 400,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أنا عبد الرحمان بنور",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "name",
+    "font": 34,
+    "lines": 1
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 18,
+    "y": 208,
+    "w": 285,
+    "h": 44,
+    "textW": 285,
+    "font": 34
+   }
+  },
+  "file": "prv01_handoff_16_chars__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv01_handoff_16_chars",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 400,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أنا عبد الرحمان بنور",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 1,
+  "truncated": [
+   "أنا عبد الرحمان بنور"
+  ],
+  "fits": [
+   {
+    "m": "name",
+    "font": 34,
+    "lines": 1
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 18,
+    "y": 210,
+    "w": 285,
+    "h": 44,
+    "textW": 285,
+    "font": 34
+   }
+  },
+  "file": "prv01_handoff_16_chars__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv01_handoff_16_chars",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 552,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أنا عبد الرحمان بنور",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "name",
+    "font": 37,
+    "lines": 1
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 25,
+    "y": 282,
+    "w": 310,
+    "h": 48,
+    "textW": 310,
+    "font": 37
+   }
+  },
+  "file": "prv01_handoff_16_chars__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv01_handoff_16_chars",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 552,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أنا عبد الرحمان بنور",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "أنا عبد الرحمان بنور"
+  ],
+  "fits": [
+   {
+    "m": "name",
+    "font": 37,
+    "lines": 1
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 25,
+    "y": 284,
+    "w": 310,
+    "h": 48,
+    "textW": 310,
+    "font": 37
+   }
+  },
+  "file": "prv01_handoff_16_chars__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv01_handoff",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 400,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أنا سلمى",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "name",
+    "font": 48,
+    "lines": 1
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 82,
+    "y": 199,
+    "w": 156,
+    "h": 62,
+    "textW": 156,
+    "font": 48
+   }
+  },
+  "file": "prv01_handoff__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv01_handoff",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 400,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أنا سلمى",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "name",
+    "font": 72,
+    "lines": 1
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 43,
+    "y": 185,
+    "w": 234,
+    "h": 94,
+    "textW": 234,
+    "font": 72
+   }
+  },
+  "file": "prv01_handoff__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv01_handoff",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 552,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أنا سلمى",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "name",
+    "font": 48,
+    "lines": 1
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 102,
+    "y": 275,
+    "w": 156,
+    "h": 62,
+    "textW": 156,
+    "font": 48
+   }
+  },
+  "file": "prv01_handoff__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv01_handoff",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 552,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أنا سلمى",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "name",
+    "font": 72,
+    "lines": 1
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 63,
+    "y": 261,
+    "w": 234,
+    "h": 94,
+    "textW": 234,
+    "font": 72
+   }
+  },
+  "file": "prv01_handoff__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv01_handoff_final_guess",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 400,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أنا ياسين",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "name",
+    "font": 48,
+    "lines": 1
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 82,
+    "y": 219,
+    "w": 157,
+    "h": 62,
+    "textW": 157,
+    "font": 48
+   }
+  },
+  "file": "prv01_handoff_final_guess__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv01_handoff_final_guess",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 400,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أنا ياسين",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "name",
+    "font": 72,
+    "lines": 1
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 42,
+    "y": 211,
+    "w": 235,
+    "h": 94,
+    "textW": 235,
+    "font": 72
+   }
+  },
+  "file": "prv01_handoff_final_guess__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv01_handoff_final_guess",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 552,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أنا ياسين",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "name",
+    "font": 48,
+    "lines": 1
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 102,
+    "y": 295,
+    "w": 157,
+    "h": 62,
+    "textW": 157,
+    "font": 48
+   }
+  },
+  "file": "prv01_handoff_final_guess__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv01_handoff_final_guess",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 552,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أنا ياسين",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "name",
+    "font": 72,
+    "lines": 1
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 62,
+    "y": 287,
+    "w": 235,
+    "h": 94,
+    "textW": 235,
+    "font": 72
+   }
+  },
+  "file": "prv01_handoff_final_guess__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv01_handoff_long_name",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 400,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أنا عبد الرحمان بن عاشور الطرابلسي",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 1,
+  "truncated": [
+   "أنا عبد الرحمان بن عاشور"
+  ],
+  "fits": [
+   {
+    "m": "name",
+    "font": 32,
+    "lines": 3
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 16,
+    "y": 168,
+    "w": 288,
+    "h": 125,
+    "textW": 242,
+    "font": 32
+   }
+  },
+  "file": "prv01_handoff_long_name__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv01_handoff_long_name",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 400,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أنا عبد الرحمان بن عاشور الطرابلسي",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 1,
+  "truncated": [
+   "أنا عبد الرحمان بن عاشور"
+  ],
+  "fits": [
+   {
+    "m": "name",
+    "font": 32,
+    "lines": 3
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 16,
+    "y": 170,
+    "w": 288,
+    "h": 125,
+    "textW": 242,
+    "font": 32
+   }
+  },
+  "file": "prv01_handoff_long_name__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv01_handoff_long_name",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 552,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أنا عبد الرحمان بن عاشور الطرابلسي",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 1,
+  "truncated": [
+   "أنا عبد الرحمان بن عاشور"
+  ],
+  "fits": [
+   {
+    "m": "name",
+    "font": 32,
+    "lines": 2
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 24,
+    "y": 264,
+    "w": 312,
+    "h": 83,
+    "textW": 300,
+    "font": 32
+   }
+  },
+  "file": "prv01_handoff_long_name__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv01_handoff_long_name",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 552,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أنا عبد الرحمان بن عاشور الطرابلسي",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 1,
+  "truncated": [
+   "أنا عبد الرحمان بن عاشور"
+  ],
+  "fits": [
+   {
+    "m": "name",
+    "font": 32,
+    "lines": 2
+   }
+  ],
+  "named": {
+   "name": {
+    "x": 24,
+    "y": 266,
+    "w": 312,
+    "h": 83,
+    "textW": 300,
+    "font": 32
+   }
+  },
+  "file": "prv01_handoff_long_name__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_proposed_civilian",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 472,
+  "bodyContent": 472,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 16,
+    "y": 389,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 76,
+    "w": 288,
+    "h": 301,
+    "textW": 288,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 202,
+    "y": 94,
+    "w": 82,
+    "h": 21,
+    "textW": 16,
+    "font": 13
+   },
+   "toprole": {
+    "x": 202,
+    "y": 115,
+    "w": 82,
+    "h": 36,
+    "textW": 82,
+    "font": 26
+   },
+   "botlbl": {
+    "x": 110,
+    "y": 193,
+    "w": 100,
+    "h": 21,
+    "textW": 100,
+    "font": 13
+   },
+   "word": {
+    "x": 76,
+    "y": 225,
+    "w": 168,
+    "h": 83,
+    "textW": 168,
+    "font": 72
+   },
+   "chip": {
+    "x": 103,
+    "y": 320,
+    "w": 113,
+    "h": 32,
+    "textW": 81,
+    "font": 15
+   }
+  },
+  "file": "prv02_proposed_civilian__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv02_proposed_civilian",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 472,
+  "bodyContent": 525,
+  "hidden": 53,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 16,
+    "y": 489,
+    "w": 288,
+    "h": 60,
+    "visible": false
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 106,
+    "clipped": false
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 88,
+    "w": 288,
+    "h": 389,
+    "textW": 288,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 161,
+    "y": 106,
+    "w": 123,
+    "h": 31,
+    "textW": 24,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 161,
+    "y": 137,
+    "w": 123,
+    "h": 55,
+    "textW": 123,
+    "font": 39
+   },
+   "botlbl": {
+    "x": 85,
+    "y": 230,
+    "w": 150,
+    "h": 31,
+    "textW": 150,
+    "font": 19.5
+   },
+   "word": {
+    "x": 36,
+    "y": 277,
+    "w": 247,
+    "h": 122,
+    "textW": 247,
+    "font": 106
+   },
+   "chip": {
+    "x": 83,
+    "y": 414,
+    "w": 154,
+    "h": 41,
+    "textW": 122,
+    "font": 22.5
+   }
+  },
+  "file": "prv02_proposed_civilian__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_proposed_civilian",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 24,
+    "y": 389,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 76,
+    "w": 312,
+    "h": 301,
+    "textW": 312,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 234,
+    "y": 94,
+    "w": 82,
+    "h": 21,
+    "textW": 16,
+    "font": 13
+   },
+   "toprole": {
+    "x": 234,
+    "y": 115,
+    "w": 82,
+    "h": 36,
+    "textW": 82,
+    "font": 26
+   },
+   "botlbl": {
+    "x": 130,
+    "y": 193,
+    "w": 100,
+    "h": 21,
+    "textW": 100,
+    "font": 13
+   },
+   "word": {
+    "x": 96,
+    "y": 225,
+    "w": 168,
+    "h": 83,
+    "textW": 168,
+    "font": 72
+   },
+   "chip": {
+    "x": 123,
+    "y": 320,
+    "w": 113,
+    "h": 32,
+    "textW": 81,
+    "font": 15
+   }
+  },
+  "file": "prv02_proposed_civilian__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv02_proposed_civilian",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 24,
+    "y": 489,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 108,
+    "clipped": false
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 88,
+    "w": 312,
+    "h": 389,
+    "textW": 312,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 193,
+    "y": 106,
+    "w": 123,
+    "h": 31,
+    "textW": 24,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 193,
+    "y": 137,
+    "w": 123,
+    "h": 55,
+    "textW": 123,
+    "font": 39
+   },
+   "botlbl": {
+    "x": 105,
+    "y": 230,
+    "w": 150,
+    "h": 31,
+    "textW": 150,
+    "font": 19.5
+   },
+   "word": {
+    "x": 54,
+    "y": 275,
+    "w": 252,
+    "h": 124,
+    "textW": 252,
+    "font": 108
+   },
+   "chip": {
+    "x": 103,
+    "y": 414,
+    "w": 154,
+    "h": 41,
+    "textW": 122,
+    "font": 22.5
+   }
+  },
+  "file": "prv02_proposed_civilian__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_proposed_impostor",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 472,
+  "bodyContent": 472,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 16,
+    "y": 389,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 76,
+    "w": 288,
+    "h": 301,
+    "textW": 288,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 202,
+    "y": 94,
+    "w": 82,
+    "h": 21,
+    "textW": 16,
+    "font": 13
+   },
+   "toprole": {
+    "x": 202,
+    "y": 115,
+    "w": 82,
+    "h": 36,
+    "textW": 82,
+    "font": 26
+   },
+   "botlbl": {
+    "x": 105,
+    "y": 193,
+    "w": 110,
+    "h": 21,
+    "textW": 110,
+    "font": 13
+   },
+   "word": {
+    "x": 58,
+    "y": 225,
+    "w": 204,
+    "h": 83,
+    "textW": 204,
+    "font": 72
+   },
+   "chip": {
+    "x": 95,
+    "y": 320,
+    "w": 130,
+    "h": 32,
+    "textW": 98,
+    "font": 15
+   }
+  },
+  "file": "prv02_proposed_impostor__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv02_proposed_impostor",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 472,
+  "bodyContent": 525,
+  "hidden": 53,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 16,
+    "y": 489,
+    "w": 288,
+    "h": 60,
+    "visible": false
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 87,
+    "clipped": false
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 88,
+    "w": 288,
+    "h": 389,
+    "textW": 288,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 161,
+    "y": 106,
+    "w": 123,
+    "h": 31,
+    "textW": 24,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 161,
+    "y": 137,
+    "w": 123,
+    "h": 55,
+    "textW": 123,
+    "font": 39
+   },
+   "botlbl": {
+    "x": 77,
+    "y": 230,
+    "w": 165,
+    "h": 31,
+    "textW": 165,
+    "font": 19.5
+   },
+   "word": {
+    "x": 36,
+    "y": 287,
+    "w": 247,
+    "h": 100,
+    "textW": 247,
+    "font": 87
+   },
+   "chip": {
+    "x": 71,
+    "y": 414,
+    "w": 178,
+    "h": 41,
+    "textW": 146,
+    "font": 22.5
+   }
+  },
+  "file": "prv02_proposed_impostor__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_proposed_impostor",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 24,
+    "y": 389,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 76,
+    "w": 312,
+    "h": 301,
+    "textW": 312,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 234,
+    "y": 94,
+    "w": 82,
+    "h": 21,
+    "textW": 16,
+    "font": 13
+   },
+   "toprole": {
+    "x": 234,
+    "y": 115,
+    "w": 82,
+    "h": 36,
+    "textW": 82,
+    "font": 26
+   },
+   "botlbl": {
+    "x": 125,
+    "y": 193,
+    "w": 110,
+    "h": 21,
+    "textW": 110,
+    "font": 13
+   },
+   "word": {
+    "x": 78,
+    "y": 225,
+    "w": 204,
+    "h": 83,
+    "textW": 204,
+    "font": 72
+   },
+   "chip": {
+    "x": 115,
+    "y": 320,
+    "w": 130,
+    "h": 32,
+    "textW": 98,
+    "font": 15
+   }
+  },
+  "file": "prv02_proposed_impostor__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv02_proposed_impostor",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 24,
+    "y": 489,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 95,
+    "clipped": false
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 88,
+    "w": 312,
+    "h": 389,
+    "textW": 312,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 193,
+    "y": 106,
+    "w": 123,
+    "h": 31,
+    "textW": 24,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 193,
+    "y": 137,
+    "w": 123,
+    "h": 55,
+    "textW": 123,
+    "font": 39
+   },
+   "botlbl": {
+    "x": 97,
+    "y": 230,
+    "w": 165,
+    "h": 31,
+    "textW": 165,
+    "font": 19.5
+   },
+   "word": {
+    "x": 45,
+    "y": 283,
+    "w": 270,
+    "h": 109,
+    "textW": 270,
+    "font": 95
+   },
+   "chip": {
+    "x": 91,
+    "y": 414,
+    "w": 178,
+    "h": 41,
+    "textW": 146,
+    "font": 22.5
+   }
+  },
+  "file": "prv02_proposed_impostor__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_proposed_long_word",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 472,
+  "bodyContent": 472,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 16,
+    "y": 389,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 40,
+    "wrapped": true
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 76,
+    "w": 288,
+    "h": 301,
+    "textW": 288,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 202,
+    "y": 94,
+    "w": 82,
+    "h": 21,
+    "textW": 16,
+    "font": 13
+   },
+   "toprole": {
+    "x": 202,
+    "y": 115,
+    "w": 82,
+    "h": 36,
+    "textW": 82,
+    "font": 26
+   },
+   "botlbl": {
+    "x": 110,
+    "y": 193,
+    "w": 100,
+    "h": 21,
+    "textW": 100,
+    "font": 13
+   },
+   "word": {
+    "x": 36,
+    "y": 221,
+    "w": 248,
+    "h": 92,
+    "textW": 185,
+    "font": 40
+   },
+   "chip": {
+    "x": 103,
+    "y": 320,
+    "w": 113,
+    "h": 32,
+    "textW": 81,
+    "font": 15
+   }
+  },
+  "file": "prv02_proposed_long_word__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv02_proposed_long_word",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 472,
+  "bodyContent": 525,
+  "hidden": 53,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 16,
+    "y": 489,
+    "w": 288,
+    "h": 60,
+    "visible": false
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 40,
+    "wrapped": true
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 88,
+    "w": 288,
+    "h": 389,
+    "textW": 288,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 161,
+    "y": 106,
+    "w": 123,
+    "h": 31,
+    "textW": 24,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 161,
+    "y": 137,
+    "w": 123,
+    "h": 55,
+    "textW": 123,
+    "font": 39
+   },
+   "botlbl": {
+    "x": 85,
+    "y": 230,
+    "w": 150,
+    "h": 31,
+    "textW": 150,
+    "font": 19.5
+   },
+   "word": {
+    "x": 36,
+    "y": 291,
+    "w": 248,
+    "h": 92,
+    "textW": 185,
+    "font": 40
+   },
+   "chip": {
+    "x": 83,
+    "y": 414,
+    "w": 154,
+    "h": 41,
+    "textW": 122,
+    "font": 22.5
+   }
+  },
+  "file": "prv02_proposed_long_word__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_proposed_long_word",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 24,
+    "y": 389,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 40,
+    "wrapped": true
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 76,
+    "w": 312,
+    "h": 301,
+    "textW": 312,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 234,
+    "y": 94,
+    "w": 82,
+    "h": 21,
+    "textW": 16,
+    "font": 13
+   },
+   "toprole": {
+    "x": 234,
+    "y": 115,
+    "w": 82,
+    "h": 36,
+    "textW": 82,
+    "font": 26
+   },
+   "botlbl": {
+    "x": 130,
+    "y": 193,
+    "w": 100,
+    "h": 21,
+    "textW": 100,
+    "font": 13
+   },
+   "word": {
+    "x": 44,
+    "y": 221,
+    "w": 272,
+    "h": 92,
+    "textW": 185,
+    "font": 40
+   },
+   "chip": {
+    "x": 123,
+    "y": 320,
+    "w": 113,
+    "h": 32,
+    "textW": 81,
+    "font": 15
+   }
+  },
+  "file": "prv02_proposed_long_word__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv02_proposed_long_word",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 24,
+    "y": 489,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 40,
+    "wrapped": true
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 88,
+    "w": 312,
+    "h": 389,
+    "textW": 312,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 193,
+    "y": 106,
+    "w": 123,
+    "h": 31,
+    "textW": 24,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 193,
+    "y": 137,
+    "w": 123,
+    "h": 55,
+    "textW": 123,
+    "font": 39
+   },
+   "botlbl": {
+    "x": 105,
+    "y": 230,
+    "w": 150,
+    "h": 31,
+    "textW": 150,
+    "font": 19.5
+   },
+   "word": {
+    "x": 44,
+    "y": 291,
+    "w": 272,
+    "h": 92,
+    "textW": 185,
+    "font": 40
+   },
+   "chip": {
+    "x": 103,
+    "y": 414,
+    "w": 154,
+    "h": 41,
+    "textW": 122,
+    "font": 22.5
+   }
+  },
+  "file": "prv02_proposed_long_word__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_proposed_sealed",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 353,
+  "hidden": 17,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "reveal",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 76,
+    "w": 288,
+    "h": 301,
+    "textW": 288,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 202,
+    "y": 94,
+    "w": 82,
+    "h": 21,
+    "textW": 16,
+    "font": 13
+   },
+   "toprole": {
+    "x": 202,
+    "y": 115,
+    "w": 82,
+    "h": 36,
+    "textW": 82,
+    "font": 26
+   }
+  },
+  "file": "prv02_proposed_sealed__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv02_proposed_sealed",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 394,
+  "hidden": 58,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "reveal",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 88,
+    "w": 288,
+    "h": 330,
+    "textW": 288,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 161,
+    "y": 106,
+    "w": 123,
+    "h": 31,
+    "textW": 24,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 161,
+    "y": 137,
+    "w": 123,
+    "h": 55,
+    "textW": 123,
+    "font": 39
+   }
+  },
+  "file": "prv02_proposed_sealed__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_proposed_sealed",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 488,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "reveal",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 76,
+    "w": 312,
+    "h": 301,
+    "textW": 312,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 234,
+    "y": 94,
+    "w": 82,
+    "h": 21,
+    "textW": 16,
+    "font": 13
+   },
+   "toprole": {
+    "x": 234,
+    "y": 115,
+    "w": 82,
+    "h": 36,
+    "textW": 82,
+    "font": 26
+   }
+  },
+  "file": "prv02_proposed_sealed__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv02_proposed_sealed",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 488,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "reveal",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 88,
+    "w": 312,
+    "h": 330,
+    "textW": 312,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 193,
+    "y": 106,
+    "w": 123,
+    "h": 31,
+    "textW": 24,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 193,
+    "y": 137,
+    "w": 123,
+    "h": 55,
+    "textW": 123,
+    "font": 39
+   }
+  },
+  "file": "prv02_proposed_sealed__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_revealed_civilian",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 472,
+  "bodyContent": 472,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 16,
+    "y": 389,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 76,
+    "w": 288,
+    "h": 301,
+    "textW": 288,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 213,
+    "y": 94,
+    "w": 71,
+    "h": 21,
+    "textW": 26,
+    "font": 13
+   },
+   "toprole": {
+    "x": 213,
+    "y": 115,
+    "w": 71,
+    "h": 36,
+    "textW": 71,
+    "font": 26
+   },
+   "botlbl": {
+    "x": 127,
+    "y": 193,
+    "w": 66,
+    "h": 21,
+    "textW": 66,
+    "font": 13
+   },
+   "word": {
+    "x": 76,
+    "y": 220,
+    "w": 168,
+    "h": 94,
+    "textW": 168,
+    "font": 72
+   },
+   "chip": {
+    "x": 103,
+    "y": 320,
+    "w": 113,
+    "h": 32,
+    "textW": 81,
+    "font": 15
+   }
+  },
+  "file": "prv02_revealed_civilian__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv02_revealed_civilian",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 472,
+  "bodyContent": 522,
+  "hidden": 50,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 16,
+    "y": 486,
+    "w": 288,
+    "h": 60,
+    "visible": false
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 106,
+    "clipped": false
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 88,
+    "w": 288,
+    "h": 386,
+    "textW": 288,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 178,
+    "y": 106,
+    "w": 106,
+    "h": 31,
+    "textW": 39,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 178,
+    "y": 137,
+    "w": 106,
+    "h": 55,
+    "textW": 106,
+    "font": 39
+   },
+   "botlbl": {
+    "x": 111,
+    "y": 230,
+    "w": 98,
+    "h": 31,
+    "textW": 98,
+    "font": 19.5
+   },
+   "word": {
+    "x": 36,
+    "y": 267,
+    "w": 247,
+    "h": 138,
+    "textW": 247,
+    "font": 106
+   },
+   "chip": {
+    "x": 83,
+    "y": 411,
+    "w": 154,
+    "h": 41,
+    "textW": 122,
+    "font": 22.5
+   }
+  },
+  "file": "prv02_revealed_civilian__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_revealed_civilian",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 24,
+    "y": 389,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 76,
+    "w": 312,
+    "h": 301,
+    "textW": 312,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 245,
+    "y": 94,
+    "w": 71,
+    "h": 21,
+    "textW": 26,
+    "font": 13
+   },
+   "toprole": {
+    "x": 245,
+    "y": 115,
+    "w": 71,
+    "h": 36,
+    "textW": 71,
+    "font": 26
+   },
+   "botlbl": {
+    "x": 147,
+    "y": 193,
+    "w": 66,
+    "h": 21,
+    "textW": 66,
+    "font": 13
+   },
+   "word": {
+    "x": 96,
+    "y": 220,
+    "w": 168,
+    "h": 94,
+    "textW": 168,
+    "font": 72
+   },
+   "chip": {
+    "x": 123,
+    "y": 320,
+    "w": 113,
+    "h": 32,
+    "textW": 81,
+    "font": 15
+   }
+  },
+  "file": "prv02_revealed_civilian__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv02_revealed_civilian",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 24,
+    "y": 489,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 108,
+    "clipped": false
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 88,
+    "w": 312,
+    "h": 389,
+    "textW": 312,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 210,
+    "y": 106,
+    "w": 106,
+    "h": 31,
+    "textW": 39,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 210,
+    "y": 137,
+    "w": 106,
+    "h": 55,
+    "textW": 106,
+    "font": 39
+   },
+   "botlbl": {
+    "x": 131,
+    "y": 230,
+    "w": 98,
+    "h": 31,
+    "textW": 98,
+    "font": 19.5
+   },
+   "word": {
+    "x": 54,
+    "y": 267,
+    "w": 252,
+    "h": 140,
+    "textW": 252,
+    "font": 108
+   },
+   "chip": {
+    "x": 103,
+    "y": 413,
+    "w": 154,
+    "h": 41,
+    "textW": 122,
+    "font": 22.5
+   }
+  },
+  "file": "prv02_revealed_civilian__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_revealed_impostor",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 472,
+  "bodyContent": 472,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 16,
+    "y": 389,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 76,
+    "w": 288,
+    "h": 301,
+    "textW": 288,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 159,
+    "y": 94,
+    "w": 125,
+    "h": 21,
+    "textW": 26,
+    "font": 13
+   },
+   "toprole": {
+    "x": 159,
+    "y": 115,
+    "w": 125,
+    "h": 36,
+    "textW": 125,
+    "font": 26
+   },
+   "botlbl": {
+    "x": 132,
+    "y": 193,
+    "w": 56,
+    "h": 21,
+    "textW": 56,
+    "font": 13
+   },
+   "word": {
+    "x": 58,
+    "y": 220,
+    "w": 204,
+    "h": 94,
+    "textW": 204,
+    "font": 72
+   },
+   "chip": {
+    "x": 95,
+    "y": 320,
+    "w": 130,
+    "h": 32,
+    "textW": 98,
+    "font": 15
+   }
+  },
+  "file": "prv02_revealed_impostor__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv02_revealed_impostor",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 472,
+  "bodyContent": 497,
+  "hidden": 25,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 16,
+    "y": 461,
+    "w": 288,
+    "h": 60,
+    "visible": false
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "إمبوستور"
+  ],
+  "fits": [
+   {
+    "m": "word",
+    "font": 87,
+    "clipped": false
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 88,
+    "w": 288,
+    "h": 361,
+    "textW": 288,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 100,
+    "y": 106,
+    "w": 184,
+    "h": 31,
+    "textW": 39,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 100,
+    "y": 137,
+    "w": 184,
+    "h": 55,
+    "textW": 188,
+    "font": 39
+   },
+   "botlbl": {
+    "x": 118,
+    "y": 230,
+    "w": 84,
+    "h": 31,
+    "textW": 84,
+    "font": 19.5
+   },
+   "word": {
+    "x": 36,
+    "y": 267,
+    "w": 247,
+    "h": 113,
+    "textW": 247,
+    "font": 87
+   },
+   "chip": {
+    "x": 71,
+    "y": 386,
+    "w": 178,
+    "h": 41,
+    "textW": 146,
+    "font": 22.5
+   }
+  },
+  "file": "prv02_revealed_impostor__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_revealed_impostor",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 24,
+    "y": 389,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 76,
+    "w": 312,
+    "h": 301,
+    "textW": 312,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 191,
+    "y": 94,
+    "w": 125,
+    "h": 21,
+    "textW": 26,
+    "font": 13
+   },
+   "toprole": {
+    "x": 191,
+    "y": 115,
+    "w": 125,
+    "h": 36,
+    "textW": 125,
+    "font": 26
+   },
+   "botlbl": {
+    "x": 152,
+    "y": 193,
+    "w": 56,
+    "h": 21,
+    "textW": 56,
+    "font": 13
+   },
+   "word": {
+    "x": 78,
+    "y": 220,
+    "w": 204,
+    "h": 94,
+    "textW": 204,
+    "font": 72
+   },
+   "chip": {
+    "x": 115,
+    "y": 320,
+    "w": 130,
+    "h": 32,
+    "textW": 98,
+    "font": 15
+   }
+  },
+  "file": "prv02_revealed_impostor__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv02_revealed_impostor",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 24,
+    "y": 472,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "word",
+    "font": 95,
+    "clipped": false
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 88,
+    "w": 312,
+    "h": 372,
+    "textW": 312,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 128,
+    "y": 106,
+    "w": 188,
+    "h": 31,
+    "textW": 39,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 128,
+    "y": 137,
+    "w": 188,
+    "h": 55,
+    "textW": 188,
+    "font": 39
+   },
+   "botlbl": {
+    "x": 138,
+    "y": 230,
+    "w": 84,
+    "h": 31,
+    "textW": 84,
+    "font": 19.5
+   },
+   "word": {
+    "x": 45,
+    "y": 267,
+    "w": 270,
+    "h": 124,
+    "textW": 270,
+    "font": 95
+   },
+   "chip": {
+    "x": 91,
+    "y": 396,
+    "w": 178,
+    "h": 41,
+    "textW": 146,
+    "font": 22.5
+   }
+  },
+  "file": "prv02_revealed_impostor__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_revealed_long_word",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 472,
+  "bodyContent": 472,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 16,
+    "y": 389,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "كسكسي بالعصبان"
+  ],
+  "fits": [
+   {
+    "m": "word",
+    "font": 40,
+    "clipped": true
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 76,
+    "w": 288,
+    "h": 301,
+    "textW": 395,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 213,
+    "y": 94,
+    "w": 71,
+    "h": 21,
+    "textW": 26,
+    "font": 13
+   },
+   "toprole": {
+    "x": 213,
+    "y": 115,
+    "w": 71,
+    "h": 36,
+    "textW": 71,
+    "font": 26
+   },
+   "botlbl": {
+    "x": 127,
+    "y": 214,
+    "w": 66,
+    "h": 21,
+    "textW": 66,
+    "font": 13
+   },
+   "word": {
+    "x": 36,
+    "y": 241,
+    "w": 248,
+    "h": 52,
+    "textW": 375,
+    "font": 40
+   },
+   "chip": {
+    "x": 103,
+    "y": 299,
+    "w": 113,
+    "h": 32,
+    "textW": 81,
+    "font": 15
+   }
+  },
+  "file": "prv02_revealed_long_word__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv02_revealed_long_word",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 472,
+  "bodyContent": 472,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 16,
+    "y": 430,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "كسكسي بالعصبان"
+  ],
+  "fits": [
+   {
+    "m": "word",
+    "font": 40,
+    "clipped": true
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 88,
+    "w": 288,
+    "h": 330,
+    "textW": 395,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 178,
+    "y": 106,
+    "w": 106,
+    "h": 31,
+    "textW": 39,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 178,
+    "y": 137,
+    "w": 106,
+    "h": 55,
+    "textW": 106,
+    "font": 39
+   },
+   "botlbl": {
+    "x": 111,
+    "y": 245,
+    "w": 98,
+    "h": 31,
+    "textW": 98,
+    "font": 19.5
+   },
+   "word": {
+    "x": 36,
+    "y": 282,
+    "w": 248,
+    "h": 52,
+    "textW": 375,
+    "font": 40
+   },
+   "chip": {
+    "x": 83,
+    "y": 340,
+    "w": 154,
+    "h": 41,
+    "textW": 122,
+    "font": 22.5
+   }
+  },
+  "file": "prv02_revealed_long_word__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_revealed_long_word",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 24,
+    "y": 389,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "كسكسي بالعصبان"
+  ],
+  "fits": [
+   {
+    "m": "word",
+    "font": 40,
+    "clipped": true
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 76,
+    "w": 312,
+    "h": 301,
+    "textW": 395,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 245,
+    "y": 94,
+    "w": 71,
+    "h": 21,
+    "textW": 26,
+    "font": 13
+   },
+   "toprole": {
+    "x": 245,
+    "y": 115,
+    "w": 71,
+    "h": 36,
+    "textW": 71,
+    "font": 26
+   },
+   "botlbl": {
+    "x": 147,
+    "y": 214,
+    "w": 66,
+    "h": 21,
+    "textW": 66,
+    "font": 13
+   },
+   "word": {
+    "x": 44,
+    "y": 241,
+    "w": 272,
+    "h": 52,
+    "textW": 375,
+    "font": 40
+   },
+   "chip": {
+    "x": 123,
+    "y": 299,
+    "w": 113,
+    "h": 32,
+    "textW": 81,
+    "font": 15
+   }
+  },
+  "file": "prv02_revealed_long_word__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv02_revealed_long_word",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "ack",
+    "x": 24,
+    "y": 430,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "كسكسي بالعصبان"
+  ],
+  "fits": [
+   {
+    "m": "word",
+    "font": 40,
+    "clipped": true
+   }
+  ],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 88,
+    "w": 312,
+    "h": 330,
+    "textW": 395,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 210,
+    "y": 106,
+    "w": 106,
+    "h": 31,
+    "textW": 39,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 210,
+    "y": 137,
+    "w": 106,
+    "h": 55,
+    "textW": 106,
+    "font": 39
+   },
+   "botlbl": {
+    "x": 131,
+    "y": 245,
+    "w": 98,
+    "h": 31,
+    "textW": 98,
+    "font": 19.5
+   },
+   "word": {
+    "x": 44,
+    "y": 282,
+    "w": 272,
+    "h": 52,
+    "textW": 375,
+    "font": 40
+   },
+   "chip": {
+    "x": 103,
+    "y": 340,
+    "w": 154,
+    "h": 41,
+    "textW": 122,
+    "font": 22.5
+   }
+  },
+  "file": "prv02_revealed_long_word__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_save_error",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 472,
+  "bodyContent": 491,
+  "hidden": 19,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "عاود",
+    "x": 16,
+    "y": 455,
+    "w": 288,
+    "h": 60,
+    "visible": false
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 76,
+    "w": 288,
+    "h": 301,
+    "textW": 288,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 202,
+    "y": 94,
+    "w": 82,
+    "h": 21,
+    "textW": 16,
+    "font": 13
+   },
+   "toprole": {
+    "x": 202,
+    "y": 115,
+    "w": 82,
+    "h": 36,
+    "textW": 82,
+    "font": 26
+   }
+  },
+  "file": "prv02_save_error__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv02_save_error",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 472,
+  "bodyContent": 583,
+  "hidden": 111,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "عاود",
+    "x": 16,
+    "y": 547,
+    "w": 288,
+    "h": 60,
+    "visible": false
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 88,
+    "w": 288,
+    "h": 330,
+    "textW": 288,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 161,
+    "y": 106,
+    "w": 123,
+    "h": 31,
+    "textW": 24,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 161,
+    "y": 137,
+    "w": 123,
+    "h": 55,
+    "textW": 123,
+    "font": 39
+   }
+  },
+  "file": "prv02_save_error__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_save_error",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "عاود",
+    "x": 24,
+    "y": 455,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 76,
+    "w": 312,
+    "h": 301,
+    "textW": 312,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 234,
+    "y": 94,
+    "w": 82,
+    "h": 21,
+    "textW": 16,
+    "font": 13
+   },
+   "toprole": {
+    "x": 234,
+    "y": 115,
+    "w": 82,
+    "h": 36,
+    "textW": 82,
+    "font": 26
+   }
+  },
+  "file": "prv02_save_error__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv02_save_error",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "عاود",
+    "x": 24,
+    "y": 508,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 88,
+    "w": 312,
+    "h": 330,
+    "textW": 312,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 193,
+    "y": 106,
+    "w": 123,
+    "h": 31,
+    "textW": 24,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 193,
+    "y": 137,
+    "w": 123,
+    "h": 55,
+    "textW": 123,
+    "font": 39
+   }
+  },
+  "file": "prv02_save_error__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_saving",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 472,
+  "bodyContent": 472,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "loading",
+    "x": 16,
+    "y": 389,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 76,
+    "w": 288,
+    "h": 301,
+    "textW": 288,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 202,
+    "y": 94,
+    "w": 82,
+    "h": 21,
+    "textW": 16,
+    "font": 13
+   },
+   "toprole": {
+    "x": 202,
+    "y": 115,
+    "w": 82,
+    "h": 36,
+    "textW": 82,
+    "font": 26
+   }
+  },
+  "file": "prv02_saving__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv02_saving",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 472,
+  "bodyContent": 472,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "loading",
+    "x": 16,
+    "y": 430,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 88,
+    "w": 288,
+    "h": 330,
+    "textW": 288,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 161,
+    "y": 106,
+    "w": 123,
+    "h": 31,
+    "textW": 24,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 161,
+    "y": 137,
+    "w": 123,
+    "h": 55,
+    "textW": 123,
+    "font": 39
+   }
+  },
+  "file": "prv02_saving__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_saving",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "loading",
+    "x": 24,
+    "y": 389,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 76,
+    "w": 312,
+    "h": 301,
+    "textW": 312,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 234,
+    "y": 94,
+    "w": 82,
+    "h": 21,
+    "textW": 16,
+    "font": 13
+   },
+   "toprole": {
+    "x": 234,
+    "y": 115,
+    "w": 82,
+    "h": 36,
+    "textW": 82,
+    "font": 26
+   }
+  },
+  "file": "prv02_saving__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv02_saving",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "loading",
+    "x": 24,
+    "y": 430,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 88,
+    "w": 312,
+    "h": 330,
+    "textW": 312,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 193,
+    "y": 106,
+    "w": 123,
+    "h": 31,
+    "textW": 24,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 193,
+    "y": 137,
+    "w": 123,
+    "h": 55,
+    "textW": 123,
+    "font": 39
+   }
+  },
+  "file": "prv02_saving__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_sealed",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 353,
+  "hidden": 17,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "reveal",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 76,
+    "w": 288,
+    "h": 301,
+    "textW": 288,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 202,
+    "y": 94,
+    "w": 82,
+    "h": 21,
+    "textW": 16,
+    "font": 13
+   },
+   "toprole": {
+    "x": 202,
+    "y": 115,
+    "w": 82,
+    "h": 36,
+    "textW": 82,
+    "font": 26
+   }
+  },
+  "file": "prv02_sealed__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv02_sealed",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 394,
+  "hidden": 58,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "reveal",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "ticket": {
+    "x": 16,
+    "y": 88,
+    "w": 288,
+    "h": 330,
+    "textW": 288,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 161,
+    "y": 106,
+    "w": 123,
+    "h": 31,
+    "textW": 24,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 161,
+    "y": 137,
+    "w": 123,
+    "h": 55,
+    "textW": 123,
+    "font": 39
+   }
+  },
+  "file": "prv02_sealed__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv02_sealed",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 488,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "reveal",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 76,
+    "w": 312,
+    "h": 301,
+    "textW": 312,
+    "font": 16
+   },
+   "toplbl": {
+    "x": 234,
+    "y": 94,
+    "w": 82,
+    "h": 21,
+    "textW": 16,
+    "font": 13
+   },
+   "toprole": {
+    "x": 234,
+    "y": 115,
+    "w": 82,
+    "h": 36,
+    "textW": 82,
+    "font": 26
+   }
+  },
+  "file": "prv02_sealed__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv02_sealed",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 488,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "reveal",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {
+   "ticket": {
+    "x": 24,
+    "y": 88,
+    "w": 312,
+    "h": 330,
+    "textW": 312,
+    "font": 24
+   },
+   "toplbl": {
+    "x": 193,
+    "y": 106,
+    "w": 123,
+    "h": 31,
+    "textW": 24,
+    "font": 19.5
+   },
+   "toprole": {
+    "x": 193,
+    "y": 137,
+    "w": 123,
+    "h": 55,
+    "textW": 123,
+    "font": 39
+   }
+  },
+  "file": "prv02_sealed__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv03_runoff_candidate",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 371,
+  "hidden": 35,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 16,
+    "y": 179,
+    "w": 288,
+    "h": 216,
+    "textW": 315,
+    "font": 16
+   }
+  },
+  "file": "prv03_runoff_candidate__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv03_runoff_candidate",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 483,
+  "hidden": 147,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 16,
+    "y": 291,
+    "w": 288,
+    "h": 216,
+    "textW": 444,
+    "font": 24
+   }
+  },
+  "file": "prv03_runoff_candidate__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv03_runoff_candidate",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 488,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 24,
+    "y": 179,
+    "w": 312,
+    "h": 216,
+    "textW": 315,
+    "font": 16
+   }
+  },
+  "file": "prv03_runoff_candidate__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv03_runoff_candidate",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 488,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 24,
+    "y": 236,
+    "w": 312,
+    "h": 216,
+    "textW": 444,
+    "font": 24
+   }
+  },
+  "file": "prv03_runoff_candidate__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv03_runoff_non_candidate",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 336,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 16,
+    "y": 179,
+    "w": 288,
+    "h": 140,
+    "textW": 315,
+    "font": 16
+   }
+  },
+  "file": "prv03_runoff_non_candidate__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv03_runoff_non_candidate",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 407,
+  "hidden": 71,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 16,
+    "y": 291,
+    "w": 288,
+    "h": 140,
+    "textW": 444,
+    "font": 24
+   }
+  },
+  "file": "prv03_runoff_non_candidate__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv03_runoff_non_candidate",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 488,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 24,
+    "y": 179,
+    "w": 312,
+    "h": 140,
+    "textW": 315,
+    "font": 16
+   }
+  },
+  "file": "prv03_runoff_non_candidate__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv03_runoff_non_candidate",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 488,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 24,
+    "y": 236,
+    "w": 312,
+    "h": 140,
+    "textW": 444,
+    "font": 24
+   }
+  },
+  "file": "prv03_runoff_non_candidate__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv03_save_error",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 639,
+  "hidden": 303,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 16,
+    "y": 153,
+    "w": 288,
+    "h": 444,
+    "textW": 315,
+    "font": 16
+   }
+  },
+  "file": "prv03_save_error__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv03_save_error",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 789,
+  "hidden": 453,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 16,
+    "y": 253,
+    "w": 288,
+    "h": 444,
+    "textW": 444,
+    "font": 24
+   }
+  },
+  "file": "prv03_save_error__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv03_save_error",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 639,
+  "hidden": 151,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 24,
+    "y": 153,
+    "w": 312,
+    "h": 444,
+    "textW": 315,
+    "font": 16
+   }
+  },
+  "file": "prv03_save_error__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv03_save_error",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 751,
+  "hidden": 263,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 24,
+    "y": 253,
+    "w": 312,
+    "h": 444,
+    "textW": 444,
+    "font": 24
+   }
+  },
+  "file": "prv03_save_error__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv03_vote_12_none",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 1029,
+  "hidden": 693,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 16,
+    "y": 153,
+    "w": 288,
+    "h": 900,
+    "textW": 315,
+    "font": 16
+   }
+  },
+  "file": "prv03_vote_12_none__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv03_vote_12_none",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 1129,
+  "hidden": 793,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 16,
+    "y": 253,
+    "w": 288,
+    "h": 900,
+    "textW": 444,
+    "font": 24
+   }
+  },
+  "file": "prv03_vote_12_none__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv03_vote_12_none",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 1029,
+  "hidden": 541,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 24,
+    "y": 153,
+    "w": 312,
+    "h": 900,
+    "textW": 315,
+    "font": 16
+   }
+  },
+  "file": "prv03_vote_12_none__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv03_vote_12_none",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 1129,
+  "hidden": 641,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 24,
+    "y": 253,
+    "w": 312,
+    "h": 900,
+    "textW": 444,
+    "font": 24
+   }
+  },
+  "file": "prv03_vote_12_none__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv03_vote_12_none",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 1261,
+  "bodyClient": 1029,
+  "bodyContent": 1029,
+  "hidden": 0,
+  "usableBottom": 1213.390625,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 1065,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 1137,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 24,
+    "y": 153,
+    "w": 312,
+    "h": 900,
+    "textW": 315,
+    "font": 16
+   }
+  },
+  "file": "prv03_vote_12_none__full.png",
+  "full": true
+ },
+ {
+  "id": "prv03_vote_12_selected",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 1029,
+  "hidden": 693,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 16,
+    "y": 153,
+    "w": 288,
+    "h": 900,
+    "textW": 315,
+    "font": 16
+   }
+  },
+  "file": "prv03_vote_12_selected__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv03_vote_12_selected",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 1129,
+  "hidden": 793,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 16,
+    "y": 253,
+    "w": 288,
+    "h": 900,
+    "textW": 444,
+    "font": 24
+   }
+  },
+  "file": "prv03_vote_12_selected__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv03_vote_12_selected",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 1029,
+  "hidden": 541,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 24,
+    "y": 153,
+    "w": 312,
+    "h": 900,
+    "textW": 315,
+    "font": 16
+   }
+  },
+  "file": "prv03_vote_12_selected__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv03_vote_12_selected",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 1129,
+  "hidden": 641,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 24,
+    "y": 253,
+    "w": 312,
+    "h": 900,
+    "textW": 444,
+    "font": 24
+   }
+  },
+  "file": "prv03_vote_12_selected__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv03_vote_6_selected",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 573,
+  "hidden": 237,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 16,
+    "y": 153,
+    "w": 288,
+    "h": 444,
+    "textW": 315,
+    "font": 16
+   }
+  },
+  "file": "prv03_vote_6_selected__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv03_vote_6_selected",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 673,
+  "hidden": 337,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 16,
+    "y": 253,
+    "w": 288,
+    "h": 444,
+    "textW": 444,
+    "font": 24
+   }
+  },
+  "file": "prv03_vote_6_selected__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv03_vote_6_selected",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 573,
+  "hidden": 85,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 24,
+    "y": 153,
+    "w": 312,
+    "h": 444,
+    "textW": 315,
+    "font": 16
+   }
+  },
+  "file": "prv03_vote_6_selected__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv03_vote_6_selected",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 673,
+  "hidden": 185,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 24,
+    "y": 253,
+    "w": 312,
+    "h": 444,
+    "textW": 444,
+    "font": 24
+   }
+  },
+  "file": "prv03_vote_6_selected__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv03_vote_long_voter",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 573,
+  "hidden": 237,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 16,
+    "y": 153,
+    "w": 288,
+    "h": 444,
+    "textW": 315,
+    "font": 16
+   }
+  },
+  "file": "prv03_vote_long_voter__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv03_vote_long_voter",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 673,
+  "hidden": 337,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 16,
+    "y": 253,
+    "w": 288,
+    "h": 444,
+    "textW": 444,
+    "font": 24
+   }
+  },
+  "file": "prv03_vote_long_voter__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv03_vote_long_voter",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 573,
+  "hidden": 85,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 24,
+    "y": 153,
+    "w": 312,
+    "h": 444,
+    "textW": 315,
+    "font": 16
+   }
+  },
+  "file": "prv03_vote_long_voter__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv03_vote_long_voter",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 673,
+  "hidden": 185,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "ارجع",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {
+   "list": {
+    "x": 24,
+    "y": 253,
+    "w": 312,
+    "h": 444,
+    "textW": 444,
+    "font": 24
+   }
+  },
+  "file": "prv03_vote_long_voter__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv04_guess_empty",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 260,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 140,
+  "bodyContent": 243,
+  "hidden": 103,
+  "usableBottom": 260,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 176,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [
+   {
+    "x": 16,
+    "y": 211,
+    "w": 288,
+    "h": 56,
+    "visible": false
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "prv04_guess_empty__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv04_guess_empty",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 260,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 140,
+  "bodyContent": 367,
+  "hidden": 227,
+  "usableBottom": 260,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 176,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [
+   {
+    "x": 16,
+    "y": 335,
+    "w": 288,
+    "h": 56,
+    "visible": false
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "prv04_guess_empty__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv04_guess_empty",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 300,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 252,
+  "bodyContent": 252,
+  "hidden": 0,
+  "usableBottom": 372,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 288,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [
+   {
+    "x": 24,
+    "y": 211,
+    "w": 312,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "prv04_guess_empty__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv04_guess_empty",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 300,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 252,
+  "bodyContent": 367,
+  "hidden": 115,
+  "usableBottom": 372,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 288,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [
+   {
+    "x": 24,
+    "y": 335,
+    "w": 312,
+    "h": 56,
+    "visible": false
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "prv04_guess_empty__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv04_guess_review",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 336,
+  "hidden": 0,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "إيه، هذا جوابي",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "نبدّلو",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "name",
+    "font": 48,
+    "lines": 1
+   }
+  ],
+  "named": {},
+  "file": "prv04_guess_review__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv04_guess_review",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 355,
+  "hidden": 19,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "إيه، هذا جوابي",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "نبدّلو",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "name",
+    "font": 72,
+    "lines": 1
+   }
+  ],
+  "named": {},
+  "file": "prv04_guess_review__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv04_guess_review",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 488,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "إيه، هذا جوابي",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "نبدّلو",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "name",
+    "font": 48,
+    "lines": 1
+   }
+  ],
+  "named": {},
+  "file": "prv04_guess_review__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv04_guess_review",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 488,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "إيه، هذا جوابي",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "نبدّلو",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [
+   {
+    "m": "name",
+    "font": 72,
+    "lines": 1
+   }
+  ],
+  "named": {},
+  "file": "prv04_guess_review__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv04_guess_typed",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 260,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 140,
+  "bodyContent": 243,
+  "hidden": 103,
+  "usableBottom": 260,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 176,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [
+   {
+    "x": 16,
+    "y": 211,
+    "w": 288,
+    "h": 56,
+    "visible": false
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "prv04_guess_typed__320x568.png",
+  "full": false
+ },
+ {
+  "id": "prv04_guess_typed",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 260,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 140,
+  "bodyContent": 367,
+  "hidden": 227,
+  "usableBottom": 260,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 16,
+    "y": 176,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [
+   {
+    "x": 16,
+    "y": 335,
+    "w": 288,
+    "h": 56,
+    "visible": false
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "prv04_guess_typed__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv04_guess_typed",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 300,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 252,
+  "bodyContent": 252,
+  "hidden": 0,
+  "usableBottom": 372,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 288,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [
+   {
+    "x": 24,
+    "y": 211,
+    "w": 312,
+    "h": 56,
+    "visible": true
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "prv04_guess_typed__360x720.png",
+  "full": false
+ },
+ {
+  "id": "prv04_guess_typed",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 300,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 252,
+  "bodyContent": 367,
+  "hidden": 115,
+  "usableBottom": 372,
+  "acts": [
+   {
+    "act": "أكّد",
+    "x": 24,
+    "y": 288,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [
+   {
+    "x": 24,
+    "y": 335,
+    "w": 312,
+    "h": 56,
+    "visible": false
+   }
+  ],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "prv04_guess_typed__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "prv05_resume_gate",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 488,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "أخرج",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "prv05_resume_gate__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub01_home",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 374,
+  "hidden": 38,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "طرح جديد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "كيفاش تتلعب؟",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "pub01_home__320x568.png",
+  "full": false
+ },
+ {
+  "id": "pub01_home",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 517,
+  "hidden": 181,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "طرح جديد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "كيفاش تتلعب؟",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "pub01_home__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub01_home",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 488,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "طرح جديد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "كيفاش تتلعب؟",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "pub01_home__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub01_home",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 532,
+  "hidden": 44,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "طرح جديد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "كيفاش تتلعب؟",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "pub01_home__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub01_home_restore_failed",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 452,
+  "hidden": 116,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "طرح جديد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "كيفاش تتلعب؟",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "pub01_home_restore_failed__320x568.png",
+  "full": false
+ },
+ {
+  "id": "pub01_home_restore_failed",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 336,
+  "bodyContent": 646,
+  "hidden": 310,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "طرح جديد",
+    "x": 16,
+    "y": 372,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "كيفاش تتلعب؟",
+    "x": 16,
+    "y": 444,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "pub01_home_restore_failed__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub01_home_restore_failed",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 488,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "طرح جديد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "كيفاش تتلعب؟",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "pub01_home_restore_failed__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub01_home_restore_failed",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 488,
+  "bodyContent": 661,
+  "hidden": 173,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "طرح جديد",
+    "x": 24,
+    "y": 524,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "كيفاش تتلعب؟",
+    "x": 24,
+    "y": 596,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "pub01_home_restore_failed__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub02_howto",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 956,
+  "hidden": 404,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "فهمت",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "pub02_howto__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub02_howto",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 1124,
+  "bodyClient": 956,
+  "bodyContent": 956,
+  "hidden": 0,
+  "usableBottom": 1075.5,
+  "acts": [
+   {
+    "act": "فهمت",
+    "x": 24,
+    "y": 992,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "pub02_howto__full.png",
+  "full": true
+ },
+ {
+  "id": "pub03_settings",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 624,
+  "bodyContent": 624,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "التراخيص",
+    "x": 24,
+    "y": 354,
+    "w": 312,
+    "h": 44,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 24,
+    "y": 354,
+    "w": 312,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "pub03_settings__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub05_players_empty",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 552,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "pub05_players_empty__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub05_players_six",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 688,
+  "hidden": 136,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {},
+  "file": "pub05_players_six__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub05_players_three",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 552,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {},
+  "file": "pub05_players_three__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub05_players_twelve",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 1124,
+  "hidden": 724,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {},
+  "file": "pub05_players_twelve__320x568.png",
+  "full": false
+ },
+ {
+  "id": "pub05_players_twelve",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 1152,
+  "hidden": 752,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {},
+  "file": "pub05_players_twelve__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub05_players_twelve",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 1124,
+  "hidden": 572,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {},
+  "file": "pub05_players_twelve__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub05_players_twelve",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 1152,
+  "hidden": 600,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {},
+  "file": "pub05_players_twelve__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub05_players_twelve",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 1292,
+  "bodyClient": 1124,
+  "bodyContent": 1124,
+  "hidden": 0,
+  "usableBottom": 1243.890625,
+  "acts": [
+   {
+    "act": "كمّل",
+    "x": 24,
+    "y": 1160,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {},
+  "file": "pub05_players_twelve__full.png",
+  "full": true
+ },
+ {
+  "id": "pub06_packs",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 552,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "هيّا نبداو",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "pub06_packs__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub06_packs_none_selected",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 486,
+  "bodyContent": 516,
+  "hidden": 30,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "هيّا نبداو",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "pub06_packs_none_selected__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub07_discussion",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 552,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "نبداو التصويت",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [],
+  "fits": [],
+  "named": {},
+  "file": "pub07_discussion__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub08_tally_12_players",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 987,
+  "hidden": 587,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "شوفوا النتيجة",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {},
+  "file": "pub08_tally_12_players__320x568.png",
+  "full": false
+ },
+ {
+  "id": "pub08_tally_12_players",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 1208,
+  "hidden": 808,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "شوفوا النتيجة",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {},
+  "file": "pub08_tally_12_players__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub08_tally_12_players",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 987,
+  "hidden": 435,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "شوفوا النتيجة",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {},
+  "file": "pub08_tally_12_players__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub08_tally_12_players",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 1208,
+  "hidden": 656,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "شوفوا النتيجة",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {},
+  "file": "pub08_tally_12_players__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub08_tally_12_players",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 1149,
+  "bodyClient": 981,
+  "bodyContent": 987,
+  "hidden": 6,
+  "usableBottom": 1101.1875,
+  "acts": [
+   {
+    "act": "شوفوا النتيجة",
+    "x": 24,
+    "y": 1017,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {},
+  "file": "pub08_tally_12_players__full.png",
+  "full": true
+ },
+ {
+  "id": "pub08_tally_a_nominee",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 603,
+  "hidden": 51,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "شوفوا النتيجة",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {},
+  "file": "pub08_tally_a_nominee__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub08_tally_b_impostor",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 667,
+  "hidden": 115,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "أعطي التليفون لـ ياسين",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {},
+  "file": "pub08_tally_b_impostor__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub08_tally_c_tie",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 640,
+  "hidden": 88,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "نعاودو التصويت",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {},
+  "file": "pub08_tally_c_tie__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub08_tally_d_runoff_tie",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 552,
+  "hidden": 0,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "شوفوا النتيجة",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [],
+  "named": {},
+  "file": "pub08_tally_d_runoff_tie__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_12_players",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 2652,
+  "hidden": 2252,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 16,
+    "y": 2568,
+    "w": 288,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "الرئيسية",
+    "x": 16,
+    "y": 2632,
+    "w": 288,
+    "h": 44,
+    "visible": false
+   },
+   {
+    "act": "طرح آخر",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 16,
+    "y": 2632,
+    "w": 288,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "كسكسي بالعصبان",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 40,
+    "clipped": true
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_12_players__320x568.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_12_players",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 2972,
+  "hidden": 2572,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 16,
+    "y": 2888,
+    "w": 288,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "الرئيسية",
+    "x": 16,
+    "y": 2952,
+    "w": 288,
+    "h": 44,
+    "visible": false
+   },
+   {
+    "act": "طرح آخر",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 16,
+    "y": 2952,
+    "w": 288,
+    "h": 44
+   }
+  ],
+  "hOverflow": 1,
+  "truncated": [
+   "كسكسي بالعصبان",
+   "عبد الرحمان بن عاشور الط",
+   "نور الهدى",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 40,
+    "clipped": true
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_12_players__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_12_players",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 2652,
+  "hidden": 2100,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 24,
+    "y": 2568,
+    "w": 312,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "الرئيسية",
+    "x": 24,
+    "y": 2632,
+    "w": 312,
+    "h": 44,
+    "visible": false
+   },
+   {
+    "act": "طرح آخر",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 24,
+    "y": 2632,
+    "w": 312,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "كسكسي بالعصبان",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 40,
+    "clipped": true
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_12_players__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_12_players",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 2972,
+  "hidden": 2420,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 24,
+    "y": 2888,
+    "w": 312,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "الرئيسية",
+    "x": 24,
+    "y": 2952,
+    "w": 312,
+    "h": 44,
+    "visible": false
+   },
+   {
+    "act": "طرح آخر",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 24,
+    "y": 2952,
+    "w": 312,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "كسكسي بالعصبان",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 40,
+    "clipped": true
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_12_players__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_12_players",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 2820,
+  "bodyClient": 2652,
+  "bodyContent": 2652,
+  "hidden": 0,
+  "usableBottom": 2771.765625,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 24,
+    "y": 2568,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "الرئيسية",
+    "x": 24,
+    "y": 2632,
+    "w": 312,
+    "h": 44,
+    "visible": true
+   },
+   {
+    "act": "طرح آخر",
+    "x": 24,
+    "y": 2688,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 24,
+    "y": 2632,
+    "w": 312,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "كسكسي بالعصبان",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 40,
+    "clipped": true
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_12_players__full.png",
+  "full": true
+ },
+ {
+  "id": "pub09_results_civilians_win",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 1617,
+  "hidden": 1217,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 16,
+    "y": 1533,
+    "w": 288,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "الرئيسية",
+    "x": 16,
+    "y": 1597,
+    "w": 288,
+    "h": 44,
+    "visible": false
+   },
+   {
+    "act": "طرح آخر",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 16,
+    "y": 1597,
+    "w": 288,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_civilians_win__320x568.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_civilians_win",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 1868,
+  "hidden": 1468,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 16,
+    "y": 1784,
+    "w": 288,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "الرئيسية",
+    "x": 16,
+    "y": 1848,
+    "w": 288,
+    "h": 44,
+    "visible": false
+   },
+   {
+    "act": "طرح آخر",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 16,
+    "y": 1848,
+    "w": 288,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "ياسين",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 104,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_civilians_win__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_civilians_win",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 1571,
+  "hidden": 1019,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 24,
+    "y": 1487,
+    "w": 312,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "الرئيسية",
+    "x": 24,
+    "y": 1551,
+    "w": 312,
+    "h": 44,
+    "visible": false
+   },
+   {
+    "act": "طرح آخر",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 24,
+    "y": 1551,
+    "w": 312,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_civilians_win__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_civilians_win",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 1873,
+  "hidden": 1321,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 24,
+    "y": 1789,
+    "w": 312,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "الرئيسية",
+    "x": 24,
+    "y": 1853,
+    "w": 312,
+    "h": 44,
+    "visible": false
+   },
+   {
+    "act": "طرح آخر",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 24,
+    "y": 1853,
+    "w": 312,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 108,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_civilians_win__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_civilians_win",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 1739,
+  "bodyClient": 1571,
+  "bodyContent": 1571,
+  "hidden": 0,
+  "usableBottom": 1690.671875,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 24,
+    "y": 1487,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "الرئيسية",
+    "x": 24,
+    "y": 1551,
+    "w": 312,
+    "h": 44,
+    "visible": true
+   },
+   {
+    "act": "طرح آخر",
+    "x": 24,
+    "y": 1607,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 24,
+    "y": 1551,
+    "w": 312,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_civilians_win__full.png",
+  "full": true
+ },
+ {
+  "id": "pub09_results_draw",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 1640,
+  "hidden": 1240,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 16,
+    "y": 1556,
+    "w": 288,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "الرئيسية",
+    "x": 16,
+    "y": 1620,
+    "w": 288,
+    "h": 44,
+    "visible": false
+   },
+   {
+    "act": "طرح آخر",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 16,
+    "y": 1620,
+    "w": 288,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_draw__320x568.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_draw",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 1922,
+  "hidden": 1522,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 16,
+    "y": 1838,
+    "w": 288,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "الرئيسية",
+    "x": 16,
+    "y": 1902,
+    "w": 288,
+    "h": 44,
+    "visible": false
+   },
+   {
+    "act": "طرح آخر",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 16,
+    "y": 1902,
+    "w": 288,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "ياسين",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 104,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_draw__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_draw",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 1640,
+  "hidden": 1088,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 24,
+    "y": 1556,
+    "w": 312,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "الرئيسية",
+    "x": 24,
+    "y": 1620,
+    "w": 312,
+    "h": 44,
+    "visible": false
+   },
+   {
+    "act": "طرح آخر",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 24,
+    "y": 1620,
+    "w": 312,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_draw__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_draw",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 1884,
+  "hidden": 1332,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 24,
+    "y": 1800,
+    "w": 312,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "الرئيسية",
+    "x": 24,
+    "y": 1864,
+    "w": 312,
+    "h": 44,
+    "visible": false
+   },
+   {
+    "act": "طرح آخر",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 24,
+    "y": 1864,
+    "w": 312,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 108,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_draw__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_draw",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 1808,
+  "bodyClient": 1640,
+  "bodyContent": 1640,
+  "hidden": 0,
+  "usableBottom": 1760.171875,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 24,
+    "y": 1556,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "الرئيسية",
+    "x": 24,
+    "y": 1620,
+    "w": 312,
+    "h": 44,
+    "visible": true
+   },
+   {
+    "act": "طرح آخر",
+    "x": 24,
+    "y": 1676,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 24,
+    "y": 1620,
+    "w": 312,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_draw__full.png",
+  "full": true
+ },
+ {
+  "id": "pub09_results_first_draft_three_pinned",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 280,
+  "bodyContent": 1485,
+  "hidden": 1205,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "طرح آخر",
+    "x": 16,
+    "y": 316,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 16,
+    "y": 388,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "الرئيسية",
+    "x": 16,
+    "y": 452,
+    "w": 288,
+    "h": 44,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 16,
+    "y": 452,
+    "w": 288,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_first_draft_three_pinned__320x568.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_first_draft_three_pinned",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 280,
+  "bodyContent": 1745,
+  "hidden": 1465,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "طرح آخر",
+    "x": 16,
+    "y": 316,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 16,
+    "y": 388,
+    "w": 288,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "الرئيسية",
+    "x": 16,
+    "y": 452,
+    "w": 288,
+    "h": 44,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 16,
+    "y": 452,
+    "w": 288,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "ياسين",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 104,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_first_draft_three_pinned__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_first_draft_three_pinned",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 432,
+  "bodyContent": 1439,
+  "hidden": 1007,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "طرح آخر",
+    "x": 24,
+    "y": 468,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 24,
+    "y": 540,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "الرئيسية",
+    "x": 24,
+    "y": 604,
+    "w": 312,
+    "h": 44,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 24,
+    "y": 604,
+    "w": 312,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_first_draft_three_pinned__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_first_draft_three_pinned",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 432,
+  "bodyContent": 1750,
+  "hidden": 1318,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "طرح آخر",
+    "x": 24,
+    "y": 468,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 24,
+    "y": 540,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "الرئيسية",
+    "x": 24,
+    "y": 604,
+    "w": 312,
+    "h": 44,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 24,
+    "y": 604,
+    "w": 312,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 108,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_first_draft_three_pinned__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_first_draft_three_pinned",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 1727,
+  "bodyClient": 1439,
+  "bodyContent": 1439,
+  "hidden": 0,
+  "usableBottom": 1678.671875,
+  "acts": [
+   {
+    "act": "طرح آخر",
+    "x": 24,
+    "y": 1475,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   },
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 24,
+    "y": 1547,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "الرئيسية",
+    "x": 24,
+    "y": 1611,
+    "w": 312,
+    "h": 44,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 24,
+    "y": 1611,
+    "w": 312,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_first_draft_three_pinned__full.png",
+  "full": true
+ },
+ {
+  "id": "pub09_results_impostor_wins",
+  "w": 320,
+  "h": 568,
+  "ts": 1,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 1513,
+  "hidden": 1113,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 16,
+    "y": 1429,
+    "w": 288,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "الرئيسية",
+    "x": 16,
+    "y": 1493,
+    "w": 288,
+    "h": 44,
+    "visible": false
+   },
+   {
+    "act": "طرح آخر",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 16,
+    "y": 1493,
+    "w": 288,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_impostor_wins__320x568.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_impostor_wins",
+  "w": 320,
+  "h": 568,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 16,
+  "deviceH": 568,
+  "bodyClient": 400,
+  "bodyContent": 1742,
+  "hidden": 1342,
+  "usableBottom": 520,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 16,
+    "y": 1658,
+    "w": 288,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "الرئيسية",
+    "x": 16,
+    "y": 1722,
+    "w": 288,
+    "h": 44,
+    "visible": false
+   },
+   {
+    "act": "طرح آخر",
+    "x": 16,
+    "y": 436,
+    "w": 288,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 16,
+    "y": 1722,
+    "w": 288,
+    "h": 44
+   }
+  ],
+  "hOverflow": 1,
+  "truncated": [
+   "ياسين",
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 104,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_impostor_wins__320x568_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_impostor_wins",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 1513,
+  "hidden": 961,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 24,
+    "y": 1429,
+    "w": 312,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "الرئيسية",
+    "x": 24,
+    "y": 1493,
+    "w": 312,
+    "h": 44,
+    "visible": false
+   },
+   {
+    "act": "طرح آخر",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 24,
+    "y": 1493,
+    "w": 312,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_impostor_wins__360x720.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_impostor_wins",
+  "w": 360,
+  "h": 720,
+  "ts": 1.5,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 720,
+  "bodyClient": 552,
+  "bodyContent": 1747,
+  "hidden": 1195,
+  "usableBottom": 672,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 24,
+    "y": 1663,
+    "w": 312,
+    "h": 52,
+    "visible": false
+   },
+   {
+    "act": "الرئيسية",
+    "x": 24,
+    "y": 1727,
+    "w": 312,
+    "h": 44,
+    "visible": false
+   },
+   {
+    "act": "طرح آخر",
+    "x": 24,
+    "y": 588,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 24,
+    "y": 1727,
+    "w": 312,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 108,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_impostor_wins__360x720_ts150.png",
+  "full": false
+ },
+ {
+  "id": "pub09_results_impostor_wins",
+  "w": 360,
+  "h": 720,
+  "ts": 1,
+  "kb": 0,
+  "margin": 24,
+  "deviceH": 1681,
+  "bodyClient": 1513,
+  "bodyContent": 1513,
+  "hidden": 0,
+  "usableBottom": 1633.265625,
+  "acts": [
+   {
+    "act": "بدّل اللعّابة والباكوات",
+    "x": 24,
+    "y": 1429,
+    "w": 312,
+    "h": 52,
+    "visible": true
+   },
+   {
+    "act": "الرئيسية",
+    "x": 24,
+    "y": 1493,
+    "w": 312,
+    "h": 44,
+    "visible": true
+   },
+   {
+    "act": "طرح آخر",
+    "x": 24,
+    "y": 1549,
+    "w": 312,
+    "h": 60,
+    "visible": true
+   }
+  ],
+  "fields": [],
+  "smallTaps": [
+   {
+    "x": 24,
+    "y": 1493,
+    "w": 312,
+    "h": 44
+   }
+  ],
+  "hOverflow": 0,
+  "truncated": [
+   "عبد الرحمان بن عاشور الط",
+   "عبد الرحمان بن عاشور الط"
+  ],
+  "fits": [
+   {
+    "m": "",
+    "font": 72,
+    "clipped": false
+   }
+  ],
+  "named": {},
+  "file": "pub09_results_impostor_wins__full.png",
+  "full": true
+ }
+]
