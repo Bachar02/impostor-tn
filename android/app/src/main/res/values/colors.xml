@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Values copied from docs/design/tokens/colors.json (palette). -->
+<resources>
+    <!-- palette.mustard: app_icon_background.svg -->
+    <color name="ic_launcher_background">#E9A820</color>
+    <!-- palette.paper: window background while Flutter starts -->
+    <color name="tesskra_paper">#F3EBDD</color>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Derived by hand from docs/design/assets/logo/app_icon_foreground.svg (ADR-0004).
+     Regenerate if that SVG changes. Dashes are drawn as segments because
+     VectorDrawable has no stroke-dasharray. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:pivotX="54"
+        android:pivotY="54"
+        android:rotation="-8">
+        <path
+            android:fillColor="#1B2A4A"
+            android:pathData="M42,27h30a8,8 0 0 1 8,8v44a8,8 0 0 1 -8,8h-30a8,8 0 0 1 -8,-8v-44a8,8 0 0 1 8,-8z" />
+        <path
+            android:fillColor="#FFFDF7"
+            android:strokeColor="#1B2A4A"
+            android:strokeWidth="3"
+            android:pathData="M39,24h30a8,8 0 0 1 8,8v44a8,8 0 0 1 -8,8h-30a8,8 0 0 1 -8,-8v-44a8,8 0 0 1 8,-8z" />
+        <group
+            android:scaleX="0.04076"
+            android:scaleY="0.04076"
+            android:translateX="42.18"
+            android:translateY="62.51">
+            <path
+                android:fillColor="#C92D22"
+                android:pathData="M230 -303Q230 -319 225.0 -329.5Q220 -340 208.0 -351.0Q196 -362 175 -377Q129 -411 105.5 -438.5Q82 -466 73.5 -492.0Q65 -518 65 -546Q65 -630 126.0 -677.0Q187 -724 293 -724Q345 -724 406.0 -704.5Q467 -685 515 -655L452 -522Q406 -546 365.0 -561.0Q324 -576 295 -576Q268 -576 255.5 -563.5Q243 -551 243 -531Q243 -518 249.0 -507.5Q255 -497 269.0 -485.0Q283 -473 307 -455Q340 -431 360.0 -407.5Q380 -384 389.5 -359.5Q399 -335 399 -308V-260H230ZM309 12Q260 12 234.0 -14.0Q208 -40 208 -81Q208 -125 234.5 -149.5Q261 -174 309 -174Q356 -174 383.5 -150.5Q411 -127 411 -81Q411 -35 384.0 -11.5Q357 12 309 12Z" />
+        </group>
+        <path
+            android:strokeColor="#1B2A4A"
+            android:strokeWidth="2.5"
+            android:pathData="M37,70h4M44.5,70h4M52,70h4M59.5,70h4M67,70h4" />
+        <path
+            android:strokeColor="#1B2A4A"
+            android:strokeWidth="2.5"
+            android:strokeLineCap="round"
+            android:pathData="M40,77H68" />
+    </group>
+</vector>

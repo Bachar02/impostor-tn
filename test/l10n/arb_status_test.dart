@@ -1,5 +1,5 @@
 // Every Arabic string carries an explicit review status so provisional copy
-// can never be mistaken for approved copy (PRD §13, DECISIONS.md D-07).
+// can never be mistaken for approved copy (PRD §13, DECISIONS.md D-06).
 import 'dart:convert';
 import 'dart:io';
 
