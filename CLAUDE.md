@@ -38,7 +38,7 @@ A PostToolUse hook formats each edited Dart file. Run analyze and the relevant t
 ```
 lib/app/        composition root: bootstrap, error handlers, MaterialApp, licences
 lib/core/       design system (tokens, themes, widgets), text helpers, diagnostics; imports no feature
-lib/game/       pure Dart game engine and domain (no Flutter, no I/O)      [not started]
+lib/game/       pure Dart game engine and domain (no Flutter, no I/O)      [rules done; word selection/cooldown not started]
 lib/data/       persistence (SQLite via drift) behind repository interfaces [not started]
 lib/features/   <feature>/{application,presentation}                        [not started]
 lib/l10n/       app_ar.arb (source) and generated/ (committed, not edited)

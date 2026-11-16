@@ -49,7 +49,7 @@ Last update: 2026-11-16 (foundation re-assessed; error handling added, ADR-0008)
 - [x] `docs/design/SCREEN_SPECIFICATIONS.md` drafted: 14 screens, 2 overlays, all states
 - [x] `docs/design/UX_RESEARCH_AND_RISKS.md` drafted: assumptions, risks, Q-06/Q-07 evidence, validation plan
 - [x] `docs/DESIGN_HANDOFF.md` updated
-- [ ] Product Owner review and approval (Q-05)
+- [ ] Product Owner review and approval (Q-05). Approval form for slice 1: `docs/design/UX_APPROVAL_PACKAGE_SLICE_1.md`
 - [ ] Blocking decisions settled: Q-01, Q-06, Q-07, Q-16, Q-17, Q-18, Q-19, Q-22
 - [x] Full-screen reference renders: 52 states, 172 images, with layout measurements (browser renders; not device-verified)
 - [x] Consistency audit: flows, specifications and risks revised (revision 2)
@@ -66,15 +66,18 @@ Last update: 2026-11-16 (foundation re-assessed; error handling added, ADR-0008)
 - [ ] Word-content schema, loader and structural validator with clearly labelled test fixtures. Real content is Q-13.
 - [ ] Persistence layer and recovery tests (ADR-0003). Needs Q-03.
 
-## Gameplay (PRD §4–§11) — not started
+## Gameplay (PRD §4–§11)
 
-- [ ] Setup: players 4–12, order, pack selection, validation
-- [ ] Role and word assignment, exactly one Impostor
-- [ ] Private reveal and persisted acknowledgement
-- [ ] Discussion phase
-- [ ] First ballot, runoff, draw
-- [ ] Final guess with exact matching
-- [ ] Results and replay
+Engine step 1 (2026-11-16): pure Dart in `lib/game/`, 133 unit tests in `test/game/` with synthetic fixtures. Mutation check: four deliberately injected rule bugs were each caught. No UI, no persistence.
+
+- [~] Setup: player count 4–12 and unique ids in the engine; name rules pending Q-01; pack selection not started
+- [~] Role assignment: exactly one Impostor from an injected `Random`; word selection not started
+- [~] Private reveal: role view per pending player (Impostor view is category-only by type), acknowledgement in playing order; persistence not started
+- [x] Discussion phase (engine)
+- [x] First ballot, single runoff among the tied, draw on a runoff tie (engine)
+- [~] Final guess with exact matching: D-01 with the strict interim reading (only U+0020 is a space) pending Q-26; empty guess compares as incorrect pending Q-02
+- [x] Results (outcome, winner, ballots with counts) and replay (engine)
+- [x] Restore by replaying recorded facts; corrupt or impossible facts rejected, never repaired (engine)
 - [ ] Cooldown of 30 across sessions and restarts
 - [ ] Session persistence and safe recovery
 

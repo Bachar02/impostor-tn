@@ -1,6 +1,6 @@
 # ADR-0001: Architecture and folder structure
 
-Status: Accepted (2026-11-15). The `game`, `data` and `features` layers are designed here but not yet built.
+Status: Accepted (2026-11-15). The `game` layer's rules exist (2026-11-16; word selection and cooldown not yet); `data` and `features` are designed here but not yet built.
 
 ## Context
 
