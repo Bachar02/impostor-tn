@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:impostor_tn/app/app.dart';
-import 'package:impostor_tn/app/foundation_placeholder_screen.dart';
 import 'package:impostor_tn/core/design/assets/tesskra_assets.dart';
 import 'package:impostor_tn/core/design/tokens/tesskra_palette.dart';
+import 'package:impostor_tn/features/home/presentation/home_screen.dart';
 import 'package:impostor_tn/l10n/generated/app_localizations.dart';
 
-Future<void> _pumpApp(WidgetTester tester) async {
-  await tester.pumpWidget(const ProviderScope(child: ImpostorApp()));
-  await tester.pumpAndSettle();
-}
+import '../features/game/application/service_fixtures.dart';
+import '../support/app_harness.dart';
+
+Future<void> _pumpApp(WidgetTester tester) => pumpApp(
+  tester,
+  store: MemoryStore(),
+  protection: FakeProtection(),
+  size: tester.view.physicalSize / tester.view.devicePixelRatio,
+  textScale: tester.platformDispatcher.textScaleFactor,
+);
 
 void main() {
   testWidgets('boots in Arabic, right-to-left, on the paper theme', (
@@ -19,11 +23,11 @@ void main() {
   ) async {
     await _pumpApp(tester);
 
-    final context = tester.element(find.byType(FoundationPlaceholderScreen));
+    final context = tester.element(find.byType(HomeScreen));
     expect(Directionality.of(context), TextDirection.rtl);
     expect(Localizations.localeOf(context), const Locale('ar'));
     expect(Theme.of(context).scaffoldBackgroundColor, TesskraPalette.paper);
-    expect(find.text(AppLocalizations.of(context).appName), findsOneWidget);
+    expect(find.text(AppLocalizations.of(context).homeNewGame), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 

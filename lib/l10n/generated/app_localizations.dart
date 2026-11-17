@@ -435,6 +435,312 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'خرّجتو مدني'**
   String get resultCivilianOut;
+
+  /// [REVIEW] Impostor. Glossary key role.impostor (ARABIC_LOCALIZATION.md §5). Note: Alternative: الدخيل (more MSA)
+  ///
+  /// In ar, this message translates to:
+  /// **'إمبوستور'**
+  String get roleImpostor;
+
+  /// [REVIEW] Civilian. Glossary key role.civilian (ARABIC_LOCALIZATION.md §5). Note: Plural used: المدنيين
+  ///
+  /// In ar, this message translates to:
+  /// **'مدني'**
+  String get roleCivilian;
+
+  /// [REVIEW] Players. Glossary key players.title (ARABIC_LOCALIZATION.md §5). Note: Singular لعّاب
+  ///
+  /// In ar, this message translates to:
+  /// **'اللعّابة'**
+  String get playersTitle;
+
+  /// [REVIEW] Up to 16 characters. Glossary key players.name_limit (ARABIC_LOCALIZATION.md §5). Note: Limit itself must come from the PRD
+  ///
+  /// In ar, this message translates to:
+  /// **'حتى 16 حرف'**
+  String get playersNameLimit;
+
+  /// [REVIEW] {n} words. Glossary key pack.word_count (ARABIC_LOCALIZATION.md §5). Note: Plural rule for 3–10 (كلمات) to decide
+  ///
+  /// In ar, this message translates to:
+  /// **'{n} كلمة'**
+  String packWordCount(String n);
+
+  /// [REVIEW] Your role. Glossary key reveal.role_label (ARABIC_LOCALIZATION.md §5). Note: Sealed state uses دور
+  ///
+  /// In ar, this message translates to:
+  /// **'دورك'**
+  String get revealRoleLabel;
+
+  /// [REVIEW] Category only. Glossary key reveal.category_only (ARABIC_LOCALIZATION.md §5). Note: برك = only
+  ///
+  /// In ar, this message translates to:
+  /// **'الصنف برك'**
+  String get revealCategoryOnly;
+
+  /// [REVIEW] Clues. Glossary key phase.clues (ARABIC_LOCALIZATION.md §5). Note: MSA-leaning
+  ///
+  /// In ar, this message translates to:
+  /// **'التلميحات'**
+  String get phaseClues;
+
+  /// [REVIEW] Voting. Glossary key phase.vote (ARABIC_LOCALIZATION.md §5). Note: MSA-leaning
+  ///
+  /// In ar, this message translates to:
+  /// **'التصويت'**
+  String get phaseVote;
+
+  /// [REVIEW] You (marks own row). Glossary key vote.self (ARABIC_LOCALIZATION.md §5). Note: Gender-neutral usage to confirm; rule itself depends on PRD
+  ///
+  /// In ar, this message translates to:
+  /// **'إنتي'**
+  String get voteSelf;
+
+  /// [REVIEW] New game. Glossary key home.new_game (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'طرح جديد'**
+  String get homeNewGame;
+
+  /// [REVIEW] Which of you?. Glossary key home.tagline (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'شكون فيكم؟'**
+  String get homeTagline;
+
+  /// [REVIEW] Add player. Glossary key players.add (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'زيد لعّاب'**
+  String get playersAdd;
+
+  /// [REVIEW] Player name. Glossary key players.name_label (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'اسم اللعّاب'**
+  String get playersNameLabel;
+
+  /// [REVIEW] e.g. Salma. Glossary key players.name_hint (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'مثلا: سلمى'**
+  String get playersNameHint;
+
+  /// [REVIEW] No players yet. Glossary key players.empty (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'مازال ما فمّا حتى لعّاب'**
+  String get playersEmpty;
+
+  /// [REVIEW] Add 4 players to start. Glossary key players.empty_hint (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'زيد 4 لعّابة باش تبداو'**
+  String get playersEmptyHint;
+
+  /// [REVIEW] Name already used. Glossary key error.name_duplicate (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'الاسم هذا موجود'**
+  String get errorNameDuplicate;
+
+  /// [REVIEW] Enter a name. Glossary key error.name_empty (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'اكتب اسم'**
+  String get errorNameEmpty;
+
+  /// [REVIEW] You need at least 4 players. Glossary key error.min_players (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'لازمكم 4 لعّابة على الأقل'**
+  String get errorMinPlayers;
+
+  /// [REVIEW] Selected. Glossary key pack.selected (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'مختار'**
+  String get packSelected;
+
+  /// [REVIEW] Contains no words. Glossary key pack.empty (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'ما فيه حتى كلمة'**
+  String get packEmpty;
+
+  /// [REVIEW] Let's start. Glossary key action.start (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'هيّا نبداو'**
+  String get actionStart;
+
+  /// [REVIEW] Confirm. Glossary key action.confirm (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'أكّد'**
+  String get actionConfirm;
+
+  /// [REVIEW] Back. Glossary key action.back (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'ارجع'**
+  String get actionBack;
+
+  /// [REVIEW] Delete player. Glossary key action.delete_player (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'فسّخ اللعّاب'**
+  String get actionDeletePlayer;
+
+  /// [REVIEW] Change name. Glossary key action.rename (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'بدّل الاسم'**
+  String get actionRename;
+
+  /// [REVIEW] Retry. Glossary key action.retry (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'عاود'**
+  String get actionRetry;
+
+  /// [REVIEW] Play again. Glossary key action.play_again (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'طرح آخر'**
+  String get actionPlayAgain;
+
+  /// [REVIEW] Pass the phone to {name}. Glossary key handoff.pass_to (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'أعطي التليفون لـ {name}'**
+  String handoffPassTo(String name);
+
+  /// [REVIEW] I am {name}. Glossary key handoff.i_am (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'أنا {name}'**
+  String handoffIAm(String name);
+
+  /// [REVIEW] No one else should see. Glossary key privacy.only_you (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'ما يشوف حد غيرك'**
+  String get privacyOnlyYou;
+
+  /// [REVIEW] Role is hidden. Glossary key reveal.sealed (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'الدور مخبّي'**
+  String get revealSealed;
+
+  /// [REVIEW] Show me my role. Glossary key reveal.show (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'ورّيني دوري'**
+  String get revealShow;
+
+  /// [REVIEW] The secret word. Glossary key reveal.word_label (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'الكلمة السرّية'**
+  String get revealWordLabel;
+
+  /// [REVIEW] Category: {category}. Glossary key reveal.category (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'الصنف: {category}'**
+  String revealCategory(String category);
+
+  /// [REVIEW] You don't know the word. Glossary key reveal.no_word (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'ما تعرفش الكلمة'**
+  String get revealNoWord;
+
+  /// [REVIEW] Got it, hide. Glossary key reveal.ack (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'فهمت، خبّي'**
+  String get revealAck;
+
+  /// [REVIEW] Everyone has seen their role. Glossary key reveal.all_done (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'الكل شافوا دورهم'**
+  String get revealAllDone;
+
+  /// [REVIEW] Tie. We vote again between them.. Glossary key vote.tie (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'تعادل في الأصوات. نعاودو التصويت بيناتهم.'**
+  String get voteTie;
+
+  /// [REVIEW] Civilians won. Glossary key result.civilians_win (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'المدنيين ربحوا'**
+  String get resultCiviliansWin;
+
+  /// [REVIEW] The Impostor won. Glossary key result.impostor_wins (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'الإمبوستور ربح'**
+  String get resultImpostorWins;
+
+  /// [REVIEW] Draw. Glossary key result.draw (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'تعادل'**
+  String get resultDraw;
+
+  /// [REVIEW] Leave the game?. Glossary key dialog.quit_title (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'تخرج من الطرح؟'**
+  String get dialogQuitTitle;
+
+  /// [REVIEW] The current game is deleted and cannot be restored.. Glossary key dialog.quit_body (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'الطرح الحالي يتفسّخ وما تنجّمش ترجّعو.'**
+  String get dialogQuitBody;
+
+  /// [REVIEW] Leave. Glossary key dialog.quit_confirm (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'أخرج'**
+  String get dialogQuitConfirm;
+
+  /// [REVIEW] Keep playing. Glossary key dialog.quit_cancel (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'كمّل اللعب'**
+  String get dialogQuitCancel;
+
+  /// [REVIEW] One moment…. Glossary key state.loading (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'لحظة…'**
+  String get stateLoading;
+
+  /// [REVIEW] The game was paused. Continue where you stopped.. Glossary key state.resumed (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'الطرح توقّف. كمّلوا من وين وصلتوا.'**
+  String get stateResumed;
+
+  /// [REVIEW] Something went wrong. Try again.. Glossary key state.error (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'صار مشكل. عاود مرّة أخرى.'**
+  String get stateError;
+
+  /// [REVIEW] 4–12 players · one phone · no internet. Glossary key home.facts (ARABIC_LOCALIZATION.md §5).
+  ///
+  /// In ar, this message translates to:
+  /// **'4–12 لعّابة · تليفون واحد · من غير أنترنات'**
+  String get homeFacts;
 }
 
 class _AppLocalizationsDelegate

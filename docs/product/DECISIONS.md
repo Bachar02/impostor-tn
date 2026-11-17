@@ -39,14 +39,18 @@ Rule for engineers: an item under "Open questions" is **not** decided. Do not im
 | D-29 | 2026-11-17 | Slice-1 Home (S-1) | How to Play and Settings are deferred to slice 2. Home in slice 1 shows neither button. | §14 |
 | D-30 | 2026-11-17 | Final-guess characters (Q-26) | The Q-26 recommendation is **not** approved. D-01 stays exactly as defined: no removal of invisible formatting marks, no broader Unicode normalization. The engine's strict reading (only U+0020 is a space) stays. | §8 |
 | D-31 | 2026-11-17 | Development authorization | Implement, in order: content infrastructure, word selection and cooldown, persistence and recovery, design-system components. Screens of the first playable slice wait for Q-05. No backend, accounts, networking, ads or purchases; no invented content. | — |
+| D-32 | 2026-11-17 | UX approval for slice 1 (Q-05) | **Approved**: the slice scope and exclusions of `UX_APPROVAL_PACKAGE_SLICE_1.md` §1; `UX_FLOWS.md` sections approved under rows 2.1–2.12 (F2 excluded, waits for slice 2); `SCREEN_SPECIFICATIONS.md` sections approved under rows 3.1–3.15; together with the earlier rulings D-15 to D-30. Q-30 corrections (D-28) and the parity ticket (D-27) apply. Screens outside the slice (PUB-02, PUB-03, PUB-04) are not approved. | — |
+| D-33 | 2026-11-17 | Loading indicator on private screens | Static loading dots on carbon screens are accepted (no looping animation, SCREEN_SPECIFICATIONS §1.5). | §12 |
+| D-34 | 2026-11-17 | Long secret words (Q-29) | Q-29 stays provisional. Do not reduce the minimum type size or compromise accessibility to fit long words. | §13 |
+| D-35 | 2026-11-17 | Development content (Q-13) | Q-13 does not block screens. Development-only synthetic fixtures may be used, with strict safeguards that keep them out of release builds. They are not content and are never reviewed or published. | §10 |
+| D-36 | 2026-11-17 | Milestone E | Build the full first playable slice (Home → … → Replay, leave dialog, resume gate, recovery) on the existing engine and persistence; whole-game screenshot protection at the approved boundaries; then run on the `Pixel_XL_API_36` emulator. | — |
 
 ## Open questions
 
-### Blocking screen work
+### Open (design)
 
 | ID | Question | Detail |
 |---|---|---|
-| Q-05 | Approval of the UX documents | `docs/design/UX_FLOWS.md`, `docs/design/SCREEN_SPECIFICATIONS.md` and `docs/design/UX_RESEARCH_AND_RISKS.md` (revision 2) and the form `docs/design/UX_APPROVAL_PACKAGE_SLICE_1.md`. **2026-11-17: not approved.** The rulings D-15 to D-30 settle individual questions; they do not approve the UX package as a whole. No screen is built until the relevant sections are explicitly approved. |
 | Q-06 | Icon stroke width | **Evidence:** three documents specify 2.25; all 26 SVG files carry `stroke-width="2"` (Lucide's default); the reference page forces 2.25 on 24 px icons and 2.4 on 20 px icons through CSS, so every approved render shows those values; no token records any stroke. **Recommendation:** set `stroke-width="2.25"` in the 26 files (updating the manifest sizes), decide whether the 2.4 small-icon value is intended, and record both as tokens. **Alternative:** leave the files at 2 and override in the app. Nothing is changed until approved; meanwhile the files are used as shipped. Detail: `UX_RESEARCH_AND_RISKS.md` §3. |
 | Q-08 | Launcher icon below Android 8 | The adaptive icon covers API 26+. API 24–25 would show the default Flutter icon. Either raise `minSdk` to 26 or supply raster PNG exports. **2026-11-17: do not change `minSdk` yet.** |
 | Q-09 | Sound | None of the seven sound effects exists. Under D-05 the sound setting is omitted until they are produced; haptics need no assets. Confirm, or schedule sound production. |
@@ -81,4 +85,4 @@ Each row gives the option the draft documents use. None is approved.
 
 ### Resolved
 
-Q-01 → D-15, Q-02 → D-16, Q-03 → D-17, Q-04 → D-18, Q-07 → D-19, Q-10 → D-20, Q-16 → D-21, Q-18 → D-22, Q-19 → D-23, Q-20 → D-24, Q-22 → D-25, Q-24 → D-26, Q-25 → D-27, Q-26 → D-30, Q-30 → D-28, S-1 → D-29 (all 2026-11-17).
+Q-05 → D-32 (slice 1), Q-01 → D-15, Q-02 → D-16, Q-03 → D-17, Q-04 → D-18, Q-07 → D-19, Q-10 → D-20, Q-16 → D-21, Q-18 → D-22, Q-19 → D-23, Q-20 → D-24, Q-22 → D-25, Q-24 → D-26, Q-25 → D-27, Q-26 → D-30, Q-30 → D-28, S-1 → D-29 (all 2026-11-17).

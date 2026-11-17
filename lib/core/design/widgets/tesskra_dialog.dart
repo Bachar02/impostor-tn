@@ -89,12 +89,16 @@ class TesskraDialog extends StatelessWidget {
 
 /// Shows [builder]'s dialog over the theme's scrim. Tapping the scrim or
 /// system back closes it with null.
+///
+/// [theme] overrides the theme of [context], for a dialog opened over a
+/// screen that applies its own theme below [context] (carbon screens).
 Future<T?> showTesskraDialog<T>({
   required BuildContext context,
   required WidgetBuilder builder,
+  ThemeData? theme,
 }) {
-  final tokens = TesskraTokens.of(context);
-  final theme = Theme.of(context);
+  final resolvedTheme = theme ?? Theme.of(context);
+  final tokens = resolvedTheme.extension<TesskraTokens>()!;
   return showGeneralDialog<T>(
     context: context,
     barrierDismissible: true,
@@ -102,7 +106,7 @@ Future<T?> showTesskraDialog<T>({
     barrierColor: tokens.colors.scrim,
     // The dialog keeps the theme of the screen it opens over.
     pageBuilder: (dialogContext, _, _) => Theme(
-      data: theme,
+      data: resolvedTheme,
       child: Builder(builder: builder),
     ),
   );

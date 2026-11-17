@@ -76,7 +76,9 @@ Three independent guards:
 2. `test/data/content/bundled_content_source_test.dart` fails if the bundled file contains a `development` word or if any other content file is declared in `pubspec.yaml`.
 3. Synthetic fixtures live only under `test/`, are built in Dart, are labelled as such, and are never declared as assets.
 
-No development word list exists (Q-13). If the Product Owner supplies one, it is added with status `development`; guards 1 and 2 then keep it out of a release, and guard 2 must be satisfied before a release is cut (it will fail while the words are in the file, which is intended).
+**Development-only synthetic words (D-35, 2026-11-17).** Placeholder words `dev01`…`dev40` in two packs (`dev-synthetic-a/b`), status `development`, no reviews, live in `lib/data/content/development_content.dart` as Dart data, not as an asset. The only reference is inside `if (kDebugMode)` in `lib/app/app_providers.dart`, so the release compiler drops them. Checked on 2026-11-17: a release x86_64 build's `libapp.so` does not contain `dev-synthetic` or `DEV pack A`, while it does contain the channel name and the catalog asset path (positive controls); the debug kernel does contain the marker. `test/app/development_content_guard_test.dart` enforces the single guarded reference.
+
+Before that ruling: no development word list existed (Q-13). If the Product Owner supplies one, it is added with status `development`; guards 1 and 2 then keep it out of a release, and guard 2 must be satisfied before a release is cut (it will fail while the words are in the file, which is intended).
 
 ### Empty catalog
 

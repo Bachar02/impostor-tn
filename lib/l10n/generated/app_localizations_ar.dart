@@ -193,4 +193,165 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get resultCivilianOut => 'خرّجتو مدني';
+
+  @override
+  String get roleImpostor => 'إمبوستور';
+
+  @override
+  String get roleCivilian => 'مدني';
+
+  @override
+  String get playersTitle => 'اللعّابة';
+
+  @override
+  String get playersNameLimit => 'حتى 16 حرف';
+
+  @override
+  String packWordCount(String n) {
+    return '$n كلمة';
+  }
+
+  @override
+  String get revealRoleLabel => 'دورك';
+
+  @override
+  String get revealCategoryOnly => 'الصنف برك';
+
+  @override
+  String get phaseClues => 'التلميحات';
+
+  @override
+  String get phaseVote => 'التصويت';
+
+  @override
+  String get voteSelf => 'إنتي';
+
+  @override
+  String get homeNewGame => 'طرح جديد';
+
+  @override
+  String get homeTagline => 'شكون فيكم؟';
+
+  @override
+  String get playersAdd => 'زيد لعّاب';
+
+  @override
+  String get playersNameLabel => 'اسم اللعّاب';
+
+  @override
+  String get playersNameHint => 'مثلا: سلمى';
+
+  @override
+  String get playersEmpty => 'مازال ما فمّا حتى لعّاب';
+
+  @override
+  String get playersEmptyHint => 'زيد 4 لعّابة باش تبداو';
+
+  @override
+  String get errorNameDuplicate => 'الاسم هذا موجود';
+
+  @override
+  String get errorNameEmpty => 'اكتب اسم';
+
+  @override
+  String get errorMinPlayers => 'لازمكم 4 لعّابة على الأقل';
+
+  @override
+  String get packSelected => 'مختار';
+
+  @override
+  String get packEmpty => 'ما فيه حتى كلمة';
+
+  @override
+  String get actionStart => 'هيّا نبداو';
+
+  @override
+  String get actionConfirm => 'أكّد';
+
+  @override
+  String get actionBack => 'ارجع';
+
+  @override
+  String get actionDeletePlayer => 'فسّخ اللعّاب';
+
+  @override
+  String get actionRename => 'بدّل الاسم';
+
+  @override
+  String get actionRetry => 'عاود';
+
+  @override
+  String get actionPlayAgain => 'طرح آخر';
+
+  @override
+  String handoffPassTo(String name) {
+    return 'أعطي التليفون لـ $name';
+  }
+
+  @override
+  String handoffIAm(String name) {
+    return 'أنا $name';
+  }
+
+  @override
+  String get privacyOnlyYou => 'ما يشوف حد غيرك';
+
+  @override
+  String get revealSealed => 'الدور مخبّي';
+
+  @override
+  String get revealShow => 'ورّيني دوري';
+
+  @override
+  String get revealWordLabel => 'الكلمة السرّية';
+
+  @override
+  String revealCategory(String category) {
+    return 'الصنف: $category';
+  }
+
+  @override
+  String get revealNoWord => 'ما تعرفش الكلمة';
+
+  @override
+  String get revealAck => 'فهمت، خبّي';
+
+  @override
+  String get revealAllDone => 'الكل شافوا دورهم';
+
+  @override
+  String get voteTie => 'تعادل في الأصوات. نعاودو التصويت بيناتهم.';
+
+  @override
+  String get resultCiviliansWin => 'المدنيين ربحوا';
+
+  @override
+  String get resultImpostorWins => 'الإمبوستور ربح';
+
+  @override
+  String get resultDraw => 'تعادل';
+
+  @override
+  String get dialogQuitTitle => 'تخرج من الطرح؟';
+
+  @override
+  String get dialogQuitBody => 'الطرح الحالي يتفسّخ وما تنجّمش ترجّعو.';
+
+  @override
+  String get dialogQuitConfirm => 'أخرج';
+
+  @override
+  String get dialogQuitCancel => 'كمّل اللعب';
+
+  @override
+  String get stateLoading => 'لحظة…';
+
+  @override
+  String get stateResumed => 'الطرح توقّف. كمّلوا من وين وصلتوا.';
+
+  @override
+  String get stateError => 'صار مشكل. عاود مرّة أخرى.';
+
+  @override
+  String get homeFacts => '4–12 لعّابة · تليفون واحد · من غير أنترنات';
 }

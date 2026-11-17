@@ -14,7 +14,7 @@ Never silently change the PRD or the design. If something is missing or contradi
 ## Hard rules
 
 1. **Git is the Product Owner's.** Never run any `git` command, not even read-only ones (it is also denied in `.claude/settings.json`). When a Git step is needed, give the exact commands, their purpose and order, then wait.
-2. **Design gate.** Do not build product screens or gameplay UI until `docs/design/UX_FLOWS.md` and `docs/design/SCREEN_SPECIFICATIONS.md` are approved by the Product Owner (today they are drafts). Do not invent screens, interactions or copy.
+2. **Design gate.** Do not build product screens or gameplay UI until `docs/design/UX_FLOWS.md` and `docs/design/SCREEN_SPECIFICATIONS.md` are approved by the Product Owner. Slice 1 is approved (D-32); everything outside it (PUB-02, PUB-03, PUB-04, reordering, tutorial) is not. Do not invent screens, interactions or copy.
 3. **Secrets never leak.** A secret word, category-as-role, role, vote or final guess must never reach a log, exception message, notification, `toString`, test name, or any screen other than the one specified. No `print`, no `debugPrint` of game data.
 4. **Arabic is provisional.** Every string is `[REVIEW]` until a Tunisian Derja speaker approves it. Never mark a string `[APPROVED]` yourself. Never fabricate word content, reviewer names or review status.
 5. **Report honestly.** Say "tested" only for checks actually executed in this session, with the result. Distinguish implemented / tested / partially tested / not tested / known limitation.
@@ -40,7 +40,7 @@ lib/app/        composition root: bootstrap, error handlers, provider overrides,
 lib/core/       design system (tokens, themes, widgets), text helpers, diagnostics; imports no feature
 lib/game/       pure Dart game engine and domain (no Flutter, no I/O)      [rules, content model, cooldown, selection, snapshot]
 lib/data/       content loader, atomic JSON state file, platform channel  [done; ADR-0003 rev. 2, ADR-0009]
-lib/features/   <feature>/{application,presentation}   [application: checkpoints C0–C9, providers; no screens]
+lib/features/   <feature>/{application,presentation}   [slice 1 screens: home, setup, game flow (D-32)]
 lib/l10n/       app_ar.arb (source) and generated/ (committed, not edited)
 ```
 

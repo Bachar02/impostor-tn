@@ -203,6 +203,31 @@ void main() {
   });
 
   group('FittedDisplayText', () {
+    testWidgets('a text too long at the floor wraps at the floor, never '
+        'smaller (D-34)', (tester) async {
+      await pumpRtl(
+        tester,
+        const SizedBox(
+          width: 200,
+          child: FittedDisplayText(
+            'نص طويل جدا جدا جدا جدا جدا',
+            style: TesskraTypography.displayXL,
+            minFontSize: TesskraTypography.displayXLMinFontSize,
+          ),
+        ),
+      );
+
+      final text = tester.widget<Text>(
+        find.descendant(
+          of: find.byType(FittedDisplayText),
+          matching: find.byType(Text),
+        ),
+      );
+      expect(text.style!.fontSize, TesskraTypography.displayXLMinFontSize);
+      expect(text.maxLines, isNull);
+      expect(find.byType(FittedBox), findsNothing);
+    });
+
     testWidgets('shrinks but never below the floor before last-resort '
         'scaling', (tester) async {
       await tester.runAsync(loadTesskraFonts);

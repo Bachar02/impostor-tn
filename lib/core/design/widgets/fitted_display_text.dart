@@ -8,13 +8,16 @@ import 'package:impostor_tn/core/design/tokens/tesskra_typography.dart';
 /// The start size is the style's size times the system text scale, clamped
 /// at [TesskraTypography.maxTextScaleSupported]. It then shrinks until the
 /// text fits [maxLines] lines in the available width, but not below
-/// [minFontSize], which is absolute (not scaled). If the text still does not
-/// fit at the floor, it is scaled down further rather than clipped, so no
-/// part of it is ever hidden; long secret words are Q-29.
+/// [minFontSize], which is absolute (not scaled).
 ///
-/// With [reserveHeight], the widget always takes the height of [maxLines]
+/// If the text still does not fit at the floor, it stays at the floor and
+/// wraps onto further lines. It is never drawn smaller than the floor (D-34)
+/// and never clipped. This is a provisional answer to Q-29 (long words).
+///
+/// With [reserveHeight], the widget takes at least the height of [maxLines]
 /// lines at the start size, whatever size the text is fitted to. Role-ticket
-/// parity (D-27) uses this so the ticket height never depends on the text.
+/// parity (D-27) uses this so the ticket height never depends on the text,
+/// except for a text that must wrap at the floor (Q-29).
 class FittedDisplayText extends StatelessWidget {
   const FittedDisplayText(
     this.text, {
@@ -39,6 +42,31 @@ class FittedDisplayText extends StatelessWidget {
 
   /// The font size [text] is drawn at in [maxWidth], before any last-resort
   /// scaling. Exposed for tests.
+  /// Whether [text] fits [maxLines] lines of [maxWidth] at [size].
+  static bool fitsAt({
+    required String text,
+    required TextStyle style,
+    required double size,
+    required int maxLines,
+    required double maxWidth,
+    required TextDirection textDirection,
+  }) {
+    final painter = TextPainter(
+      text: TextSpan(
+        text: text,
+        style: style.copyWith(fontSize: size),
+      ),
+      textDirection: textDirection,
+      maxLines: maxLines,
+      textScaler: TextScaler.noScaling,
+    )..layout(maxWidth: maxWidth);
+    final fits =
+        !painter.didExceedMaxLines &&
+        (maxLines > 1 || painter.maxIntrinsicWidth <= maxWidth);
+    painter.dispose();
+    return fits;
+  }
+
   static double fittedSize({
     required String text,
     required TextStyle style,
@@ -48,21 +76,14 @@ class FittedDisplayText extends StatelessWidget {
     required double maxWidth,
     required TextDirection textDirection,
   }) {
-    bool fits(double size) {
-      final painter = TextPainter(
-        text: TextSpan(
-          text: text,
-          style: style.copyWith(fontSize: size),
-        ),
-        textDirection: textDirection,
-        maxLines: maxLines,
-        textScaler: TextScaler.noScaling,
-      )..layout(maxWidth: maxWidth);
-      final fitsLines = !painter.didExceedMaxLines;
-      final fitsWidth = maxLines > 1 || painter.maxIntrinsicWidth <= maxWidth;
-      painter.dispose();
-      return fitsLines && fitsWidth;
-    }
+    bool fits(double size) => fitsAt(
+      text: text,
+      style: style,
+      size: size,
+      maxLines: maxLines,
+      maxWidth: maxWidth,
+      textDirection: textDirection,
+    );
 
     if (startSize <= minFontSize || fits(startSize)) return startSize;
     // Whole-pixel binary search: at most about 6 layouts for 72 → 40.
@@ -99,19 +120,29 @@ class FittedDisplayText extends StatelessWidget {
           maxWidth: constraints.maxWidth,
           textDirection: direction,
         );
-        final drawn = Text(
+        final fitsAtSize = fitsAt(
+          text: text,
+          style: style,
+          size: size,
+          maxLines: maxLines,
+          maxWidth: constraints.maxWidth,
+          textDirection: direction,
+        );
+        final fitted = Text(
           text,
           style: style.copyWith(fontSize: size),
-          maxLines: maxLines,
+          // At the floor and still too long: wrap, never shrink (D-34).
+          maxLines: fitsAtSize ? maxLines : null,
           textAlign: textAlign,
           textDirection: direction,
           textScaler: TextScaler.noScaling,
-          softWrap: maxLines > 1,
+          softWrap: maxLines > 1 || !fitsAtSize,
         );
-        final fitted = FittedBox(fit: BoxFit.scaleDown, child: drawn);
         if (!reserveHeight) return fitted;
-        return SizedBox(
-          height: startSize * style.height! * maxLines,
+        return ConstrainedBox(
+          constraints: BoxConstraints(
+            minHeight: startSize * style.height! * maxLines,
+          ),
           child: Center(child: fitted),
         );
       },

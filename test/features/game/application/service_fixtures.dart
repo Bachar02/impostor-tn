@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
 
@@ -32,6 +33,9 @@ final class MemoryStore implements StateStore {
 
   bool failReads = false;
 
+  /// While set, writes wait for it: a save that is still in flight.
+  Completer<void>? holdWrites;
+
   SavedState get state => document == null
       ? SavedState.empty
       : SavedStateCodec.decode(utf8.encode(document!)).state;
@@ -45,6 +49,7 @@ final class MemoryStore implements StateStore {
 
   @override
   Future<StoreWrite> write(SavedState state) async {
+    if (holdWrites case final hold?) await hold.future;
     if (failWrites) return StoreWrite.failed;
     document = SavedStateCodec.encode(state);
     writes++;

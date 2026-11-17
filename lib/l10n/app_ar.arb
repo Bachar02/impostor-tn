@@ -242,5 +242,229 @@
   "resultCivilianOut": "خرّجتو مدني",
   "@resultCivilianOut": {
     "description": "[REVIEW] A civilian was voted out. Spec key result.civilian_out; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
+  },
+  "roleImpostor": "إمبوستور",
+  "@roleImpostor": {
+    "description": "[REVIEW] Impostor. Glossary key role.impostor (ARABIC_LOCALIZATION.md §5). Note: Alternative: الدخيل (more MSA)"
+  },
+  "roleCivilian": "مدني",
+  "@roleCivilian": {
+    "description": "[REVIEW] Civilian. Glossary key role.civilian (ARABIC_LOCALIZATION.md §5). Note: Plural used: المدنيين"
+  },
+  "playersTitle": "اللعّابة",
+  "@playersTitle": {
+    "description": "[REVIEW] Players. Glossary key players.title (ARABIC_LOCALIZATION.md §5). Note: Singular لعّاب"
+  },
+  "playersNameLimit": "حتى 16 حرف",
+  "@playersNameLimit": {
+    "description": "[REVIEW] Up to 16 characters. Glossary key players.name_limit (ARABIC_LOCALIZATION.md §5). Note: Limit itself must come from the PRD"
+  },
+  "packWordCount": "{n} كلمة",
+  "@packWordCount": {
+    "description": "[REVIEW] {n} words. Glossary key pack.word_count (ARABIC_LOCALIZATION.md §5). Note: Plural rule for 3–10 (كلمات) to decide",
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "revealRoleLabel": "دورك",
+  "@revealRoleLabel": {
+    "description": "[REVIEW] Your role. Glossary key reveal.role_label (ARABIC_LOCALIZATION.md §5). Note: Sealed state uses دور"
+  },
+  "revealCategoryOnly": "الصنف برك",
+  "@revealCategoryOnly": {
+    "description": "[REVIEW] Category only. Glossary key reveal.category_only (ARABIC_LOCALIZATION.md §5). Note: برك = only"
+  },
+  "phaseClues": "التلميحات",
+  "@phaseClues": {
+    "description": "[REVIEW] Clues. Glossary key phase.clues (ARABIC_LOCALIZATION.md §5). Note: MSA-leaning"
+  },
+  "phaseVote": "التصويت",
+  "@phaseVote": {
+    "description": "[REVIEW] Voting. Glossary key phase.vote (ARABIC_LOCALIZATION.md §5). Note: MSA-leaning"
+  },
+  "voteSelf": "إنتي",
+  "@voteSelf": {
+    "description": "[REVIEW] You (marks own row). Glossary key vote.self (ARABIC_LOCALIZATION.md §5). Note: Gender-neutral usage to confirm; rule itself depends on PRD"
+  },
+  "homeNewGame": "طرح جديد",
+  "@homeNewGame": {
+    "description": "[REVIEW] New game. Glossary key home.new_game (ARABIC_LOCALIZATION.md §5)."
+  },
+  "homeTagline": "شكون فيكم؟",
+  "@homeTagline": {
+    "description": "[REVIEW] Which of you?. Glossary key home.tagline (ARABIC_LOCALIZATION.md §5)."
+  },
+  "playersAdd": "زيد لعّاب",
+  "@playersAdd": {
+    "description": "[REVIEW] Add player. Glossary key players.add (ARABIC_LOCALIZATION.md §5)."
+  },
+  "playersNameLabel": "اسم اللعّاب",
+  "@playersNameLabel": {
+    "description": "[REVIEW] Player name. Glossary key players.name_label (ARABIC_LOCALIZATION.md §5)."
+  },
+  "playersNameHint": "مثلا: سلمى",
+  "@playersNameHint": {
+    "description": "[REVIEW] e.g. Salma. Glossary key players.name_hint (ARABIC_LOCALIZATION.md §5)."
+  },
+  "playersEmpty": "مازال ما فمّا حتى لعّاب",
+  "@playersEmpty": {
+    "description": "[REVIEW] No players yet. Glossary key players.empty (ARABIC_LOCALIZATION.md §5)."
+  },
+  "playersEmptyHint": "زيد 4 لعّابة باش تبداو",
+  "@playersEmptyHint": {
+    "description": "[REVIEW] Add 4 players to start. Glossary key players.empty_hint (ARABIC_LOCALIZATION.md §5)."
+  },
+  "errorNameDuplicate": "الاسم هذا موجود",
+  "@errorNameDuplicate": {
+    "description": "[REVIEW] Name already used. Glossary key error.name_duplicate (ARABIC_LOCALIZATION.md §5)."
+  },
+  "errorNameEmpty": "اكتب اسم",
+  "@errorNameEmpty": {
+    "description": "[REVIEW] Enter a name. Glossary key error.name_empty (ARABIC_LOCALIZATION.md §5)."
+  },
+  "errorMinPlayers": "لازمكم 4 لعّابة على الأقل",
+  "@errorMinPlayers": {
+    "description": "[REVIEW] You need at least 4 players. Glossary key error.min_players (ARABIC_LOCALIZATION.md §5)."
+  },
+  "packSelected": "مختار",
+  "@packSelected": {
+    "description": "[REVIEW] Selected. Glossary key pack.selected (ARABIC_LOCALIZATION.md §5)."
+  },
+  "packEmpty": "ما فيه حتى كلمة",
+  "@packEmpty": {
+    "description": "[REVIEW] Contains no words. Glossary key pack.empty (ARABIC_LOCALIZATION.md §5)."
+  },
+  "actionStart": "هيّا نبداو",
+  "@actionStart": {
+    "description": "[REVIEW] Let's start. Glossary key action.start (ARABIC_LOCALIZATION.md §5)."
+  },
+  "actionConfirm": "أكّد",
+  "@actionConfirm": {
+    "description": "[REVIEW] Confirm. Glossary key action.confirm (ARABIC_LOCALIZATION.md §5)."
+  },
+  "actionBack": "ارجع",
+  "@actionBack": {
+    "description": "[REVIEW] Back. Glossary key action.back (ARABIC_LOCALIZATION.md §5)."
+  },
+  "actionDeletePlayer": "فسّخ اللعّاب",
+  "@actionDeletePlayer": {
+    "description": "[REVIEW] Delete player. Glossary key action.delete_player (ARABIC_LOCALIZATION.md §5)."
+  },
+  "actionRename": "بدّل الاسم",
+  "@actionRename": {
+    "description": "[REVIEW] Change name. Glossary key action.rename (ARABIC_LOCALIZATION.md §5)."
+  },
+  "actionRetry": "عاود",
+  "@actionRetry": {
+    "description": "[REVIEW] Retry. Glossary key action.retry (ARABIC_LOCALIZATION.md §5)."
+  },
+  "actionPlayAgain": "طرح آخر",
+  "@actionPlayAgain": {
+    "description": "[REVIEW] Play again. Glossary key action.play_again (ARABIC_LOCALIZATION.md §5)."
+  },
+  "handoffPassTo": "أعطي التليفون لـ {name}",
+  "@handoffPassTo": {
+    "description": "[REVIEW] Pass the phone to {name}. Glossary key handoff.pass_to (ARABIC_LOCALIZATION.md §5).",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "handoffIAm": "أنا {name}",
+  "@handoffIAm": {
+    "description": "[REVIEW] I am {name}. Glossary key handoff.i_am (ARABIC_LOCALIZATION.md §5).",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "privacyOnlyYou": "ما يشوف حد غيرك",
+  "@privacyOnlyYou": {
+    "description": "[REVIEW] No one else should see. Glossary key privacy.only_you (ARABIC_LOCALIZATION.md §5)."
+  },
+  "revealSealed": "الدور مخبّي",
+  "@revealSealed": {
+    "description": "[REVIEW] Role is hidden. Glossary key reveal.sealed (ARABIC_LOCALIZATION.md §5)."
+  },
+  "revealShow": "ورّيني دوري",
+  "@revealShow": {
+    "description": "[REVIEW] Show me my role. Glossary key reveal.show (ARABIC_LOCALIZATION.md §5)."
+  },
+  "revealWordLabel": "الكلمة السرّية",
+  "@revealWordLabel": {
+    "description": "[REVIEW] The secret word. Glossary key reveal.word_label (ARABIC_LOCALIZATION.md §5)."
+  },
+  "revealCategory": "الصنف: {category}",
+  "@revealCategory": {
+    "description": "[REVIEW] Category: {category}. Glossary key reveal.category (ARABIC_LOCALIZATION.md §5).",
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "revealNoWord": "ما تعرفش الكلمة",
+  "@revealNoWord": {
+    "description": "[REVIEW] You don't know the word. Glossary key reveal.no_word (ARABIC_LOCALIZATION.md §5)."
+  },
+  "revealAck": "فهمت، خبّي",
+  "@revealAck": {
+    "description": "[REVIEW] Got it, hide. Glossary key reveal.ack (ARABIC_LOCALIZATION.md §5)."
+  },
+  "revealAllDone": "الكل شافوا دورهم",
+  "@revealAllDone": {
+    "description": "[REVIEW] Everyone has seen their role. Glossary key reveal.all_done (ARABIC_LOCALIZATION.md §5)."
+  },
+  "voteTie": "تعادل في الأصوات. نعاودو التصويت بيناتهم.",
+  "@voteTie": {
+    "description": "[REVIEW] Tie. We vote again between them.. Glossary key vote.tie (ARABIC_LOCALIZATION.md §5)."
+  },
+  "resultCiviliansWin": "المدنيين ربحوا",
+  "@resultCiviliansWin": {
+    "description": "[REVIEW] Civilians won. Glossary key result.civilians_win (ARABIC_LOCALIZATION.md §5)."
+  },
+  "resultImpostorWins": "الإمبوستور ربح",
+  "@resultImpostorWins": {
+    "description": "[REVIEW] The Impostor won. Glossary key result.impostor_wins (ARABIC_LOCALIZATION.md §5)."
+  },
+  "resultDraw": "تعادل",
+  "@resultDraw": {
+    "description": "[REVIEW] Draw. Glossary key result.draw (ARABIC_LOCALIZATION.md §5)."
+  },
+  "dialogQuitTitle": "تخرج من الطرح؟",
+  "@dialogQuitTitle": {
+    "description": "[REVIEW] Leave the game?. Glossary key dialog.quit_title (ARABIC_LOCALIZATION.md §5)."
+  },
+  "dialogQuitBody": "الطرح الحالي يتفسّخ وما تنجّمش ترجّعو.",
+  "@dialogQuitBody": {
+    "description": "[REVIEW] The current game is deleted and cannot be restored.. Glossary key dialog.quit_body (ARABIC_LOCALIZATION.md §5)."
+  },
+  "dialogQuitConfirm": "أخرج",
+  "@dialogQuitConfirm": {
+    "description": "[REVIEW] Leave. Glossary key dialog.quit_confirm (ARABIC_LOCALIZATION.md §5)."
+  },
+  "dialogQuitCancel": "كمّل اللعب",
+  "@dialogQuitCancel": {
+    "description": "[REVIEW] Keep playing. Glossary key dialog.quit_cancel (ARABIC_LOCALIZATION.md §5)."
+  },
+  "stateLoading": "لحظة…",
+  "@stateLoading": {
+    "description": "[REVIEW] One moment…. Glossary key state.loading (ARABIC_LOCALIZATION.md §5)."
+  },
+  "stateResumed": "الطرح توقّف. كمّلوا من وين وصلتوا.",
+  "@stateResumed": {
+    "description": "[REVIEW] The game was paused. Continue where you stopped.. Glossary key state.resumed (ARABIC_LOCALIZATION.md §5)."
+  },
+  "stateError": "صار مشكل. عاود مرّة أخرى.",
+  "@stateError": {
+    "description": "[REVIEW] Something went wrong. Try again.. Glossary key state.error (ARABIC_LOCALIZATION.md §5)."
+  },
+  "homeFacts": "4–12 لعّابة · تليفون واحد · من غير أنترنات",
+  "@homeFacts": {
+    "description": "[REVIEW] 4–12 players · one phone · no internet. Glossary key home.facts (ARABIC_LOCALIZATION.md §5)."
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:impostor_tn/app/foundation_placeholder_screen.dart';
+import 'package:impostor_tn/app/app_start.dart';
 import 'package:impostor_tn/core/design/theme/tesskra_theme.dart';
 import 'package:impostor_tn/l10n/generated/app_localizations.dart';
 
@@ -21,7 +21,7 @@ class ImpostorApp extends StatelessWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       theme: TesskraTheme.public,
-      home: const FoundationPlaceholderScreen(),
+      home: const AppStart(),
     );
   }
 }

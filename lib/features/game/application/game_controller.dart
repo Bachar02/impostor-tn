@@ -3,6 +3,7 @@ import 'package:impostor_tn/features/game/application/active_game.dart';
 import 'package:impostor_tn/features/game/application/checkpoint.dart';
 import 'package:impostor_tn/features/game/application/game_providers.dart';
 import 'package:impostor_tn/features/game/application/game_service.dart';
+import 'package:impostor_tn/features/game/application/launch.dart';
 import 'package:impostor_tn/game/ballot.dart';
 import 'package:impostor_tn/game/persistence/saved_state.dart';
 import 'package:impostor_tn/game/player.dart';
@@ -22,8 +23,12 @@ final gameControllerProvider = NotifierProvider<GameController, ActiveGame?>(
 /// Actions name the player the screen is showing, rather than "whoever is
 /// pending", so a stale screen can never act for someone else.
 class GameController extends Notifier<ActiveGame?> {
+  /// Starts from the saved game found at launch, if any (F1).
   @override
-  ActiveGame? build() => null;
+  ActiveGame? build() => switch (ref.read(launchProvider).value) {
+    LaunchResume(:final game) => game,
+    _ => null,
+  };
 
   /// From the launch result (F1) or the resume gate.
   void resume(ActiveGame game) => state = game;

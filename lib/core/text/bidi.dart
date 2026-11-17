@@ -20,3 +20,11 @@ String ltrIsolate(String text) =>
 /// cannot reorder the surrounding sentence.
 String directionIsolate(String text) =>
     '$_firstStrongIsolate$text$_popDirectionalIsolate';
+
+final _numberRun = RegExp(r'\d+(?:\s*[–/-]\s*\d+)?');
+
+/// Wraps every number or number range (`4–12`, `3 / 12`) in [text] as an
+/// isolated left-to-right run (ARABIC_LOCALIZATION.md §3), so a string that
+/// carries its own digits still renders them in order.
+String isolateNumberRanges(String text) =>
+    text.replaceAllMapped(_numberRun, (m) => ltrIsolate(m[0]!));

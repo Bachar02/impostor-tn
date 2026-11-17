@@ -2,7 +2,7 @@
 
 Updated after every milestone. Legend: `[x]` done and verified as described, `[~]` partly done, `[ ]` not started, `[!]` blocked.
 
-Last update: 2026-11-17 (rulings D-15 to D-31 recorded; milestones A content, B cooldown, C persistence and recovery implemented).
+Last update: 2026-11-17 (Milestone E: first playable slice implemented, Q-05 approved as D-32; device runs on Pixel_XL_API_36 emulator).
 
 ## Phase A — Repository audit
 
@@ -49,21 +49,30 @@ Last update: 2026-11-17 (rulings D-15 to D-31 recorded; milestones A content, B 
 - [x] `docs/design/SCREEN_SPECIFICATIONS.md` drafted: 14 screens, 2 overlays, all states
 - [x] `docs/design/UX_RESEARCH_AND_RISKS.md` drafted: assumptions, risks, Q-06/Q-07 evidence, validation plan
 - [x] `docs/DESIGN_HANDOFF.md` updated
-- [ ] Product Owner review and approval (Q-05). Approval form for slice 1: `docs/design/UX_APPROVAL_PACKAGE_SLICE_1.md`
+- [x] Product Owner approval for slice 1 (D-32, 2026-11-17)
 - [~] Blocking decisions: Q-01, Q-07, Q-16, Q-18, Q-19, Q-22 settled (D-15 to D-25); Q-06 and Q-17 open
 - [x] Full-screen reference renders: 52 states, 172 images, with layout measurements (browser renders; not device-verified)
 - [x] Consistency audit: flows, specifications and risks revised (revision 2)
 - [~] Audit decisions: Q-25, Q-26, Q-30 settled (D-27, D-30, D-28); Q-27, Q-28, Q-29 open
 
-## Phase D — First vertical slice
+## Phase D — First vertical slice (Milestone E, 2026-11-17)
 
-- [!] Blocked: needs approved `docs/design/UX_FLOWS.md` and `docs/design/SCREEN_SPECIFICATIONS.md` (D-09, Q-05)
+- [x] Screens: Home (no settings/how-to, D-29), Players + edit sheet (no reordering, Q-17), Packs, Handoff, Role ticket (parity, D-27), Discussion, Vote, Tally (A–D), Final guess with review, Results, Replay, leave dialog, resume gate
+- [x] Single in-game route (`GameFlow`) over the checkpoint service; screen routing is a pure function (`routeGame`) with unit tests
+- [x] Whole-game screenshot protection (D-18): on at game start, off when the game is left; no private screen without confirmation
+- [x] Secrets leave the tree in the same frame on acknowledgement and on hide; a frame is forced while hidden
+- [x] 108 ARB strings, all `[REVIEW]` (glossary keys used by the slice + Appendix A)
+- [x] Development-only synthetic words (D-35) in debug builds; absent from a release binary (checked by grep with positive controls)
+- [x] Widget-level integration tests: civilian win, Impostor win (12 players), civilian out, tie → runoff → draw, replay, leave, back rules, hide during reveal, protection refused, cold start (gate, result), whole game at 320×568 ×1.5 with 16-character names
+- [x] Emulator Pixel_XL_API_36 (Android 16), debug x86_64 build, driven by accessibility labels: civilian win, Impostor win, civilian out + replay + cold start, 6-player tie → runoff → draw, home-button interruption during a revealed ticket, process kill → resume gate. Screenshots blank during the game, not on Home (control). These runs used the build before the post-review fixes (hide during a save, carbon leave dialog); re-running on the final build was blocked by emulator storage (INSTALL_FAILED_INSUFFICIENT_STORAGE, 561 MB free). The fixes are covered by widget tests only
+- [ ] Physical device; TalkBack; real keyboard behaviour on small phones
+- [ ] Simplified motion: paper↔carbon uses a plain cross-fade (220 ms), not the designed `carbonIn`/`carbonOut`; no `ticketReveal` seal animation, no `winnerReveal` slam, no `listItemIn/Out` (see report)
 
 ## Work that is not blocked by the design gate (needs Product Owner go-ahead)
 
 - [~] Milestone D (2026-11-17), design-system components with widget tests (real fonts loaded; RTL; 360×720, 320×568, scale 1.5): `TesskraButton` (5 variants, carbon variants, pressed/disabled/focus/loading), `LoadingDots`, `TesskraBanner`, `TesskraDialog`, `TesskraSheet`, `CountPill`, `ScreenFrame`, `PrivateScope`, `HandoffBlock`, `RoleTicket` with D-27 parity, `FittedDisplayText`. D-19 tokens applied. Not yet built (screen-specific, wait for Q-05): text field, app bar, player row, pack card, vote option, tally row, winner stamp, plaque, role reveal row, stamp label, state block, carbon transition. Icon stroke stays as shipped (Q-06).
 - [x] D-26: 56 Appendix A strings merged into `app_ar.arb`, all `[REVIEW]`
-- [~] D-18 screenshot protection: `setSecure` platform method and `ScreenProtection` provider; not yet switched by the game flow; not verified on a device
+- [x] D-18 screenshot protection switched by the game flow; screencap blank on the emulator during the game (not checked on a physical device or the recents thumbnail)
 - [x] Game engine in pure Dart with full rule tests (no UI). Empty final guess rejected (D-16).
 - [x] Milestone A (2026-11-17): word-content model, JSON format, strict decoder and validator, eligibility by build channel, empty production catalog, synthetic fixtures under `test/` only (ADR-0009). Real content is Q-13.
 - [x] Milestone B (2026-11-17): cooldown of 30, selection with progressive release, consumption at C2 in one write with the session mark (D-21).
