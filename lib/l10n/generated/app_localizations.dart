@@ -139,7 +139,7 @@ abstract class AppLocalizations {
   /// [REVIEW] Change players or packs. Spec key action.change_setup; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed.
   ///
   /// In ar, this message translates to:
-  /// **'بدّل اللعّابة والباكوات'**
+  /// **'بدّل اللاعبين والباكوات'**
   String get actionChangeSetup;
 
   /// [REVIEW] Home. Spec key action.home; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed.
@@ -169,7 +169,7 @@ abstract class AppLocalizations {
   /// [REVIEW] 12 players is the maximum. Spec key players.max_reached; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed.
   ///
   /// In ar, this message translates to:
-  /// **'12 لعّاب هو الحدّ'**
+  /// **'12 لاعب هو الحدّ'**
   String get playersMaxReached;
 
   /// [REVIEW] Move earlier in the order. Spec key players.move_earlier; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed.
@@ -253,7 +253,7 @@ abstract class AppLocalizations {
   /// [REVIEW] Each player takes the phone, looks at their role alone, hides it, then passes it on.. Spec key tutorial.handoff_body; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed.
   ///
   /// In ar, this message translates to:
-  /// **'كل لعّاب ياخذ التليفون، يشوف دورو وحدو، يخبّيه، ومبعد يعدّيه.'**
+  /// **'كل لاعب ياخذ التليفون، يشوف دورو وحدو، يخبّيه، ومبعد يعدّيه.'**
   String get tutorialHandoffBody;
 
   /// [REVIEW] One-word clues. Spec key tutorial.clues_title; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed.
@@ -448,10 +448,10 @@ abstract class AppLocalizations {
   /// **'مدني'**
   String get roleCivilian;
 
-  /// [REVIEW] Players. Glossary key players.title (ARABIC_LOCALIZATION.md §5). Note: Singular لعّاب
+  /// [REVIEW] Players. Glossary key players.title (ARABIC_LOCALIZATION.md §5). Note: Singular لاعب
   ///
   /// In ar, this message translates to:
-  /// **'اللعّابة'**
+  /// **'اللاعبين'**
   String get playersTitle;
 
   /// [REVIEW] Up to 16 characters. Glossary key players.name_limit (ARABIC_LOCALIZATION.md §5). Note: Limit itself must come from the PRD
@@ -511,13 +511,13 @@ abstract class AppLocalizations {
   /// [REVIEW] Add player. Glossary key players.add (ARABIC_LOCALIZATION.md §5).
   ///
   /// In ar, this message translates to:
-  /// **'زيد لعّاب'**
+  /// **'زيد لاعب'**
   String get playersAdd;
 
   /// [REVIEW] Player name. Glossary key players.name_label (ARABIC_LOCALIZATION.md §5).
   ///
   /// In ar, this message translates to:
-  /// **'اسم اللعّاب'**
+  /// **'اسم اللاعب'**
   String get playersNameLabel;
 
   /// [REVIEW] e.g. Salma. Glossary key players.name_hint (ARABIC_LOCALIZATION.md §5).
@@ -529,13 +529,13 @@ abstract class AppLocalizations {
   /// [REVIEW] No players yet. Glossary key players.empty (ARABIC_LOCALIZATION.md §5).
   ///
   /// In ar, this message translates to:
-  /// **'مازال ما فمّا حتى لعّاب'**
+  /// **'مازال ما فمّا حتى لاعب'**
   String get playersEmpty;
 
   /// [REVIEW] Add 3 players to start. Glossary key players.empty_hint (ARABIC_LOCALIZATION.md §5).
   ///
   /// In ar, this message translates to:
-  /// **'زيد 3 لعّابة باش تبداو'**
+  /// **'زيد 3 لاعبين باش تبداو'**
   String get playersEmptyHint;
 
   /// [REVIEW] Name already used. Glossary key error.name_duplicate (ARABIC_LOCALIZATION.md §5).
@@ -553,7 +553,7 @@ abstract class AppLocalizations {
   /// [REVIEW] You need at least 3 players. Glossary key error.min_players (ARABIC_LOCALIZATION.md §5).
   ///
   /// In ar, this message translates to:
-  /// **'لازمكم 3 لعّابة على الأقل'**
+  /// **'لازمكم 3 لاعبين على الأقل'**
   String get errorMinPlayers;
 
   /// [REVIEW] Selected. Glossary key pack.selected (ARABIC_LOCALIZATION.md §5).
@@ -589,7 +589,7 @@ abstract class AppLocalizations {
   /// [REVIEW] Delete player. Glossary key action.delete_player (ARABIC_LOCALIZATION.md §5).
   ///
   /// In ar, this message translates to:
-  /// **'فسّخ اللعّاب'**
+  /// **'فسّخ اللاعب'**
   String get actionDeletePlayer;
 
   /// [REVIEW] Change name. Glossary key action.rename (ARABIC_LOCALIZATION.md §5).
@@ -735,12 +735,6 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'صار مشكل. عاود مرّة أخرى.'**
   String get stateError;
-
-  /// [REVIEW] 3–12 players · one phone · no internet. Glossary key home.facts (ARABIC_LOCALIZATION.md §5).
-  ///
-  /// In ar, this message translates to:
-  /// **'3–12 لعّابة · تليفون واحد · من غير أنترنات'**
-  String get homeFacts;
 
   /// [REVIEW] Delete {name}? Confirmation before removing a player from the list.
   ///

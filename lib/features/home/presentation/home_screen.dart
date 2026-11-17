@@ -7,7 +7,6 @@ import 'package:impostor_tn/core/design/tokens/tesskra_typography.dart';
 import 'package:impostor_tn/core/design/widgets/screen_frame.dart';
 import 'package:impostor_tn/core/design/widgets/tesskra_banner.dart';
 import 'package:impostor_tn/core/design/widgets/tesskra_button.dart';
-import 'package:impostor_tn/core/text/bidi.dart';
 import 'package:impostor_tn/l10n/generated/app_localizations.dart';
 
 /// PUB-01 Home, slice 1: no settings icon and no "how to play" button
@@ -68,12 +67,6 @@ class _HomeScreenState extends State<HomeScreen> {
               l10n.homeTagline,
               textAlign: TextAlign.center,
               style: TesskraTypography.displayM.copyWith(color: c.textPrimary),
-            ),
-            const SizedBox(height: TesskraSpacing.s3),
-            Text(
-              isolateNumberRanges(l10n.homeFacts),
-              textAlign: TextAlign.center,
-              style: TesskraTypography.bodyM.copyWith(color: c.textSecondary),
             ),
           ],
         ),

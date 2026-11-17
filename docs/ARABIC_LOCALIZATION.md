@@ -56,7 +56,7 @@ Not yet tested: rendering on real Android devices, and behaviour with heavy diac
 2. Short imperative labels; avoid long sentences on buttons.
 3. Avoid second-person pronouns and gendered forms where possible. Where unavoidable, use one form for everyone and have the reviewer choose it.
 4. Use `ڨ` for the hard g sound, `ڤ` for v, `پ` for p in loanwords.
-5. Shadda is written where it prevents misreading (لعّابة, خبّي). Other diacritics are omitted.
+5. Shadda is written where it prevents misreading (خبّي). The Product Owner uses لاعب / لاعبين, not لعّاب / لعّابة (2026-11-17). Other diacritics are omitted.
 6. Loanwords are written the way people text them (تليفون, باكو, أنترنات); the reviewer confirms each spelling.
 7. Each concept has one term across the whole app (glossary below).
 
@@ -77,16 +77,16 @@ Status values: **Review** = drafted, needs Derja validation. **Approved** = vali
 | settings.title | الإعدادات | Settings | Review | MSA word, widely understood; Derja alternative unclear |
 | settings.sound | الصوت | Sound | Review | |
 | settings.haptics | الاهتزاز | Vibration | Review | MSA-leaning |
-| players.title | اللعّابة | Players | Review | Singular لعّاب |
-| players.add | زيد لعّاب | Add player | Review | |
-| players.name_label | اسم اللعّاب | Player name | Review | |
+| players.title | اللاعبين | Players | Review | Singular لاعب |
+| players.add | زيد لاعب | Add player | Review | |
+| players.name_label | اسم اللاعب | Player name | Review | |
 | players.name_hint | مثلا: سلمى | e.g. Salma | Review | |
 | players.name_limit | حتى 16 حرف | Up to 16 characters | Review | Limit itself must come from the PRD |
-| players.empty | مازال ما فمّا حتى لعّاب | No players yet | Review | |
-| players.empty_hint | زيد 4 لعّابة باش تبداو | Add 4 players to start | Review | |
+| players.empty | مازال ما فمّا حتى لاعب | No players yet | Review | |
+| players.empty_hint | زيد 3 لاعبين باش تبداو | Add 3 players to start | Review | |
 | error.name_duplicate | الاسم هذا موجود | Name already used | Review | |
 | error.name_empty | اكتب اسم | Enter a name | Review | |
-| error.min_players | لازمكم 4 لعّابة على الأقل | You need at least 4 players | Review | |
+| error.min_players | لازمكم 3 لاعبين على الأقل | You need at least 3 players | Review | |
 | pack.word_count | {n} كلمة | {n} words | Review | Plural rule for 3–10 (كلمات) to decide |
 | pack.selected | مختار | Selected | Review | |
 | pack.locked | مسكّر | Locked | Review | |
@@ -94,7 +94,7 @@ Status values: **Review** = drafted, needs Derja validation. **Approved** = vali
 | action.start | هيّا نبداو | Let's start | Review | |
 | action.confirm | أكّد | Confirm | Review | |
 | action.back | ارجع | Back | Review | |
-| action.delete_player | فسّخ اللعّاب | Delete player | Review | |
+| action.delete_player | فسّخ اللاعب | Delete player | Review | |
 | action.rename | بدّل الاسم | Change name | Review | |
 | action.retry | عاود | Retry | Review | |
 | action.play_again | طرح آخر | Play again | Review | |
@@ -124,7 +124,7 @@ Status values: **Review** = drafted, needs Derja validation. **Approved** = vali
 | state.loading | لحظة… | One moment… | Review | |
 | state.resumed | الطرح توقّف. كمّلوا من وين وصلتوا. | The game was paused. Continue where you stopped. | Review | |
 | state.error | صار مشكل. عاود مرّة أخرى. | Something went wrong. Try again. | Review | |
-| home.facts | 4–12 لعّابة · تليفون واحد · من غير أنترنات | 4–12 players · one phone · no internet | Review | |
+| home.facts | — | — | Removed | Removed from Home by the Product Owner (2026-11-17) |
 
 Sample content used in mockups only (not UI strings): سلمى, ياسين, عبد الرحمان بن عاشور الطرابلسي, ڨمر (names); ماكلة تونسية, بلايص, كورة, أمثال (pack names); بريك (word); ماكلة (category).
 
@@ -134,7 +134,7 @@ Simple, recognizable category labels proposed by the Product Owner (2026-11-17).
 
 | # | Label | Gloss | Set | Status |
 |---|---|---|---|---|
-| 0 | مكلة | Food | Initial | Review |
+| 0 | ماكلة | Food | Initial | Review |
 | 1 | بلايص | Places | Initial | Review |
 | 2 | حيوانات | Animals | Initial | Review |
 | 3 | خدمة | Work, jobs | Initial | Review |

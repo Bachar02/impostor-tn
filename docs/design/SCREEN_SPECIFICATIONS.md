@@ -93,7 +93,7 @@ Named interactions, durations and haptics follow `INTERACTIONS_AND_ANIMATIONS.md
 2. Information banner, only in the "restore failed" state.
 3. Hero: `logo/logo_ticket_lockup.svg`, centred, full content width up to its natural 320, aspect ratio 320 : 190. The file already contains its ticket outline, notches and hard shadow; no extra shadow is added.
 4. `home.tagline` in `displayM`, centred, `public.textPrimary`.
-5. `home.facts` in `bodyM`, centred, `public.textSecondary`; `3–12` is an isolated LTR run.
+5. *(Removed by the Product Owner, 2026-11-17: no facts line under the tagline.)*
 6. Flexible space.
 7. Bottom action area: primary `TesskraButton` `home.new_game`; below it secondary `TesskraButton` `home.how_to`.
 

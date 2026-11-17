@@ -29,7 +29,7 @@ abstract final class DevelopmentContent {
   /// The proposed category labels, in the Product Owner's order. [REVIEW]:
   /// not approved by a Derja reviewer.
   static const categoryLabels = [
-    'مكلة',
+    'ماكلة',
     'بلايص',
     'حيوانات',
     'خدمة',

@@ -28,7 +28,7 @@
   "@actionRunoffStart": {
     "description": "[REVIEW] Vote again. Spec key action.runoff_start; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
   },
-  "actionChangeSetup": "بدّل اللعّابة والباكوات",
+  "actionChangeSetup": "بدّل اللاعبين والباكوات",
   "@actionChangeSetup": {
     "description": "[REVIEW] Change players or packs. Spec key action.change_setup; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
   },
@@ -48,7 +48,7 @@
   "@revealRoleLabelSealed": {
     "description": "[REVIEW] Role (label on the sealed ticket, above the player's name). Spec key reveal.role_label_sealed; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
   },
-  "playersMaxReached": "12 لعّاب هو الحدّ",
+  "playersMaxReached": "12 لاعب هو الحدّ",
   "@playersMaxReached": {
     "description": "[REVIEW] 12 players is the maximum. Spec key players.max_reached; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
   },
@@ -109,7 +109,7 @@
   "@tutorialHandoffTitle": {
     "description": "[REVIEW] One phone, passed around. Spec key tutorial.handoff_title; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
   },
-  "tutorialHandoffBody": "كل لعّاب ياخذ التليفون، يشوف دورو وحدو، يخبّيه، ومبعد يعدّيه.",
+  "tutorialHandoffBody": "كل لاعب ياخذ التليفون، يشوف دورو وحدو، يخبّيه، ومبعد يعدّيه.",
   "@tutorialHandoffBody": {
     "description": "[REVIEW] Each player takes the phone, looks at their role alone, hides it, then passes it on.. Spec key tutorial.handoff_body; draft from SCREEN_SPECIFICATIONS.md Appendix A, merged under D-26. Not reviewed."
   },
@@ -251,9 +251,9 @@
   "@roleCivilian": {
     "description": "[REVIEW] Civilian. Glossary key role.civilian (ARABIC_LOCALIZATION.md §5). Note: Plural used: المدنيين"
   },
-  "playersTitle": "اللعّابة",
+  "playersTitle": "اللاعبين",
   "@playersTitle": {
-    "description": "[REVIEW] Players. Glossary key players.title (ARABIC_LOCALIZATION.md §5). Note: Singular لعّاب"
+    "description": "[REVIEW] Players. Glossary key players.title (ARABIC_LOCALIZATION.md §5). Note: Singular لاعب"
   },
   "playersNameLimit": "حتى 16 حرف",
   "@playersNameLimit": {
@@ -296,11 +296,11 @@
   "@homeTagline": {
     "description": "[REVIEW] Which of you?. Glossary key home.tagline (ARABIC_LOCALIZATION.md §5)."
   },
-  "playersAdd": "زيد لعّاب",
+  "playersAdd": "زيد لاعب",
   "@playersAdd": {
     "description": "[REVIEW] Add player. Glossary key players.add (ARABIC_LOCALIZATION.md §5)."
   },
-  "playersNameLabel": "اسم اللعّاب",
+  "playersNameLabel": "اسم اللاعب",
   "@playersNameLabel": {
     "description": "[REVIEW] Player name. Glossary key players.name_label (ARABIC_LOCALIZATION.md §5)."
   },
@@ -308,11 +308,11 @@
   "@playersNameHint": {
     "description": "[REVIEW] e.g. Salma. Glossary key players.name_hint (ARABIC_LOCALIZATION.md §5)."
   },
-  "playersEmpty": "مازال ما فمّا حتى لعّاب",
+  "playersEmpty": "مازال ما فمّا حتى لاعب",
   "@playersEmpty": {
     "description": "[REVIEW] No players yet. Glossary key players.empty (ARABIC_LOCALIZATION.md §5)."
   },
-  "playersEmptyHint": "زيد 3 لعّابة باش تبداو",
+  "playersEmptyHint": "زيد 3 لاعبين باش تبداو",
   "@playersEmptyHint": {
     "description": "[REVIEW] Add 3 players to start. Glossary key players.empty_hint (ARABIC_LOCALIZATION.md §5)."
   },
@@ -324,7 +324,7 @@
   "@errorNameEmpty": {
     "description": "[REVIEW] Enter a name. Glossary key error.name_empty (ARABIC_LOCALIZATION.md §5)."
   },
-  "errorMinPlayers": "لازمكم 3 لعّابة على الأقل",
+  "errorMinPlayers": "لازمكم 3 لاعبين على الأقل",
   "@errorMinPlayers": {
     "description": "[REVIEW] You need at least 3 players. Glossary key error.min_players (ARABIC_LOCALIZATION.md §5)."
   },
@@ -348,7 +348,7 @@
   "@actionBack": {
     "description": "[REVIEW] Back. Glossary key action.back (ARABIC_LOCALIZATION.md §5)."
   },
-  "actionDeletePlayer": "فسّخ اللعّاب",
+  "actionDeletePlayer": "فسّخ اللاعب",
   "@actionDeletePlayer": {
     "description": "[REVIEW] Delete player. Glossary key action.delete_player (ARABIC_LOCALIZATION.md §5)."
   },
@@ -462,10 +462,6 @@
   "stateError": "صار مشكل. عاود مرّة أخرى.",
   "@stateError": {
     "description": "[REVIEW] Something went wrong. Try again.. Glossary key state.error (ARABIC_LOCALIZATION.md §5)."
-  },
-  "homeFacts": "3–12 لعّابة · تليفون واحد · من غير أنترنات",
-  "@homeFacts": {
-    "description": "[REVIEW] 3–12 players · one phone · no internet. Glossary key home.facts (ARABIC_LOCALIZATION.md §5)."
   },
   "dialogDeletePlayerTitle": "تفسّخ {name}؟",
   "@dialogDeletePlayerTitle": {

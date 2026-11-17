@@ -31,7 +31,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get actionRunoffStart => 'نعاودو التصويت';
 
   @override
-  String get actionChangeSetup => 'بدّل اللعّابة والباكوات';
+  String get actionChangeSetup => 'بدّل اللاعبين والباكوات';
 
   @override
   String get actionHome => 'الرئيسية';
@@ -46,7 +46,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get revealRoleLabelSealed => 'دور';
 
   @override
-  String get playersMaxReached => '12 لعّاب هو الحدّ';
+  String get playersMaxReached => '12 لاعب هو الحدّ';
 
   @override
   String get playersMoveEarlier => 'قدّم';
@@ -93,7 +93,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get tutorialHandoffBody =>
-      'كل لعّاب ياخذ التليفون، يشوف دورو وحدو، يخبّيه، ومبعد يعدّيه.';
+      'كل لاعب ياخذ التليفون، يشوف دورو وحدو، يخبّيه، ومبعد يعدّيه.';
 
   @override
   String get tutorialCluesTitle => 'تلميح بكلمة وحدة';
@@ -201,7 +201,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get roleCivilian => 'مدني';
 
   @override
-  String get playersTitle => 'اللعّابة';
+  String get playersTitle => 'اللاعبين';
 
   @override
   String get playersNameLimit => 'حتى 16 حرف';
@@ -233,19 +233,19 @@ class AppLocalizationsAr extends AppLocalizations {
   String get homeTagline => 'شكون فيكم؟';
 
   @override
-  String get playersAdd => 'زيد لعّاب';
+  String get playersAdd => 'زيد لاعب';
 
   @override
-  String get playersNameLabel => 'اسم اللعّاب';
+  String get playersNameLabel => 'اسم اللاعب';
 
   @override
   String get playersNameHint => 'مثلا: سلمى';
 
   @override
-  String get playersEmpty => 'مازال ما فمّا حتى لعّاب';
+  String get playersEmpty => 'مازال ما فمّا حتى لاعب';
 
   @override
-  String get playersEmptyHint => 'زيد 3 لعّابة باش تبداو';
+  String get playersEmptyHint => 'زيد 3 لاعبين باش تبداو';
 
   @override
   String get errorNameDuplicate => 'الاسم هذا موجود';
@@ -254,7 +254,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get errorNameEmpty => 'اكتب اسم';
 
   @override
-  String get errorMinPlayers => 'لازمكم 3 لعّابة على الأقل';
+  String get errorMinPlayers => 'لازمكم 3 لاعبين على الأقل';
 
   @override
   String get packSelected => 'مختار';
@@ -272,7 +272,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get actionBack => 'ارجع';
 
   @override
-  String get actionDeletePlayer => 'فسّخ اللعّاب';
+  String get actionDeletePlayer => 'فسّخ اللاعب';
 
   @override
   String get actionRename => 'بدّل الاسم';
@@ -351,9 +351,6 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get stateError => 'صار مشكل. عاود مرّة أخرى.';
-
-  @override
-  String get homeFacts => '3–12 لعّابة · تليفون واحد · من غير أنترنات';
 
   @override
   String dialogDeletePlayerTitle(String name) {
