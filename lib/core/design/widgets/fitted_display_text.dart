@@ -147,9 +147,11 @@ class FittedDisplayText extends StatelessWidget {
         if (!reserveHeight) return fitted;
         return ConstrainedBox(
           constraints: BoxConstraints(
+            // Laid-out lines are rounded to whole pixels, so each reserved
+            // line is rounded up: text never exceeds the reserve (D-39).
             minHeight: math.max(
-              startSize * style.height! * maxLines,
-              minFontSize * style.height! * floorLinesReserved,
+              maxLines * (startSize * style.height!).ceilToDouble(),
+              floorLinesReserved * (minFontSize * style.height!).ceilToDouble(),
             ),
           ),
           child: Center(child: fitted),

@@ -266,10 +266,11 @@ class _Chip extends StatelessWidget {
   static const _paddingV = TesskraSpacing.s1;
   static const _style = TesskraTypography.labelM;
 
-  /// Outer height of a chip whose text runs to [lines] lines.
+  /// Outer height of a chip whose text runs to [lines] lines. Laid-out
+  /// lines are rounded to whole pixels, so each line is rounded up here.
   static double heightFor(int lines, TextScaler scaler) =>
       2 * (_paddingV + TesskraBorders.standard) +
-      lines * scaler.scale(_style.fontSize!) * _style.height!;
+      lines * (scaler.scale(_style.fontSize!) * _style.height!).ceilToDouble();
 
   @override
   Widget build(BuildContext context) {

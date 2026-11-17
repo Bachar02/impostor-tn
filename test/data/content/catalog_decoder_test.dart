@@ -39,7 +39,7 @@ void main() {
       expect(word.version, 1);
       expect(word.canonical, 'canonical w-1');
       expect(word.aliases, ['alias one']);
-      expect(word.category, 'fixture category');
+      expect(word.category, fixtureLabel('pack-a'));
       expect(word.language, 'aeb-Arab');
       expect(word.access, AccessStatus.free);
       expect(word.status, EditorialStatus.published);
@@ -220,7 +220,7 @@ void main() {
     test('a pack id used twice', () {
       final json = fixtureCatalog([
         fixturePack('pack-a', []),
-        fixturePack('pack-a', []),
+        fixturePack('pack-a', [], title: 'label second'),
       ]);
 
       expect(issuesOf(decodeJson(json)), [
@@ -413,7 +413,7 @@ void main() {
         validFixtureCatalog(),
       ) as DecodedCatalog).catalog.packs.first;
 
-      expect(pack.title, fixtureLabel);
+      expect(pack.title, fixtureLabel('pack-a'));
       expect(pack.labelStatus, LabelStatus.approved);
       expect(pack.labelReview, 'fixture-label-reviewer');
       expect(pack.words.map((w) => w.category).toSet(), {pack.title});
@@ -440,8 +440,8 @@ void main() {
     test('a pack title no word matches rejects every word of the pack', () {
       final json = fixtureCatalog([
         fixturePack('pack-a', [
-          fixtureWord('w-1'),
-          fixtureWord('w-2'),
+          fixtureWord('w-1', category: 'label pack-a'),
+          fixtureWord('w-2', category: 'label pack-a'),
         ], title: 'another label'),
       ]);
 
@@ -458,7 +458,7 @@ void main() {
     });
 
     test('the comparison is exact: no space or letter folding (D-01)', () {
-      for (final variant in ['$fixtureLabel.', 'Fixture category']) {
+      for (final variant in ['label pack-a.', 'Label pack-a']) {
         final json = withWord(fixtureWord('w-1', category: variant));
 
         expect(issuesOf(decodeJson(json)).map((i) => i.kind), [
@@ -589,6 +589,100 @@ void main() {
           ContentIssueKind.approvedLabelWithoutReview,
         ),
       ]);
+    });
+  });
+
+  group('unique category labels (D-40)', () {
+    test('two packs with the same label are rejected with both pack IDs', () {
+      final json = fixtureCatalog([
+        fixturePack('pack-a', [fixtureWord('w-1')], title: 'shared label'),
+        fixturePack('pack-b', [fixtureWord('w-2')], title: 'shared label'),
+      ]);
+
+      final issues = issuesOf(decodeJson(json));
+
+      expect(issues, [
+        const ContentIssue(
+          'packs[1].title',
+          ContentIssueKind.duplicatePackLabel,
+          relatedPath: 'packs[0].title',
+          packId: 'pack-b',
+          relatedPackId: 'pack-a',
+        ),
+      ]);
+      expect(
+        issues.single.toString(),
+        allOf(contains('pack-a'), contains('pack-b')),
+      );
+    });
+
+    test('every later duplicate is reported against the first pack', () {
+      final json = fixtureCatalog([
+        fixturePack('pack-a', [], title: 'shared label'),
+        fixturePack('pack-b', [], title: 'other label'),
+        fixturePack('pack-c', [], title: 'shared label'),
+        fixturePack('pack-d', [], title: 'shared label'),
+      ]);
+
+      expect(
+        issuesOf(decodeJson(json))
+            .map((i) => (i.path, i.packId, i.relatedPackId)),
+        [
+          ('packs[2].title', 'pack-c', 'pack-a'),
+          ('packs[3].title', 'pack-d', 'pack-a'),
+        ],
+      );
+    });
+
+    test('the comparison is exact: labels differing in case are distinct', () {
+      final json = fixtureCatalog([
+        fixturePack('pack-a', [], title: 'shared label'),
+        fixturePack('pack-b', [], title: 'Shared label'),
+        fixturePack('pack-c', [], title: 'shared label.'),
+      ]);
+
+      expect(decodeJson(json), isA<DecodedCatalog>());
+    });
+
+    test('distinct labels are accepted and nothing is merged or renamed', () {
+      final json = fixtureCatalog([
+        fixturePack('pack-a', [fixtureWord('w-1')], title: 'label one'),
+        fixturePack('pack-b', [fixtureWord('w-2')], title: 'label two'),
+      ]);
+
+      final catalog = (decodeJson(json) as DecodedCatalog).catalog;
+
+      expect(catalog.packs.map((p) => (p.id, p.title, p.words.length)), [
+        ('pack-a', 'label one', 1),
+        ('pack-b', 'label two', 1),
+      ]);
+    });
+
+    test('a duplicate label rejects the catalog in both channels', () {
+      final json = fixtureCatalog([
+        fixturePack('pack-a', [], title: 'shared label'),
+        fixturePack('pack-b', [], title: 'shared label'),
+      ]);
+
+      for (final channel in ContentChannel.values) {
+        expect(
+          issuesOf(decodeJson(json, channel: channel)).map((i) => i.kind),
+          [ContentIssueKind.duplicatePackLabel],
+        );
+      }
+    });
+
+    test('the duplicate issue never quotes the label or a word ID', () {
+      const label = 'fixture-secret-label';
+      final json = fixtureCatalog([
+        fixturePack('pack-a', [fixtureWord('w-1')], title: label),
+        fixturePack('pack-b', [fixtureWord('w-2')], title: label),
+      ]);
+
+      final text = issuesOf(decodeJson(json)).join('\n');
+
+      expect(text, isNot(contains(label)));
+      expect(text, isNot(contains('w-1')));
     });
   });
 

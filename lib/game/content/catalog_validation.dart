@@ -16,6 +16,8 @@ abstract final class CatalogValidation {
   ) {
     final issues = <ContentIssue>[];
     final packIds = <String, String>{};
+    // Pack title → index of the first pack using it (D-40).
+    final labels = <String, int>{};
     final wordIds = <String, String>{};
     // Comparison form of every accepted answer → path of the word owning it.
     final answers = <String, String>{};
@@ -37,6 +39,20 @@ abstract final class CatalogValidation {
       }
       _checkText(issues, '$packPath.title', pack.title);
       _checkLabel(issues, packPath, pack, channel);
+      // Exact comparison, as for categories (D-38); nothing is merged.
+      if (labels[pack.title] case final first?) {
+        issues.add(
+          ContentIssue(
+            '$packPath.title',
+            ContentIssueKind.duplicatePackLabel,
+            relatedPath: 'packs[$first].title',
+            packId: pack.id,
+            relatedPackId: catalog.packs[first].id,
+          ),
+        );
+      } else {
+        labels[pack.title] = p;
+      }
 
       for (var w = 0; w < pack.words.length; w++) {
         final wordPath = '$packPath.words[$w]';

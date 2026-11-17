@@ -62,8 +62,10 @@ Strict, and the file is accepted or rejected **as a whole**: a bundled file is e
 - A `published` word needs both reviews, by two different references.
 - Every word's `category` equals its pack's `title`, compared exactly (no folding); a mismatch is reported at the word's `category` with the pack title as related path (`categoryDiffersFromPack`).
 - An `approved` label needs `labelReview` (`approvedLabelWithoutReview`), in both channels.
+- Pack labels are unique (D-40): a later pack whose `title` equals an earlier one, compared exactly, is reported at its `title` with the first pack's title as related path (`duplicatePackLabel`), in both channels. Nothing is merged or renamed.
 - A label that is not `approved` rejects a **release** catalog as a whole (`unreviewedLabelInRelease`), even in a pack without playable words, because the packs screen shows every pack. Debug builds accept it.
-- Issues are reported as JSON paths (`packs[0].words[3].aliases[1]`) and a kind. They never contain content text or IDs, since IDs may be mnemonic.
+- Issues are reported as JSON paths (`packs[0].words[3].aliases[1]`) and a kind. They never contain content text or word IDs, since word IDs may be mnemonic. Exception (D-40): `duplicatePackLabel` also carries both **pack** IDs, which are not secret (the label is public on the packs screen). Issues are not logged anywhere; they stay inside `ContentUnavailable`.
+- **Ticket fit (D-39, D-40).** `test/data/content/catalog_ticket_fit_test.dart` renders every pack label of the bundled and development catalogs on both role tickets at 360×720 and 320×568, text scale 1 and 1.5, and fails if one needs a third line in the Civilian's chip or the Impostor's big text, or if parity breaks. The limit is measured by rendering; there is no character limit.
 
 ### Eligibility (`ContentEligibility`)
 

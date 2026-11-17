@@ -65,6 +65,38 @@ void main() {
       });
     }
 
+    // Laid-out lines are rounded to whole pixels; the reserve rounds each
+    // line up, so a big text at full size and one that had to shrink give
+    // the same ticket. 1.15 is a scale where the full-size line rounds up
+    // (72 × 1.15 × 1.3 = 107.64 → 108) and sets the reserve.
+    for (final (name, size, scale) in [
+      ...frames,
+      ('360x720 scale 1.15', const Size(360, 720), 1.15),
+      ('320x568 scale 1.15', const Size(320, 568), 1.15),
+    ]) {
+      testWidgets('full-size and shrunk big text give one size at $name', (
+        tester,
+      ) async {
+        RevealedTicket withBig(String text) => RevealedTicket(
+          label: _label,
+          name: _name,
+          caption: 'نص',
+          bigText: text,
+          chip: 'شريحة',
+        );
+        await pumpTicket(tester, withBig('ب'), size: size, textScale: scale);
+        final full = tester.getSize(find.byType(RoleTicket));
+        await pumpTicket(
+          tester,
+          withBig('كلمتان طويلتان'),
+          size: size,
+          textScale: scale,
+        );
+
+        expect(tester.getSize(find.byType(RoleTicket)), full);
+      });
+    }
+
     testWidgets('same widget structure, only the text differs', (tester) async {
       await pumpTicket(tester, _civilian);
       final civilian = widgetTypes(tester);
