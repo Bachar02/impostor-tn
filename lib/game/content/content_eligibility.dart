@@ -12,9 +12,10 @@ abstract final class ContentEligibility {
       switch (word.status) {
         EditorialStatus.published => word.reviews != null,
         EditorialStatus.development => channel == ContentChannel.development,
-        EditorialStatus.draft ||
-        EditorialStatus.inReview ||
-        EditorialStatus.retired => false,
+        // D-42: words in review are playable in debug builds only, so the
+        // content can be played before its reviews; never in a release.
+        EditorialStatus.inReview => channel == ContentChannel.development,
+        EditorialStatus.draft || EditorialStatus.retired => false,
       };
 
   /// The playable words of [pack], in catalog order.

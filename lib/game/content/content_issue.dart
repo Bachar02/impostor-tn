@@ -46,10 +46,6 @@ enum ContentIssueKind {
   /// A pack label marked approved without its review reference (D-38).
   approvedLabelWithoutReview,
 
-  /// A release catalog must not contain a pack label that is not approved
-  /// (D-38).
-  unreviewedLabelInRelease,
-
   /// Two packs with the same label: a category belongs to one pack only
   /// (D-40). Carries both pack IDs.
   duplicatePackLabel,

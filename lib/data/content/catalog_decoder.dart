@@ -96,9 +96,19 @@ abstract final class CatalogDecoder {
       packs: packs,
     );
     final ruleIssues = CatalogValidation.validate(catalog, channel);
-    return ruleIssues.isEmpty
-        ? DecodedCatalog(catalog)
-        : InvalidCatalog(ruleIssues);
+    if (ruleIssues.isNotEmpty) return InvalidCatalog(ruleIssues);
+    return DecodedCatalog(switch (channel) {
+      // D-38/D-42: an unreviewed label never appears in a release build.
+      // The whole file is validated first, so hiding never masks an error.
+      ContentChannel.release => ContentCatalog(
+        contentVersion: catalog.contentVersion,
+        packs: [
+          for (final pack in catalog.packs)
+            if (pack.labelStatus == LabelStatus.approved) pack,
+        ],
+      ),
+      ContentChannel.development => catalog,
+    });
   }
 
   static WordPack? _pack(JsonFields? fields) {

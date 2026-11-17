@@ -26,7 +26,7 @@ void main() {
       EditorialStatus.published: (true, true),
       EditorialStatus.development: (false, true),
       EditorialStatus.draft: (false, false),
-      EditorialStatus.inReview: (false, false),
+      EditorialStatus.inReview: (false, true),
       EditorialStatus.retired: (false, false),
     };
 

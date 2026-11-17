@@ -548,34 +548,68 @@ void main() {
       ),
     ]);
 
-    test('an unreviewed label makes a release catalog invalid as a whole', () {
-      expect(issuesOf(decodeJson(inReview)), [
-        const ContentIssue(
-          'packs[0].labelStatus',
-          ContentIssueKind.unreviewedLabelInRelease,
-        ),
-      ]);
-    });
+    List<String> packIds(CatalogDecoding d) => [
+      for (final pack in (d as DecodedCatalog).catalog.packs) pack.id,
+    ];
 
-    test('an unreviewed label in a pack without words is still rejected', () {
+    test('a release build hides a pack whose label is not approved (D-42)', () {
       final json = fixtureCatalog([
         fixturePack('pack-a', [fixtureWord('w-1')]),
-        fixturePack('pack-b', [], labelStatus: 'in_review'),
+        fixturePack(
+          'pack-b',
+          [fixtureWord('w-2')],
+          labelStatus: 'in_review',
+          withLabelReview: false,
+        ),
+        fixturePack('pack-c', [], labelStatus: 'in_review'),
       ]);
 
-      expect(issuesOf(decodeJson(json)), [
-        const ContentIssue(
-          'packs[1].labelStatus',
-          ContentIssueKind.unreviewedLabelInRelease,
-        ),
-      ]);
+      final decoding = decodeJson(json);
+
+      expect(packIds(decoding), ['pack-a']);
+      final catalog = (decoding as DecodedCatalog).catalog;
+      expect(catalog.wordById('w-2'), isNull, reason: 'hidden words too');
     });
 
-    test('an unreviewed label is accepted in the development channel', () {
+    test('a debug build shows a pack whose label is in review', () {
       expect(
-        decodeJson(inReview, channel: ContentChannel.development),
-        isA<DecodedCatalog>(),
+        packIds(decodeJson(inReview, channel: ContentChannel.development)),
+        ['pack-a'],
       );
+    });
+
+    test('hiding never masks an error elsewhere in the file', () {
+      final json = fixtureCatalog([
+        fixturePack(
+          'pack-a',
+          [fixtureWord('w-1')],
+          labelStatus: 'in_review',
+          withLabelReview: false,
+        ),
+        fixturePack('pack-b', [fixtureWord('w-1')]),
+      ]);
+
+      expect(
+        issuesOf(decodeJson(json)).map((i) => i.kind),
+        contains(ContentIssueKind.duplicateWordId),
+      );
+    });
+
+    test('a hidden pack still counts for unique labels (D-40)', () {
+      final json = fixtureCatalog([
+        fixturePack('pack-a', [], title: 'shared label'),
+        fixturePack(
+          'pack-b',
+          [],
+          title: 'shared label',
+          labelStatus: 'in_review',
+          withLabelReview: false,
+        ),
+      ]);
+
+      expect(issuesOf(decodeJson(json)).map((i) => i.kind), [
+        ContentIssueKind.duplicatePackLabel,
+      ]);
     });
 
     test('an approved label still needs its reference in development', () {

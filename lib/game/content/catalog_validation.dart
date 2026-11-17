@@ -38,7 +38,7 @@ abstract final class CatalogValidation {
         packIds[pack.id] = '$packPath.id';
       }
       _checkText(issues, '$packPath.title', pack.title);
-      _checkLabel(issues, packPath, pack, channel);
+      _checkLabel(issues, packPath, pack);
       // Exact comparison, as for categories (D-38); nothing is merged.
       if (labels[pack.title] case final first?) {
         issues.add(
@@ -177,37 +177,24 @@ abstract final class CatalogValidation {
     }
   }
 
-  /// D-38: the label carries an explicit review status, and only approved
-  /// labels may ship. An unreviewed label rejects a release catalog as a
-  /// whole, like development content.
+  /// D-38: the label carries an explicit review status; an approved one
+  /// needs its review reference. An unreviewed label is not an error: a
+  /// release build hides its pack (D-42, `CatalogDecoder`).
   static void _checkLabel(
     List<ContentIssue> issues,
     String packPath,
     WordPack pack,
-    ContentChannel channel,
   ) {
     if (pack.labelReview case final review?) {
       _checkText(issues, '$packPath.labelReview', review);
     }
-    switch (pack.labelStatus) {
-      case LabelStatus.approved:
-        if (pack.labelReview == null) {
-          issues.add(
-            ContentIssue(
-              '$packPath.labelReview',
-              ContentIssueKind.approvedLabelWithoutReview,
-            ),
-          );
-        }
-      case LabelStatus.inReview:
-        if (channel == ContentChannel.release) {
-          issues.add(
-            ContentIssue(
-              '$packPath.labelStatus',
-              ContentIssueKind.unreviewedLabelInRelease,
-            ),
-          );
-        }
+    if (pack.labelStatus == LabelStatus.approved && pack.labelReview == null) {
+      issues.add(
+        ContentIssue(
+          '$packPath.labelReview',
+          ContentIssueKind.approvedLabelWithoutReview,
+        ),
+      );
     }
   }
 

@@ -1,5 +1,219 @@
 {
   "format": 1,
-  "contentVersion": 1,
-  "packs": []
+  "contentVersion": 2,
+  "packs": [
+    {
+      "id": "p01",
+      "title": "ماكلة",
+      "labelStatus": "in_review",
+      "words": [
+        {
+          "id": "p01-w01",
+          "version": 1,
+          "canonical": "كسكسي",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w02",
+          "version": 1,
+          "canonical": "ملاوي",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w03",
+          "version": 1,
+          "canonical": "لبلابي",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w04",
+          "version": 1,
+          "canonical": "بريك",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w05",
+          "version": 1,
+          "canonical": "مقرونة",
+          "aliases": [
+            "مكرونة"
+          ],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w06",
+          "version": 1,
+          "canonical": "شربة",
+          "aliases": [
+            "شوربة"
+          ],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w07",
+          "version": 1,
+          "canonical": "عجة",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w08",
+          "version": 1,
+          "canonical": "طاجين",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w09",
+          "version": 1,
+          "canonical": "كفتاجي",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w10",
+          "version": 1,
+          "canonical": "مرقة",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w11",
+          "version": 1,
+          "canonical": "فريكاسي",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w12",
+          "version": 1,
+          "canonical": "سلاطة مشوية",
+          "aliases": [
+            "سلطة مشوية"
+          ],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w13",
+          "version": 1,
+          "canonical": "زبيب",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w14",
+          "version": 1,
+          "canonical": "هروس",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w15",
+          "version": 1,
+          "canonical": "لبن",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w16",
+          "version": 1,
+          "canonical": "زلابية",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w17",
+          "version": 1,
+          "canonical": "مقروض",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w18",
+          "version": 1,
+          "canonical": "يويو",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w19",
+          "version": 1,
+          "canonical": "بمبالوني",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p01-w20",
+          "version": 1,
+          "canonical": "غريبة",
+          "aliases": [],
+          "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        }
+      ]
+    }
+  ]
 }

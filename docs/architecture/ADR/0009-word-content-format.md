@@ -63,7 +63,7 @@ Strict, and the file is accepted or rejected **as a whole**: a bundled file is e
 - Every word's `category` equals its pack's `title`, compared exactly (no folding); a mismatch is reported at the word's `category` with the pack title as related path (`categoryDiffersFromPack`).
 - An `approved` label needs `labelReview` (`approvedLabelWithoutReview`), in both channels.
 - Pack labels are unique (D-40): a later pack whose `title` equals an earlier one, compared exactly, is reported at its `title` with the first pack's title as related path (`duplicatePackLabel`), in both channels. Nothing is merged or renamed.
-- A label that is not `approved` rejects a **release** catalog as a whole (`unreviewedLabelInRelease`), even in a pack without playable words, because the packs screen shows every pack. Debug builds accept it.
+- A label that is not `approved` is not an error. A **release** decode hides that pack, with its words, after the whole file has been validated (D-42); debug builds show it.
 - Issues are reported as JSON paths (`packs[0].words[3].aliases[1]`) and a kind. They never contain content text or word IDs, since word IDs may be mnemonic. Exception (D-40): `duplicatePackLabel` also carries both **pack** IDs, which are not secret (the label is public on the packs screen). Issues are not logged anywhere; they stay inside `ContentUnavailable`.
 - **Ticket fit (D-39, D-40).** `test/data/content/catalog_ticket_fit_test.dart` renders every pack label of the bundled and development catalogs on both role tickets at 360×720 and 320×568, text scale 1 and 1.5, and fails if one needs a third line in the Civilian's chip or the Impostor's big text, or if parity breaks. The limit is measured by rendering; there is no character limit.
 
@@ -73,7 +73,8 @@ Strict, and the file is accepted or rejected **as a whole**: a bundled file is e
 |---|---|---|
 | `published` (with both reviews) | playable | playable |
 | `development` | **catalog rejected** | playable |
-| `draft`, `in_review`, `retired` | never | never |
+| `in_review` | never | playable (D-42) |
+| `draft`, `retired` | never | never |
 
 The channel comes from the composition root: `ContentChannel.development` only when `kDebugMode`.
 
@@ -81,7 +82,7 @@ The channel comes from the composition root: `ContentChannel.development` only w
 
 Three independent guards:
 
-1. A release-channel decode rejects any catalog that contains a `development` word or an unreviewed pack label, so such a build has no playable content at all rather than unreviewed content. The development packs carry `in_review` labels, so they trip both checks.
+1. A release-channel decode rejects any catalog that contains a `development` word, so such a build has no playable content at all rather than unreviewed content. Packs with an unreviewed label are hidden from release (D-42), and `in_review` words are never playable there.
 2. `test/data/content/bundled_content_source_test.dart` fails if the bundled file contains a `development` word or if any other content file is declared in `pubspec.yaml`.
 3. Synthetic fixtures live only under `test/`, are built in Dart, are labelled as such, and are never declared as assets.
 

@@ -8,8 +8,8 @@ import 'package:impostor_tn/game/content/content_source.dart';
 
 /// DEVELOPMENT-ONLY SYNTHETIC CONTENT (D-35, ADR-0009). NOT GAME CONTENT.
 ///
-/// One pack per proposed category label (D-37/D-38), so the labels can be
-/// seen and played in debug builds. The labels are `in_review` (not
+/// One pack per proposed category label (D-37/D-38) that has no real
+/// content yet, so the labels can be seen and played in debug builds. The labels are `in_review` (not
 /// approved). The words are placeholders (`dev001`, `dev002`, …): not
 /// Tunisian words, status `development`, never reviewed, never published.
 /// Real word content is Q-13.
@@ -46,11 +46,16 @@ abstract final class DevelopmentContent {
 
   static const wordsPerPack = 20;
 
+  /// Labels that have a real pack in the bundled catalog: no synthetic pack,
+  /// so labels stay unique (D-40). Ids of the other packs do not move.
+  static const labelsWithRealContent = {'ماكلة'};
+
   static String catalogJson() => jsonEncode({
     'format': CatalogDecoder.supportedFormat,
     'contentVersion': 1,
     'packs': [
-      for (final (index, label) in categoryLabels.indexed) _pack(index, label),
+      for (final (index, label) in categoryLabels.indexed)
+        if (!labelsWithRealContent.contains(label)) _pack(index, label),
     ],
   });
 

@@ -27,9 +27,11 @@ void main() {
 
   // Decoded inside each test: `expect` cannot run while the file loads.
   final catalogs = <String, List<String> Function()>{
+    // Development channel: labels still in review are hidden in release but
+    // must already fit (D-42).
     'bundled catalog': () => labelsOf(
       File(BundledContentSource.catalogAsset).readAsStringSync(),
-      ContentChannel.release,
+      ContentChannel.development,
     ),
     'development catalog': () =>
         labelsOf(DevelopmentContent.catalogJson(), ContentChannel.development),

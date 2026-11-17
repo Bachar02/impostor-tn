@@ -54,7 +54,8 @@ void main() {
     expect(
       words,
       hasLength(
-        DevelopmentContent.categoryLabels.length *
+        (DevelopmentContent.categoryLabels.length -
+                DevelopmentContent.labelsWithRealContent.length) *
             DevelopmentContent.wordsPerPack,
       ),
     );
@@ -74,7 +75,11 @@ void main() {
       channel: ContentChannel.development,
     ) as DecodedCatalog).catalog;
 
-    expect(catalog.packs.map((p) => p.title), proposedLabels);
+    // Labels with a real pack in the bundled catalog have no synthetic one.
+    expect(catalog.packs.map((p) => p.title), [
+      for (final label in proposedLabels)
+        if (!DevelopmentContent.labelsWithRealContent.contains(label)) label,
+    ]);
     for (final pack in catalog.packs) {
       expect(pack.labelStatus, LabelStatus.inReview);
       expect(pack.labelReview, isNull);
@@ -82,12 +87,11 @@ void main() {
       expect(pack.words.map((w) => w.category).toSet(), {pack.title});
       expect(pack.title, isNot(contains('DEV')), reason: 'no DEV names');
     }
-    // The ids used before stay where they were.
-    expect(catalog.packs.take(2).map((p) => p.id), [
-      'dev-synthetic-a',
-      'dev-synthetic-b',
-    ]);
-    expect(catalog.packs.first.words.first.id, 'dev-synthetic-w01');
+    // Ids do not move when a label gets real content: the synthetic food
+    // pack (`-a`, words w01–w20) is gone, the others keep theirs.
+    expect(catalog.packs.map((p) => p.id), isNot(contains('dev-synthetic-a')));
+    expect(catalog.packs.first.id, 'dev-synthetic-b');
+    expect(catalog.packs.first.words.first.id, 'dev-synthetic-w21');
   });
 
   test('every development word is visibly a placeholder', () {
@@ -110,10 +114,8 @@ void main() {
     );
 
     expect(decoding, isA<InvalidCatalog>());
-    // Twice guarded: development words, and labels never reviewed (D-38).
     expect((decoding as InvalidCatalog).issues.map((i) => i.kind).toSet(), {
       ContentIssueKind.developmentContentInRelease,
-      ContentIssueKind.unreviewedLabelInRelease,
     });
   });
 
