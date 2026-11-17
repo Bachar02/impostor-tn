@@ -8,6 +8,7 @@ import 'package:impostor_tn/core/design/widgets/screen_frame.dart';
 import 'package:impostor_tn/core/design/widgets/tesskra_banner.dart';
 import 'package:impostor_tn/core/design/widgets/tesskra_button.dart';
 import 'package:impostor_tn/core/design/widgets/tesskra_icon.dart';
+import 'package:impostor_tn/core/design/widgets/winner_reveal.dart';
 import 'package:impostor_tn/core/text/bidi.dart';
 import 'package:impostor_tn/features/game/application/game_route.dart';
 import 'package:impostor_tn/game/ballot.dart';
@@ -30,6 +31,8 @@ class ResultsView extends StatelessWidget {
     required this.onHome,
     this.busy = false,
     this.error,
+    this.animateEntrance = false,
+    this.entranceDelay = Duration.zero,
   });
 
   final GameSession session;
@@ -38,6 +41,13 @@ class ResultsView extends StatelessWidget {
   final VoidCallback onHome;
   final bool busy;
   final String? error;
+
+  /// First display of a result reached in this process: `winnerReveal`.
+  /// On recovery the result is shown at once (PUB-09 interactions).
+  final bool animateEntrance;
+
+  /// The screen transition the result arrives with, so the slam is seen.
+  final Duration entranceDelay;
 
   @override
   Widget build(BuildContext context) {
@@ -88,106 +98,119 @@ class ResultsView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const SizedBox(height: TesskraLayout.sectionGap),
-          Center(
-            child: WinnerStamp(label: stampLabel, kind: stampKind),
-          ),
-          if (explanation != null) ...[
-            const SizedBox(height: TesskraLayout.sectionGap),
-            Text(
-              explanation,
-              textAlign: TextAlign.center,
-              style: TesskraTypography.bodyL.copyWith(color: c.textPrimary),
+          WinnerReveal(
+            animate: animateEntrance,
+            delay: entranceDelay,
+            stamp: Center(
+              child: WinnerStamp(label: stampLabel, kind: stampKind),
             ),
-          ],
-          const SizedBox(height: TesskraLayout.sectionGap),
-          SecretWordPlaque(
-            caption: l10n.revealWordLabel,
-            word: word.canonical,
-            chip: l10n.revealCategory(word.category),
-          ),
-          if (outcome case ImpostorGuessed(
-            :final rawGuess,
-            :final correct,
-          )) ...[
-            const SizedBox(height: TesskraLayout.sectionGap),
-            Container(
-              padding: const EdgeInsets.all(TesskraLayout.cardPadding),
-              decoration: BoxDecoration(
-                color: c.surface,
-                borderRadius: BorderRadius.circular(TesskraRadii.md),
-                border: Border.all(
-                  color: c.border,
-                  width: TesskraBorders.standard,
-                ),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+            content: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                if (explanation != null) ...[
+                  const SizedBox(height: TesskraLayout.sectionGap),
                   Text(
-                    l10n.resultGuessLabel,
-                    style: TesskraTypography.caption.copyWith(
-                      color: c.textSecondary,
-                    ),
-                  ),
-                  Text(
-                    directionIsolate(FinalGuessMatching.displayForm(rawGuess)),
-                    style: TesskraTypography.titleM.copyWith(
+                    explanation,
+                    textAlign: TextAlign.center,
+                    style: TesskraTypography.bodyL.copyWith(
                       color: c.textPrimary,
                     ),
                   ),
-                  const SizedBox(height: TesskraSpacing.s2),
-                  Row(
-                    children: [
-                      TesskraIcon(
-                        correct ? TesskraIcons.check : TesskraIcons.x,
-                        color: correct ? c.success : c.errorText,
+                ],
+                const SizedBox(height: TesskraLayout.sectionGap),
+                SecretWordPlaque(
+                  caption: l10n.revealWordLabel,
+                  word: word.canonical,
+                  chip: l10n.revealCategory(word.category),
+                ),
+                if (outcome case ImpostorGuessed(
+                  :final rawGuess,
+                  :final correct,
+                )) ...[
+                  const SizedBox(height: TesskraLayout.sectionGap),
+                  Container(
+                    padding: const EdgeInsets.all(TesskraLayout.cardPadding),
+                    decoration: BoxDecoration(
+                      color: c.surface,
+                      borderRadius: BorderRadius.circular(TesskraRadii.md),
+                      border: Border.all(
+                        color: c.border,
+                        width: TesskraBorders.standard,
                       ),
-                      const SizedBox(width: TesskraSpacing.s2),
-                      Text(
-                        correct
-                            ? l10n.resultGuessCorrect
-                            : l10n.resultGuessWrong,
-                        style: TesskraTypography.labelM.copyWith(
-                          color: correct ? c.success : c.errorText,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          l10n.resultGuessLabel,
+                          style: TesskraTypography.caption.copyWith(
+                            color: c.textSecondary,
+                          ),
                         ),
-                      ),
-                    ],
+                        Text(
+                          directionIsolate(
+                            FinalGuessMatching.displayForm(rawGuess),
+                          ),
+                          style: TesskraTypography.titleM.copyWith(
+                            color: c.textPrimary,
+                          ),
+                        ),
+                        const SizedBox(height: TesskraSpacing.s2),
+                        Row(
+                          children: [
+                            TesskraIcon(
+                              correct ? TesskraIcons.check : TesskraIcons.x,
+                              color: correct ? c.success : c.errorText,
+                            ),
+                            const SizedBox(width: TesskraSpacing.s2),
+                            Text(
+                              correct
+                                  ? l10n.resultGuessCorrect
+                                  : l10n.resultGuessWrong,
+                              style: TesskraTypography.labelM.copyWith(
+                                color: correct ? c.success : c.errorText,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ],
-              ),
+                heading(l10n.playersTitle),
+                for (final (index, player) in session.players.indexed) ...[
+                  RoleRevealRow(
+                    position: index + 1,
+                    name: player.name,
+                    isImpostor: player.id == session.impostor,
+                    roleLabel: player.id == session.impostor
+                        ? l10n.roleImpostor
+                        : l10n.roleCivilian,
+                  ),
+                  const SizedBox(height: TesskraLayout.itemGap),
+                ],
+                heading(l10n.resultVotesTitle),
+                for (final b in phase.ballots)
+                  ballot(
+                    b.kind == BallotKind.first
+                        ? l10n.resultFirstBallot
+                        : l10n.voteRunoffTitle,
+                    b,
+                  ),
+                const SizedBox(height: TesskraLayout.sectionGap),
+                TesskraButton(
+                  label: l10n.actionChangeSetup,
+                  variant: TesskraButtonVariant.secondary,
+                  onPressed: busy ? null : onChangeSetup,
+                ),
+                const SizedBox(height: TesskraLayout.itemGap),
+                TesskraButton(
+                  label: l10n.actionHome,
+                  variant: TesskraButtonVariant.text,
+                  onPressed: busy ? null : onHome,
+                ),
+              ],
             ),
-          ],
-          heading(l10n.playersTitle),
-          for (final (index, player) in session.players.indexed) ...[
-            RoleRevealRow(
-              position: index + 1,
-              name: player.name,
-              isImpostor: player.id == session.impostor,
-              roleLabel: player.id == session.impostor
-                  ? l10n.roleImpostor
-                  : l10n.roleCivilian,
-            ),
-            const SizedBox(height: TesskraLayout.itemGap),
-          ],
-          heading(l10n.resultVotesTitle),
-          for (final b in phase.ballots)
-            ballot(
-              b.kind == BallotKind.first
-                  ? l10n.resultFirstBallot
-                  : l10n.voteRunoffTitle,
-              b,
-            ),
-          const SizedBox(height: TesskraLayout.sectionGap),
-          TesskraButton(
-            label: l10n.actionChangeSetup,
-            variant: TesskraButtonVariant.secondary,
-            onPressed: busy ? null : onChangeSetup,
-          ),
-          const SizedBox(height: TesskraLayout.itemGap),
-          TesskraButton(
-            label: l10n.actionHome,
-            variant: TesskraButtonVariant.text,
-            onPressed: busy ? null : onHome,
           ),
         ],
       ),

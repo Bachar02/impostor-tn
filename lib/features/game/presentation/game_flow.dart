@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:impostor_tn/core/design/haptics.dart';
+import 'package:impostor_tn/core/design/theme/tesskra_tokens.dart';
 import 'package:impostor_tn/core/design/tokens/tesskra_motion.dart';
 import 'package:impostor_tn/core/design/widgets/private_scope.dart';
+import 'package:impostor_tn/core/design/widgets/surface_switcher.dart';
 import 'package:impostor_tn/features/game/application/active_game.dart';
 import 'package:impostor_tn/features/game/application/checkpoint.dart';
 import 'package:impostor_tn/features/game/application/game_controller.dart';
@@ -37,8 +39,14 @@ enum GameExit { home, changeSetup }
 class GameFlow extends ConsumerStatefulWidget {
   const GameFlow({super.key, required this.onExit, this.coldStart = false});
 
-  /// Called after C8 has committed, with the retained roster.
-  final void Function(GameExit exit, SavedRoster roster) onExit;
+  /// Called after C8 has committed, with the retained roster. [fromCarbon]:
+  /// the game was left from a carbon screen, so the way out is `carbonOut`.
+  final void Function(
+    GameExit exit,
+    SavedRoster roster, {
+    required bool fromCarbon,
+  })
+  onExit;
 
   /// Opened from launch with a saved, unfinished game: show PRV-05 first.
   final bool coldStart;
@@ -58,6 +66,11 @@ class _GameFlowState extends ConsumerState<GameFlow> {
 
   /// A tally reached live animates; one reached by recovery does not.
   bool _animateTally = false;
+
+  /// Likewise the result (winnerReveal); [_resultDelay] is the transition
+  /// it arrives with.
+  bool _animateResult = false;
+  Duration _resultDelay = Duration.zero;
   bool _busy = false;
   String? _error;
   String? _screenKey;
@@ -211,6 +224,9 @@ class _GameFlowState extends ConsumerState<GameFlow> {
             GameSteps.openBallotKind(game.session) != screen.ballot.kind;
         if (game.session.phase is ResultPhase) {
           _ui = _ui.copyWith(resultViaBallot: true);
+          // Shown after its tally, a paper-to-paper change.
+          _animateResult = true;
+          _resultDelay = Duration.zero;
         }
       });
     }
@@ -222,6 +238,11 @@ class _GameFlowState extends ConsumerState<GameFlow> {
       setState(() {
         _closePrivate();
         _ui = _ui.copyWith(resultViaBallot: false);
+        // Shown straight after the guess: it arrives with carbonOut.
+        _animateResult = true;
+        _resultDelay = MediaQuery.disableAnimationsOf(context)
+            ? TesskraMotion.carbonReduced
+            : TesskraMotion.carbonShift;
       });
     }
   }
@@ -229,7 +250,7 @@ class _GameFlowState extends ConsumerState<GameFlow> {
   Future<void> _leave(GameExit exit) async {
     final result = await _run(_games.leave);
     if (result case Saved(value: final roster) when mounted) {
-      widget.onExit(exit, roster);
+      widget.onExit(exit, roster, fromCarbon: !_isPublicKey(_screenKey));
     }
   }
 
@@ -288,8 +309,6 @@ class _GameFlowState extends ConsumerState<GameFlow> {
       _screenKey = key;
       _error = null;
     }
-    final dropOutgoing = _enteredFromPrivate;
-    final reduce = MediaQuery.disableAnimationsOf(context);
     final child = _buildScreen(game, screen);
 
     return PopScope(
@@ -298,19 +317,16 @@ class _GameFlowState extends ConsumerState<GameFlow> {
         if (!didPop) _back(screen);
       },
       child: Scaffold(
-        body: AnimatedSwitcher(
-          duration: reduce || dropOutgoing
-              ? Duration.zero
-              : TesskraDurations.base,
+        body: SurfaceSwitcher(
+          screenKey: key,
+          surface: _isPublicKey(key)
+              ? TesskraSurface.paper
+              : TesskraSurface.carbon,
           // Out of a private screen the outgoing child is dropped in this
-          // very frame, never kept for a fade: a secret leaves the tree in
-          // the frame it is hidden (SCREEN_SPECIFICATIONS §1.5).
-          // The structure never changes, so the current screen keeps its state.
-          layoutBuilder: (current, previous) => Stack(
-            alignment: Alignment.center,
-            children: [if (!dropOutgoing) ...previous, ?current],
-          ),
-          child: KeyedSubtree(key: ValueKey(key), child: child),
+          // very frame, never kept for a transition: a secret leaves the
+          // tree in the frame it is hidden (SCREEN_SPECIFICATIONS §1.5).
+          dropOutgoing: _enteredFromPrivate,
+          child: child,
         ),
       ),
     );
@@ -438,6 +454,8 @@ class _GameFlowState extends ConsumerState<GameFlow> {
           session: session,
           busy: _busy,
           error: _error,
+          animateEntrance: _animateResult,
+          entranceDelay: _resultDelay,
           onPlayAgain: () => unawaited(_run(_games.playAgain)),
           onChangeSetup: () => unawaited(_leave(GameExit.changeSetup)),
           onHome: () => unawaited(_leave(GameExit.home)),

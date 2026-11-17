@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:impostor_tn/core/design/tokens/tesskra_metrics.dart';
 import 'package:impostor_tn/core/design/tokens/tesskra_typography.dart';
 import 'package:impostor_tn/core/design/widgets/loading_dots.dart';
+import 'package:impostor_tn/core/design/widgets/surface_routes.dart';
 import 'package:impostor_tn/features/game/application/active_game.dart';
 import 'package:impostor_tn/features/game/application/game_providers.dart';
 import 'package:impostor_tn/features/game/application/launch.dart';
@@ -61,11 +62,14 @@ void openSetup(BuildContext context) {
 /// setup (F10).
 void openGame(NavigatorState navigator, {bool coldStart = false}) {
   navigator.pushAndRemoveUntil(
-    MaterialPageRoute<void>(
+    // Setup is paper, the first game screen carbon (PUB-06 → PRV-01).
+    CarbonInRoute<void>(
+      reducedMotion: MediaQuery.disableAnimationsOf(navigator.context),
       builder: (_) => Consumer(
         builder: (context, ref, _) => GameFlow(
           coldStart: coldStart,
-          onExit: (exit, roster) => _exitGame(navigator, ref, exit, roster),
+          onExit: (exit, roster, {required fromCarbon}) =>
+              _exitGame(navigator, ref, exit, roster, fromCarbon: fromCarbon),
         ),
       ),
     ),
@@ -77,11 +81,19 @@ void _exitGame(
   NavigatorState navigator,
   WidgetRef ref,
   GameExit exit,
-  SavedRoster roster,
-) {
+  SavedRoster roster, {
+  required bool fromCarbon,
+}) {
   ref.read(rosterControllerProvider.notifier).replace(roster);
   navigator.pushAndRemoveUntil(
-    MaterialPageRoute<void>(builder: homeScreen),
+    // OVL-02 from a carbon screen: carbonOut; Home covers the game screen
+    // from the first frame.
+    fromCarbon
+        ? CarbonOutRoute<void>(
+            reducedMotion: MediaQuery.disableAnimationsOf(navigator.context),
+            builder: homeScreen,
+          )
+        : MaterialPageRoute<void>(builder: homeScreen),
     (_) => false,
   );
   if (exit == GameExit.changeSetup) {
@@ -107,8 +119,13 @@ class _ResumeState extends ConsumerState<_Resume> {
   Widget build(BuildContext context) => GameFlow(
     // A finished game opens on its result without the gate (F1 step 2).
     coldStart: widget.game.session.phase is! ResultPhase,
-    onExit: (exit, roster) =>
-        _exitGame(Navigator.of(context), ref, exit, roster),
+    onExit: (exit, roster, {required fromCarbon}) => _exitGame(
+      Navigator.of(context),
+      ref,
+      exit,
+      roster,
+      fromCarbon: fromCarbon,
+    ),
   );
 }
 

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:impostor_tn/core/design/assets/tesskra_assets.dart';
 import 'package:impostor_tn/core/design/theme/tesskra_tokens.dart';
 import 'package:impostor_tn/core/design/tokens/tesskra_metrics.dart';
+import 'package:impostor_tn/core/design/tokens/tesskra_motion.dart';
 import 'package:impostor_tn/core/design/tokens/tesskra_shadows.dart';
 import 'package:impostor_tn/core/design/tokens/tesskra_typography.dart';
 import 'package:impostor_tn/core/design/widgets/fitted_display_text.dart';
@@ -69,9 +70,23 @@ final class RevealedTicket extends RoleTicketContent {
 /// Secret text is plain, non-selectable text and announces nothing by
 /// itself (Q-28 default).
 class RoleTicket extends StatelessWidget {
-  const RoleTicket({super.key, required this.content});
+  const RoleTicket({
+    super.key,
+    required this.content,
+    this.sealLift,
+    this.secretIn,
+  });
 
   final RoleTicketContent content;
+
+  /// `ticketReveal`, sealed content only: 0 → 1 lifts the seal by 24 and
+  /// fades it out.
+  final Animation<double>? sealLift;
+
+  /// `ticketReveal`, revealed content only: the secret's opacity. The owner
+  /// builds [RevealedTicket] only once the seal is gone, so no frame shows
+  /// the seal and the secret together.
+  final Animation<double>? secretIn;
 
   /// Drawn at 52 as in the approved renders (Q-23 (7) draft resolution;
   /// `sizes.stampSmall` is 56 and unused).
@@ -138,38 +153,44 @@ class RoleTicket extends StatelessWidget {
         padding: const EdgeInsets.all(TesskraLayout.ticketPadding),
         child: Center(
           child: switch (content) {
-            SealedTicket(:final sealedText) => Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                TesskraIcon(TesskraIcons.eyeOff, color: ink),
-                const SizedBox(height: TesskraSpacing.s2),
-                Text(
-                  sealedText,
-                  textAlign: TextAlign.center,
-                  style: TesskraTypography.labelL.copyWith(color: ink),
-                ),
-              ],
-            ),
-            RevealedTicket(:final caption, :final bigText, :final chip) =>
-              Column(
+            SealedTicket(:final sealedText) => _Seal(
+              lift: sealLift,
+              child: Column(
                 mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
+                  TesskraIcon(TesskraIcons.eyeOff, color: ink),
+                  const SizedBox(height: TesskraSpacing.s2),
                   Text(
-                    caption,
+                    sealedText,
                     textAlign: TextAlign.center,
-                    style: TesskraTypography.caption.copyWith(color: ink),
-                  ),
-                  FittedDisplayText(
-                    bigText,
-                    style: TesskraTypography.displayXL.copyWith(color: ink),
-                    minFontSize: TesskraTypography.displayXLMinFontSize,
-                    reserveHeight: true,
-                  ),
-                  Center(
-                    child: _Chip(text: chip, color: ink),
+                    style: TesskraTypography.labelL.copyWith(color: ink),
                   ),
                 ],
+              ),
+            ),
+            RevealedTicket(:final caption, :final bigText, :final chip) =>
+              FadeTransition(
+                opacity: secretIn ?? kAlwaysCompleteAnimation,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(
+                      caption,
+                      textAlign: TextAlign.center,
+                      style: TesskraTypography.caption.copyWith(color: ink),
+                    ),
+                    FittedDisplayText(
+                      bigText,
+                      style: TesskraTypography.displayXL.copyWith(color: ink),
+                      minFontSize: TesskraTypography.displayXLMinFontSize,
+                      reserveHeight: true,
+                    ),
+                    Center(
+                      child: _Chip(text: chip, color: ink),
+                    ),
+                  ],
+                ),
               ),
           },
         ),
@@ -191,6 +212,31 @@ class RoleTicket extends StatelessWidget {
           bottom,
         ],
       ),
+    );
+  }
+}
+
+/// The sealed content, lifting off during `ticketReveal`.
+class _Seal extends StatelessWidget {
+  const _Seal({required this.lift, required this.child});
+
+  final Animation<double>? lift;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    final lift = this.lift;
+    if (lift == null) return child;
+    return AnimatedBuilder(
+      animation: lift,
+      builder: (context, child) => Opacity(
+        opacity: 1 - lift.value,
+        child: Transform.translate(
+          offset: Offset(0, -TesskraMotion.ticketSealLift * lift.value),
+          child: child,
+        ),
+      ),
+      child: child,
     );
   }
 }

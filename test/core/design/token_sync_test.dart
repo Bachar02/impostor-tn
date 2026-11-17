@@ -344,6 +344,77 @@ void main() {
         expect([c.a, c.b, c.c, c.d], json[entry.key], reason: entry.key);
       }
     });
+
+    test('named interactions the app plays', () {
+      final named = animations['named'] as Map<String, dynamic>;
+      final durations = animations['durations'] as Map<String, dynamic>;
+      Map<String, dynamic> entry(String name) =>
+          named[name] as Map<String, dynamic>;
+      int ms(Object? value) =>
+          value is String ? durations[value] as int : value! as int;
+      int reduced(String name) =>
+          (entry(name)['reducedMotion'] as Map<String, dynamic>)['duration']
+              as int;
+      String effect(String name) => entry(name)['effect'] as String;
+
+      expect(
+        TesskraMotion.carbonShift.inMilliseconds,
+        ms(entry('carbonIn')['duration']),
+      );
+      expect(
+        TesskraMotion.carbonShift.inMilliseconds,
+        ms(entry('carbonOut')['duration']),
+      );
+      expect(TesskraMotion.carbonReduced.inMilliseconds, reduced('carbonIn'));
+      expect(TesskraMotion.carbonReduced.inMilliseconds, reduced('carbonOut'));
+      expect(
+        effect('carbonIn'),
+        contains('last ${TesskraMotion.carbonContentIn.inMilliseconds}ms'),
+      );
+
+      expect(
+        TesskraMotion.ticketReveal.inMilliseconds,
+        ms(entry('ticketReveal')['duration']),
+      );
+      expect(
+        TesskraMotion.ticketReduced.inMilliseconds,
+        reduced('ticketReveal'),
+      );
+      expect(
+        effect('ticketReveal'),
+        contains('translate up ${TesskraMotion.ticketSealLift.toInt()}'),
+      );
+      expect(
+        effect('ticketReveal'),
+        contains('last ${TesskraMotion.ticketSecretIn.inMilliseconds}ms'),
+      );
+
+      expect(
+        TesskraMotion.winnerReveal.inMilliseconds,
+        ms(entry('winnerReveal')['duration']),
+      );
+      expect(
+        TesskraMotion.winnerReduced.inMilliseconds,
+        reduced('winnerReveal'),
+      );
+      expect(
+        effect('stampIn'),
+        contains('scale ${TesskraMotion.stampScale} to 1'),
+      );
+
+      expect(
+        TesskraMotion.listItemIn.inMilliseconds,
+        ms(entry('listItemIn')['duration']),
+      );
+      expect(
+        TesskraMotion.listItemOut.inMilliseconds,
+        ms(entry('listItemOut')['duration']),
+      );
+      expect(
+        effect('listItemIn'),
+        contains('${TesskraMotion.listItemRise.toInt()}px rise'),
+      );
+    });
   });
 
   group('typography.json', () {

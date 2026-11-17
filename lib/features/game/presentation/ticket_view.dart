@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:impostor_tn/core/design/tokens/tesskra_metrics.dart';
+import 'package:impostor_tn/core/design/tokens/tesskra_motion.dart';
 import 'package:impostor_tn/core/design/widgets/role_ticket.dart';
 import 'package:impostor_tn/core/design/widgets/screen_frame.dart';
 import 'package:impostor_tn/core/design/widgets/small_components.dart';
@@ -43,9 +44,23 @@ class TicketView extends StatefulWidget {
   State<TicketView> createState() => _TicketViewState();
 }
 
-class _TicketViewState extends State<TicketView> {
+class _TicketViewState extends State<TicketView>
+    with SingleTickerProviderStateMixin {
   Timer? _lock;
   bool _locked = false;
+
+  /// `ticketReveal`, linear 0 → 1. Settled at 1 when the view is built
+  /// already revealed.
+  late final AnimationController _reveal = AnimationController(
+    vsync: this,
+    value: widget.phase == TicketPhase.revealed ? 1 : 0,
+  );
+
+  /// Where on [_reveal] the seal is gone and the secret may be built:
+  /// 300 of 420 ms, or 0 with reduced motion (a plain 120 ms fade).
+  double _sealEnd = 0;
+  late final _sealLift = CurvedAnimation(parent: _reveal, curve: Curves.linear);
+  late final _secretIn = CurvedAnimation(parent: _reveal, curve: Curves.linear);
 
   /// Q-30 (4): "got it" moves to the pinned area when, under the ticket, it
   /// would not be fully visible. Decided after layout, once per view.
@@ -75,6 +90,25 @@ class _TicketViewState extends State<TicketView> {
   void didUpdateWidget(TicketView old) {
     super.didUpdateWidget(old);
     if (old.phase != widget.phase) _syncLock();
+    if (old.phase == TicketPhase.sealed &&
+        widget.phase == TicketPhase.revealed) {
+      final reduced = MediaQuery.disableAnimationsOf(context);
+      _sealEnd = reduced
+          ? 0
+          : 1 -
+                TesskraMotion.ticketSecretIn.inMicroseconds /
+                    TesskraMotion.ticketReveal.inMicroseconds;
+      // Reduced motion: no lift, the secret fades in over the whole 120 ms.
+      _sealLift.curve = reduced
+          ? const Threshold(0)
+          : Interval(0, _sealEnd, curve: TesskraCurves.enter);
+      _secretIn.curve = reduced ? Curves.linear : Interval(_sealEnd, 1);
+      _reveal
+        ..duration = reduced
+            ? TesskraMotion.ticketReduced
+            : TesskraMotion.ticketReveal
+        ..forward(from: 0);
+    }
   }
 
   void _syncLock() {
@@ -90,22 +124,29 @@ class _TicketViewState extends State<TicketView> {
   @override
   void dispose() {
     _lock?.cancel();
+    _sealLift.dispose();
+    _secretIn.dispose();
+    _reveal.dispose();
     super.dispose();
   }
 
+  /// The secret is built only in the revealed phase and only once the seal
+  /// has lifted off (ticketReveal; INTERACTIONS_AND_ANIMATIONS §6).
+  bool get _secretShown =>
+      widget.phase == TicketPhase.revealed && _reveal.value >= _sealEnd;
+
   RoleTicketContent _content(AppLocalizations l10n) {
     final label = l10n.revealRoleLabelSealed;
-    return switch ((widget.phase, widget.role)) {
+    return switch ((_secretShown, widget.role)) {
       // Parity layout (D-27): the role name opens the caption.
-      (TicketPhase.revealed, CivilianView(:final word, :final category)) =>
-        RevealedTicket(
-          label: label,
-          name: widget.name,
-          caption: '${l10n.roleCivilian} · ${l10n.revealWordLabel}',
-          bigText: word,
-          chip: l10n.revealCategory(category),
-        ),
-      (TicketPhase.revealed, ImpostorView(:final category)) => RevealedTicket(
+      (true, CivilianView(:final word, :final category)) => RevealedTicket(
+        label: label,
+        name: widget.name,
+        caption: '${l10n.roleCivilian} · ${l10n.revealWordLabel}',
+        bigText: word,
+        chip: l10n.revealCategory(category),
+      ),
+      (true, ImpostorView(:final category)) => RevealedTicket(
         label: label,
         name: widget.name,
         caption: '${l10n.roleImpostor} · ${l10n.revealCategoryOnly}',
@@ -141,7 +182,14 @@ class _TicketViewState extends State<TicketView> {
         children: [
           PrivacyHint(text: l10n.privacyOnlyYou),
           const SizedBox(height: TesskraLayout.sectionGap),
-          RoleTicket(content: _content(l10n)),
+          AnimatedBuilder(
+            animation: _reveal,
+            builder: (context, _) => RoleTicket(
+              content: _content(l10n),
+              sealLift: widget.phase == TicketPhase.revealed ? _sealLift : null,
+              secretIn: _secretIn,
+            ),
+          ),
           if (phase == TicketPhase.saveError) ...[
             const SizedBox(height: TesskraLayout.itemGap),
             TesskraBanner(

@@ -4,6 +4,7 @@ import 'package:impostor_tn/core/design/assets/tesskra_assets.dart';
 import 'package:impostor_tn/core/design/theme/tesskra_tokens.dart';
 import 'package:impostor_tn/core/design/tokens/tesskra_metrics.dart';
 import 'package:impostor_tn/core/design/tokens/tesskra_typography.dart';
+import 'package:impostor_tn/core/design/widgets/animated_rows.dart';
 import 'package:impostor_tn/core/design/widgets/count_pill.dart';
 import 'package:impostor_tn/core/design/widgets/screen_frame.dart';
 import 'package:impostor_tn/core/design/widgets/setup_components.dart';
@@ -85,16 +86,18 @@ class PlayersScreen extends ConsumerWidget {
               ),
               const SizedBox(height: TesskraLayout.sectionGap),
             ],
-            for (final (index, player) in players.indexed) ...[
-              PlayerRow(
+            AnimatedRows<Player>(
+              items: players,
+              idOf: (player) => player.id.value,
+              gap: TesskraLayout.itemGap,
+              builder: (context, player, index) => PlayerRow(
                 key: ValueKey(player.id),
                 position: index + 1,
                 name: player.name,
                 editLabel: l10n.actionRename,
                 onEdit: () => _edit(context, player),
               ),
-              const SizedBox(height: TesskraLayout.itemGap),
-            ],
+            ),
             if (full)
               Text(
                 l10n.playersMaxReached,
