@@ -136,6 +136,100 @@ void main() {
     expect(store.state.cooldown.oldestFirst, [first.session.word.wordId]);
   });
 
+  group('3 players, the minimum', () {
+    Future<FlowDriver> start(WidgetTester tester) async {
+      final (driver, _, _) = await startGame(tester, players: 3);
+      final session = driver.game.session;
+      expect(session.playerIds, hasLength(3));
+      expect(
+        session.playerIds.where((id) => id == session.impostor),
+        hasLength(1),
+        reason: 'exactly one Impostor',
+      );
+      await driver.revealAll();
+      await driver.tapButton(driver.l10n.actionStartVote);
+      return driver;
+    }
+
+    Finder resultsCategory(FlowDriver driver) => find.text(
+      driver.l10n.revealCategory(driver.game.session.word.category),
+    );
+
+    testWidgets('civilians win: Impostor nominated, wrong guess', (
+      tester,
+    ) async {
+      final driver = await start(tester);
+      await driver.voteAll(driver.accuse);
+      await driver.continueTally();
+      await driver.guess('not the word');
+
+      final outcome = (driver.game.session.phase as ResultPhase).outcome;
+      expect(outcome.winner, Winner.civilians);
+      expect(find.byType(ResultsView), findsOneWidget);
+      expect(resultsCategory(driver), findsOneWidget);
+    });
+
+    testWidgets('Impostor wins with a correct guess', (tester) async {
+      final driver = await start(tester);
+      await driver.voteAll(driver.accuse);
+      await driver.continueTally();
+      await driver.guess(driver.game.session.word.canonical);
+
+      final outcome = (driver.game.session.phase as ResultPhase).outcome;
+      expect(outcome.winner, Winner.impostor);
+    });
+
+    testWidgets('a civilian nominated: the Impostor wins', (tester) async {
+      final driver = await start(tester);
+      await driver.voteAll(driver.electB);
+      await driver.continueTally();
+
+      expect(
+        (driver.game.session.phase as ResultPhase).outcome,
+        isA<CivilianNominated>(),
+      );
+    });
+
+    testWidgets('1-1-1, runoff among all three, 1-1-1 again: a draw', (
+      tester,
+    ) async {
+      final driver = await start(tester);
+      await driver.voteAll(driver.cycle);
+      expect(
+        (driver.game.session.phase as RunoffPhase).runoff.candidates,
+        hasLength(3),
+      );
+      await driver.continueTally();
+      await driver.voteAll(driver.cycle);
+      await driver.continueTally();
+
+      expect(
+        (driver.game.session.phase as ResultPhase).outcome,
+        isA<RunoffDraw>(),
+      );
+      expect(find.byType(ResultsView), findsOneWidget);
+    });
+
+    testWidgets('replay: a new 3-player game with one Impostor', (
+      tester,
+    ) async {
+      final driver = await start(tester);
+      await driver.voteAll(driver.electB);
+      await driver.continueTally();
+      final first = driver.game;
+
+      await driver.tapButton(driver.l10n.actionPlayAgain);
+
+      final next = driver.game;
+      expect(next.sessionId, isNot(first.sessionId));
+      expect(next.session.playerIds, first.session.playerIds);
+      expect(next.session.playerIds, contains(next.session.impostor));
+      expect(find.byType(HandoffView), findsOneWidget);
+      await driver.revealAll();
+      expect(find.byType(DiscussionView), findsOneWidget);
+    });
+  });
+
   testWidgets('leaving from the handoff: dialog, then Home; protection off', (
     tester,
   ) async {

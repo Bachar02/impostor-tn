@@ -113,8 +113,8 @@ void main() {
       );
     });
 
-    test('three players are refused', () async {
-      final store = await storeWithRoster(players: 3);
+    test('fewer than the minimum is refused', () async {
+      final store = await storeWithRoster(players: GameRules.minPlayers - 1);
 
       expectRefused(
         await service(store).startGame(),

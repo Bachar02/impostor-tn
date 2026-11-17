@@ -16,7 +16,7 @@ Fourteen screens and two overlays cover the whole MVP. A "screen" is a distinct 
 | PUB-02 | How to play | paper | Tutorial and help (also the first-launch onboarding) |
 | PUB-03 | Settings | paper | Haptics, credits, version |
 | PUB-04 | Licences | paper | Full licence texts |
-| PUB-05 | Players | paper | Enter 4–12 names and their order |
+| PUB-05 | Players | paper | Enter 3–12 names and their order |
 | PUB-06 | Packs | paper | Choose word packs and start the game |
 | PUB-07 | Discussion | paper | Clue rules; move on to voting |
 | PUB-08 | Vote tally | paper | Outcome of a ballot: nominee, runoff or draw |
@@ -153,7 +153,7 @@ PRD §10 requires the word to be recorded "before the first private role reveal 
 ### F3 — Setup
 
 1. PUB-01 "new game" → PUB-05. A retained roster is pre-filled.
-2. PUB-05: add, rename, reorder and delete players through OVL-01. The continue button is enabled only with 4–12 valid, unique names.
+2. PUB-05: add, rename, reorder and delete players through OVL-01. The continue button is enabled only with 3–12 valid, unique names (D-41).
 3. PUB-05 → PUB-06: choose one or more packs. Only packs with approved, available words can be selected (PRD §10). Retained selections are pre-ticked if still available.
 4. PUB-06 "let's start" → C1.
    - Success → paper-to-carbon transition → PRV-01 for player 1.

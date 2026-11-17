@@ -81,7 +81,7 @@ decorative motifs.
 ### P0 --- Required for MVP
 
 -   Home screen and game setup.
--   4--12 player names and player order.
+-   3--12 player names and player order.
 -   Word/category pack selection.
 -   Exactly one Impostor per game.
 -   Private role reveal and acknowledgement flow.
@@ -116,7 +116,7 @@ decorative motifs.
 
 ## 4. Players and game setup
 
--   Minimum players: **4**.
+-   Minimum players: **3** (D-41).
 -   Maximum players: **12**.
 -   Each game has **exactly one Impostor**.
 -   Players enter names and establish a playing order.

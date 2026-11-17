@@ -55,15 +55,23 @@ class RosterController extends Notifier<SavedRoster> {
     ),
   );
 
-  Future<Checkpoint<SavedRoster>> remove(PlayerId id) => _save(
-    SavedRoster(
-      players: [
-        for (final p in state.players)
-          if (p.id != id) p,
-      ],
-      packIds: state.packIds,
-    ),
-  );
+  /// A deletion never leaves fewer than [GameRules.minPlayers] players.
+  bool get canRemove => state.players.length > GameRules.minPlayers;
+
+  Future<Checkpoint<SavedRoster>> remove(PlayerId id) {
+    if (!canRemove) {
+      return Future.value(const Refused(RefusalReason.invalidRoster));
+    }
+    return _save(
+      SavedRoster(
+        players: [
+          for (final p in state.players)
+            if (p.id != id) p,
+        ],
+        packIds: state.packIds,
+      ),
+    );
+  }
 
   Future<Checkpoint<SavedRoster>> togglePack(String packId) => _save(
     SavedRoster(

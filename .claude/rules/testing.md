@@ -6,7 +6,7 @@ Tests are part of the change, not a later phase. Strategy and rationale: `docs/a
 
 | Change | Required tests |
 |---|---|
-| Game rule or transition | Unit tests for the legal path, every rejection, and boundary player counts (4 and 12) |
+| Game rule or transition | Unit tests for the legal path, every rejection, and boundary player counts (3 and 12) |
 | Persistence or recovery | Tests against an in-memory database, including interruption before and after each commit, and corrupt/incompatible data |
 | Widget or screen | Widget tests: RTL, 320 wide, text scale 1.5, long name, disabled/error/loading states |
 | Private screen | A test that the secret is absent before reveal and after acknowledgement, and that both roles build the same widget structure |

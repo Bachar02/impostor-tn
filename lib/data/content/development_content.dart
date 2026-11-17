@@ -8,51 +8,78 @@ import 'package:impostor_tn/game/content/content_source.dart';
 
 /// DEVELOPMENT-ONLY SYNTHETIC CONTENT (D-35, ADR-0009). NOT GAME CONTENT.
 ///
-/// Placeholder words (`dev01`, `dev02`, …) so the slice can be played before
-/// real content exists (Q-13). They are not Tunisian words, have status
-/// `development`, were never reviewed and must never be published.
+/// One pack per proposed category label (D-37/D-38), so the labels can be
+/// seen and played in debug builds. The labels are `in_review` (not
+/// approved). The words are placeholders (`dev001`, `dev002`, …): not
+/// Tunisian words, status `development`, never reviewed, never published.
+/// Real word content is Q-13.
 ///
 /// Guards that keep them out of a release build:
 /// 1. The only reference is inside `if (kDebugMode)` in `lib/app`, so the
 ///    release compiler removes this file's code and strings.
 /// 2. A source guard test checks that reference.
-/// 3. A release catalog containing a `development` word is rejected whole.
+/// 3. A release catalog containing a `development` word or an unreviewed
+///    label is rejected whole.
 /// 4. The release-build check greps the compiled binary for
 ///    [developmentMarker] (`docs/DEVELOPMENT_CHECKLIST.md`).
 abstract final class DevelopmentContent {
   /// Appears in every development pack id; searched for in release binaries.
   static const developmentMarker = 'dev-synthetic';
 
+  /// The proposed category labels, in the Product Owner's order. [REVIEW]:
+  /// not approved by a Derja reviewer.
+  static const categoryLabels = [
+    'مكلة',
+    'بلايص',
+    'حيوانات',
+    'خدمة',
+    'حاجات في الدار',
+    'تنقّل',
+    'رياضة',
+    'فنّ وفرجة',
+    'تكنولوجيا',
+    'بدن الإنسان',
+    'قراية',
+    'حاجات في الشارع',
+    'عادات وتقاليد',
+  ];
+
+  static const wordsPerPack = 20;
+
   static String catalogJson() => jsonEncode({
     'format': CatalogDecoder.supportedFormat,
     'contentVersion': 1,
     'packs': [
-      _pack('a', 'DEV pack A (synthetic)', 1),
-      _pack('b', 'DEV pack B (synthetic)', 21),
+      for (final (index, label) in categoryLabels.indexed) _pack(index, label),
     ],
   });
 
-  /// One label is both the pack title and every word's category (D-38).
-  /// It is never reviewed, so `in_review`.
-  static Map<String, Object?> _pack(String letter, String label, int first) => {
-    'id': '$developmentMarker-$letter',
-    'title': label,
-    'labelStatus': 'in_review',
-    'words': [
-      for (var i = first; i < first + 20; i++)
-        {
-          'id': '$developmentMarker-w${i.toString().padLeft(2, '0')}',
-          // 2: the category text changed with D-38.
-          'version': 2,
-          'canonical': 'dev${i.toString().padLeft(2, '0')}',
-          'aliases': <String>[],
-          'category': label,
-          'language': 'und',
-          'access': 'free',
-          'status': 'development',
-        },
-    ],
-  };
+  /// Pack ids `dev-synthetic-a` … `-m` and word ids `dev-synthetic-w01` …
+  /// in sequence, so the ids of the first two packs are the ones used
+  /// before. One label is both the title and every word's category (D-38).
+  static Map<String, Object?> _pack(int index, String label) {
+    final letter = String.fromCharCode('a'.codeUnitAt(0) + index);
+    final first = index * wordsPerPack + 1;
+    return {
+      'id': '$developmentMarker-$letter',
+      'title': label,
+      'labelStatus': 'in_review',
+      'words': [
+        for (var i = first; i < first + wordsPerPack; i++)
+          {
+            'id': '$developmentMarker-w${i.toString().padLeft(2, '0')}',
+            // 3: label and placeholder text changed again.
+            'version': 3,
+            'canonical': 'dev${i.toString().padLeft(3, '0')}',
+            'aliases': <String>[],
+            'category': label,
+            'language': 'und',
+            'access': 'free',
+            'status': 'development',
+          },
+      ],
+    };
+  }
 }
 
 /// [ContentSource] for debug builds: the bundled catalog plus the

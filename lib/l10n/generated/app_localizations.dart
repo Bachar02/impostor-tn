@@ -532,10 +532,10 @@ abstract class AppLocalizations {
   /// **'مازال ما فمّا حتى لعّاب'**
   String get playersEmpty;
 
-  /// [REVIEW] Add 4 players to start. Glossary key players.empty_hint (ARABIC_LOCALIZATION.md §5).
+  /// [REVIEW] Add 3 players to start. Glossary key players.empty_hint (ARABIC_LOCALIZATION.md §5).
   ///
   /// In ar, this message translates to:
-  /// **'زيد 4 لعّابة باش تبداو'**
+  /// **'زيد 3 لعّابة باش تبداو'**
   String get playersEmptyHint;
 
   /// [REVIEW] Name already used. Glossary key error.name_duplicate (ARABIC_LOCALIZATION.md §5).
@@ -550,10 +550,10 @@ abstract class AppLocalizations {
   /// **'اكتب اسم'**
   String get errorNameEmpty;
 
-  /// [REVIEW] You need at least 4 players. Glossary key error.min_players (ARABIC_LOCALIZATION.md §5).
+  /// [REVIEW] You need at least 3 players. Glossary key error.min_players (ARABIC_LOCALIZATION.md §5).
   ///
   /// In ar, this message translates to:
-  /// **'لازمكم 4 لعّابة على الأقل'**
+  /// **'لازمكم 3 لعّابة على الأقل'**
   String get errorMinPlayers;
 
   /// [REVIEW] Selected. Glossary key pack.selected (ARABIC_LOCALIZATION.md §5).
@@ -736,11 +736,29 @@ abstract class AppLocalizations {
   /// **'صار مشكل. عاود مرّة أخرى.'**
   String get stateError;
 
-  /// [REVIEW] 4–12 players · one phone · no internet. Glossary key home.facts (ARABIC_LOCALIZATION.md §5).
+  /// [REVIEW] 3–12 players · one phone · no internet. Glossary key home.facts (ARABIC_LOCALIZATION.md §5).
   ///
   /// In ar, this message translates to:
-  /// **'4–12 لعّابة · تليفون واحد · من غير أنترنات'**
+  /// **'3–12 لعّابة · تليفون واحد · من غير أنترنات'**
   String get homeFacts;
+
+  /// [REVIEW] Delete {name}? Confirmation before removing a player from the list.
+  ///
+  /// In ar, this message translates to:
+  /// **'تفسّخ {name}؟'**
+  String dialogDeletePlayerTitle(String name);
+
+  /// [REVIEW] The name is removed from the list.
+  ///
+  /// In ar, this message translates to:
+  /// **'الاسم يتنحّى من الليستة.'**
+  String get dialogDeletePlayerBody;
+
+  /// [REVIEW] Keep (the player). Cancels the deletion.
+  ///
+  /// In ar, this message translates to:
+  /// **'خلّيه'**
+  String get dialogDeletePlayerCancel;
 }
 
 class _AppLocalizationsDelegate

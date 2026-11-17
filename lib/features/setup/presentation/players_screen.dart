@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:impostor_tn/core/design/assets/tesskra_assets.dart';
+import 'package:impostor_tn/core/design/haptics.dart';
 import 'package:impostor_tn/core/design/theme/tesskra_tokens.dart';
 import 'package:impostor_tn/core/design/tokens/tesskra_metrics.dart';
 import 'package:impostor_tn/core/design/tokens/tesskra_typography.dart';
@@ -14,28 +15,51 @@ import 'package:impostor_tn/core/design/widgets/tesskra_banner.dart';
 import 'package:impostor_tn/core/design/widgets/tesskra_button.dart';
 import 'package:impostor_tn/core/design/widgets/tesskra_icon_button.dart';
 import 'package:impostor_tn/core/design/widgets/tesskra_sheet.dart';
+import 'package:impostor_tn/features/game/application/checkpoint.dart';
 import 'package:impostor_tn/features/setup/application/roster_controller.dart';
+import 'package:impostor_tn/features/setup/presentation/delete_player_dialog.dart';
 import 'package:impostor_tn/features/setup/presentation/edit_player_sheet.dart';
 import 'package:impostor_tn/game/game_rules.dart';
 import 'package:impostor_tn/game/player.dart';
 import 'package:impostor_tn/l10n/generated/app_localizations.dart';
 
-/// PUB-05 Players: 4–12 names in order of entry (Q-17 excluded).
-class PlayersScreen extends ConsumerWidget {
+/// PUB-05 Players: 3–12 names in order of entry (Q-17 excluded). Each row
+/// has edit and delete; a deletion is confirmed first and never leaves
+/// fewer than [GameRules.minPlayers] players.
+class PlayersScreen extends ConsumerStatefulWidget {
   const PlayersScreen({super.key, required this.onContinue});
 
   final VoidCallback onContinue;
+
+  @override
+  ConsumerState<PlayersScreen> createState() => _PlayersScreenState();
+}
+
+class _PlayersScreenState extends ConsumerState<PlayersScreen> {
+  bool _deleteFailed = false;
 
   void _edit(BuildContext context, [Player? player]) => showTesskraSheet<void>(
     context: context,
     builder: (_) => EditPlayerSheet(player: player),
   );
 
+  Future<void> _delete(Player player) async {
+    if (!await showDeletePlayerDialog(context, player.name)) return;
+    final result = await ref
+        .read(rosterControllerProvider.notifier)
+        .remove(player.id);
+    if (!mounted) return;
+    final saved = result is Saved<Object?>;
+    if (saved) Haptics.light();
+    setState(() => _deleteFailed = !saved);
+  }
+
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     final c = TesskraTokens.of(context).colors;
     final players = ref.watch(rosterControllerProvider).players;
+    final canRemove = players.length > GameRules.minPlayers;
     final count = players.length;
     final valid =
         count >= GameRules.minPlayers && count <= GameRules.maxPlayers;
@@ -70,6 +94,13 @@ class PlayersScreen extends ConsumerWidget {
               ],
             ),
             const SizedBox(height: TesskraLayout.itemGap),
+            if (_deleteFailed) ...[
+              TesskraBanner(
+                message: l10n.stateError,
+                kind: TesskraBannerKind.error,
+              ),
+              const SizedBox(height: TesskraLayout.itemGap),
+            ],
             if (count > 0 && count < GameRules.minPlayers) ...[
               TesskraBanner(
                 message: l10n.errorMinPlayers,
@@ -96,6 +127,8 @@ class PlayersScreen extends ConsumerWidget {
                 name: player.name,
                 editLabel: l10n.actionRename,
                 onEdit: () => _edit(context, player),
+                deleteLabel: l10n.actionDeletePlayer,
+                onDelete: canRemove ? () => _delete(player) : null,
               ),
             ),
             if (full)
@@ -112,7 +145,7 @@ class PlayersScreen extends ConsumerWidget {
         actions: [
           TesskraButton(
             label: l10n.actionContinue,
-            onPressed: valid ? onContinue : null,
+            onPressed: valid ? widget.onContinue : null,
           ),
         ],
       ),

@@ -123,6 +123,13 @@ final class FlowDriver {
     return others.indexOf(voter).isEven ? a : b;
   }
 
+  /// Everyone votes the next player among [candidates] in playing order,
+  /// wrapping: 1-1-1-… (the only tie possible at 3 players).
+  PlayerId cycle(PlayerId voter) {
+    final ids = game.session.playerIds.toList();
+    return ids[(ids.indexOf(voter) + 1) % ids.length];
+  }
+
   /// Civilian B is nominated.
   PlayerId electB(PlayerId voter) {
     final [a, b, ...] = civilians;

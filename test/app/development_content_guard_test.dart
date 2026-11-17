@@ -3,10 +3,13 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:impostor_tn/data/content/catalog_decoder.dart';
 import 'package:impostor_tn/data/content/development_content.dart';
+import 'package:impostor_tn/game/content/content_catalog.dart';
 import 'package:impostor_tn/game/content/content_eligibility.dart';
 import 'package:impostor_tn/game/content/content_issue.dart';
 import 'package:impostor_tn/game/content/content_source.dart';
 import 'package:impostor_tn/game/content/word_entry.dart';
+
+import '../support/proposed_category_labels.dart';
 
 /// D-35: development words can never reach a release build.
 void main() {
@@ -48,7 +51,13 @@ void main() {
     ) as DecodedCatalog).catalog;
 
     final words = [for (final p in catalog.packs) ...p.words];
-    expect(words, hasLength(40));
+    expect(
+      words,
+      hasLength(
+        DevelopmentContent.categoryLabels.length *
+            DevelopmentContent.wordsPerPack,
+      ),
+    );
     for (final pack in catalog.packs) {
       expect(pack.id, contains(DevelopmentContent.developmentMarker));
     }
@@ -56,6 +65,41 @@ void main() {
       expect(word.status, EditorialStatus.development);
       expect(word.reviews, isNull);
       expect(word.id, contains(DevelopmentContent.developmentMarker));
+    }
+  });
+
+  test('the debug packs are the 13 proposed labels, in order, unreviewed', () {
+    final catalog = (CatalogDecoder.decode(
+      DevelopmentContent.catalogJson(),
+      channel: ContentChannel.development,
+    ) as DecodedCatalog).catalog;
+
+    expect(catalog.packs.map((p) => p.title), proposedLabels);
+    for (final pack in catalog.packs) {
+      expect(pack.labelStatus, LabelStatus.inReview);
+      expect(pack.labelReview, isNull);
+      expect(pack.words, isNotEmpty, reason: 'no empty playable pack');
+      expect(pack.words.map((w) => w.category).toSet(), {pack.title});
+      expect(pack.title, isNot(contains('DEV')), reason: 'no DEV names');
+    }
+    // The ids used before stay where they were.
+    expect(catalog.packs.take(2).map((p) => p.id), [
+      'dev-synthetic-a',
+      'dev-synthetic-b',
+    ]);
+    expect(catalog.packs.first.words.first.id, 'dev-synthetic-w01');
+  });
+
+  test('every development word is visibly a placeholder', () {
+    final catalog = (CatalogDecoder.decode(
+      DevelopmentContent.catalogJson(),
+      channel: ContentChannel.development,
+    ) as DecodedCatalog).catalog;
+
+    for (final pack in catalog.packs) {
+      for (final word in pack.words) {
+        expect(word.canonical, matches(RegExp(r'^dev\d{3}$')));
+      }
     }
   });
 

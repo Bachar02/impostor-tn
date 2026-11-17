@@ -93,7 +93,7 @@ Named interactions, durations and haptics follow `INTERACTIONS_AND_ANIMATIONS.md
 2. Information banner, only in the "restore failed" state.
 3. Hero: `logo/logo_ticket_lockup.svg`, centred, full content width up to its natural 320, aspect ratio 320 : 190. The file already contains its ticket outline, notches and hard shadow; no extra shadow is added.
 4. `home.tagline` in `displayM`, centred, `public.textPrimary`.
-5. `home.facts` in `bodyM`, centred, `public.textSecondary`; `4–12` is an isolated LTR run.
+5. `home.facts` in `bodyM`, centred, `public.textSecondary`; `3–12` is an isolated LTR run.
 6. Flexible space.
 7. Bottom action area: primary `TesskraButton` `home.new_game`; below it secondary `TesskraButton` `home.how_to`.
 
@@ -188,7 +188,7 @@ Named interactions, durations and haptics follow `INTERACTIONS_AND_ANIMATIONS.md
 
 ### PUB-05 Players
 
-**Purpose.** Enter 4–12 player names and their order (PRD §4).
+**Purpose.** Enter 3–12 player names and their order (PRD §4, D-41). Each player row has an edit (`ic_pencil`) and a delete (`ic_trash`) icon button side by side; delete asks for confirmation and is disabled when it would leave fewer than 3 players (D-41).
 
 **Entry.** PUB-01 "new game"; PUB-09 "change players or packs"; back from PUB-06. **Exit.** PUB-06; back to PUB-01.
 

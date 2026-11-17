@@ -312,9 +312,9 @@
   "@playersEmpty": {
     "description": "[REVIEW] No players yet. Glossary key players.empty (ARABIC_LOCALIZATION.md §5)."
   },
-  "playersEmptyHint": "زيد 4 لعّابة باش تبداو",
+  "playersEmptyHint": "زيد 3 لعّابة باش تبداو",
   "@playersEmptyHint": {
-    "description": "[REVIEW] Add 4 players to start. Glossary key players.empty_hint (ARABIC_LOCALIZATION.md §5)."
+    "description": "[REVIEW] Add 3 players to start. Glossary key players.empty_hint (ARABIC_LOCALIZATION.md §5)."
   },
   "errorNameDuplicate": "الاسم هذا موجود",
   "@errorNameDuplicate": {
@@ -324,9 +324,9 @@
   "@errorNameEmpty": {
     "description": "[REVIEW] Enter a name. Glossary key error.name_empty (ARABIC_LOCALIZATION.md §5)."
   },
-  "errorMinPlayers": "لازمكم 4 لعّابة على الأقل",
+  "errorMinPlayers": "لازمكم 3 لعّابة على الأقل",
   "@errorMinPlayers": {
-    "description": "[REVIEW] You need at least 4 players. Glossary key error.min_players (ARABIC_LOCALIZATION.md §5)."
+    "description": "[REVIEW] You need at least 3 players. Glossary key error.min_players (ARABIC_LOCALIZATION.md §5)."
   },
   "packSelected": "مختار",
   "@packSelected": {
@@ -463,8 +463,25 @@
   "@stateError": {
     "description": "[REVIEW] Something went wrong. Try again.. Glossary key state.error (ARABIC_LOCALIZATION.md §5)."
   },
-  "homeFacts": "4–12 لعّابة · تليفون واحد · من غير أنترنات",
+  "homeFacts": "3–12 لعّابة · تليفون واحد · من غير أنترنات",
   "@homeFacts": {
-    "description": "[REVIEW] 4–12 players · one phone · no internet. Glossary key home.facts (ARABIC_LOCALIZATION.md §5)."
+    "description": "[REVIEW] 3–12 players · one phone · no internet. Glossary key home.facts (ARABIC_LOCALIZATION.md §5)."
+  },
+  "dialogDeletePlayerTitle": "تفسّخ {name}؟",
+  "@dialogDeletePlayerTitle": {
+    "description": "[REVIEW] Delete {name}? Confirmation before removing a player from the list.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dialogDeletePlayerBody": "الاسم يتنحّى من الليستة.",
+  "@dialogDeletePlayerBody": {
+    "description": "[REVIEW] The name is removed from the list."
+  },
+  "dialogDeletePlayerCancel": "خلّيه",
+  "@dialogDeletePlayerCancel": {
+    "description": "[REVIEW] Keep (the player). Cancels the deletion."
   }
 }

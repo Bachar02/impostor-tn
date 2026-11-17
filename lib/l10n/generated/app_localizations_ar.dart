@@ -245,7 +245,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get playersEmpty => 'مازال ما فمّا حتى لعّاب';
 
   @override
-  String get playersEmptyHint => 'زيد 4 لعّابة باش تبداو';
+  String get playersEmptyHint => 'زيد 3 لعّابة باش تبداو';
 
   @override
   String get errorNameDuplicate => 'الاسم هذا موجود';
@@ -254,7 +254,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get errorNameEmpty => 'اكتب اسم';
 
   @override
-  String get errorMinPlayers => 'لازمكم 4 لعّابة على الأقل';
+  String get errorMinPlayers => 'لازمكم 3 لعّابة على الأقل';
 
   @override
   String get packSelected => 'مختار';
@@ -353,5 +353,16 @@ class AppLocalizationsAr extends AppLocalizations {
   String get stateError => 'صار مشكل. عاود مرّة أخرى.';
 
   @override
-  String get homeFacts => '4–12 لعّابة · تليفون واحد · من غير أنترنات';
+  String get homeFacts => '3–12 لعّابة · تليفون واحد · من غير أنترنات';
+
+  @override
+  String dialogDeletePlayerTitle(String name) {
+    return 'تفسّخ $name؟';
+  }
+
+  @override
+  String get dialogDeletePlayerBody => 'الاسم يتنحّى من الليستة.';
+
+  @override
+  String get dialogDeletePlayerCancel => 'خلّيه';
 }

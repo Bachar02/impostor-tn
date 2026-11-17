@@ -35,7 +35,9 @@ class TesskraIconButton extends StatelessWidget {
       excludeSemantics: true,
       child: GestureDetector(
         behavior: HitTestBehavior.opaque,
-        onTap: onPressed,
+        // Disabled still claims the tap, so it never falls through to a
+        // tappable parent (a player row would open its edit sheet).
+        onTap: onPressed ?? () {},
         child: Container(
           width: TesskraSizes.iconButton,
           height: TesskraSizes.iconButton,

@@ -1,7 +1,7 @@
 /// Business limits from PRD §4, §10 and D-15. Defined once; never repeat
 /// these literals.
 abstract final class GameRules {
-  static const minPlayers = 4;
+  static const minPlayers = 3;
   static const maxPlayers = 12;
 
   /// The 30 most recently used distinct word IDs are excluded (PRD §10).

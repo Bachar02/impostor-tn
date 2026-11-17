@@ -1,6 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:impostor_tn/game/game_engine.dart';
 import 'package:impostor_tn/game/game_phase.dart';
+import 'package:impostor_tn/game/game_rules.dart';
 import 'package:impostor_tn/game/game_session.dart';
 import 'package:impostor_tn/game/player.dart';
 import 'package:impostor_tn/game/secret_word.dart';
@@ -114,7 +115,7 @@ void main() {
     for (final (label, recorded, reason) in [
       (
         'too few players',
-        copy(reveal, players: roster(3)),
+        copy(reveal, players: roster(GameRules.minPlayers - 1)),
         SessionCorruption.invalidRoster,
       ),
       (

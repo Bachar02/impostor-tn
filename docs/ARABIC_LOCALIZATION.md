@@ -134,7 +134,7 @@ Simple, recognizable category labels proposed by the Product Owner (2026-11-17).
 
 | # | Label | Gloss | Set | Status |
 |---|---|---|---|---|
-| 0 | ماكلة | Food | Initial | Review |
+| 0 | مكلة | Food | Initial | Review |
 | 1 | بلايص | Places | Initial | Review |
 | 2 | حيوانات | Animals | Initial | Review |
 | 3 | خدمة | Work, jobs | Initial | Review |

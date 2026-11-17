@@ -54,6 +54,62 @@ void main() {
       expect(ballot.tally, {pid(0): 1, pid(1): 3, pid(2): 0, pid(3): 0});
     });
 
+    // Three players, the minimum: every first-ballot shape. With three
+    // voters and no self-vote, a tie can only be 1-1-1.
+    group('at 3 players', () {
+      for (final (label, targets, impostor, check) in [
+        (
+          'Impostor nominated → final guess',
+          [1, 0, 0],
+          0,
+          (GameSession s) => expect(s.phase, isA<FinalGuessPhase>()),
+        ),
+        (
+          'civilian nominated → Impostor wins',
+          [2, 2, 1],
+          0,
+          (GameSession s) => expect(
+            (s.phase as ResultPhase).outcome,
+            isA<CivilianNominated>(),
+          ),
+        ),
+        (
+          'Impostor not first in order, nominated',
+          [2, 2, 0],
+          2,
+          (GameSession s) =>
+              expect((s.phase as FinalGuessPhase).nominee, pid(2)),
+        ),
+        (
+          '1-1-1 → runoff among all three',
+          [1, 2, 0],
+          0,
+          (GameSession s) => expect(
+            (s.phase as RunoffPhase).runoff.candidates,
+            [pid(0), pid(1), pid(2)],
+          ),
+        ),
+      ]) {
+        test(label, () {
+          check(
+            castAll(votingSession(players: 3, impostor: impostor), targets),
+          );
+        });
+      }
+
+      test('runoff 1-1-1 again is a draw without a final guess', () {
+        final runoff = castAll(votingSession(players: 3), [1, 2, 0]);
+        final phase = castAll(runoff, [2, 0, 1]).phase as ResultPhase;
+        expect(phase.outcome, isA<RunoffDraw>());
+        expect(phase.ballots, hasLength(2));
+      });
+
+      test('runoff with a unique Impostor leader → final guess', () {
+        final runoff = castAll(votingSession(players: 3), [1, 2, 0]);
+        expect(castAll(runoff, [1, 0, 0]).phase, isA<FinalGuessPhase>());
+      });
+    });
+
     test('works at 12 players', () {
       final session = castAll(votingSession(players: 12), [
         for (var voter = 0; voter < 12; voter++) voter == 11 ? 0 : 11,

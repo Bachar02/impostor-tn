@@ -12,6 +12,7 @@ import 'package:impostor_tn/core/design/widgets/tesskra_text_field.dart';
 import 'package:impostor_tn/features/game/application/checkpoint.dart';
 import 'package:impostor_tn/features/setup/application/player_names.dart';
 import 'package:impostor_tn/features/setup/application/roster_controller.dart';
+import 'package:impostor_tn/features/setup/presentation/delete_player_dialog.dart';
 import 'package:impostor_tn/game/game_rules.dart';
 import 'package:impostor_tn/game/player.dart';
 import 'package:impostor_tn/l10n/generated/app_localizations.dart';
@@ -94,10 +95,13 @@ class _EditPlayerSheetState extends ConsumerState<EditPlayerSheet> {
   }
 
   Future<void> _delete() async {
+    final player = widget.player!;
+    if (!await showDeletePlayerDialog(context, player.name)) return;
+    if (!mounted) return;
     setState(() => _saving = true);
     final result = await ref
         .read(rosterControllerProvider.notifier)
-        .remove(widget.player!.id);
+        .remove(player.id);
     if (!mounted) return;
     setState(() => _saving = false);
     if (result is Saved<Object?>) {
@@ -153,7 +157,13 @@ class _EditPlayerSheetState extends ConsumerState<EditPlayerSheet> {
             label: l10n.actionDeletePlayer,
             icon: TesskraIcons.trash,
             variant: TesskraButtonVariant.destructive,
-            onPressed: _saving ? null : _delete,
+            // Never below the minimum, as on the row's delete button.
+            onPressed:
+                _saving ||
+                    ref.watch(rosterControllerProvider).players.length <=
+                        GameRules.minPlayers
+                ? null
+                : _delete,
           ),
         ],
       ],

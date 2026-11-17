@@ -6,7 +6,7 @@ library;
 
 /// The eight initial labels, in the Product Owner's order.
 const proposedInitialLabels = <String>[
-  'ماكلة',
+  'مكلة',
   'بلايص',
   'حيوانات',
   'خدمة',

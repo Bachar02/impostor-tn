@@ -46,12 +46,18 @@ class PlayerRow extends StatelessWidget {
     required this.name,
     required this.editLabel,
     required this.onEdit,
+    required this.deleteLabel,
+    required this.onDelete,
   });
 
   final int position;
   final String name;
   final String editLabel;
   final VoidCallback onEdit;
+  final String deleteLabel;
+
+  /// Null disables the delete button (no deletion below the minimum).
+  final VoidCallback? onDelete;
 
   @override
   Widget build(BuildContext context) {
@@ -86,6 +92,12 @@ class PlayerRow extends StatelessWidget {
               icon: TesskraIcons.pencil,
               semanticLabel: editLabel,
               onPressed: onEdit,
+              ghost: true,
+            ),
+            TesskraIconButton(
+              icon: TesskraIcons.trash,
+              semanticLabel: deleteLabel,
+              onPressed: onDelete,
               ghost: true,
             ),
           ],

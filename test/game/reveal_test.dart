@@ -2,6 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:impostor_tn/game/game_engine.dart';
 import 'package:impostor_tn/game/game_phase.dart';
 import 'package:impostor_tn/game/game_rejection.dart';
+import 'package:impostor_tn/game/game_rules.dart';
 import 'package:impostor_tn/game/player.dart';
 import 'package:impostor_tn/game/role_view.dart';
 
@@ -49,7 +50,7 @@ void main() {
 
   group('acknowledge', () {
     test('the last acknowledgement starts the discussion', () {
-      for (final count in [4, 12]) {
+      for (final count in [GameRules.minPlayers, GameRules.maxPlayers]) {
         final session = acknowledgeAll(revealSession(players: count));
         expect(session.phase, isA<DiscussionPhase>());
         expect(GameEngine.pendingPlayer(session), isNull);

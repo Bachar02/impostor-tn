@@ -261,6 +261,35 @@ void main() {
   });
 
   group('TesskraDialog', () {
+    testWidgets('text never gets the no-Material debug underline', (
+      tester,
+    ) async {
+      await pumpRtl(
+        tester,
+        Builder(
+          builder: (context) => TextButton(
+            onPressed: () => showTesskraDialog<void>(
+              context: context,
+              builder: (_) =>
+                  const TesskraDialog(title: 'عنوان', body: 'نص', actions: []),
+            ),
+            child: const Text('open'),
+          ),
+        ),
+      );
+      await tester.tap(find.text('open'));
+      await tester.pumpAndSettle();
+
+      for (final text in ['عنوان', 'نص']) {
+        final style = DefaultTextStyle.of(tester.element(find.text(text)));
+        expect(style.style.decoration, isNot(TextDecoration.underline));
+        expect(
+          find.ancestor(of: find.text(text), matching: find.byType(Material)),
+          findsWidgets,
+        );
+      }
+    });
+
     testWidgets('stacks actions in order, the safe one last', (tester) async {
       await pumpRtl(
         tester,

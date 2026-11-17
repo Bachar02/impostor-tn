@@ -11,7 +11,7 @@ Applies to everything that touches game rules, session state or private screens.
 
 ## Invariants that must hold after every transition and every restart
 
-- 4–12 players; exactly one Impostor; assignment and word never change within a session.
+- 3–12 players (D-41); exactly one Impostor; assignment and word never change within a session.
 - The Impostor's view contains the category only: no word, alias or hint.
 - A player advances past reveal only after their acknowledgement is persisted.
 - One vote per player per ballot; no self-vote; no change after submission (D-02).

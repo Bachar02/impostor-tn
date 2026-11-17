@@ -107,7 +107,12 @@ Future<T?> showTesskraDialog<T>({
     // The dialog keeps the theme of the screen it opens over.
     pageBuilder: (dialogContext, _, _) => Theme(
       data: resolvedTheme,
-      child: Builder(builder: builder),
+      // A route of its own has no Material ancestor: without one, text falls
+      // back to the debug style (yellow double underline).
+      child: Material(
+        type: MaterialType.transparency,
+        child: Builder(builder: builder),
+      ),
     ),
   );
 }
