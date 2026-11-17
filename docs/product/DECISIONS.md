@@ -44,6 +44,9 @@ Rule for engineers: an item under "Open questions" is **not** decided. Do not im
 | D-34 | 2026-11-17 | Long secret words (Q-29) | Q-29 stays provisional. Do not reduce the minimum type size or compromise accessibility to fit long words. | §13 |
 | D-35 | 2026-11-17 | Development content (Q-13) | Q-13 does not block screens. Development-only synthetic fixtures may be used, with strict safeguards that keep them out of release builds. They are not content and are never reviewed or published. | §10 |
 | D-36 | 2026-11-17 | Milestone E | Build the full first playable slice (Home → … → Replay, leave dialog, resume gate, recovery) on the existing engine and persistence; whole-game screenshot protection at the approved boundaries; then run on the `Pixel_XL_API_36` emulator. | — |
+| D-37 | 2026-11-17 | Category labels | Pack and category names are simple, recognizable Derja category labels, not creative phrases. Eight initial labels and five later candidates are proposed as display names only (`ARABIC_LOCALIZATION.md` §5.1), all `[REVIEW]`. No pack, word or ID is created for them and no empty pack is published; they are used when real content arrives (Q-13). | §10 |
+| D-38 | 2026-11-17 | One category per pack (Q-31) | A pack is exactly one word category: every word in a pack has the same category, and the pack title and that category are the same Derja label. The category is shown on both role tickets and on results (unchanged). Stable IDs and the architecture are kept; the catalog validator rejects a word whose category differs from its pack title. Every pack label has an explicit review status (`labelStatus`, with a `labelReview` reference when approved); an unreviewed label must not appear in release content, so it rejects a release catalog. No words invented, no empty pack published. | §10 |
+| D-39 | 2026-11-17 | Category on the role ticket (Q-32) | Exactly two lines are reserved for the category label on both the Civilian and Impostor tickets, so both keep identical dimensions; no font-size reduction, no role-dependent layout; RTL and Tesskra typography kept. Test all 13 proposed labels at 360 and 320 wide with text scale 1.5, with ticket-height parity for every label. Correction to the Q-32 measurement: the taller ticket was the **Civilian's**, because its chip `reveal.category` ("الصنف: …") wrapped; the Impostor's big text had not wrapped. | §5, §13 |
 
 ## Open questions
 
@@ -85,4 +88,4 @@ Each row gives the option the draft documents use. None is approved.
 
 ### Resolved
 
-Q-05 → D-32 (slice 1), Q-01 → D-15, Q-02 → D-16, Q-03 → D-17, Q-04 → D-18, Q-07 → D-19, Q-10 → D-20, Q-16 → D-21, Q-18 → D-22, Q-19 → D-23, Q-20 → D-24, Q-22 → D-25, Q-24 → D-26, Q-25 → D-27, Q-26 → D-30, Q-30 → D-28, S-1 → D-29 (all 2026-11-17).
+Q-05 → D-32 (slice 1), Q-01 → D-15, Q-02 → D-16, Q-03 → D-17, Q-04 → D-18, Q-07 → D-19, Q-10 → D-20, Q-16 → D-21, Q-18 → D-22, Q-19 → D-23, Q-20 → D-24, Q-22 → D-25, Q-24 → D-26, Q-25 → D-27, Q-26 → D-30, Q-30 → D-28, S-1 → D-29, Q-31 → D-38, Q-32 → D-39 (all 2026-11-17).

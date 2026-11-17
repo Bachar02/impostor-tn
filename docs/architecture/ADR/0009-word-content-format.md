@@ -19,14 +19,16 @@ PRD §10 requires each word to carry a stable ID, canonical word, explicit alias
   "packs": [
     {
       "id": "pack-id",
-      "title": "<pack title as shown on the card>",
+      "title": "<category label: pack card title and every word's category>",
+      "labelStatus": "in_review | approved",
+      "labelReview": "<label reviewer ref, required when approved>",
       "words": [
         {
           "id": "word-id",
           "version": 1,
           "canonical": "<the word>",
           "aliases": ["<approved variant>"],
-          "category": "<category shown to every player>",
+          "category": "<equal to the pack title (D-38)>",
           "difficulty": "easy | medium | hard",
           "language": "aeb-Arab",
           "region": "<optional cultural context>",
@@ -46,6 +48,8 @@ PRD §10 requires each word to carry a stable ID, canonical word, explicit alias
 - `difficulty`, `region`, `aliases` and, except for published words, `reviews` are optional.
 - `access`: only `free` exists (D-04).
 - `reviews`: opaque references the Product Owner keeps for the two required human reviews (PRD §10). They are not names and nothing in the app produces them.
+- **One category per pack (D-38, 2026-11-17).** A pack is exactly one category: `title` is the category label, and every word's `category` must equal it. The field stays on each word (the engine and saved sessions read it there), so no model or snapshot changed.
+- `labelStatus` (required) and `labelReview`: the explicit review state of that label. `labelReview` is an opaque reference like `reviews`, required when `approved`. The format number stayed 1: no catalog with packs had been delivered, and the shipped file has none.
 
 ### Validation (`CatalogDecoder`, `CatalogValidation`)
 
@@ -56,6 +60,9 @@ Strict, and the file is accepted or rejected **as a whole**: a bundled file is e
 - Text (canonical, aliases, category, title, region, reviewer refs): not empty; no leading, trailing or repeated spaces; no control characters, no whitespace other than U+0020, no invisible formatting marks (zero-width and direction marks, Arabic letter mark, soft hyphen, BOM). This does not change matching (D-01, D-30); it keeps out text that a player could not type.
 - Aliases: none equal to its own canonical word, none repeated; no canonical word or alias equal to a canonical word or alias of another word anywhere in the catalog. Comparison uses the D-01 comparison form, so Latin case differences are distinct (D-16).
 - A `published` word needs both reviews, by two different references.
+- Every word's `category` equals its pack's `title`, compared exactly (no folding); a mismatch is reported at the word's `category` with the pack title as related path (`categoryDiffersFromPack`).
+- An `approved` label needs `labelReview` (`approvedLabelWithoutReview`), in both channels.
+- A label that is not `approved` rejects a **release** catalog as a whole (`unreviewedLabelInRelease`), even in a pack without playable words, because the packs screen shows every pack. Debug builds accept it.
 - Issues are reported as JSON paths (`packs[0].words[3].aliases[1]`) and a kind. They never contain content text or IDs, since IDs may be mnemonic.
 
 ### Eligibility (`ContentEligibility`)
@@ -72,11 +79,11 @@ The channel comes from the composition root: `ContentChannel.development` only w
 
 Three independent guards:
 
-1. A release-channel decode rejects any catalog that contains a `development` word, so such a build has no playable content at all rather than unreviewed content.
+1. A release-channel decode rejects any catalog that contains a `development` word or an unreviewed pack label, so such a build has no playable content at all rather than unreviewed content. The development packs carry `in_review` labels, so they trip both checks.
 2. `test/data/content/bundled_content_source_test.dart` fails if the bundled file contains a `development` word or if any other content file is declared in `pubspec.yaml`.
 3. Synthetic fixtures live only under `test/`, are built in Dart, are labelled as such, and are never declared as assets.
 
-**Development-only synthetic words (D-35, 2026-11-17).** Placeholder words `dev01`…`dev40` in two packs (`dev-synthetic-a/b`), status `development`, no reviews, live in `lib/data/content/development_content.dart` as Dart data, not as an asset. The only reference is inside `if (kDebugMode)` in `lib/app/app_providers.dart`, so the release compiler drops them. Checked on 2026-11-17: a release x86_64 build's `libapp.so` does not contain `dev-synthetic` or `DEV pack A`, while it does contain the channel name and the catalog asset path (positive controls); the debug kernel does contain the marker. `test/app/development_content_guard_test.dart` enforces the single guarded reference.
+**Development-only synthetic words (D-35, 2026-11-17).** Placeholder words `dev01`…`dev40` in two packs (`dev-synthetic-a/b`), status `development`, no reviews, label `in_review` used as both title and category (D-38; word version raised to 2 when the category text changed), live in `lib/data/content/development_content.dart` as Dart data, not as an asset. The only reference is inside `if (kDebugMode)` in `lib/app/app_providers.dart`, so the release compiler drops them. Checked on 2026-11-17: a release x86_64 build's `libapp.so` does not contain `dev-synthetic` or `DEV pack A`, while it does contain the channel name and the catalog asset path (positive controls); the debug kernel does contain the marker. `test/app/development_content_guard_test.dart` enforces the single guarded reference.
 
 Before that ruling: no development word list existed (Q-13). If the Product Owner supplies one, it is added with status `development`; guards 1 and 2 then keep it out of a release, and guard 2 must be satisfied before a release is cut (it will fail while the words are in the file, which is intended).
 

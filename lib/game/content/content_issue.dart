@@ -38,6 +38,17 @@ enum ContentIssueKind {
 
   /// A release catalog must not contain development content.
   developmentContentInRelease,
+
+  /// A word's category differs from its pack's title: a pack is exactly one
+  /// category (D-38). The related path is the pack title.
+  categoryDiffersFromPack,
+
+  /// A pack label marked approved without its review reference (D-38).
+  approvedLabelWithoutReview,
+
+  /// A release catalog must not contain a pack label that is not approved
+  /// (D-38).
+  unreviewedLabelInRelease,
 }
 
 /// One problem, located by a JSON path such as `packs[0].words[3].aliases[1]`.

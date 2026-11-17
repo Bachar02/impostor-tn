@@ -36,17 +36,22 @@ abstract final class CatalogValidation {
         packIds[pack.id] = '$packPath.id';
       }
       _checkText(issues, '$packPath.title', pack.title);
+      _checkLabel(issues, packPath, pack, channel);
 
       for (var w = 0; w < pack.words.length; w++) {
         final wordPath = '$packPath.words[$w]';
-        _validateWord(
-          issues,
-          pack.words[w],
-          wordPath,
-          channel,
-          wordIds,
-          answers,
-        );
+        final word = pack.words[w];
+        _validateWord(issues, word, wordPath, channel, wordIds, answers);
+        // Exact comparison: hygiene is checked on both texts already.
+        if (word.category != pack.title) {
+          issues.add(
+            ContentIssue(
+              '$wordPath.category',
+              ContentIssueKind.categoryDiffersFromPack,
+              relatedPath: '$packPath.title',
+            ),
+          );
+        }
       }
     }
     return List.unmodifiable(issues);
@@ -153,6 +158,40 @@ abstract final class CatalogValidation {
       issues.add(
         ContentIssue('$path.reviews', ContentIssueKind.reviewsNotDistinct),
       );
+    }
+  }
+
+  /// D-38: the label carries an explicit review status, and only approved
+  /// labels may ship. An unreviewed label rejects a release catalog as a
+  /// whole, like development content.
+  static void _checkLabel(
+    List<ContentIssue> issues,
+    String packPath,
+    WordPack pack,
+    ContentChannel channel,
+  ) {
+    if (pack.labelReview case final review?) {
+      _checkText(issues, '$packPath.labelReview', review);
+    }
+    switch (pack.labelStatus) {
+      case LabelStatus.approved:
+        if (pack.labelReview == null) {
+          issues.add(
+            ContentIssue(
+              '$packPath.labelReview',
+              ContentIssueKind.approvedLabelWithoutReview,
+            ),
+          );
+        }
+      case LabelStatus.inReview:
+        if (channel == ContentChannel.release) {
+          issues.add(
+            ContentIssue(
+              '$packPath.labelStatus',
+              ContentIssueKind.unreviewedLabelInRelease,
+            ),
+          );
+        }
     }
   }
 

@@ -1,8 +1,12 @@
 import 'dart:convert';
 
 // SYNTHETIC TEST FIXTURES. Not game content and never bundled. The words,
-// categories and reviewer references are placeholders; "published" here only
-// exercises the filter and says nothing about any real review.
+// categories, labels and reviewer references are placeholders; "published"
+// and "approved" here only exercise the filters and say nothing about any
+// real review.
+
+/// The label of every fixture pack, so each word's category matches (D-38).
+const fixtureLabel = 'fixture category';
 
 Map<String, Object?> fixtureReviews() => {
   'linguistic': 'fixture-reviewer-a',
@@ -15,20 +19,32 @@ Map<String, Object?> fixtureWord(
   List<String> aliases = const [],
   String status = 'published',
   bool withReviews = true,
+  String category = fixtureLabel,
 }) => {
   'id': id,
   'version': 1,
   'canonical': canonical ?? 'canonical $id',
   'aliases': aliases,
-  'category': 'fixture category',
+  'category': category,
   'language': 'aeb-Arab',
   'access': 'free',
   'status': status,
   if (withReviews) 'reviews': fixtureReviews(),
 };
 
-Map<String, Object?> fixturePack(String id, List<Map<String, Object?>> words) =>
-    {'id': id, 'title': 'title $id', 'words': words};
+Map<String, Object?> fixturePack(
+  String id,
+  List<Map<String, Object?>> words, {
+  String title = fixtureLabel,
+  String labelStatus = 'approved',
+  bool withLabelReview = true,
+}) => {
+  'id': id,
+  'title': title,
+  'labelStatus': labelStatus,
+  if (withLabelReview) 'labelReview': 'fixture-label-reviewer',
+  'words': words,
+};
 
 Map<String, Object?> fixtureCatalog(List<Map<String, Object?>> packs) => {
   'format': 1,

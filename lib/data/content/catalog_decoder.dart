@@ -42,6 +42,10 @@ abstract final class CatalogDecoder {
     'retired': EditorialStatus.retired,
     'development': EditorialStatus.development,
   };
+  static const _labelStatuses = {
+    'in_review': LabelStatus.inReview,
+    'approved': LabelStatus.approved,
+  };
   static const _difficulties = {
     'easy': Difficulty.easy,
     'medium': Difficulty.medium,
@@ -99,15 +103,29 @@ abstract final class CatalogDecoder {
 
   static WordPack? _pack(JsonFields? fields) {
     if (fields == null) return null;
-    fields.allowOnly(const {'id', 'title', 'words'});
+    fields.allowOnly(const {
+      'id',
+      'title',
+      'labelStatus',
+      'labelReview',
+      'words',
+    });
     final id = fields.string('id');
     final title = fields.string('title');
+    final labelStatus = fields.choice('labelStatus', _labelStatuses);
+    final labelReview = fields.string('labelReview', optional: true);
     final words = [
       for (final (index, value) in fields.list('words').indexed)
         ?_word(fields.child(value, 'words[$index]')),
     ];
-    if (id == null || title == null) return null;
-    return WordPack(id: id, title: title, words: words);
+    if (id == null || title == null || labelStatus == null) return null;
+    return WordPack(
+      id: id,
+      title: title,
+      labelStatus: labelStatus,
+      labelReview: labelReview,
+      words: words,
+    );
   }
 
   static WordEntry? _word(JsonFields? fields) {

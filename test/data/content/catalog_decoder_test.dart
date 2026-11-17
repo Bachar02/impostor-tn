@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:impostor_tn/data/content/catalog_decoder.dart';
+import 'package:impostor_tn/game/content/content_catalog.dart';
 import 'package:impostor_tn/game/content/content_eligibility.dart';
 import 'package:impostor_tn/game/content/content_issue.dart';
 import 'package:impostor_tn/game/content/word_entry.dart';
@@ -406,13 +407,199 @@ void main() {
     });
   });
 
+  group('one category per pack (D-38)', () {
+    test('decodes the label and its review status', () {
+      final pack = (decodeJson(
+        validFixtureCatalog(),
+      ) as DecodedCatalog).catalog.packs.first;
+
+      expect(pack.title, fixtureLabel);
+      expect(pack.labelStatus, LabelStatus.approved);
+      expect(pack.labelReview, 'fixture-label-reviewer');
+      expect(pack.words.map((w) => w.category).toSet(), {pack.title});
+    });
+
+    test('a word whose category differs from the pack title is rejected', () {
+      final json = fixtureCatalog([
+        fixturePack('pack-a', [
+          fixtureWord('w-1'),
+          fixtureWord('w-2', category: 'other category'),
+          fixtureWord('w-3'),
+        ]),
+      ]);
+
+      expect(issuesOf(decodeJson(json)), [
+        const ContentIssue(
+          'packs[0].words[1].category',
+          ContentIssueKind.categoryDiffersFromPack,
+          relatedPath: 'packs[0].title',
+        ),
+      ]);
+    });
+
+    test('a pack title no word matches rejects every word of the pack', () {
+      final json = fixtureCatalog([
+        fixturePack('pack-a', [
+          fixtureWord('w-1'),
+          fixtureWord('w-2'),
+        ], title: 'another label'),
+      ]);
+
+      expect(issuesOf(decodeJson(json)).map((i) => (i.path, i.kind)), [
+        (
+          'packs[0].words[0].category',
+          ContentIssueKind.categoryDiffersFromPack,
+        ),
+        (
+          'packs[0].words[1].category',
+          ContentIssueKind.categoryDiffersFromPack,
+        ),
+      ]);
+    });
+
+    test('the comparison is exact: no space or letter folding (D-01)', () {
+      for (final variant in ['$fixtureLabel.', 'Fixture category']) {
+        final json = withWord(fixtureWord('w-1', category: variant));
+
+        expect(issuesOf(decodeJson(json)).map((i) => i.kind), [
+          ContentIssueKind.categoryDiffersFromPack,
+        ]);
+      }
+    });
+
+    test('each pack is checked against its own title', () {
+      final json = fixtureCatalog([
+        fixturePack('pack-a', [fixtureWord('w-1')]),
+        fixturePack('pack-b', [
+          fixtureWord('w-2', category: 'label b'),
+        ], title: 'label b'),
+      ]);
+
+      expect(decodeJson(json), isA<DecodedCatalog>());
+    });
+
+    test('a pack without words is not a category conflict', () {
+      final json = fixtureCatalog([fixturePack('pack-a', [])]);
+
+      expect(decodeJson(json), isA<DecodedCatalog>());
+    });
+
+    test('a development word is held to the same rule', () {
+      final json = withWord(
+        fixtureWord(
+          'w-1',
+          status: 'development',
+          withReviews: false,
+          category: 'other category',
+        ),
+      );
+
+      expect(issuesOf(decodeJson(json, channel: ContentChannel.development)), [
+        const ContentIssue(
+          'packs[0].words[0].category',
+          ContentIssueKind.categoryDiffersFromPack,
+          relatedPath: 'packs[0].title',
+        ),
+      ]);
+    });
+  });
+
+  group('label review status (D-38)', () {
+    final cases = <String, (Map<String, Object?>, ContentIssue)>{
+      'missing label status': (
+        fixtureCatalog([fixturePack('pack-a', [])..remove('labelStatus')]),
+        const ContentIssue(
+          'packs[0].labelStatus',
+          ContentIssueKind.missingField,
+        ),
+      ),
+      'unknown label status': (
+        fixtureCatalog([fixturePack('pack-a', [], labelStatus: 'reviewed')]),
+        const ContentIssue(
+          'packs[0].labelStatus',
+          ContentIssueKind.invalidValue,
+        ),
+      ),
+      'approved without a review reference': (
+        fixtureCatalog([fixturePack('pack-a', [], withLabelReview: false)]),
+        const ContentIssue(
+          'packs[0].labelReview',
+          ContentIssueKind.approvedLabelWithoutReview,
+        ),
+      ),
+      'untidy review reference': (
+        fixtureCatalog([
+          {...fixturePack('pack-a', []), 'labelReview': ' fixture-r'},
+        ]),
+        const ContentIssue('packs[0].labelReview', ContentIssueKind.untidyText),
+      ),
+    };
+
+    for (final MapEntry(key: name, value: (json, issue)) in cases.entries) {
+      test(name, () => expect(issuesOf(decodeJson(json)), [issue]));
+    }
+
+    final inReview = fixtureCatalog([
+      fixturePack(
+        'pack-a',
+        [fixtureWord('w-1')],
+        labelStatus: 'in_review',
+        withLabelReview: false,
+      ),
+    ]);
+
+    test('an unreviewed label makes a release catalog invalid as a whole', () {
+      expect(issuesOf(decodeJson(inReview)), [
+        const ContentIssue(
+          'packs[0].labelStatus',
+          ContentIssueKind.unreviewedLabelInRelease,
+        ),
+      ]);
+    });
+
+    test('an unreviewed label in a pack without words is still rejected', () {
+      final json = fixtureCatalog([
+        fixturePack('pack-a', [fixtureWord('w-1')]),
+        fixturePack('pack-b', [], labelStatus: 'in_review'),
+      ]);
+
+      expect(issuesOf(decodeJson(json)), [
+        const ContentIssue(
+          'packs[1].labelStatus',
+          ContentIssueKind.unreviewedLabelInRelease,
+        ),
+      ]);
+    });
+
+    test('an unreviewed label is accepted in the development channel', () {
+      expect(
+        decodeJson(inReview, channel: ContentChannel.development),
+        isA<DecodedCatalog>(),
+      );
+    });
+
+    test('an approved label still needs its reference in development', () {
+      final json = fixtureCatalog([
+        fixturePack('pack-a', [], withLabelReview: false),
+      ]);
+
+      expect(issuesOf(decodeJson(json, channel: ContentChannel.development)), [
+        const ContentIssue(
+          'packs[0].labelReview',
+          ContentIssueKind.approvedLabelWithoutReview,
+        ),
+      ]);
+    });
+  });
+
   test('issues never quote content text', () {
     const secretLike = 'fixture-secret-text';
     final json = fixtureCatalog([
       fixturePack('pack-a', [
         fixtureWord('w-1', canonical: secretLike, aliases: [secretLike]),
         fixtureWord('w-2', canonical: '$secretLike '),
-      ]),
+        fixtureWord('w-3', category: '$secretLike label'),
+      ], title: '$secretLike title'),
     ]);
 
     final issues = issuesOf(decodeJson(json));

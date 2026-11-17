@@ -66,6 +66,10 @@ final class RevealedTicket extends RoleTicketContent {
 /// 2. The big text reserves the full `displayXL` line box whatever size it
 ///    is fitted to, so both roles give the same ticket height at every text
 ///    scale.
+/// 3. The category gets two lines on both tickets (D-39): the big text
+///    (the Impostor's category) reserves two lines at its 40 floor as well,
+///    and the chip (the Civilian's "category: X") reserves two lines. A
+///    category that needs a third line in either place breaks parity.
 ///
 /// Secret text is plain, non-selectable text and announces nothing by
 /// itself (Q-28 default).
@@ -94,6 +98,9 @@ class RoleTicket extends StatelessWidget {
 
   /// Bottom block minimum height (DESIGN_SYSTEM §5 "Role ticket").
   static const double bottomMinHeight = 206;
+
+  /// Lines reserved for the category on both tickets (D-39).
+  static const int categoryLines = 2;
 
   /// The stamp is rotated 6° (DESIGN_SYSTEM §5).
   static const double _stampTurn = 6 * math.pi / 180;
@@ -185,9 +192,18 @@ class RoleTicket extends StatelessWidget {
                       style: TesskraTypography.displayXL.copyWith(color: ink),
                       minFontSize: TesskraTypography.displayXLMinFontSize,
                       reserveHeight: true,
+                      floorLinesReserved: categoryLines,
                     ),
-                    Center(
-                      child: _Chip(text: chip, color: ink),
+                    ConstrainedBox(
+                      constraints: BoxConstraints(
+                        minHeight: _Chip.heightFor(
+                          categoryLines,
+                          MediaQuery.textScalerOf(context),
+                        ),
+                      ),
+                      child: Center(
+                        child: _Chip(text: chip, color: ink),
+                      ),
                     ),
                   ],
                 ),
@@ -247,12 +263,20 @@ class _Chip extends StatelessWidget {
   final String text;
   final Color color;
 
+  static const _paddingV = TesskraSpacing.s1;
+  static const _style = TesskraTypography.labelM;
+
+  /// Outer height of a chip whose text runs to [lines] lines.
+  static double heightFor(int lines, TextScaler scaler) =>
+      2 * (_paddingV + TesskraBorders.standard) +
+      lines * scaler.scale(_style.fontSize!) * _style.height!;
+
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsetsDirectional.symmetric(
         horizontal: TesskraSpacing.s4,
-        vertical: TesskraSpacing.s1,
+        vertical: _paddingV,
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(TesskraRadii.pill),
@@ -262,7 +286,7 @@ class _Chip extends StatelessWidget {
         text,
         textAlign: TextAlign.center,
         // labelM (16) where the reference uses 15 (Q-23 (1) draft).
-        style: TesskraTypography.labelM.copyWith(color: color),
+        style: _style.copyWith(color: color),
       ),
     );
   }

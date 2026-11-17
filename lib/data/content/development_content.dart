@@ -27,27 +27,26 @@ abstract final class DevelopmentContent {
     'format': CatalogDecoder.supportedFormat,
     'contentVersion': 1,
     'packs': [
-      _pack('a', 'DEV pack A (synthetic)', 'DEV category A', 1),
-      _pack('b', 'DEV pack B (synthetic)', 'DEV category B', 21),
+      _pack('a', 'DEV pack A (synthetic)', 1),
+      _pack('b', 'DEV pack B (synthetic)', 21),
     ],
   });
 
-  static Map<String, Object?> _pack(
-    String letter,
-    String title,
-    String category,
-    int first,
-  ) => {
+  /// One label is both the pack title and every word's category (D-38).
+  /// It is never reviewed, so `in_review`.
+  static Map<String, Object?> _pack(String letter, String label, int first) => {
     'id': '$developmentMarker-$letter',
-    'title': title,
+    'title': label,
+    'labelStatus': 'in_review',
     'words': [
       for (var i = first; i < first + 20; i++)
         {
           'id': '$developmentMarker-w${i.toString().padLeft(2, '0')}',
-          'version': 1,
+          // 2: the category text changed with D-38.
+          'version': 2,
           'canonical': 'dev${i.toString().padLeft(2, '0')}',
           'aliases': <String>[],
-          'category': category,
+          'category': label,
           'language': 'und',
           'access': 'free',
           'status': 'development',

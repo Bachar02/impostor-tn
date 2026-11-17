@@ -128,6 +128,28 @@ Status values: **Review** = drafted, needs Derja validation. **Approved** = vali
 
 Sample content used in mockups only (not UI strings): سلمى, ياسين, عبد الرحمان بن عاشور الطرابلسي, ڨمر (names); ماكلة تونسية, بلايص, كورة, أمثال (pack names); بريك (word); ماكلة (category).
 
+### 5.1 Proposed category labels (content metadata, not UI strings) — D-37
+
+Simple, recognizable category labels proposed by the Product Owner (2026-11-17). They are **not** in `app_ar.arb`: they are content data in `assets/content/catalog.json` (ADR-0009). Under D-38 one label is both a pack's `title` and the `category` of every word in it, and carries its own `labelStatus`; all 13 are `in_review` until a Derja reviewer approves them. No pack, word or ID exists for them yet (Q-13), so none is published. English glosses are approximate.
+
+| # | Label | Gloss | Set | Status |
+|---|---|---|---|---|
+| 0 | ماكلة | Food | Initial | Review |
+| 1 | بلايص | Places | Initial | Review |
+| 2 | حيوانات | Animals | Initial | Review |
+| 3 | خدمة | Work, jobs | Initial | Review |
+| 4 | حاجات في الدار | Things at home | Initial | Review |
+| 5 | تنقّل | Getting around, transport | Initial | Review |
+| 6 | رياضة | Sport | Initial | Review |
+| 7 | فنّ وفرجة | Art and entertainment | Initial | Review |
+| 8 | تكنولوجيا | Technology | Later candidate | Review |
+| 9 | بدن الإنسان | The human body | Later candidate | Review |
+| 10 | قراية | Studies, school | Later candidate | Review |
+| 11 | حاجات في الشارع | Things in the street | Later candidate | Review |
+| 12 | عادات وتقاليد | Customs and traditions | Later candidate | Review |
+
+Measured 2026-11-17 (`test/core/design/widgets/proposed_category_labels_test.dart`, real fonts, RTL): all 13 pass the content text rules and fit the pack card at 360×720, 320×568 and text scale 1.5. On the role ticket, before D-39, #4 and #11 wrapped the Civilian's chip ("الصنف: …") at text scale 1.5 and made that ticket 31 px taller than the Impostor's. With the two-line category reserve of D-39, all 13 keep identical ticket sizes for both roles at all four frames. The list is kept in sync by hand with `test/support/proposed_category_labels.dart`.
+
 ## 6. Text validation requirements (for the reviewer and for QA)
 
 - Each glossary row reviewed by a native Derja speaker; status changed to Approved or replaced.

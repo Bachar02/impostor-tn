@@ -66,8 +66,10 @@ void main() {
     );
 
     expect(decoding, isA<InvalidCatalog>());
+    // Twice guarded: development words, and labels never reviewed (D-38).
     expect((decoding as InvalidCatalog).issues.map((i) => i.kind).toSet(), {
       ContentIssueKind.developmentContentInRelease,
+      ContentIssueKind.unreviewedLabelInRelease,
     });
   });
 

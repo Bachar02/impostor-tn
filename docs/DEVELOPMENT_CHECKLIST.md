@@ -75,6 +75,9 @@ Last update: 2026-11-17 (Milestone E: first playable slice implemented, Q-05 app
 - [x] D-26: 56 Appendix A strings merged into `app_ar.arb`, all `[REVIEW]`
 - [x] D-18 screenshot protection switched by the game flow; screencap blank and recents thumbnail black on the emulator during the game (not checked on a physical device)
 - [x] Game engine in pure Dart with full rule tests (no UI). Empty final guess rejected (D-16).
+- [x] Category labels (D-37, 2026-11-17): 13 proposed labels recorded as content metadata, `in_review` (`ARABIC_LOCALIZATION.md` §5.1); no catalog change, no pack or word created.
+- [x] One category per pack and label review status (D-38, 2026-11-17): `labelStatus`/`labelReview` on packs; validator rejects a category differing from its pack title, an approved label without reference, and any unreviewed label in a release catalog; development packs relabelled (word version 2). Decoder tests for each rule.
+- [x] Two-line category reserve on the role ticket (D-39, 2026-11-17): big text and chip; parity widget-tested for all 13 labels and a synthetic two-line category at 360×720, 320×568, scale 1 and 1.5; both reserves mutation-checked. Not checked on a device
 - [x] Milestone A (2026-11-17): word-content model, JSON format, strict decoder and validator, eligibility by build channel, empty production catalog, synthetic fixtures under `test/` only (ADR-0009). Real content is Q-13.
 - [x] Milestone B (2026-11-17): cooldown of 30, selection with progressive release, consumption at C2 in one write with the session mark (D-21).
 - [x] Milestone C (2026-11-17): atomic single-file state store, checkpoint service C0–C9, launch recovery, Riverpod providers without automatic retry (D-12), platform channel for the private directory (ADR-0003 revision 2). Not run on a device.

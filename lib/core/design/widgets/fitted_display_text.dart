@@ -18,6 +18,10 @@ import 'package:impostor_tn/core/design/tokens/tesskra_typography.dart';
 /// lines at the start size, whatever size the text is fitted to. Role-ticket
 /// parity (D-27) uses this so the ticket height never depends on the text,
 /// except for a text that must wrap at the floor (Q-29).
+///
+/// [floorLinesReserved] raises that reserve to at least so many lines at
+/// [minFontSize], so a text that wraps at the floor onto that many lines
+/// keeps the same height too (D-39).
 class FittedDisplayText extends StatelessWidget {
   const FittedDisplayText(
     this.text, {
@@ -26,6 +30,7 @@ class FittedDisplayText extends StatelessWidget {
     required this.minFontSize,
     this.maxLines = 1,
     this.reserveHeight = false,
+    this.floorLinesReserved = 1,
     this.textAlign = TextAlign.center,
     this.textDirection,
   });
@@ -37,6 +42,7 @@ class FittedDisplayText extends StatelessWidget {
   final double minFontSize;
   final int maxLines;
   final bool reserveHeight;
+  final int floorLinesReserved;
   final TextAlign textAlign;
   final TextDirection? textDirection;
 
@@ -141,7 +147,10 @@ class FittedDisplayText extends StatelessWidget {
         if (!reserveHeight) return fitted;
         return ConstrainedBox(
           constraints: BoxConstraints(
-            minHeight: startSize * style.height! * maxLines,
+            minHeight: math.max(
+              startSize * style.height! * maxLines,
+              minFontSize * style.height! * floorLinesReserved,
+            ),
           ),
           child: Center(child: fitted),
         );

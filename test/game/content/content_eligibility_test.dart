@@ -63,6 +63,7 @@ void main() {
         WordPack(
           id: 'pack-a',
           title: 'a',
+          labelStatus: LabelStatus.approved,
           words: [
             entry('w-1', EditorialStatus.published),
             entry('w-2', EditorialStatus.draft),
@@ -72,11 +73,13 @@ void main() {
         WordPack(
           id: 'pack-b',
           title: 'b',
+          labelStatus: LabelStatus.approved,
           words: [entry('w-4', EditorialStatus.published)],
         ),
         WordPack(
           id: 'pack-c',
           title: 'c',
+          labelStatus: LabelStatus.approved,
           words: [entry('w-5', EditorialStatus.inReview)],
         ),
       ],

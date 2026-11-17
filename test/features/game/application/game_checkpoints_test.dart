@@ -494,10 +494,16 @@ void main() {
       final moved = ContentCatalog(
         contentVersion: 2,
         packs: [
-          WordPack(id: 'pack-a', title: 'a', words: const []),
+          WordPack(
+            id: 'pack-a',
+            title: 'a',
+            labelStatus: LabelStatus.approved,
+            words: const [],
+          ),
           WordPack(
             id: 'pack-b',
             title: 'b',
+            labelStatus: LabelStatus.approved,
             words: [fixtureEntry(old.session.word.wordId)],
           ),
         ],

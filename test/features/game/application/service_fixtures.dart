@@ -88,6 +88,7 @@ ContentCatalog fixtureCatalog({int words = 40, int version = 1}) =>
         WordPack(
           id: 'pack-a',
           title: 'pack a',
+          labelStatus: LabelStatus.approved,
           words: [
             for (var i = 0; i < words; i++)
               fixtureEntry('w-$i', version: version),
@@ -96,11 +97,13 @@ ContentCatalog fixtureCatalog({int words = 40, int version = 1}) =>
         WordPack(
           id: 'pack-draft',
           title: 'draft',
+          labelStatus: LabelStatus.approved,
           words: [fixtureEntry('d-0', status: EditorialStatus.draft)],
         ),
         WordPack(
           id: 'pack-dev',
           title: 'dev',
+          labelStatus: LabelStatus.approved,
           words: [fixtureEntry('v-0', status: EditorialStatus.development)],
         ),
       ],

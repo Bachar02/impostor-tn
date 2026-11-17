@@ -513,6 +513,8 @@ Anyone who can read the screen learns the role, and the secret word if it is a C
 
 This also makes the screen satisfy design principle 3 ("name first"), which the approved revealed-ticket render does not: it shows no name. The remaining differences are the small caption, the chip and the big text itself. **Applied by D-27 (2026-11-17).** These two changes supersede the "Revealed, Civilian" and "Revealed, Impostor" rows of the state table above: the top row keeps `reveal.role_label_sealed` and the player's name, the stamp changes from `ic_lock` to `ic_user`, and the role name opens the caption. Implemented in `RoleTicket` (`lib/core/design/widgets/role_ticket.dart`).
 
+**Category lines (D-39, 2026-11-17).** Both revealed tickets reserve exactly two lines for the category label: the big text (the Impostor's category) reserves two lines at its 40 floor in addition to its `displayXL` line box, and the chip (the Civilian's `reveal.category`) reserves two `labelM` lines; a one-line chip is centred in that space. Same widgets and sizes for both roles; no type size changed. A category needing a third line in either place would break parity.
+
 **Interactions**
 
 - A tap anywhere other than a button does nothing. There is no hold gesture and no timer; the revealed state stays until acknowledged.

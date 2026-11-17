@@ -1,18 +1,39 @@
 import 'package:impostor_tn/game/content/word_entry.dart';
 
+/// Review state of a pack's Derja label (D-38). The label is both the pack
+/// title and the category of every word in the pack.
+enum LabelStatus {
+  /// Not approved by a Tunisian Derja reviewer; never in a release catalog.
+  inReview,
+
+  /// Approved; needs [WordPack.labelReview].
+  approved,
+}
+
 /// A selectable group of words (PRD §4, §10). Each word belongs to exactly
-/// one pack.
+/// one pack, and a pack is exactly one category: every word's category
+/// equals [title] (D-38, checked by `CatalogValidation`).
 final class WordPack {
   WordPack({
     required this.id,
     required this.title,
+    required this.labelStatus,
+    this.labelReview,
     required List<WordEntry> words,
   }) : words = List.unmodifiable(words);
 
   final String id;
 
-  /// Shown on the pack card.
+  /// The category label, shown on the pack card.
   final String title;
+
+  final LabelStatus labelStatus;
+
+  /// Opaque reference, kept by the Product Owner, to the Derja review of
+  /// [title]. Required when [labelStatus] is [LabelStatus.approved]. Never
+  /// created by the app.
+  final String? labelReview;
+
   final List<WordEntry> words;
 
   @override

@@ -226,6 +226,7 @@ void main() {
             WordPack(
               id: 'pack-a',
               title: 'a',
+              labelStatus: LabelStatus.approved,
               words: [fixtureEntry(wordId, status: status)],
             ),
           ],
