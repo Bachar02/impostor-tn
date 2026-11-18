@@ -3,11 +3,9 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:impostor_tn/data/content/bundled_content_source.dart';
 import 'package:impostor_tn/data/content/catalog_decoder.dart';
-import 'package:impostor_tn/data/content/development_content.dart';
 import 'package:impostor_tn/features/game/application/game_service.dart';
 import 'package:impostor_tn/game/content/content_catalog.dart';
 import 'package:impostor_tn/game/content/content_eligibility.dart';
-import 'package:impostor_tn/game/content/content_source.dart';
 import 'package:impostor_tn/game/content/word_entry.dart';
 import 'package:impostor_tn/game/final_guess_matching.dart';
 import 'package:impostor_tn/game/persistence/saved_state.dart';
@@ -140,19 +138,6 @@ void main() {
     );
   });
 
-  test(
-    'merged with the development packs, the debug catalog is valid',
-    () async {
-      final load = await DevelopmentContentSource(
-        _FixedSource(decode(ContentChannel.development)),
-      ).load();
-
-      expect(load, isA<ContentReady>(), reason: '$load');
-      final titles = (load as ContentReady).catalog.packs.map((p) => p.title);
-      expect(titles.where((t) => t == label), hasLength(1));
-    },
-  );
-
   test('all 20 words can be selected in debug gameplay', () async {
     // Twenty consecutive games on this pack only, through the real service:
     // each consumes its word into the cooldown (30), so no word repeats and
@@ -178,13 +163,4 @@ void main() {
 
     expect(seen.toSet(), {for (final word in pack().words) word.id});
   });
-}
-
-final class _FixedSource implements ContentSource {
-  const _FixedSource(this.catalog);
-
-  final ContentCatalog catalog;
-
-  @override
-  Future<ContentLoad> load() async => ContentReady(catalog);
 }

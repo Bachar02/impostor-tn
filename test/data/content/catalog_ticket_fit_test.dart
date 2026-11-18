@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:impostor_tn/data/content/bundled_content_source.dart';
 import 'package:impostor_tn/data/content/catalog_decoder.dart';
-import 'package:impostor_tn/data/content/development_content.dart';
 import 'package:impostor_tn/game/content/content_eligibility.dart';
 
 import '../../core/design/widgets/widget_harness.dart';
@@ -33,8 +32,6 @@ void main() {
       File(BundledContentSource.catalogAsset).readAsStringSync(),
       ContentChannel.development,
     ),
-    'development catalog': () =>
-        labelsOf(DevelopmentContent.catalogJson(), ContentChannel.development),
   };
 
   for (final MapEntry(key: name, value: load) in catalogs.entries) {
