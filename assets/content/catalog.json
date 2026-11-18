@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "contentVersion": 2,
+  "contentVersion": 3,
   "packs": [
     {
       "id": "p01",
@@ -209,6 +209,2611 @@
           "canonical": "غريبة",
           "aliases": [],
           "category": "ماكلة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "title": "بلايص",
+      "labelStatus": "in_review",
+      "words": [
+        {
+          "id": "p02-w01",
+          "version": 1,
+          "canonical": "سوق",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w02",
+          "version": 1,
+          "canonical": "جامع",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w03",
+          "version": 1,
+          "canonical": "حمام",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w04",
+          "version": 1,
+          "canonical": "سبيطار",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w05",
+          "version": 1,
+          "canonical": "مطار",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w06",
+          "version": 1,
+          "canonical": "شط",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w07",
+          "version": 1,
+          "canonical": "كوشة",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w08",
+          "version": 1,
+          "canonical": "حانوت",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w09",
+          "version": 1,
+          "canonical": "حومة",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w10",
+          "version": 1,
+          "canonical": "بلدية",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w11",
+          "version": 1,
+          "canonical": "بوسطة",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w12",
+          "version": 1,
+          "canonical": "صيدلية",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w13",
+          "version": 1,
+          "canonical": "جنينة",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w14",
+          "version": 1,
+          "canonical": "جبانة",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w15",
+          "version": 1,
+          "canonical": "بنكة",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w16",
+          "version": 1,
+          "canonical": "أوتيل",
+          "aliases": [
+            "اوتيل",
+            "نزل"
+          ],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w17",
+          "version": 1,
+          "canonical": "حبس",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w18",
+          "version": 1,
+          "canonical": "مرسى",
+          "aliases": [],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w19",
+          "version": 1,
+          "canonical": "لاڨار",
+          "aliases": [
+            "لاقار"
+          ],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p02-w20",
+          "version": 1,
+          "canonical": "ريستوران",
+          "aliases": [
+            "مطعم"
+          ],
+          "category": "بلايص",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "title": "حيوانات",
+      "labelStatus": "in_review",
+      "words": [
+        {
+          "id": "p03-w01",
+          "version": 1,
+          "canonical": "قطوس",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w02",
+          "version": 1,
+          "canonical": "كلب",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w03",
+          "version": 1,
+          "canonical": "حمار",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w04",
+          "version": 1,
+          "canonical": "عود",
+          "aliases": [
+            "حصان"
+          ],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w05",
+          "version": 1,
+          "canonical": "جمل",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w06",
+          "version": 1,
+          "canonical": "بقرة",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w07",
+          "version": 1,
+          "canonical": "علوش",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w08",
+          "version": 1,
+          "canonical": "معزة",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w09",
+          "version": 1,
+          "canonical": "دجاجة",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w10",
+          "version": 1,
+          "canonical": "سردوك",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w11",
+          "version": 1,
+          "canonical": "فار",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w12",
+          "version": 1,
+          "canonical": "حنش",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w13",
+          "version": 1,
+          "canonical": "عقرب",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w14",
+          "version": 1,
+          "canonical": "فكرون",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w15",
+          "version": 1,
+          "canonical": "قنفود",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w16",
+          "version": 1,
+          "canonical": "ذيب",
+          "aliases": [
+            "ذئب"
+          ],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w17",
+          "version": 1,
+          "canonical": "سبع",
+          "aliases": [
+            "أسد",
+            "اسد"
+          ],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w18",
+          "version": 1,
+          "canonical": "فيل",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w19",
+          "version": 1,
+          "canonical": "قرد",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p03-w20",
+          "version": 1,
+          "canonical": "ببوش",
+          "aliases": [],
+          "category": "حيوانات",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "title": "خدمة",
+      "labelStatus": "in_review",
+      "words": [
+        {
+          "id": "p04-w01",
+          "version": 1,
+          "canonical": "طبيب",
+          "aliases": [
+            "دكتور"
+          ],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w02",
+          "version": 1,
+          "canonical": "معلم",
+          "aliases": [],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w03",
+          "version": 1,
+          "canonical": "بوليسي",
+          "aliases": [],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w04",
+          "version": 1,
+          "canonical": "خباز",
+          "aliases": [],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w05",
+          "version": 1,
+          "canonical": "حجام",
+          "aliases": [],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w06",
+          "version": 1,
+          "canonical": "نجار",
+          "aliases": [],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w07",
+          "version": 1,
+          "canonical": "حداد",
+          "aliases": [],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w08",
+          "version": 1,
+          "canonical": "بناي",
+          "aliases": [],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w09",
+          "version": 1,
+          "canonical": "فلاح",
+          "aliases": [],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w10",
+          "version": 1,
+          "canonical": "تريسيان",
+          "aliases": [
+            "كهربائي"
+          ],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w11",
+          "version": 1,
+          "canonical": "بلومبي",
+          "aliases": [],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w12",
+          "version": 1,
+          "canonical": "خياط",
+          "aliases": [],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w13",
+          "version": 1,
+          "canonical": "جزار",
+          "aliases": [],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w14",
+          "version": 1,
+          "canonical": "بحري",
+          "aliases": [],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w15",
+          "version": 1,
+          "canonical": "عسكري",
+          "aliases": [],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w16",
+          "version": 1,
+          "canonical": "فرملي",
+          "aliases": [
+            "ممرض"
+          ],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w17",
+          "version": 1,
+          "canonical": "طيار",
+          "aliases": [],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w18",
+          "version": 1,
+          "canonical": "محامي",
+          "aliases": [],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w19",
+          "version": 1,
+          "canonical": "عساس",
+          "aliases": [],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p04-w20",
+          "version": 1,
+          "canonical": "ميكانيسيان",
+          "aliases": [
+            "ميكانيكي"
+          ],
+          "category": "خدمة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "title": "حاجات في الدار",
+      "labelStatus": "in_review",
+      "words": [
+        {
+          "id": "p05-w01",
+          "version": 1,
+          "canonical": "كرسي",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w02",
+          "version": 1,
+          "canonical": "طاولة",
+          "aliases": [
+            "طابلة"
+          ],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w03",
+          "version": 1,
+          "canonical": "فرش",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w04",
+          "version": 1,
+          "canonical": "مخدة",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w05",
+          "version": 1,
+          "canonical": "كنابة",
+          "aliases": [
+            "كنابي"
+          ],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w06",
+          "version": 1,
+          "canonical": "فريجيدار",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w07",
+          "version": 1,
+          "canonical": "مراية",
+          "aliases": [
+            "مرايا"
+          ],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w08",
+          "version": 1,
+          "canonical": "زربية",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w09",
+          "version": 1,
+          "canonical": "ريدو",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w10",
+          "version": 1,
+          "canonical": "مفتاح",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w11",
+          "version": 1,
+          "canonical": "شباك",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w12",
+          "version": 1,
+          "canonical": "صابون",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w13",
+          "version": 1,
+          "canonical": "فوطة",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w14",
+          "version": 1,
+          "canonical": "مشط",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w15",
+          "version": 1,
+          "canonical": "طنجرة",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w16",
+          "version": 1,
+          "canonical": "كاس",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w17",
+          "version": 1,
+          "canonical": "فرشيطة",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w18",
+          "version": 1,
+          "canonical": "مغرفة",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w19",
+          "version": 1,
+          "canonical": "براد",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p05-w20",
+          "version": 1,
+          "canonical": "قفة",
+          "aliases": [],
+          "category": "حاجات في الدار",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "title": "تنقّل",
+      "labelStatus": "in_review",
+      "words": [
+        {
+          "id": "p06-w01",
+          "version": 1,
+          "canonical": "كرهبة",
+          "aliases": [],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w02",
+          "version": 1,
+          "canonical": "تاكسي",
+          "aliases": [],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w03",
+          "version": 1,
+          "canonical": "لواج",
+          "aliases": [],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w04",
+          "version": 1,
+          "canonical": "كار",
+          "aliases": [],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w05",
+          "version": 1,
+          "canonical": "ميترو",
+          "aliases": [],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w06",
+          "version": 1,
+          "canonical": "تران",
+          "aliases": [
+            "ترينو"
+          ],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w07",
+          "version": 1,
+          "canonical": "طيارة",
+          "aliases": [
+            "طائرة"
+          ],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w08",
+          "version": 1,
+          "canonical": "بابور",
+          "aliases": [],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w09",
+          "version": 1,
+          "canonical": "فلوكة",
+          "aliases": [],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w10",
+          "version": 1,
+          "canonical": "بشكليطة",
+          "aliases": [],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w11",
+          "version": 1,
+          "canonical": "موتور",
+          "aliases": [],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w12",
+          "version": 1,
+          "canonical": "كاميو",
+          "aliases": [],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w13",
+          "version": 1,
+          "canonical": "كريطة",
+          "aliases": [],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w14",
+          "version": 1,
+          "canonical": "تراكتور",
+          "aliases": [],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w15",
+          "version": 1,
+          "canonical": "كاليش",
+          "aliases": [],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w16",
+          "version": 1,
+          "canonical": "رخصة",
+          "aliases": [],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w17",
+          "version": 1,
+          "canonical": "بنزين",
+          "aliases": [],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w18",
+          "version": 1,
+          "canonical": "رومبوان",
+          "aliases": [],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w19",
+          "version": 1,
+          "canonical": "تسكرة",
+          "aliases": [
+            "تيكي"
+          ],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p06-w20",
+          "version": 1,
+          "canonical": "ڨيدون",
+          "aliases": [
+            "قيدون"
+          ],
+          "category": "تنقّل",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "title": "رياضة",
+      "labelStatus": "in_review",
+      "words": [
+        {
+          "id": "p07-w01",
+          "version": 1,
+          "canonical": "كورة",
+          "aliases": [],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w02",
+          "version": 1,
+          "canonical": "باسكات",
+          "aliases": [
+            "باسكت"
+          ],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w03",
+          "version": 1,
+          "canonical": "هاند",
+          "aliases": [
+            "هاندبول"
+          ],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w04",
+          "version": 1,
+          "canonical": "فولي",
+          "aliases": [],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w05",
+          "version": 1,
+          "canonical": "تنس",
+          "aliases": [],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w06",
+          "version": 1,
+          "canonical": "بوكس",
+          "aliases": [
+            "ملاكمة"
+          ],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w07",
+          "version": 1,
+          "canonical": "كاراتي",
+          "aliases": [],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w08",
+          "version": 1,
+          "canonical": "جودو",
+          "aliases": [],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w09",
+          "version": 1,
+          "canonical": "سباحة",
+          "aliases": [],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w10",
+          "version": 1,
+          "canonical": "شطرنج",
+          "aliases": [],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w11",
+          "version": 1,
+          "canonical": "ماتش",
+          "aliases": [],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w12",
+          "version": 1,
+          "canonical": "حكم",
+          "aliases": [],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w13",
+          "version": 1,
+          "canonical": "ڨول",
+          "aliases": [
+            "قول"
+          ],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w14",
+          "version": 1,
+          "canonical": "بلانتي",
+          "aliases": [
+            "بينالتي"
+          ],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w15",
+          "version": 1,
+          "canonical": "ملعب",
+          "aliases": [],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w16",
+          "version": 1,
+          "canonical": "صفارة",
+          "aliases": [],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w17",
+          "version": 1,
+          "canonical": "ماراطون",
+          "aliases": [
+            "ماراثون"
+          ],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w18",
+          "version": 1,
+          "canonical": "ميدالية",
+          "aliases": [],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w19",
+          "version": 1,
+          "canonical": "مريول",
+          "aliases": [],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p07-w20",
+          "version": 1,
+          "canonical": "سبادري",
+          "aliases": [],
+          "category": "رياضة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "title": "فنّ وفرجة",
+      "labelStatus": "in_review",
+      "words": [
+        {
+          "id": "p08-w01",
+          "version": 1,
+          "canonical": "مزود",
+          "aliases": [],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w02",
+          "version": 1,
+          "canonical": "دربوكة",
+          "aliases": [],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w03",
+          "version": 1,
+          "canonical": "بندير",
+          "aliases": [],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w04",
+          "version": 1,
+          "canonical": "ڨيتارة",
+          "aliases": [
+            "قيتارة",
+            "غيتارة"
+          ],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w05",
+          "version": 1,
+          "canonical": "كمنجة",
+          "aliases": [],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w06",
+          "version": 1,
+          "canonical": "ناي",
+          "aliases": [],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w07",
+          "version": 1,
+          "canonical": "بيانو",
+          "aliases": [],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w08",
+          "version": 1,
+          "canonical": "مسرح",
+          "aliases": [],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w09",
+          "version": 1,
+          "canonical": "سينما",
+          "aliases": [],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w10",
+          "version": 1,
+          "canonical": "فيلم",
+          "aliases": [],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w11",
+          "version": 1,
+          "canonical": "مسلسل",
+          "aliases": [],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w12",
+          "version": 1,
+          "canonical": "شطيح",
+          "aliases": [
+            "رقص"
+          ],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w13",
+          "version": 1,
+          "canonical": "غناية",
+          "aliases": [
+            "أغنية",
+            "اغنية"
+          ],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w14",
+          "version": 1,
+          "canonical": "مطرب",
+          "aliases": [
+            "مغني"
+          ],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w15",
+          "version": 1,
+          "canonical": "رسم",
+          "aliases": [],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w16",
+          "version": 1,
+          "canonical": "تصويرة",
+          "aliases": [
+            "صورة"
+          ],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w17",
+          "version": 1,
+          "canonical": "سيرك",
+          "aliases": [],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w18",
+          "version": 1,
+          "canonical": "مهرجان",
+          "aliases": [],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w19",
+          "version": 1,
+          "canonical": "ميكرو",
+          "aliases": [],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p08-w20",
+          "version": 1,
+          "canonical": "ركح",
+          "aliases": [],
+          "category": "فنّ وفرجة",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "title": "تكنولوجيا",
+      "labelStatus": "in_review",
+      "words": [
+        {
+          "id": "p09-w01",
+          "version": 1,
+          "canonical": "بورتابل",
+          "aliases": [
+            "تليفون"
+          ],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w02",
+          "version": 1,
+          "canonical": "أوردي",
+          "aliases": [
+            "اوردي",
+            "كمبيوتر"
+          ],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w03",
+          "version": 1,
+          "canonical": "تلفزة",
+          "aliases": [],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w04",
+          "version": 1,
+          "canonical": "تيليكوموند",
+          "aliases": [],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w05",
+          "version": 1,
+          "canonical": "أنترنات",
+          "aliases": [
+            "انترنات",
+            "إنترنت",
+            "انترنت"
+          ],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w06",
+          "version": 1,
+          "canonical": "ويفي",
+          "aliases": [
+            "واي فاي"
+          ],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w07",
+          "version": 1,
+          "canonical": "شارجور",
+          "aliases": [],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w08",
+          "version": 1,
+          "canonical": "كاسك",
+          "aliases": [],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w09",
+          "version": 1,
+          "canonical": "كلافيي",
+          "aliases": [],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w10",
+          "version": 1,
+          "canonical": "سوري",
+          "aliases": [],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w11",
+          "version": 1,
+          "canonical": "إيكران",
+          "aliases": [
+            "ايكران",
+            "شاشة"
+          ],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w12",
+          "version": 1,
+          "canonical": "طابعة",
+          "aliases": [],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w13",
+          "version": 1,
+          "canonical": "روبو",
+          "aliases": [
+            "روبوت"
+          ],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w14",
+          "version": 1,
+          "canonical": "درون",
+          "aliases": [],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w15",
+          "version": 1,
+          "canonical": "كاميرا",
+          "aliases": [],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w16",
+          "version": 1,
+          "canonical": "بلوتوث",
+          "aliases": [],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w17",
+          "version": 1,
+          "canonical": "تابلات",
+          "aliases": [],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w18",
+          "version": 1,
+          "canonical": "كلي",
+          "aliases": [
+            "فلاشة"
+          ],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w19",
+          "version": 1,
+          "canonical": "باتري",
+          "aliases": [
+            "بطارية"
+          ],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p09-w20",
+          "version": 1,
+          "canonical": "ميساج",
+          "aliases": [
+            "رسالة"
+          ],
+          "category": "تكنولوجيا",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "title": "بدن الإنسان",
+      "labelStatus": "in_review",
+      "words": [
+        {
+          "id": "p10-w01",
+          "version": 1,
+          "canonical": "راس",
+          "aliases": [
+            "رأس"
+          ],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w02",
+          "version": 1,
+          "canonical": "عين",
+          "aliases": [],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w03",
+          "version": 1,
+          "canonical": "ودن",
+          "aliases": [
+            "أذن",
+            "اذن"
+          ],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w04",
+          "version": 1,
+          "canonical": "نيف",
+          "aliases": [
+            "أنف",
+            "انف"
+          ],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w05",
+          "version": 1,
+          "canonical": "فم",
+          "aliases": [],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w06",
+          "version": 1,
+          "canonical": "سنة",
+          "aliases": [
+            "سن"
+          ],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w07",
+          "version": 1,
+          "canonical": "لسان",
+          "aliases": [],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w08",
+          "version": 1,
+          "canonical": "يد",
+          "aliases": [],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w09",
+          "version": 1,
+          "canonical": "صبع",
+          "aliases": [
+            "إصبع",
+            "اصبع",
+            "صباع"
+          ],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w10",
+          "version": 1,
+          "canonical": "ساق",
+          "aliases": [],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w11",
+          "version": 1,
+          "canonical": "قلب",
+          "aliases": [],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w12",
+          "version": 1,
+          "canonical": "كرش",
+          "aliases": [],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w13",
+          "version": 1,
+          "canonical": "ظهر",
+          "aliases": [],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w14",
+          "version": 1,
+          "canonical": "كتف",
+          "aliases": [],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w15",
+          "version": 1,
+          "canonical": "ركبة",
+          "aliases": [],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w16",
+          "version": 1,
+          "canonical": "شعر",
+          "aliases": [],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w17",
+          "version": 1,
+          "canonical": "رقبة",
+          "aliases": [],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w18",
+          "version": 1,
+          "canonical": "لحية",
+          "aliases": [],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w19",
+          "version": 1,
+          "canonical": "حاجب",
+          "aliases": [],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p10-w20",
+          "version": 1,
+          "canonical": "ضافر",
+          "aliases": [
+            "ظفر"
+          ],
+          "category": "بدن الإنسان",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "title": "قراية",
+      "labelStatus": "in_review",
+      "words": [
+        {
+          "id": "p11-w01",
+          "version": 1,
+          "canonical": "مدرسة",
+          "aliases": [],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w02",
+          "version": 1,
+          "canonical": "معهد",
+          "aliases": [],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w03",
+          "version": 1,
+          "canonical": "جامعة",
+          "aliases": [],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w04",
+          "version": 1,
+          "canonical": "قسم",
+          "aliases": [],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w05",
+          "version": 1,
+          "canonical": "كراس",
+          "aliases": [],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w06",
+          "version": 1,
+          "canonical": "كتاب",
+          "aliases": [],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w07",
+          "version": 1,
+          "canonical": "قلم",
+          "aliases": [],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w08",
+          "version": 1,
+          "canonical": "ستيلو",
+          "aliases": [],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w09",
+          "version": 1,
+          "canonical": "ڨومة",
+          "aliases": [
+            "قومة"
+          ],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w10",
+          "version": 1,
+          "canonical": "مسطرة",
+          "aliases": [],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w11",
+          "version": 1,
+          "canonical": "كرتابلة",
+          "aliases": [
+            "كرطابلة"
+          ],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w12",
+          "version": 1,
+          "canonical": "سبورة",
+          "aliases": [],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w13",
+          "version": 1,
+          "canonical": "طباشير",
+          "aliases": [],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w14",
+          "version": 1,
+          "canonical": "امتحان",
+          "aliases": [
+            "إمتحان"
+          ],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w15",
+          "version": 1,
+          "canonical": "باك",
+          "aliases": [
+            "باكالوريا"
+          ],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w16",
+          "version": 1,
+          "canonical": "أستاذ",
+          "aliases": [
+            "استاذ"
+          ],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w17",
+          "version": 1,
+          "canonical": "تلميذ",
+          "aliases": [],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w18",
+          "version": 1,
+          "canonical": "عدد",
+          "aliases": [],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w19",
+          "version": 1,
+          "canonical": "ديكتي",
+          "aliases": [
+            "إملاء",
+            "املاء"
+          ],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p11-w20",
+          "version": 1,
+          "canonical": "عطلة",
+          "aliases": [],
+          "category": "قراية",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "title": "حاجات في الشارع",
+      "labelStatus": "in_review",
+      "words": [
+        {
+          "id": "p12-w01",
+          "version": 1,
+          "canonical": "كياس",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w02",
+          "version": 1,
+          "canonical": "تروتوار",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w03",
+          "version": 1,
+          "canonical": "ضو",
+          "aliases": [
+            "ضوء"
+          ],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w04",
+          "version": 1,
+          "canonical": "بوطو",
+          "aliases": [
+            "بوتو"
+          ],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w05",
+          "version": 1,
+          "canonical": "بانو",
+          "aliases": [
+            "لافتة"
+          ],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w06",
+          "version": 1,
+          "canonical": "زبلة",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w07",
+          "version": 1,
+          "canonical": "بوبالة",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w08",
+          "version": 1,
+          "canonical": "كيوسك",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w09",
+          "version": 1,
+          "canonical": "حفرة",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w10",
+          "version": 1,
+          "canonical": "زحمة",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w11",
+          "version": 1,
+          "canonical": "نصبة",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w12",
+          "version": 1,
+          "canonical": "طاكسيفون",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w13",
+          "version": 1,
+          "canonical": "حيط",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w14",
+          "version": 1,
+          "canonical": "بلاكة",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w15",
+          "version": 1,
+          "canonical": "ثنية",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w16",
+          "version": 1,
+          "canonical": "شجرة",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w17",
+          "version": 1,
+          "canonical": "حجرة",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w18",
+          "version": 1,
+          "canonical": "كلاكسون",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w19",
+          "version": 1,
+          "canonical": "ستوب",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p12-w20",
+          "version": 1,
+          "canonical": "باساج",
+          "aliases": [],
+          "category": "حاجات في الشارع",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        }
+      ]
+    },
+    {
+      "id": "p13",
+      "title": "عادات وتقاليد",
+      "labelStatus": "in_review",
+      "words": [
+        {
+          "id": "p13-w01",
+          "version": 1,
+          "canonical": "عرس",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w02",
+          "version": 1,
+          "canonical": "طهور",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w03",
+          "version": 1,
+          "canonical": "عيد",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w04",
+          "version": 1,
+          "canonical": "رمضان",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w05",
+          "version": 1,
+          "canonical": "سحور",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w06",
+          "version": 1,
+          "canonical": "حنة",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w07",
+          "version": 1,
+          "canonical": "جبة",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w08",
+          "version": 1,
+          "canonical": "شاشية",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w09",
+          "version": 1,
+          "canonical": "سفساري",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w10",
+          "version": 1,
+          "canonical": "برنوس",
+          "aliases": [
+            "برنس"
+          ],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w11",
+          "version": 1,
+          "canonical": "زردة",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w12",
+          "version": 1,
+          "canonical": "عولة",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w13",
+          "version": 1,
+          "canonical": "خطوبة",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w14",
+          "version": 1,
+          "canonical": "صداق",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w15",
+          "version": 1,
+          "canonical": "طبال",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w16",
+          "version": 1,
+          "canonical": "عاشوراء",
+          "aliases": [
+            "عاشورا"
+          ],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w17",
+          "version": 1,
+          "canonical": "مولد",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w18",
+          "version": 1,
+          "canonical": "بخور",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w19",
+          "version": 1,
+          "canonical": "زغرودة",
+          "aliases": [],
+          "category": "عادات وتقاليد",
+          "language": "aeb-Arab",
+          "access": "free",
+          "status": "in_review"
+        },
+        {
+          "id": "p13-w20",
+          "version": 1,
+          "canonical": "حرقوس",
+          "aliases": [],
+          "category": "عادات وتقاليد",
           "language": "aeb-Arab",
           "access": "free",
           "status": "in_review"
